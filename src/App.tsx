@@ -6,7 +6,7 @@ function Home() {
 }
 
 function About() {
-  return <h2>Acerca de</h2>;
+  return <h2>Acerca</h2>;
 }
 
 function App() {
