@@ -2,7 +2,7 @@ import "./App.css";
 import { Routes, Route, Link } from "react-router-dom";
 
 function Home() {
-  return <h2>Inicio</h2>;
+  return <h2>hola</h2>;
 }
 
 function About() {
