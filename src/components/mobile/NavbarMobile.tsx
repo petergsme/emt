@@ -10,6 +10,25 @@ const NavbarMobile: React.FC = () => {
   };
 
   return (
+    <>
+      <nav className="nav-items">
+        <Link to="/" className="logo">
+          <img
+            src="/emt.png"
+            alt="EMT Logo"
+            className="logo-img"
+            style={{ height: "20px" }}
+          />
+        </Link>
+        <button onClick={toggleSidebar} className="menu-toggle">
+          <FaBars />
+        </button>
+      </nav>
+      <SidebarMobile
+        isOpen={isSidebarOpen}
+        onClose={() => setIsSidebarOpen(false)}
+      />
+    </>
   );
 };
 
