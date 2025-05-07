@@ -2,6 +2,9 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import { FaBars } from "react-icons/fa";
+import SidebarMobile from "./SidebarMobile";
+import "./NavbarMobile.css";
+
 const NavbarMobile: React.FC = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
