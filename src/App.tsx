@@ -1,26 +1,21 @@
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
+import Home from "./pages/home";
+import NavbarMobile from "./components/mobile/NavbarMobile";
 import "./App.css";
-import { Routes, Route, Link } from "react-router-dom";
 
-function Home() {
-  return <h2>tengo ganas de fiesta</h2>;
-}
-
-function About() {
-  return <h2>hasta luego</h2>;
-}
-
-function App() {
+const App: React.FC = () => {
   return (
-    <div>
-      <nav>
-        <Link to="/">no puede ser</Link> | <Link to="/about">que hay</Link>
-      </nav>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-      </Routes>
-    </div>
+    <Router>
+      <div className="App">
+        <NavbarMobile />
+        <Routes>
+          <Route path="/" element={<Home />} />
+        </Routes>
+      </div>
+    </Router>
   );
-}
+};
 
 export default App;
