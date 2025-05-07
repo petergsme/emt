@@ -1,0 +1,137 @@
+.sidebar-backdrop {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    background-color: rgb(91, 0, 0);
+    z-index: 999;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 360px;
+    height: 100vh;
+    background-color: var(--elements);
+    box-shadow: var(--shadow);
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+    z-index: 1000;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    -webkit-overflow-scrolling: touch;
+}
+
+.sidebar.open {
+    transform: translateX(0);
+}
+
+.sidebar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem;
+    border-bottom: 1px solid var(--border-color);
+    position: sticky;
+    top: 0;
+    background-color: var(--elements);
+    z-index: 2;
+}
+
+.sidebar-header h3 {
+    margin: 0;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--text);
+}
+
+.close-button {
+    background: none;
+    border: none;
+    color: var(--text);
+    font-size: 1.25rem;
+    padding: 0.5rem;
+    cursor: pointer;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s ease;
+    width: 40px;
+    height: 40px;
+}
+
+.close-button:hover {
+    background-color: var(--shadow);
+}
+
+.lists-container {
+    padding: 1.5rem;
+}
+
+.list-section {
+    margin-bottom: 2rem;
+}
+
+.list-section h4 {
+    margin: 0 0 1rem;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text);
+}
+
+.empty-message {
+    color: var(--text-secondary);
+    font-size: 0.875rem;
+    margin: 0;
+    padding: 0.5rem 0;
+}
+
+.favorites-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.favorite-item {
+    margin-bottom: 0.5rem;
+}
+
+.favorite-item a {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem;
+    text-decoration: none;
+    color: var(--text);
+    border-radius: 8px;
+    transition: background-color 0.2s ease;
+}
+
+.favorite-item a:hover {
+    background-color: var(--shadow);
+}
+
+.favorite-flag {
+    width: 32px;
+    height: 20px;
+    object-fit: cover;
+    border-radius: 2px;
+}
+
+.favorite-item span {
+    font-size: 0.875rem;
+}
