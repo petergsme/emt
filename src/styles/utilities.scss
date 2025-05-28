@@ -1,0 +1,150 @@
+//UTILITY CLASSES
+
+//TEXT STYLES UTILITIES
+//Display styles
+.display-large {
+  font-family: var(--font-family-display);
+  font-weight: var(--font-weight-regular);
+  font-size: var(--font-size-48);
+  line-height: var(--line-height-72);
+}
+
+.display-medium {
+  font-family: var(--font-family-display);
+  font-weight: var(--font-weight-regular);
+  font-size: var(--font-size-28);
+  line-height: var(--line-height-44);
+}
+
+.display-cards {
+  font-family: var(--font-family-display);
+  font-weight: var(--font-weight-regular);
+  font-size: var(--font-size-28);
+}
+
+.display-small {
+  font-family: var(--font-family-display);
+  font-weight: var(--font-weight-regular);
+  font-size: var(--font-size-16);
+}
+
+//Paragraph styles
+.paragraph-medium {
+  font-family: var(--font-family-body);
+  font-weight: var(--font-weight-medium);
+  font-size: var(--font-size-20);
+  line-height: var(--line-height-24);
+}
+
+.paragraph-small {
+  font-family: var(--font-family-body);
+  font-weight: var(--font-weight-medium);
+  font-size: var(--font-size-18);
+  line-height: var(--line-height-24);
+  letter-spacing: var(--tracking-tight);
+}
+
+.paragraph-xsmall {
+  font-family: var(--font-family-body);
+  font-weight: var(--font-weight-medium);
+  font-size: var(--font-size-16);
+  line-height: var(--line-height-20);
+  letter-spacing: var(--tracking-tight);
+}
+
+.paragraph-xxsmall {
+  font-family: var(--font-family-body);
+  font-weight: var(--font-weight-medium);
+  font-size: var(--font-size-12);
+  letter-spacing: var(--tracking-tight);
+}
+
+.questions-small {
+  font-family: var(--font-family-body);
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-18);
+  line-height: var(--line-height-24);
+  letter-spacing: var(--tracking-tight);
+}
+
+//Label styles
+.label-button {
+  font-family: var(--font-family-display);
+  font-weight: var(--font-weight-regular);
+  font-size: var(--font-size-16);
+  line-height: var(--line-height-32);
+}
+
+.label-tags {
+  font-family: var(--font-family-body);
+  font-weight: var(--font-weight-semibold);
+  font-size: var(--font-size-16);
+  letter-spacing: var(--tracking-tight);
+}
+
+.label-filters {
+  font-family: var(--font-family-body);
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-16);
+  letter-spacing: var(--tracking-tight);
+}
+
+.label-price-small {
+  font-family: var(--font-family-display);
+  font-weight: var(--font-weight-regular);
+  font-size: var(--font-size-16);
+}
+
+.label-price-xsmall {
+  font-family: var(--font-family-display);
+  font-weight: var(--font-weight-regular);
+  font-size: var(--font-size-12);
+}
+
+//Link styles
+.link-small {
+  font-family: var(--font-family-body);
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-18);
+  text-decoration: underline;
+  letter-spacing: var(--tracking-tight);
+  cursor: pointer;
+}
+
+.link-xsmall {
+  font-family: var(--font-family-body);
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-16);
+  text-decoration: underline;
+  letter-spacing: var(--tracking-tight);
+  cursor: pointer;
+}
+
+//GRADIENT UTILITIES.
+.gradient-light-short {
+  background: linear-gradient(180deg, var(--red-0) 0%, var(--red-100) 50%, var(--red-200) 100%);
+}
+
+.gradient-light-long {
+  background: linear-gradient(
+    160deg,
+    var(--red-0) 25%,
+    var(--red-100) 50%,
+    var(--red-200) 75%,
+    var(--red-300-main) 100%
+  );
+}
+
+.gradient-dark-short {
+  background: linear-gradient(180deg, var(--red-700) 10%, var(--red-300-main) 100%);
+}
+
+.gradient-dark-long {
+  background: linear-gradient(
+    160deg,
+    var(--red-900) 25%,
+    var(--red-700) 50%,
+    var(--red-500) 75%,
+    var(--red-300-main) 100%
+  );
+}

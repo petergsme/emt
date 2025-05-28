@@ -1,26 +1,22 @@
-import "./App.css";
-import { Routes, Route, Link } from "react-router-dom";
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
-function Home() {
-  return <h2>hola</h2>;
-}
+import Home from './pages/home';
+import NavbarMobile from './components/mobile/NavbarMobile';
+import './App.module.scss';
+import '@/styles/mixins.scss';
 
-function About() {
-  return <h2>Acerca</h2>;
-}
-
-function App() {
+const App: React.FC = () => {
   return (
-    <div>
-      <nav>
-        <Link to="/">Inicio</Link> | <Link to="/about">Acerca</Link>
-      </nav>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-      </Routes>
-    </div>
+    <Router>
+      <div className="App">
+        <NavbarMobile />
+        <Routes>
+          <Route path="/" element={<Home />} />
+        </Routes>
+      </div>
+    </Router>
   );
-}
+};
 
 export default App;
