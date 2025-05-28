@@ -1,0 +1,17 @@
+@import './reset.scss';
+@import './variables.scss';
+@import './utilities.scss';
+
+//Remember the key to scss is nesting, variables, and functions/utilities (mixins).
+//Remember @import is only used to import css/scss between stylesheets & it's also used for mixins (@include ...)
+//Remember index.scss includes the global styles, while App.scss is meant to be just for app.
+//Remember, custom properties, utility classes and the reset will be available globally through being imported here, but that won't work for mixins.
+
+//ENTRY POINT CSS
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background-color: #fffff2;
+}
