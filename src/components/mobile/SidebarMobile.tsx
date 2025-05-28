@@ -1,5 +1,5 @@
 import React from "react";
-import { FaTimes } from "react-icons/fa";
+// import { FaTimes } from "react-icons/fa";
 import "./SidebarMobile.css";
 
 interface SidebarMobileProps {
@@ -12,20 +12,11 @@ const SidebarMobile: React.FC<SidebarMobileProps> = ({ isOpen, onClose }) => {
   return (
     <>
       {isOpen && <div className="sidebar-backdrop" onClick={onClose}></div>}
-      <aside
-        className={`sidebar ${isOpen ? "open" : ""}`}
-        role="dialog"
-        aria-modal="true"
-        aria-label="Menu"
-      >
+      <aside className={`sidebar ${isOpen ? "open" : ""}`} role="dialog" aria-modal="true" aria-label="Menu">
         <div className="sidebar-header">
           <h3>Menu</h3>
-          <button
-            onClick={onClose}
-            className="close-button"
-            aria-label="Close sidebar"
-          >
-            <FaTimes />
+          <button onClick={onClose} className="close-button" aria-label="Close sidebar">
+            {/* <FaTimes /> */}
           </button>
         </div>
 
