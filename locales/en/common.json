@@ -1,0 +1,10 @@
+{
+  "tasks": "Tasks",
+  "welcome": "Welcome to React",
+  "menu": {
+    "login": "Login",
+    "signup": "Sign up",
+    "tasks": "Tasks"
+  },
+  "completedProgress": "{{completed}} of {{total}} tasks completed"
+}

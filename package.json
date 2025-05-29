@@ -12,6 +12,7 @@
   "dependencies": {
     "classnames": "^2.5.1",
     "i18next": "^25.2.1",
+    "i18next-http-backend": "^3.0.2",
     "icons": "^1.0.0",
     "react": "^19.1.0",
     "react-dom": "^19.0.0",

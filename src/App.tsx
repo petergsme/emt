@@ -1,10 +1,11 @@
-import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
-import Home from "./pages/home";
-import NavbarMobile from "./components/mobile/NavbarMobile";
-import "./App.module.scss";
-import "@/styles/mixins.scss";
+import Home from './pages/home';
+import NavbarMobile from './components/mobile/NavbarMobile';
+import './App.module.scss';
+import '@/styles/mixins.scss';
+import './i18n';
 
 const App: React.FC = () => {
   return (
