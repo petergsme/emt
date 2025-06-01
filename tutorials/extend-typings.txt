@@ -1,0 +1,10 @@
+Ahora vamos a ver algunas utilidades de typescript que no hemos visto el resto del año.
+
+1.Extender interfaces.
+Si tengo interface A, con propiedades 1,2,3 e interface B con propiedades 1,2,3 y algo mas, puedo dejar solo las nuevas y hacer:
+interface B extends A. (Con type es un pelin diferente).
+
+2. type PepinoProps = Pick<tipado, "propiedad" | "propiedad">.
+con este tipado pillas algunas propiedades sueltas de un tipado que señalas separadas por |. Ojito, solo usable con type.
+
+3. Omit (funciona como pick pero al reves) .También existe el pick inverso, que tenga todas menos algunas propiedades.
