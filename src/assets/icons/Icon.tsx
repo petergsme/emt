@@ -14,7 +14,7 @@ export const Icon = ({ icon, size = 'medium', color = 'onprimary' }: IconProps) 
   return (
     <span
       className={`${theme.icon} ${theme[`icon__size--${size}`]} ${theme[`icon__color--${color}`]}`}
-      aria-label={icon}
+      aria-label={`${icon}-icon`}
       role="img"
     >
       {createElement(icons[icon], {})}
