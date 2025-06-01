@@ -12,7 +12,7 @@ const App: React.FC = () => {
   return (
     <Router>
       <div className="App">
-        <Icon icon="Whatsapp" />
+        <Icon icon="Close" />
         <NavbarMobile />
         <Routes>
           <Route path="/" element={<Home />} />

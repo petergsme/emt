@@ -1,0 +1,54 @@
+//ICON STYLES
+@mixin icon-size($size: var(--icon-24)) {
+  width: $size;
+  height: $size;
+}
+
+.icon {
+  //COMMON
+  @include icon-size();
+  color: var(--icon-onprimary);
+  display: inline-block;
+
+  & * {
+    fill: currentColor;
+  }
+
+  //NESTED SIZE CLASSES
+  &__size {
+    &--small {
+      @include icon-size(var(--icon-24));
+    }
+
+    &--medium {
+      @include icon-size(var(--icon-32));
+    }
+
+    &--large {
+      @include icon-size(var(--icon-48));
+    }
+  }
+
+  //NESTED COLOR CLASSES
+  &__color {
+    &--onprimary {
+      color: var(--icon-onprimary);
+    }
+
+    &--onprimary-secondary {
+      color: var(--icon-onprimary-secondary);
+    }
+
+    &--onbrand {
+      color: var(--icon-onbrand);
+    }
+
+    &--onbrand-secondary {
+      color: var(--icon-onbrandsecondary);
+    }
+
+    &--disabled {
+      color: var(--icon-disabled);
+    }
+  }
+}
