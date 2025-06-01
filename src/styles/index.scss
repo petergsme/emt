@@ -1,9 +1,10 @@
-@import './reset.scss';
-@import './variables.scss';
-@import './utilities.scss';
+@use './reset' as *;
+@use './variables' as *;
+@use './utilities' as *;
 
 //Remember the key to scss is nesting, variables, and functions/utilities (mixins).
 //Remember @import is only used to import css/scss between stylesheets & it's also used for mixins (@include ...)
+//Ignore my previous statement @import is deprecated, now we use @use, and there's no need to write file extensions (reset.scss --> reset). The "as *" is to keep using scss variables like usual, otherwise you'd need to access them like this: variables.$tuvariable. Custom properties don't change but i'm leaving the import like that just in case i end up adding mixins to those stylesheets.
 //Remember index.scss includes the global styles, while App.scss is meant to be just for app.
 //Remember, custom properties, utility classes and the reset will be available globally through being imported here, but that won't work for mixins.
 
