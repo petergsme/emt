@@ -1,25 +1,22 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { NavLink, Link, Outlet } from 'react-router-dom';
+import theme from './App.module.scss';
 
-import Home from './pages/home';
-import NavbarMobile from './components/mobile/NavbarMobile';
-import './App.module.scss';
-import '@/styles/mixins.scss';
-import './i18n';
-import { Icon } from './assets/icons/Icon';
-
-const App: React.FC = () => {
+export const App: React.FC = () => {
   return (
-    <Router>
-      <div className="App">
-        <Icon icon="Close" />
-        <NavbarMobile />
-        <Routes>
-          <Route path="/" element={<Home />} />
-        </Routes>
+    <>
+      <div className={theme.menu}>
+        <NavLink className="a" to="/">
+          Home
+        </NavLink>
+        <Link to="/login">Login</Link>
       </div>
-    </Router>
+      <Outlet />
+    </>
   );
 };
 
-export default App;
+//The nav component will be here, in App.tsx. And it will make use of the routers' Link and NavLink. Remember NavLink has className properties relateed to whether it's selected while Link doesn't. The class ".active" is automatically assigned to an active NavLink. Also important, these components prevent page reloads, unlike <a>. For now here's a fake nav to show the usage of those two components.
+
+//Remember an import with @ like this: import '@/styles/mixins.scss'; means that you're searching from the src folder, @ = src.
+
+//Remember the idea is to have a nav and footer component here.
