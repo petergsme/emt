@@ -1,4 +1,38 @@
 //FORM INPUT STYLES
+
+.inputform {
+  display: flex;
+  gap: 20px;
+  border-radius: 1000px;
+  background-color: var(--bg-secondary);
+  padding: 20px 20px;
+  width: fit-content;
+  border: 2px solid var(--bg-secondary);
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    border: 2px solid var(--border-onprimary-secondary);
+  }
+
+  &:focus {
+    background-color: var(--bg-brand-light-primary);
+  }
+
+  & input {
+    background-color: transparent;
+    border: none;
+    color: var(--text-onbrandsecondary);
+
+    &:focus {
+      outline: none;
+    }
+
+    &::placeholder {
+      color: var(--text-disabled);
+    }
+  }
+}
+
 @mixin icon-size($size: var(--icon-24)) {
   width: $size;
   height: $size;

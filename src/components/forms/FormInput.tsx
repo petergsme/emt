@@ -1,9 +1,9 @@
-import { UseFormRegister, FieldErrors } from 'react-hook-form';
+import { UseFormRegister, FieldErrors } from "react-hook-form";
 //We import these typings because useForm HAS to be used in the form itself, so here we need to have parameters for those functions we were importing (register & errors). We type them so that we can use them exactly like we were when we imported them directly. In essence those two parameters are generic functions typed to specifically work like the ones you would import from the package.
-import { useTranslation } from 'react-i18next';
-import { patterns } from './validation';
-// import theme from './formInput.module.scss';
-import { Icon, IconName } from '../../assets/icons/Icon';
+import { useTranslation } from "react-i18next";
+import { patterns } from "./validation";
+import theme from "./formInput.module.scss";
+import { Icon, IconName } from "../../assets/icons/Icon";
 
 export interface RegisterFormData {
   cardNumber: string;
@@ -24,32 +24,30 @@ interface FormInputProps {
 }
 
 export const FormInput = ({ type, register, errors, required = true, leadingIcon }: FormInputProps) => {
-  const { t } = useTranslation('register-form');
+  const { t } = useTranslation("register-form");
   //Selecting the namespace that has the labels, the error messages and placeholders. This is the reason why we don't need no parameters for those, just through the type parameter we can use them.
 
   return (
     <article className="">
-      <label className="" htmlFor={type}>
+      <label className="paragraph-xsmall" htmlFor={type}>
         {t(`labels.${type}`)}
       </label>
-      <div>
+      <div tabIndex={0} className={theme.inputform}>
         <Icon icon={leadingIcon} size="small" color="onprimary" />
 
         <input
-          className=""
+          className="paragraph-small"
           placeholder={t(`placeholders.${type}`)}
           id={type}
           {...register(type, {
-            required: required ? t('errors.required') : false,
+            required: required ? t("errors.required") : false,
             pattern: { value: patterns[type], message: t(`errors.${type}`) },
           })}
         />
-        {errors[type] && <span className="">{errors[type].message}</span>}
 
         {required && <Icon icon="AsteriskLine" size="small" color="disabled" />}
       </div>
+      {errors[type] && <span className="paragraph-xsmall">{errors[type].message}</span>}
     </article>
   );
 };
-
-//antes de integrar clases monta un form normalete
