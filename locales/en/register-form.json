@@ -8,7 +8,7 @@
     "mail": "Email"
   },
   "placeholders": {
-    "cardNumber": "5678 1234 5678...",
+    "cardNumber": "567812345678...",
     "documentNumber": "23824449T...",
     "firstName": "John...",
     "lastName": "Smith...",

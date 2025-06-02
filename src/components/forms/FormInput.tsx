@@ -26,13 +26,14 @@ interface FormInputProps {
 export const FormInput = ({ type, register, errors, required = true, leadingIcon }: FormInputProps) => {
   const { t } = useTranslation("register-form");
   //Selecting the namespace that has the labels, the error messages and placeholders. This is the reason why we don't need no parameters for those, just through the type parameter we can use them.
+  const hasError = !!errors[type];
 
   return (
-    <article className="">
-      <label className="paragraph-xsmall" htmlFor={type}>
+    <article className={theme.wrapper}>
+      <label className={`paragraph-xsmall ${theme.padding} ${theme.colored}`} htmlFor={type}>
         {t(`labels.${type}`)}
       </label>
-      <div tabIndex={0} className={theme.inputform}>
+      <div className={`${theme.inputform} ${hasError ? theme.error : ""}`}>
         <Icon icon={leadingIcon} size="small" color="onprimary" />
 
         <input
@@ -47,7 +48,7 @@ export const FormInput = ({ type, register, errors, required = true, leadingIcon
 
         {required && <Icon icon="AsteriskLine" size="small" color="disabled" />}
       </div>
-      {errors[type] && <span className="paragraph-xsmall">{errors[type].message}</span>}
+      {errors[type] && <span className={`paragraph-xsmall ${theme.padding}`}>{errors[type].message}</span>}
     </article>
   );
 };

@@ -1,5 +1,24 @@
 //FORM INPUT STYLES
 
+.colored {
+  color: var(--icon-onbrandsecondary);
+}
+
+.wrapper {
+  display: flex;
+  gap: 12px;
+  flex-direction: column;
+}
+
+.padding {
+  padding-left: 20px;
+}
+
+.error {
+  border: 2px solid red;
+  color: red;
+}
+
 .inputform {
   display: flex;
   gap: 20px;
@@ -14,8 +33,13 @@
     border: 2px solid var(--border-onprimary-secondary);
   }
 
-  &:focus {
+  &:focus-within {
+    border: 2px solid var(--border-onprimary-secondary);
     background-color: var(--bg-brand-light-primary);
+
+    & span:last-of-type {
+      color: var(--border-onprimary-secondary);
+    }
   }
 
   & input {
@@ -33,56 +57,56 @@
   }
 }
 
-@mixin icon-size($size: var(--icon-24)) {
-  width: $size;
-  height: $size;
-}
+// @mixin icon-size($size: var(--icon-24)) {
+//   width: $size;
+//   height: $size;
+// }
 
-.icon {
-  //COMMON
-  @include icon-size();
-  color: var(--icon-onprimary);
-  display: inline-block;
+// .icon {
+//   //COMMON
+//   @include icon-size();
+//   color: var(--icon-onprimary);
+//   display: inline-block;
 
-  & * {
-    fill: currentColor;
-  }
+//   & * {
+//     fill: currentColor;
+//   }
 
-  //NESTED SIZE CLASSES
-  &__size {
-    &--small {
-      @include icon-size(var(--icon-24));
-    }
+//   //NESTED SIZE CLASSES
+//   &__size {
+//     &--small {
+//       @include icon-size(var(--icon-24));
+//     }
 
-    &--medium {
-      @include icon-size(var(--icon-32));
-    }
+//     &--medium {
+//       @include icon-size(var(--icon-32));
+//     }
 
-    &--large {
-      @include icon-size(var(--icon-48));
-    }
-  }
+//     &--large {
+//       @include icon-size(var(--icon-48));
+//     }
+//   }
 
-  //NESTED COLOR CLASSES
-  &__color {
-    &--onprimary {
-      color: var(--icon-onprimary);
-    }
+//   //NESTED COLOR CLASSES
+//   &__color {
+//     &--onprimary {
+//       color: var(--icon-onprimary);
+//     }
 
-    &--onprimary-secondary {
-      color: var(--icon-onprimary-secondary);
-    }
+//     &--onprimary-secondary {
+//       color: var(--icon-onprimary-secondary);
+//     }
 
-    &--onbrand {
-      color: var(--icon-onbrand);
-    }
+//     &--onbrand {
+//       color: var(--icon-onbrand);
+//     }
 
-    &--onbrand-secondary {
-      color: var(--icon-onbrandsecondary);
-    }
+//     &--onbrand-secondary {
+//       color: var(--icon-onbrandsecondary);
+//     }
 
-    &--disabled {
-      color: var(--icon-disabled);
-    }
-  }
-}
+//     &--disabled {
+//       color: var(--icon-disabled);
+//     }
+//   }
+// }

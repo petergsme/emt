@@ -1,7 +1,10 @@
-.test-form-container {
+.testformcontainer {
   max-width: 400px;
   margin: 20px auto;
   padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
 }
 
 .submit-section {

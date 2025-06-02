@@ -1,5 +1,6 @@
-import { useForm } from 'react-hook-form';
-import { FormInput, RegisterFormData } from './FormInput';
+import { useForm } from "react-hook-form";
+import { FormInput, RegisterFormData } from "./FormInput";
+import theme from "./testRegistrationForm.module.scss";
 // import styles from './testRegistrationForm.module.scss';
 
 /**
@@ -14,25 +15,25 @@ export const TestRegistrationForm = () => {
     formState: { errors, isValid }, // Form state including errors and validation status
     watch, // Function to watch field values (useful for debugging)
   } = useForm<RegisterFormData>({
-    mode: 'onChange', // Validate on every change (good for testing)
+    mode: "onChange", // Validate on every change (good for testing)
   });
 
   // Form submission handler - just logs data for now
   const onSubmit = (data: RegisterFormData) => {
-    console.log('Form submitted with data:', data);
-    alert('Form submitted! Check console for data.');
+    console.log("Form submitted with data:", data);
+    alert("Form submitted! Check console for data.");
   };
 
   // Optional: Watch all form values for debugging
-  console.log('Current form values:', watch());
+  console.log("Current form values:", watch());
 
   return (
-    <div className="test-form-container">
+    <div className={theme.testformcontainer}>
       <h2>Registration Form - Testing Component</h2>
 
       <form onSubmit={handleSubmit(onSubmit)} noValidate>
         {/* Required Fields */}
-        <section>
+        <section className={theme.testformcontainer}>
           <h3>Required Fields</h3>
 
           <FormInput
@@ -94,13 +95,13 @@ export const TestRegistrationForm = () => {
           <button
             type="submit"
             disabled={!isValid}
-            className={isValid ? 'submit-button enabled' : 'submit-button disabled'}
+            className={isValid ? "submit-button enabled" : "submit-button disabled"}
           >
             REGISTRAR TARJETA
           </button>
 
           {/* Debug info */}
-          <p className="debug-info">Form is {isValid ? 'valid' : 'invalid'}</p>
+          <p className="debug-info">Form is {isValid ? "valid" : "invalid"}</p>
         </section>
       </form>
     </div>
