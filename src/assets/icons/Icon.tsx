@@ -6,7 +6,7 @@ import theme from './icon.module.scss';
 export type IconName = keyof typeof icons;
 
 const cx = classNames.bind(theme);
-interface IconProps {
+export interface IconProps {
   icon: IconName;
   size?: 'small' | 'medium' | 'large';
   color?: 'onprimary' | 'onprimary-secondary' | 'onbrand' | 'onbrand-secondary' | 'disabled';
