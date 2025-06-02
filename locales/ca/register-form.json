@@ -1,0 +1,27 @@
+{
+  "labels": {
+    "cardNumber": "Número de targeta Mobilis",
+    "documentNumber": "Número del document d'identificació",
+    "firstName": "Nom",
+    "lastName": "Cognoms",
+    "phone": "Número de telèfon",
+    "mail": "Correu electrònic"
+  },
+  "placeholders": {
+    "cardNumber": "5678 1234 5678...",
+    "documentNumber": "23824449T...",
+    "firstName": "Joan...",
+    "lastName": "Perales Olmos...",
+    "phone": "628 098 545...",
+    "mail": "joan@gmail.com..."
+  },
+  "errors": {
+    "required": "Este camp és obligatori",
+    "cardNumber": "La targeta ha de tindre exactament 12 dígits",
+    "documentNumber": "El document només pot contindre lletres i números",
+    "firstName": "El nom només pot contindre lletres",
+    "lastName": "Els cognoms només poden contindre lletres",
+    "phone": "El telèfon només pot contindre dígits",
+    "mail": "Introdueix un correu electrònic vàlid"
+  }
+}
