@@ -2,7 +2,7 @@ import { UseFormRegister, FieldErrors } from 'react-hook-form';
 //We import these typings because useForm HAS to be used in the form itself, so here we need to have parameters for those functions we were importing (register & errors). We type them so that we can use them exactly like we were when we imported them directly. In essence those two parameters are generic functions typed to specifically work like the ones you would import from the package.
 import { useTranslation } from 'react-i18next';
 import { patterns } from './validation';
-import theme from './formInput.module.scss';
+// import theme from './formInput.module.scss';
 import { Icon, IconName } from '../../assets/icons/Icon';
 
 export interface RegisterFormData {
@@ -28,12 +28,15 @@ export const FormInput = ({ type, register, errors, required = true, leadingIcon
   //Selecting the namespace that has the labels, the error messages and placeholders. This is the reason why we don't need no parameters for those, just through the type parameter we can use them.
 
   return (
-    <article>
-      <label htmlFor={type}>{t(`labels.${type}`)}</label>
+    <article className="">
+      <label className="" htmlFor={type}>
+        {t(`labels.${type}`)}
+      </label>
       <div>
         <Icon icon={leadingIcon} size="small" color="onprimary" />
 
         <input
+          className=""
           placeholder={t(`placeholders.${type}`)}
           id={type}
           {...register(type, {
@@ -41,7 +44,7 @@ export const FormInput = ({ type, register, errors, required = true, leadingIcon
             pattern: { value: patterns[type], message: t(`errors.${type}`) },
           })}
         />
-        {errors[type] && <span>{errors[type].message}</span>}
+        {errors[type] && <span className="">{errors[type].message}</span>}
 
         {required && <Icon icon="AsteriskLine" size="small" color="disabled" />}
       </div>
@@ -49,4 +52,4 @@ export const FormInput = ({ type, register, errors, required = true, leadingIcon
   );
 };
 
-//No tenemos clases aun xd.
+//antes de integrar clases monta un form normalete

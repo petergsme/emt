@@ -1,0 +1,24 @@
+.test-form-container {
+  max-width: 400px;
+  margin: 20px auto;
+  padding: 20px;
+}
+
+.submit-section {
+  margin-top: 20px;
+}
+
+.submit-button {
+  width: 100%;
+  padding: 12px;
+
+  &.enabled {
+    background: #e63946;
+    color: white;
+  }
+
+  &.disabled {
+    background: #ccc;
+    color: #666;
+  }
+}
