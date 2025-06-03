@@ -9,6 +9,7 @@
   @include icon-size();
   color: var(--icon-onprimary);
   display: inline-block;
+  flex-shrink: 0;
 
   & * {
     fill: currentColor;

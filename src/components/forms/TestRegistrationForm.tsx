@@ -1,5 +1,6 @@
 import { useForm } from 'react-hook-form';
 import { FormInput, RegisterFormData } from './FormInput';
+import { FormCheckbox } from './FormCheckbox';
 import theme from './testRegistrationForm.module.scss';
 // import styles from './testRegistrationForm.module.scss';
 
@@ -46,6 +47,8 @@ export const TestRegistrationForm = () => {
           <FormInput type="phone" leadingIcon="Phone" register={register} errors={errors} required={false} />
 
           <FormInput type="mail" leadingIcon="Mail" register={register} errors={errors} required={false} />
+
+          <FormCheckbox type="privacy" register={register} errors={errors} watch={watch} required={false} />
         </section>
         {/* Submit Section */}
         <section className="submit-section">

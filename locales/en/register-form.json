@@ -5,7 +5,9 @@
     "firstName": "First name",
     "lastName": "Last name",
     "phone": "Phone number",
-    "mail": "Email"
+    "mail": "Email",
+    "privacy": "I accept the privacy policy and the terms of purchase.",
+    "bill": "I wish to receive a copy of the invoice by email."
   },
   "placeholders": {
     "cardNumber": "567812345678...",
@@ -17,6 +19,7 @@
   },
   "errors": {
     "required": "This input is required",
+    "privacy": "You must accept the terms of purchase",
     "cardNumber": "Must have exactly 12 digits",
     "documentNumber": "Can only contain letters and numbers",
     "firstName": "Cn only contain letters",

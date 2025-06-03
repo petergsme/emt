@@ -2,9 +2,11 @@ import { UseFormRegister, FieldErrors } from 'react-hook-form';
 //We import these typings because useForm HAS to be used in the form itself, so here we need to have parameters for those functions we were importing (register & errors). We type them so that we can use them exactly like we were when we imported them directly. In essence those two parameters are generic functions typed to specifically work like the ones you would import from the package.
 import { useTranslation } from 'react-i18next';
 import { patterns } from './validation';
+import classNames from 'classnames/bind';
 import theme from './formInput.module.scss';
 import { Icon, IconName } from '../../assets/icons/Icon';
 
+const cx = classNames.bind(theme);
 export interface RegisterFormData {
   cardNumber: string;
   documentNumber: string;
@@ -12,6 +14,9 @@ export interface RegisterFormData {
   lastName: string;
   phone: string;
   mail: string;
+  privacy: boolean;
+  bill: boolean;
+  //Those last two are the checkbox types.
 }
 
 interface FormInputProps {
@@ -31,7 +36,11 @@ export const FormInput = ({ type, register, errors, required = true, leadingIcon
   return (
     <article className={theme.input__wrapper}>
       <label
-        className={`paragraph-xsmall ${theme.input__label} ${hasError ? theme['input__label--error'] : ''}`}
+        className={cx({
+          'paragraph-xsmall': true,
+          input__label: true,
+          'input__label--error': hasError,
+        })}
         htmlFor={type}
       >
         {t(`labels.${type}`)}
@@ -46,7 +55,8 @@ export const FormInput = ({ type, register, errors, required = true, leadingIcon
             id={type}
             {...register(type, {
               required: required ? t('errors.required') : false,
-              pattern: { value: patterns[type], message: t(`errors.${type}`) },
+              pattern: patterns[type] ? { value: patterns[type], message: t(`errors.${type}`) } : undefined,
+              //We made the patterns for the booleans undefined, now with this terciario only when patterns for the type exist will it have them.
             })}
           />
         </span>
@@ -57,3 +67,5 @@ export const FormInput = ({ type, register, errors, required = true, leadingIcon
     </article>
   );
 };
+
+//Just using classnames bind on one of the elements' classes that was a bit hard to read.

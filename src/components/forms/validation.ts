@@ -5,4 +5,6 @@ export const patterns = {
   lastName: /^[a-zA-ZáéíóúñÑ\s]+$/,
   phone: /^\d+$/,
   mail: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
+  privacy: undefined,
+  bill: undefined,
 };

@@ -5,7 +5,9 @@
     "firstName": "Nom",
     "lastName": "Cognoms",
     "phone": "Número de telèfon",
-    "mail": "Correu electrònic"
+    "mail": "Correu electrònic",
+    "privacy": "Accepte la política de privacitat i les condicions de compra.",
+    "bill": "Desitge rebre una còpia de la factura al meu correu electrònic."
   },
   "placeholders": {
     "cardNumber": "567812345678...",
@@ -17,6 +19,7 @@
   },
   "errors": {
     "required": "Este camp és obligatori",
+    "privacy": "Has d'acceptar les condicions de compra",
     "cardNumber": "Ha de tindre exactament 12 dígits",
     "documentNumber": "Només pot contindre lletres i números",
     "firstName": "Només pot contindre lletres",

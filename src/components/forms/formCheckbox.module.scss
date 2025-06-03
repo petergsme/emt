@@ -1,0 +1,28 @@
+//FORM CHECKBOX STYLES
+
+.checkbox__icon {
+  appearance: none;
+  border-radius: 100px;
+  background-color: var(--bg-disabled);
+  flex-shrink: 0;
+
+  &:checked {
+    background-color: var(--icon-onprimary);
+  }
+}
+
+.checkbox__wrapper {
+  display: flex;
+  align-items: center;
+  gap: var(--gap-12);
+}
+
+.checkbox__label {
+  color: var(--icon-onbrandsecondary);
+}
+
+.input__errorMessage {
+  color: var(--text-brand);
+  padding: 0 20px;
+  text-align: end;
+}

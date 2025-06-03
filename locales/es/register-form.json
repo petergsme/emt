@@ -5,7 +5,9 @@
     "firstName": "Nombre",
     "lastName": "Apellidos",
     "phone": "Número de teléfono",
-    "mail": "Correo electrónico"
+    "mail": "Correo electrónico",
+    "privacy": "Acepto la politica de privacidad y las condiciones de compra.",
+    "bill": "Deseo recibir copia de la factura en mi correo electrónico."
   },
   "placeholders": {
     "cardNumber": "567812345678...",
@@ -17,6 +19,7 @@
   },
   "errors": {
     "required": "Este campo es obligatorio",
+    "privacy": "Debes aceptar las condiciones de compra",
     "cardNumber": "Debe tener exactamente 12 dígitos",
     "documentNumber": "Solo puede contener letras y números",
     "firstName": "Solo puede contener letras",
