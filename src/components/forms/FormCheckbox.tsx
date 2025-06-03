@@ -28,8 +28,11 @@ export const FormCheckbox = ({ type, register, errors, watch, required = true }:
           {...register(type, { required: required ? t('errors.privacy') : false })}
         />
 
-        {isChecked && <Icon icon="Check" size="medium" color="onprimary" />}
-        {!isChecked && <Icon icon="Check" size="medium" color="disabled" />}
+        {isChecked ? (
+          <Icon icon="Check" size="medium" color="onprimary" />
+        ) : (
+          <Icon icon="Check" size="medium" color="disabled" />
+        )}
 
         <label className={`paragraph-xsmall ${theme.checkbox__label}`} htmlFor={type}>
           {t(`labels.${type}`)}

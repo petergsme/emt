@@ -2,12 +2,19 @@
 
 .checkbox__icon {
   appearance: none;
+  width: 32px;
+  height: 32px;
   border-radius: 100px;
   background-color: var(--bg-disabled);
   flex-shrink: 0;
+  position: relative;
 
   &:checked {
     background-color: var(--icon-onprimary);
+  }
+
+  & span {
+    position: absolute;
   }
 }
 
