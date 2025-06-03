@@ -1,0 +1,86 @@
+//FORM INPUT STYLES
+
+@mixin input($border-color-var: --white-300) {
+  display: flex;
+  justify-content: space-between;
+  border-radius: var(--border-radius-1000);
+  background-color: var(--bg-secondary);
+  padding: 0 var(--padding-20);
+  min-width: fit-content;
+  border: var(--border-width-2) solid var($border-color-var);
+  transition: all 0.3s ease-in-out;
+  align-items: center;
+}
+
+@mixin input-field {
+  background-color: transparent;
+  border: none;
+  color: var(--text-onbrandsecondary);
+
+  &:focus {
+    outline: none;
+  }
+
+  &::placeholder {
+    color: var(--text-disabled);
+  }
+}
+//This is just resetting the styles of the input.
+
+.input__container {
+  @include input();
+
+  &:hover {
+    border: 2px solid var(--border-onprimary-secondary);
+  }
+
+  &:focus-within {
+    border: var(--border-width-2) solid var(--border-onprimary-secondary);
+    background-color: var(--bg-brand-light-primary);
+
+    & span:last-of-type {
+      color: var(--icon-onprimary-secondary);
+    }
+  }
+
+  & input {
+    @include input-field();
+  }
+}
+
+.input__container--error {
+  @extend .input__container; //It's what it looks like, inherits all the styles from the above class.
+  border-color: var(--border-onprimary-brand);
+}
+
+.input__wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-12);
+}
+
+.input__label {
+  color: var(--icon-onbrandsecondary);
+  padding: 0 20px;
+
+  &--error {
+    color: var(--text-brand);
+  }
+}
+
+.input__iconGroup {
+  display: flex;
+  gap: var(--gap-20);
+  align-items: center;
+}
+
+.input--padding {
+  padding: 20px 0;
+}
+//This is the top & bottom padding for the input to occupy more space.
+
+.input__errorMessage {
+  color: var(--text-brand);
+  padding: 0 20px;
+  text-align: end;
+}

@@ -7,4 +7,7 @@ export const patterns = {
   mail: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
   privacy: undefined,
   bill: undefined,
+  contact: undefined,
+  refill: undefined,
+  documentType: undefined,
 };

@@ -7,7 +7,10 @@
     "phone": "Número de teléfono",
     "mail": "Correo electrónico",
     "privacy": "Acepto la politica de privacidad y las condiciones de compra.",
-    "bill": "Deseo recibir copia de la factura en mi correo electrónico."
+    "bill": "Deseo recibir copia de la factura en mi correo electrónico.",
+    "contact": "Escoge un asunto",
+    "refill": "Recarga y precio",
+    "documentType": "Tipo de documento de identificación"
   },
   "placeholders": {
     "cardNumber": "567812345678...",
@@ -26,5 +29,37 @@
     "lastName": "Solo pueden contener letras",
     "phone": "Solo puede contener números",
     "mail": "Introduce un email válido"
+  },
+
+  "documentSelect": {
+    "dni": "DNI",
+    "nie": "NIE",
+    "passport": "Pasaporte"
+  },
+
+  "contactSelect": {
+    "fault": "Quejas",
+    "lost": "Objetos perdidos",
+    "issues": "Incidencias en la línea",
+    "other": "Otras consultas"
+  },
+
+  "refillSelect": {
+    "emtJove": "Renovación EMT Jove / 12,5€ (descuento + IVA)",
+    "bonobus": {
+      "option1": "10 viajes / 4,25€ (descuento + IVA)",
+      "option2": "20 viajes / 8,50€ (descuento + IVA)",
+      "option3": "30 viajes / 12, 75€ (descuento + IVA)"
+    },
+    "persesp": {
+      "option1": "10 viajes / 2,15€  (con IVA)",
+      "option2": "20 viajes / 4,30€ (con IVA)",
+      "option3": "30 viajes / 6,45€ (con IVA)"
+    },
+    "persgen": {
+      "option1": "10 viajes / 3,40€ (con IVA)",
+      "option2": "20 viajes / 6,80€ (con IVA)",
+      "option3": "30 viajes / 10,20€ (con IVA)"
+    }
   }
 }

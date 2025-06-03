@@ -1,7 +1,8 @@
-import { useForm } from 'react-hook-form';
-import { FormInput, RegisterFormData } from './FormInput';
-import { FormCheckbox } from './FormCheckbox';
-import theme from './testRegistrationForm.module.scss';
+import { useForm } from "react-hook-form";
+import { FormInput, RegisterFormData } from "./FormInput";
+import { FormCheckbox } from "./FormCheckbox";
+import theme from "./testRegistrationForm.module.scss";
+import { FormSelect } from "./FormSelect";
 // import styles from './testRegistrationForm.module.scss';
 
 /**
@@ -16,13 +17,13 @@ export const TestRegistrationForm = () => {
     formState: { errors, isValid }, // Form state including errors and validation status
     watch, // Function to watch field values (useful for debugging)
   } = useForm<RegisterFormData>({
-    mode: 'onChange', // Validate on every change (good for testing)
+    mode: "onChange", // Validate on every change (good for testing)
   });
 
   // Form submission handler - just logs data for now
   const onSubmit = (data: RegisterFormData) => {
-    console.log('Form submitted with data:', data);
-    alert('Form submitted! Check console for data.');
+    console.log("Form submitted with data:", data);
+    alert("Form submitted! Check console for data.");
   };
 
   // Optional: Watch all form values for debugging
@@ -49,19 +50,28 @@ export const TestRegistrationForm = () => {
           <FormInput type="mail" leadingIcon="Mail" register={register} errors={errors} required={false} />
 
           <FormCheckbox type="privacy" register={register} errors={errors} watch={watch} required={false} />
+
+          <FormSelect
+            leadingIcon="User"
+            type="refill"
+            register={register}
+            errors={errors}
+            required={true}
+            options={["DNI", "NIE", "Pasaporte"]}
+          />
         </section>
         {/* Submit Section */}
         <section className="submit-section">
           <button
             type="submit"
             disabled={!isValid}
-            className={isValid ? 'submit-button enabled' : 'submit-button disabled'}
+            className={isValid ? "submit-button enabled" : "submit-button disabled"}
           >
             REGISTRAR TARJETA
           </button>
 
           {/* Debug info */}
-          <p className="debug-info">Form is {isValid ? 'valid' : 'invalid'}</p>
+          <p className="debug-info">Form is {isValid ? "valid" : "invalid"}</p>
         </section>
       </form>
     </div>

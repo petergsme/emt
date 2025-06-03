@@ -7,7 +7,10 @@
     "phone": "Phone number",
     "mail": "Email",
     "privacy": "I accept the privacy policy and the terms of purchase.",
-    "bill": "I wish to receive a copy of the invoice by email."
+    "bill": "I wish to receive a copy of the invoice by email.",
+    "contact": "Choose a subject",
+    "refill": "Top-up and price",
+    "documentType": "Type of identification document"
   },
   "placeholders": {
     "cardNumber": "567812345678...",
@@ -26,5 +29,37 @@
     "lastName": "Can only contain letters",
     "phone": "Can only contain digits",
     "mail": "Enter a valid email address"
+  },
+
+  "documentSelect": {
+    "dni": "DNI",
+    "nie": "NIE",
+    "passport": "Passport"
+  },
+
+  "contactSelect": {
+    "fault": "Complaints",
+    "lost": "Lost and found",
+    "issues": "Service disruptions",
+    "other": "Other inquiries"
+  },
+
+  "refillSelect": {
+    "emtJove": "EMT Jove Renewal / €12.5 (discount + VAT)",
+    "bonobus": {
+      "option1": "10 trips / €4.25 (discount + VAT)",
+      "option2": "20 trips / €8.50 (discount + VAT)",
+      "option3": "30 trips / €12.75 (discount + VAT)"
+    },
+    "persesp": {
+      "option1": "10 trips / €2.15 (VAT included)",
+      "option2": "20 trips / €4.30 (VAT included)",
+      "option3": "30 trips / €6.45 (VAT included)"
+    },
+    "persgen": {
+      "option1": "10 trips / €3.40 (VAT included)",
+      "option2": "20 trips / €6.80 (VAT included)",
+      "option3": "30 trips / €10.20 (VAT included)"
+    }
   }
 }
