@@ -17,11 +17,11 @@
   },
   "errors": {
     "required": "Este campo es obligatorio",
-    "cardNumber": "La tarjeta debe tener exactamente 12 dígitos",
-    "documentNumber": "El documento solo puede contener letras y números",
-    "firstName": "El nombre solo puede contener letras",
-    "lastName": "Los apellidos solo pueden contener letras",
-    "phone": "El teléfono solo puede contener números",
+    "cardNumber": "Debe tener exactamente 12 dígitos",
+    "documentNumber": "Solo puede contener letras y números",
+    "firstName": "Solo puede contener letras",
+    "lastName": "Solo pueden contener letras",
+    "phone": "Solo puede contener números",
     "mail": "Introduce un email válido"
   }
 }

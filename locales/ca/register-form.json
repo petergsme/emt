@@ -17,11 +17,11 @@
   },
   "errors": {
     "required": "Este camp és obligatori",
-    "cardNumber": "La targeta ha de tindre exactament 12 dígits",
-    "documentNumber": "El document només pot contindre lletres i números",
-    "firstName": "El nom només pot contindre lletres",
-    "lastName": "Els cognoms només poden contindre lletres",
-    "phone": "El telèfon només pot contindre dígits",
+    "cardNumber": "Ha de tindre exactament 12 dígits",
+    "documentNumber": "Només pot contindre lletres i números",
+    "firstName": "Només pot contindre lletres",
+    "lastName": "Només poden contindre lletres",
+    "phone": "Només pot contindre dígits",
     "mail": "Introdueix un correu electrònic vàlid"
   }
 }

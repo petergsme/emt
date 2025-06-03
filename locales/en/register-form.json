@@ -17,11 +17,11 @@
   },
   "errors": {
     "required": "This input is required",
-    "cardNumber": "The card must have exactly 12 digits",
-    "documentNumber": "The document can only contain letters and numbers",
-    "firstName": "The name can only contain letters",
-    "lastName": "The last name can only contain letters",
-    "phone": "The phone number can only contain digits",
+    "cardNumber": "Must have exactly 12 digits",
+    "documentNumber": "Can only contain letters and numbers",
+    "firstName": "Cn only contain letters",
+    "lastName": "Can only contain letters",
+    "phone": "Can only contain digits",
     "mail": "Enter a valid email address"
   }
 }
