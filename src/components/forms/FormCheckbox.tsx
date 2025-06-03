@@ -1,8 +1,8 @@
-import { UseFormRegister, FieldErrors, UseFormWatch } from 'react-hook-form';
-import { RegisterFormData } from './FormInput';
-import { Icon } from '../../assets/icons/Icon';
-import { useTranslation } from 'react-i18next';
-import theme from './formCheckbox.module.scss';
+import { UseFormRegister, FieldErrors, UseFormWatch } from "react-hook-form";
+import { RegisterFormData } from "./FormInput";
+import { Icon } from "../../assets/icons/Icon";
+import { useTranslation } from "react-i18next";
+import theme from "./formCheckbox.module.scss";
 
 interface FormCheckboxProps {
   type: keyof RegisterFormData;
@@ -14,7 +14,7 @@ interface FormCheckboxProps {
 }
 
 export const FormCheckbox = ({ type, register, errors, watch, required = true }: FormCheckboxProps) => {
-  const { t } = useTranslation('register-form');
+  const { t } = useTranslation("register-form");
 
   const isChecked = watch(type);
 
@@ -25,7 +25,7 @@ export const FormCheckbox = ({ type, register, errors, watch, required = true }:
           className={theme.checkbox__icon}
           type="checkbox"
           id={type}
-          {...register(type, { required: required ? t('errors.privacy') : false })}
+          {...register(type, { required: required ? t("errors.privacy") : false })}
         />
 
         {isChecked ? (
@@ -38,7 +38,9 @@ export const FormCheckbox = ({ type, register, errors, watch, required = true }:
           {t(`labels.${type}`)}
         </label>
       </span>
-      {errors[type] && <span className={`paragraph-xsmall ${theme.input__errorMessage}`}>{errors[type].message}</span>}
+      {errors[type] && (
+        <span className={`paragraph-xsmall ${theme.checkbox__errorMessage}`}>{errors[type].message}</span>
+      )}
     </>
   );
 };

@@ -2,33 +2,31 @@
 
 .checkbox__icon {
   appearance: none;
-  width: 32px;
-  height: 32px;
-  border-radius: 100px;
-  background-color: var(--bg-disabled);
+  width: 28px;
+  height: 28px;
   flex-shrink: 0;
-  position: relative;
-
-  &:checked {
-    background-color: var(--icon-onprimary);
-  }
-
-  & span {
-    position: absolute;
-  }
+  margin: 0;
+  //Appearance none hides the classic checkbox look while giving it width and height keeps it clickable.
 }
 
 .checkbox__wrapper {
   display: flex;
   align-items: center;
   gap: var(--gap-12);
+  position: relative;
+
+  & span {
+    position: absolute;
+    pointer-events: none;
+  }
+  //This span is targetting the Icon component and positioning it on top of the real checkbox while making it invisible to our click so we can still click the checkbox.
 }
 
 .checkbox__label {
   color: var(--icon-onbrandsecondary);
 }
 
-.input__errorMessage {
+.checkbox__errorMessage {
   color: var(--text-brand);
   padding: 0 20px;
   text-align: end;
