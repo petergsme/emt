@@ -1,14 +1,9 @@
-import { useForm } from "react-hook-form";
-import { FormInput, RegisterFormData } from "./FormInput";
-import { FormCheckbox } from "./FormCheckbox";
-import theme from "./testRegistrationForm.module.scss";
-import { FormSelect } from "./FormSelect";
-// import styles from './testRegistrationForm.module.scss';
+import { useForm } from 'react-hook-form';
+import { FormInput, RegisterFormData } from './FormInput';
+import { FormCheckbox } from './FormCheckbox';
+import { FormSelect } from './FormSelect';
+import theme from './testRegistrationForm.module.scss';
 
-/**
- * Simple form component for testing FormInput components
- * This is just for development/styling purposes, not the final modal form
- */
 export const TestRegistrationForm = () => {
   // useForm hook manages the entire form state
   const {
@@ -17,26 +12,24 @@ export const TestRegistrationForm = () => {
     formState: { errors, isValid }, // Form state including errors and validation status
     watch, // Function to watch field values (useful for debugging)
   } = useForm<RegisterFormData>({
-    mode: "onChange", // Validate on every change (good for testing)
+    mode: 'onChange', // Validate on every change (good for testing)
   });
 
   // Form submission handler - just logs data for now
   const onSubmit = (data: RegisterFormData) => {
-    console.log("Form submitted with data:", data);
-    alert("Form submitted! Check console for data.");
+    console.log('Form submitted with data:', data);
+    alert('Form submitted! Check console for data.');
   };
 
   // Optional: Watch all form values for debugging
 
   return (
-    <div className={theme.testformcontainer}>
-      <h2>Registration Form - Testing Component</h2>
+    <div className={`${theme.padding_special} ${theme.testformcontainer}`}>
+      <h2>Registration Form</h2>
 
       <form onSubmit={handleSubmit(onSubmit)} noValidate>
         {/* Required Fields */}
         <section className={theme.testformcontainer}>
-          <h3>Required Fields</h3>
-
           <FormInput type="cardNumber" leadingIcon="Card" register={register} errors={errors} required={true} />
 
           <FormInput type="documentNumber" leadingIcon="Id" register={register} errors={errors} required={true} />
@@ -51,47 +44,22 @@ export const TestRegistrationForm = () => {
 
           <FormCheckbox type="privacy" register={register} errors={errors} watch={watch} required={false} />
 
-          <FormSelect
-            leadingIcon="User"
-            type="refill"
-            register={register}
-            errors={errors}
-            required={true}
-            options={["DNI", "NIE", "Pasaporte"]}
-          />
+          <FormSelect leadingIcon="User" type="refill" register={register} errors={errors} required={true} />
         </section>
         {/* Submit Section */}
         <section className="submit-section">
           <button
             type="submit"
             disabled={!isValid}
-            className={isValid ? "submit-button enabled" : "submit-button disabled"}
+            className={isValid ? 'submit-button enabled' : 'submit-button disabled'}
           >
             REGISTRAR TARJETA
           </button>
 
           {/* Debug info */}
-          <p className="debug-info">Form is {isValid ? "valid" : "invalid"}</p>
+          <p className="debug-info">Form is {isValid ? 'valid' : 'invalid'}</p>
         </section>
       </form>
     </div>
   );
 };
-
-/*
-USAGE INSTRUCTIONS:
-
-1. Replace icon names with your actual IconName values:
-   - "CreditCard" → your card icon name
-   - "Document" → your document icon name  
-   - "User" → your user icon name
-   - "Phone" → your phone icon name
-   - "Mail" → your mail icon name
-
-2. Import and use in your app:
-   import { TestRegistrationForm } from './components/forms/TestRegistrationForm';
-   
-   function App() {
-     return <TestRegistrationForm />;
-   }
-*/

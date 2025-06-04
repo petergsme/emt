@@ -31,20 +31,20 @@
     "mail": "Introduce un email válido"
   },
 
-  "documentSelect": {
+  "documentType": {
     "dni": "DNI",
     "nie": "NIE",
     "passport": "Pasaporte"
   },
 
-  "contactSelect": {
+  "contact": {
     "fault": "Quejas",
     "lost": "Objetos perdidos",
     "issues": "Incidencias en la línea",
     "other": "Otras consultas"
   },
 
-  "refillSelect": {
+  "refill": {
     "emtJove": "Renovación EMT Jove / 12,5€ (descuento + IVA)",
     "bonobus": {
       "option1": "10 viajes / 4,25€ (descuento + IVA)",

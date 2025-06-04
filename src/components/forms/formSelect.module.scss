@@ -43,8 +43,13 @@
     }
   }
 
-  & input {
+  & select {
     @include input-field();
+    appearance: none;
+
+    & options {
+      background-color: green;
+    }
   }
 }
 

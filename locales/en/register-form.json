@@ -31,20 +31,20 @@
     "mail": "Enter a valid email address"
   },
 
-  "documentSelect": {
+  "documenType": {
     "dni": "DNI",
     "nie": "NIE",
     "passport": "Passport"
   },
 
-  "contactSelect": {
+  "contact": {
     "fault": "Complaints",
     "lost": "Lost and found",
     "issues": "Service disruptions",
     "other": "Other inquiries"
   },
 
-  "refillSelect": {
+  "refill": {
     "emtJove": "EMT Jove Renewal / €12.5 (discount + VAT)",
     "bonobus": {
       "option1": "10 trips / €4.25 (discount + VAT)",

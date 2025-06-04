@@ -3,6 +3,7 @@
 @mixin input($border-color-var: --white-300) {
   display: flex;
   justify-content: space-between;
+  gap: var(--gap-20);
   border-radius: var(--border-radius-1000);
   background-color: var(--bg-secondary);
   padding: 0 var(--padding-20);
