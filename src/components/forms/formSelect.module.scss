@@ -51,6 +51,7 @@
   gap: var(--gap-20);
   align-items: center;
   min-width: 0;
+  // Flexbox lleva "min-width: auto" por defecto, impide que los bloques se contraigan. "Min-width: 0" hace que funcione el text-overflow, pero se lo tienes que poner a todos los contenedores (padre + hijo).
 }
 
 // FIELD (BUTTON + DROPDOWN WITH OPTIONS)

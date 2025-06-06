@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { Controller, Control, FieldErrors } from 'react-hook-form';
 import { useTranslation } from 'react-i18next';
 import { RegisterFormData } from './FormInput';
@@ -20,6 +20,32 @@ export const FormSelect = ({ type, control, errors, required = true, leadingIcon
   const { t } = useTranslation('register-form');
 
   const [isOpen, setIsOpen] = useState(false);
+  const dropdownNode = useRef<HTMLDivElement>(null);
+  // La clave esta en que el CURRENT del elemento que al que ponemos nuestra ref contiene una referencia real al DOM de ese elemento. Importa porque nosotros no tenemos acceso directo al arbol de react a traves del queryselector de js en el navegador.
+  // El tipado del useref sirve para decirle que elemento lo recibe.
+
+  useEffect(() => {
+    const handleClick = (event: MouseEvent) => {
+      if (!dropdownNode.current?.contains(event.target as Node)) {
+        setIsOpen(false);
+      }
+    };
+    // Montada fuera porque tenemos que limpiarla luego en cada rerender.
+    // Todos los eventos tienen un target que es lo que necesitabamos utilizar aqui, aquí nos dice quien recibe el click.
+    // Contains es simplemente una función que comprueba si un elemento contiene otro en el arbol html.
+    // Estamos comprobando si el elemento que recibe el click (event.target) esta dentro del elemento que lleva nuestra REF (que si el click se ha hecho en algo dentro del dropdown vamos.)
+    // El tipado del event es este y no "React.ChangeEvent<HTMLInputElement>" porque estabamos trabajando con un addEventListener nativo, si estuviera en un onClick de un componente usaríamos este.
+
+    // La explicación del "as Node" para que no se queje viene de este articulo de medium.
+    // https://medium.com/@turingvang/eventtarget-is-not-assignable-to-parameter-of-type-node-efe9b8cbf902
+
+    document.addEventListener('click', handleClick);
+
+    return () => {
+      document.removeEventListener('click', handleClick);
+    };
+    // Tenemos que ejecutar una función de limpieza del listener, o de lo contrario tendríamos problemas por donde lo hemos puesto.
+  }, []);
 
   const hasError = errors[type] ? true : false;
 
@@ -54,7 +80,8 @@ export const FormSelect = ({ type, control, errors, required = true, leadingIcon
         {t(`labels.${type}`)}
       </label>
 
-      <div className={hasError ? theme['select__container--error'] : theme.select__container}>
+      <div className={hasError ? theme['select__container--error'] : theme.select__container} ref={dropdownNode}>
+        {/* Ref tiene que ir aquí arriba en todo el contenedor para poder desplegar el dropdown, si estuviera abajo, hacer click aquí contaría como click fuera del dropdown asi que abriria y cerraria. */}
         <span className={theme.select__iconGroup}>
           <Icon icon={leadingIcon} size="small" color="onprimary" />
 
