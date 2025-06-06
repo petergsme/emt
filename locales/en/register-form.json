@@ -18,7 +18,10 @@
     "firstName": "John...",
     "lastName": "Smith...",
     "phone": "628 098 545...",
-    "mail": "john@gmail.com..."
+    "mail": "john@gmail.com...",
+    "contact": "I lost my glasses...",
+    "refill": "Select your top-up...",
+    "documentType": "Passport"
   },
   "errors": {
     "required": "This input is required",

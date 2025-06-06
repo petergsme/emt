@@ -18,7 +18,10 @@
     "firstName": "Joan...",
     "lastName": "Perales Olmos...",
     "phone": "628 098 545...",
-    "mail": "joan@gmail.com..."
+    "mail": "joan@gmail.com...",
+    "contact": "He perdut les meues ulleres...",
+    "refill": "Selecciona la teua recàrrega...",
+    "documentType": "Passaport"
   },
   "errors": {
     "required": "Este camp és obligatori",

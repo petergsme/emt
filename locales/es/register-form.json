@@ -18,7 +18,10 @@
     "firstName": "Juan...",
     "lastName": "Perales Olmos...",
     "phone": "628 098 545...",
-    "mail": "Juan@gmail.com..."
+    "mail": "Juan@gmail.com...",
+    "contact": "He perdido mis gafas...",
+    "refill": "Selecciona tu recarga...",
+    "documentType": "Pasaporte"
   },
   "errors": {
     "required": "Este campo es obligatorio",

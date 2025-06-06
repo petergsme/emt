@@ -8,6 +8,7 @@ export const TestRegistrationForm = () => {
   // useForm hook manages the entire form state
   const {
     register, // Function to register inputs with validation
+    control,
     handleSubmit, // Function to handle form submission
     formState: { errors, isValid }, // Form state including errors and validation status
     watch, // Function to watch field values (useful for debugging)
@@ -44,7 +45,7 @@ export const TestRegistrationForm = () => {
 
           <FormCheckbox type="privacy" register={register} errors={errors} watch={watch} required={false} />
 
-          <FormSelect leadingIcon="User" type="refill" register={register} errors={errors} required={true} />
+          <FormSelect leadingIcon="User" type="refill" control={control} errors={errors} required={true} />
         </section>
         {/* Submit Section */}
         <section className="submit-section">

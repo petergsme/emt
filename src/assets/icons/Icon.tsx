@@ -10,18 +10,22 @@ export interface IconProps {
   icon: IconName;
   size?: 'small' | 'medium' | 'large';
   color?: 'onprimary' | 'onprimary-secondary' | 'onbrand' | 'onbrand-secondary' | 'disabled';
+  extraClass?: string;
 }
 
 //Using classnames package as an example, even if here it doesn't change much, but at least classes look more organized and I don't need to write theme.whateverclass all the time.
 
-export const Icon = ({ icon, size = 'medium', color = 'onprimary' }: IconProps) => {
+export const Icon = ({ icon, size = 'medium', color = 'onprimary', extraClass }: IconProps) => {
   return (
     <span
-      className={cx({
-        icon: true,
-        [`icon__size--${size}`]: true,
-        [`icon__color--${color}`]: true,
-      })}
+      className={cx(
+        {
+          icon: true,
+          [`icon__size--${size}`]: true,
+          [`icon__color--${color}`]: true,
+        },
+        extraClass
+      )}
       aria-label={`${icon}-icon`}
       role="img"
     >
