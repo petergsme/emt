@@ -14,18 +14,17 @@
   margin-top: 20px;
 }
 
-.submit-button {
+.submit-button-test {
   width: 100%;
-  padding: 12px;
+  padding: 12px 24px;
+  border-radius: 1000px;
+  background-color: var(--bg-brand);
+  border: none;
+  color: var(--text-primary);
 
   &.enabled {
     background: #e63946;
     color: white;
-  }
-
-  &.disabled {
-    background: #ccc;
-    color: #666;
   }
 }
 

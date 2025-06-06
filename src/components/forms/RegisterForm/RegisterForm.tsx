@@ -48,11 +48,7 @@ export const RegisterForm = () => {
         </section>
 
         <section className="submit-section">
-          <button
-            type="submit"
-            disabled={!isValid}
-            className={isValid ? "submit-button enabled" : "submit-button disabled"}
-          >
+          <button type="submit" disabled={!isValid} className={`label-button ${theme["submit-button-test"]}`}>
             REGISTRAR TARJETA
           </button>
         </section>
