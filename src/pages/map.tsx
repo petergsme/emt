@@ -1,7 +1,7 @@
-import React from "react";
+// import React from "react";
 
-const Mapa = () => {
-  return <div>Mapa</div>;
-};
+// const Mapa = () => {
+//   return <div>Mapa</div>;
+// };
 
-export default Mapa;
+// export default Mapa;

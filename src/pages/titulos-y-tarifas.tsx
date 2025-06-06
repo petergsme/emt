@@ -1,7 +1,7 @@
-import React from "react";
+// import React from "react";
 
-const TitulosYTarifas = () => {
-  return <div>TitulosYTarifas</div>;
-};
+// const TitulosYTarifas = () => {
+//   return <div>TitulosYTarifas</div>;
+// };
 
-export default TitulosYTarifas;
+// export default TitulosYTarifas;
