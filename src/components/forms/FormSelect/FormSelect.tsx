@@ -1,10 +1,10 @@
-import { useEffect, useRef, useState } from 'react';
-import { Controller, Control, FieldErrors } from 'react-hook-form';
-import { useTranslation } from 'react-i18next';
-import { RegisterFormData } from './FormInput';
-import classNames from 'classnames/bind';
-import theme from './formSelect.module.scss';
-import { Icon, IconName } from '../../assets/icons/Icon';
+import { useEffect, useRef, useState } from "react";
+import { Controller, Control, FieldErrors } from "react-hook-form";
+import { useTranslation } from "react-i18next";
+import { RegisterFormData } from "../RegisterFormData";
+import classNames from "classnames/bind";
+import theme from "./formSelect.module.scss";
+import { Icon, IconName } from "../../../assets/icons/Icon";
 
 const cx = classNames.bind(theme);
 
@@ -17,7 +17,7 @@ interface FormSelectProps {
 }
 
 export const FormSelect = ({ type, control, errors, required = true, leadingIcon }: FormSelectProps) => {
-  const { t } = useTranslation('register-form');
+  const { t } = useTranslation("register-form");
 
   const [isOpen, setIsOpen] = useState(false);
   const dropdownNode = useRef<HTMLDivElement>(null);
@@ -39,10 +39,10 @@ export const FormSelect = ({ type, control, errors, required = true, leadingIcon
     // La explicación del "as Node" para que no se queje viene de este articulo de medium.
     // https://medium.com/@turingvang/eventtarget-is-not-assignable-to-parameter-of-type-node-efe9b8cbf902
 
-    document.addEventListener('click', handleClick);
+    document.addEventListener("click", handleClick);
 
     return () => {
-      document.removeEventListener('click', handleClick);
+      document.removeEventListener("click", handleClick);
     };
     // Tenemos que ejecutar una función de limpieza del listener, o de lo contrario tendríamos problemas por donde lo hemos puesto.
   }, []);
@@ -51,19 +51,19 @@ export const FormSelect = ({ type, control, errors, required = true, leadingIcon
 
   const options: string[] = [];
   switch (type) {
-    case 'contact':
+    case "contact":
       options.push(
-        t('contactSelect.fault'),
-        t('contactSelect.lost'),
-        t('contactSelect.issues'),
-        t('contactSelect.other')
+        t("contactSelect.fault"),
+        t("contactSelect.lost"),
+        t("contactSelect.issues"),
+        t("contactSelect.other")
       );
       break;
-    case 'documentType':
-      options.push(t('documentType.dni'), t('documentType.nie'), t('documentType.passport'));
+    case "documentType":
+      options.push(t("documentType.dni"), t("documentType.nie"), t("documentType.passport"));
       break;
-    case 'refill':
-      options.push(t('refill.bonobus.option1'), t('refill.bonobus.option2'), t('refill.bonobus.option3'));
+    case "refill":
+      options.push(t("refill.bonobus.option1"), t("refill.bonobus.option2"), t("refill.bonobus.option3"));
       break;
   }
 
@@ -71,16 +71,20 @@ export const FormSelect = ({ type, control, errors, required = true, leadingIcon
     <article className={theme.select__wrapper}>
       <label
         className={cx({
-          'paragraph-xsmall': true,
+          "paragraph-xsmall": true,
           select__label: true,
-          'select__label--error': hasError,
+          "select__label--error": hasError,
         })}
         htmlFor={type}
       >
         {t(`labels.${type}`)}
       </label>
 
-      <div className={hasError ? theme['select__container--error'] : theme.select__container} ref={dropdownNode}>
+      <div
+        className={hasError ? theme["select__container--error"] : theme.select__container}
+        ref={dropdownNode}
+        onClick={() => setIsOpen(!isOpen)}
+      >
         {/* Ref tiene que ir aquí arriba en todo el contenedor para poder desplegar el dropdown, si estuviera abajo, hacer click aquí contaría como click fuera del dropdown asi que abriria y cerraria. */}
         <span className={theme.select__iconGroup}>
           <Icon icon={leadingIcon} size="small" color="onprimary" />
@@ -88,7 +92,7 @@ export const FormSelect = ({ type, control, errors, required = true, leadingIcon
           <Controller
             control={control}
             name={type}
-            rules={{ required: required ? t('errors.required') : false }}
+            rules={{ required: required ? t("errors.required") : false }}
             render={({ field }) => (
               // Este div es el equivalente a la caja que contiene el select.
               <div className={theme.select__field}>
@@ -96,9 +100,9 @@ export const FormSelect = ({ type, control, errors, required = true, leadingIcon
                 <button
                   type="button"
                   className={cx({
-                    'paragraph-small': true,
+                    "paragraph-small": true,
                     select__trigger: true,
-                    'select__trigger--placeholder': !field.value,
+                    "select__trigger--placeholder": !field.value,
                   })}
                   onClick={() => setIsOpen(!isOpen)}
                 >
@@ -113,9 +117,9 @@ export const FormSelect = ({ type, control, errors, required = true, leadingIcon
                       <div
                         key={index}
                         className={cx({
-                          'paragraph-small': true,
+                          "paragraph-small": true,
                           select__option: true,
-                          'select__option--selected': field.value === value,
+                          "select__option--selected": field.value === value,
                         })}
                         onClick={() => {
                           field.onChange(value);
@@ -137,7 +141,7 @@ export const FormSelect = ({ type, control, errors, required = true, leadingIcon
             icon="ChevronDown"
             size="small"
             color="onprimary"
-            extraClass={isOpen ? theme['select__chevron--open'] : theme.select__chevron}
+            extraClass={isOpen ? theme["select__chevron--open"] : theme.select__chevron}
           />
         )}
       </div>

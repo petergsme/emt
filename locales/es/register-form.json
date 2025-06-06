@@ -21,7 +21,7 @@
     "mail": "Juan@gmail.com...",
     "contact": "He perdido mis gafas...",
     "refill": "Selecciona tu recarga...",
-    "documentType": "Pasaporte"
+    "documentType": "Pasaporte..."
   },
   "errors": {
     "required": "Este campo es obligatorio",

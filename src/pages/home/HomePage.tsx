@@ -1,9 +1,9 @@
-import { TestRegistrationForm } from '../../components/forms/TestRegistrationForm';
+import { RegisterForm } from "../../components/forms/RegisterForm/RegisterForm";
 
 export const HomePage: React.FC = () => {
   return (
     <>
-      <TestRegistrationForm />
+      <RegisterForm />
     </>
   );
 };

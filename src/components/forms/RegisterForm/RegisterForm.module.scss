@@ -28,3 +28,19 @@
     color: #666;
   }
 }
+
+.claim__container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: var(--gap-8);
+  padding: 0 20px;
+
+  & h2 {
+    color: var(--text-onbrandsecondary);
+  }
+
+  & h3 {
+    color: var(--text-brand);
+  }
+}

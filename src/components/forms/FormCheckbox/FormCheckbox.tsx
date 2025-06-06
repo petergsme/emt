@@ -1,6 +1,6 @@
 import { UseFormRegister, FieldErrors, UseFormWatch } from "react-hook-form";
-import { RegisterFormData } from "./FormInput";
-import { Icon } from "../../assets/icons/Icon";
+import { RegisterFormData } from "../RegisterFormData";
+import { Icon } from "@/assets/icons/Icon";
 import { useTranslation } from "react-i18next";
 import theme from "./formCheckbox.module.scss";
 

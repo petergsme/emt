@@ -21,7 +21,7 @@
     "mail": "john@gmail.com...",
     "contact": "I lost my glasses...",
     "refill": "Select your top-up...",
-    "documentType": "Passport"
+    "documentType": "Passport..."
   },
   "errors": {
     "required": "This input is required",
