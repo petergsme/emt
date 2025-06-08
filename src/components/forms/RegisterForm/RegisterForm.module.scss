@@ -50,9 +50,20 @@
   background-color: var(--bg-brand);
   border: none;
   color: var(--text-primary);
+  cursor: pointer;
 
   &.enabled {
     background: #e63946;
     color: white;
   }
+}
+
+.button-openModal {
+  @extend .wrapper--padding;
+  background-color: transparent;
+  border: none;
+  margin: 0;
+  max-width: fit-content;
+  align-self: flex-end;
+  cursor: pointer;
 }

@@ -30,8 +30,8 @@ dd {
 }
 
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
-ul[role="list"],
-ol[role="list"] {
+ul[role='list'],
+ol[role='list'] {
   list-style: none;
 }
 
@@ -49,7 +49,7 @@ h4,
 button,
 input,
 label {
-  line-height: 1.1;
+  line-height: 0;
 }
 
 /* Balance text wrapping on headings */
