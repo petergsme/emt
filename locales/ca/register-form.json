@@ -64,5 +64,9 @@
       "option2": "20 viatges / 6,80€ (amb IVA)",
       "option3": "30 viatges / 10,20€ (amb IVA)"
     }
-  }
+  },
+
+  "claim": "Registra ta targeta",
+  "subclaim": "ASSEGURA TES VIATGES",
+  "button": "REGISTRAR TARGETA"
 }

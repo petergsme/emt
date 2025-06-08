@@ -64,5 +64,9 @@
       "option2": "20 viajes / 6,80€ (con IVA)",
       "option3": "30 viajes / 10,20€ (con IVA)"
     }
-  }
+  },
+
+  "claim": "Registra tu tarjeta",
+  "subclaim": "ASEGURA TUS VIAJES",
+  "button": "REGISTRAR TARJETA"
 }

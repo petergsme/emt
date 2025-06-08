@@ -19,6 +19,8 @@
   color: var(--text-onbrandsecondary);
   min-width: 0;
 
+  transition: color 50000s step-end, background-color 50000s step-end;
+
   &:focus {
     outline: none;
   }

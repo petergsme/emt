@@ -64,5 +64,9 @@
       "option2": "20 trips / €6.80 (VAT included)",
       "option3": "30 trips / €10.20 (VAT included)"
     }
-  }
+  },
+
+  "claim": "Register your card",
+  "subclaim": "SECURE YOUR TRIPS",
+  "button": "REGISTER CARD"
 }

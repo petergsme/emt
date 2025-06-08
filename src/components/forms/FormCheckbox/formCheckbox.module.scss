@@ -9,6 +9,12 @@
   //Appearance none hides the classic checkbox look while giving it width and height keeps it clickable.
 }
 
+.checkbox__container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-12);
+}
+
 .checkbox__wrapper {
   display: flex;
   align-items: center;
