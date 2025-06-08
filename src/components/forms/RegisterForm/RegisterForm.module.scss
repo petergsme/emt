@@ -19,8 +19,9 @@
 // CLASES ESPECÍFICAS DE CONTENEDORES.
 .register__section {
   @include display-flex(var(--gap-40));
-  margin-top: var(--margin-40);
-  margin-bottom: var(--margin-80);
+  padding-top: var(--padding-40);
+  padding-bottom: var(--padding-80);
+  background-color: var(--bg-primary);
   max-width: 390px;
 }
 

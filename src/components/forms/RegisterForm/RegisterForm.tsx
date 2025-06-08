@@ -115,6 +115,8 @@ export const RegisterForm = ({ setIsOpenSection }: FormProps) => {
   );
 };
 
-//  deberas meterle css a este componente en si mismo o su wrapper en el componente padre, para convertirlo en un fixed que aparece encima o en un lateral o como sea.
+// SOBRE SCSS
+// TENEMOS QUE MIRAR FIGMA PERO POTENCIALMENTE METER TODO LO DE AQUI DENTRO DE OTRO CONTENEDOR, PONERLES ABSOLUTE Y A FUNCIONAR, METER EN EL BG LO DE ANTES. CUIDADO QUE EL MODAL SE POSICIONA RESPECTO AL BODY PORQUE NADA AQUI ES RELATIVE, PERO PODRIAMOS NECESITAR POSICIONARLO RESPECTO A NUESTRO BLOQUE PRINCIPAL. SI AL FINAL SALE DE UN LATERAL MIREMOS ANIMACIONES. PODRIA SALIR CENTRADO Y YA.
 
-// crear el custom hook mover toda la logica.
+// ¿Deberíamos necesitar otro useffect aqui para evitar el scroll detras?
+// Falta crear el custom hook tras finalizar el SCSS.
