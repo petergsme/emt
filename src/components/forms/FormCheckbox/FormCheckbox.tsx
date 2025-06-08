@@ -14,7 +14,7 @@ interface FormCheckboxProps {
 }
 
 export const FormCheckbox = ({ type, register, errors, watch, required = true }: FormCheckboxProps) => {
-  const { t } = useTranslation('register-form');
+  const { t } = useTranslation('form');
 
   const isChecked = watch(type);
 

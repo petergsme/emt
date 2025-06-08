@@ -66,7 +66,40 @@
     }
   },
 
-  "claim": "Registra ta targeta",
-  "subclaim": "ASSEGURA TES VIATGES",
-  "button": "REGISTRAR TARGETA"
+  "sectionText": {
+    "register": {
+      "claim": "Registra ta targeta",
+      "subclaim": "ASSEGURA TES VIATGES",
+      "button": "REGISTRAR TARGETA"
+    },
+
+    "purchase": {
+      "claim": "Que res t'ature",
+      "subclaim": "RECARREGA TES VIATGES",
+      "button": "COMPRAR RECÀRREGA"
+    }
+  },
+
+  "modal": {
+    "abandon": {
+      "claim": "Segur?",
+      "info": "Si abandones el procés, perdràs les dades que has introduït i hauràs de tornar a començar.",
+      "exit": "SÍ",
+      "continue": "NO"
+    },
+
+    "completed": {
+      "register": {
+        "claim": "Registre completat",
+        "info": "Enhorabona, ara els teus viatges estan ben guardats."
+      },
+
+      "purchase": {
+        "claim": "Compra completada",
+        "info": "Si ho vas triar, rebràs una còpia de la factura per correu electrònic."
+      },
+
+      "exit": "CONTINUAR"
+    }
+  }
 }

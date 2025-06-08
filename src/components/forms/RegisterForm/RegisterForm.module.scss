@@ -42,6 +42,16 @@
   @include display-flex(var(--gap-40));
 }
 
+.button-openModal {
+  @extend .wrapper--padding;
+  background-color: transparent;
+  border: none;
+  margin: 0;
+  max-width: fit-content;
+  align-self: flex-end;
+  cursor: pointer;
+}
+
 // MIENTRAS NO EXISTA EL BOTÓN REAL USO ESTOS ESTILOS PARA VERLO COMO SERÍA.
 .submit-button-test {
   width: 100%;
@@ -58,12 +68,15 @@
   }
 }
 
-.button-openModal {
-  @extend .wrapper--padding;
-  background-color: transparent;
-  border: none;
-  margin: 0;
-  max-width: fit-content;
-  align-self: flex-end;
-  cursor: pointer;
+// clases del modal
+
+.flex-utility {
+  @include display-flex();
+  flex-direction: row;
+
+  & .blanco {
+    background-color: transparent;
+    color: var(--text-brand);
+    border: var(--border-width-3) solid var(--border-onprimary-brand);
+  }
 }

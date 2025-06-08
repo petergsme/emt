@@ -66,7 +66,36 @@
     }
   },
 
-  "claim": "Registra tu tarjeta",
-  "subclaim": "ASEGURA TUS VIAJES",
-  "button": "REGISTRAR TARJETA"
+  "sectionText": {
+    "register": {
+      "claim": "Registra tu tarjeta",
+      "subclaim": "ASEGURA TUS VIAJES",
+      "button": "REGISTRAR TARJETA"
+    },
+
+    "purchase": { "claim": "Que nada te pare", "subclaim": "RECARGA TUS VIAJES", "button": "COMPRAR RECARGA" }
+  },
+
+  "modal": {
+    "abandon": {
+      "claim": "¿Seguro?",
+      "info": "Si abandonas el proceso perderás los datos que has introducido y tendrás que volver a empezar.",
+      "exit": "SÍ",
+      "continue": "NO"
+    },
+
+    "completed": {
+      "register": {
+        "claim": "Registro completado",
+        "info": "Enhorabuena, ahora tus viajes están a buen recaudo."
+      },
+
+      "purchase": {
+        "claim": "Compra completada",
+        "info": "Si lo elegiste, recibirás una copia de la factura en tu correo electrónico."
+      },
+
+      "exit": "CONTINUAR"
+    }
+  }
 }

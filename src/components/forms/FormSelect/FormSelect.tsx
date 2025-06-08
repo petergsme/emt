@@ -17,7 +17,7 @@ interface FormSelectProps {
 }
 
 export const FormSelect = ({ type, control, errors, required = true, leadingIcon }: FormSelectProps) => {
-  const { t } = useTranslation('register-form');
+  const { t } = useTranslation('form');
 
   const [isOpen, setIsOpen] = useState(false);
   const dropdownNode = useRef<HTMLDivElement>(null);

@@ -66,7 +66,40 @@
     }
   },
 
-  "claim": "Register your card",
-  "subclaim": "SECURE YOUR TRIPS",
-  "button": "REGISTER CARD"
+  "sectionText": {
+    "register": {
+      "claim": "Register your card",
+      "subclaim": "SECURE YOUR TRIPS",
+      "button": "REGISTER CARD"
+    },
+
+    "purchase": {
+      "claim": "Fuel your next ride",
+      "subclaim": "TOP UP YOUR CARD",
+      "button": "ADD TRAVEL CREDIT"
+    }
+  },
+
+  "modal": {
+    "abandon": {
+      "claim": "Are you sure?",
+      "info": "If you abandon the process, the data you entered will be lost and you'll have to start over.",
+      "exit": "YES",
+      "continue": "NO"
+    },
+
+    "completed": {
+      "register": {
+        "claim": "Registration completed",
+        "info": "Congratulations, your card has been registered successfully."
+      },
+
+      "purchase": {
+        "claim": "Purchase completed",
+        "info": "If selected, you'll receive a copy of the invoice via email."
+      },
+
+      "exit": "CONTINUE"
+    }
+  }
 }

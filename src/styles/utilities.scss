@@ -155,3 +155,13 @@
     var(--red-300-main) 100%
   );
 }
+
+// TEXT UTILITIES
+
+.center-text {
+  text-align: center;
+}
+
+.text__color--brand {
+  color: var(--text-brand);
+}

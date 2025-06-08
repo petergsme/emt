@@ -1,11 +1,11 @@
-import { UseFormRegister, FieldErrors } from "react-hook-form";
+import { UseFormRegister, FieldErrors } from 'react-hook-form';
 //We import these typings because useForm HAS to be used in the form itself, so here we need to have parameters for those functions we were importing (register & errors). We type them so that we can use them exactly like we were when we imported them directly. In essence those two parameters are generic functions typed to specifically work like the ones you would import from the package.
-import { useTranslation } from "react-i18next";
-import { patterns } from "../validation";
-import { RegisterFormData } from "../RegisterFormData";
-import classNames from "classnames/bind";
-import theme from "./formInput.module.scss";
-import { Icon, IconName } from "@/assets/icons/Icon";
+import { useTranslation } from 'react-i18next';
+import { patterns } from '../validation';
+import { RegisterFormData } from '../RegisterFormData';
+import classNames from 'classnames/bind';
+import theme from './formInput.module.scss';
+import { Icon, IconName } from '@/assets/icons/Icon';
 
 const cx = classNames.bind(theme);
 
@@ -19,7 +19,7 @@ interface FormInputProps {
 }
 
 export const FormInput = ({ type, register, errors, required = true, leadingIcon }: FormInputProps) => {
-  const { t } = useTranslation("register-form");
+  const { t } = useTranslation('form');
   //Selecting the namespace that has the labels, the error messages and placeholders. This is the reason why we don't need no parameters for those, just through the type parameter we can use them.
   const hasError = errors[type] ? true : false;
 
@@ -27,24 +27,24 @@ export const FormInput = ({ type, register, errors, required = true, leadingIcon
     <article className={theme.input__wrapper}>
       <label
         className={cx({
-          "paragraph-xsmall": true,
+          'paragraph-xsmall': true,
           input__label: true,
-          "input__label--error": hasError,
+          'input__label--error': hasError,
         })}
         htmlFor={type}
       >
         {t(`labels.${type}`)}
       </label>
-      <div className={hasError ? theme["input__container--error"] : theme.input__container}>
+      <div className={hasError ? theme['input__container--error'] : theme.input__container}>
         <span className={theme.input__iconGroup}>
           <Icon icon={leadingIcon} size="small" color="onprimary" />
 
           <input
-            className={`paragraph-small ${theme["input--padding"]}`}
+            className={`paragraph-small ${theme['input--padding']}`}
             placeholder={t(`placeholders.${type}`)}
             id={type}
             {...register(type, {
-              required: required ? t("errors.required") : false,
+              required: required ? t('errors.required') : false,
               pattern: patterns[type] ? { value: patterns[type], message: t(`errors.${type}`) } : undefined,
               //We made the patterns for the booleans undefined, now with this terciario only when patterns for the type exist will it have them.
             })}
