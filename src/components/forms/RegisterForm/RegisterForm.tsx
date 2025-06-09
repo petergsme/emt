@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useForm } from 'react-hook-form';
 import { RegisterFormData } from '../RegisterFormData';
 import { FormInput } from '../FormInput/FormInput';
@@ -18,6 +18,15 @@ export const RegisterForm = ({ setIsOpenSection }: FormProps) => {
   const [isOpenExit, setIsOpenExit] = useState(false);
   const [isOpenSuccess, setIsOpenSuccess] = useState(false);
 
+  useEffect(() => {
+    document.body.style.overflow = 'hidden';
+
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, []);
+  // Muy sencillo, al montarse el body deja de poderse scrollear, al desmontarse vuelve a poderse.
+
   const { t } = useTranslation('form');
 
   const {
@@ -33,7 +42,7 @@ export const RegisterForm = ({ setIsOpenSection }: FormProps) => {
   };
 
   return (
-    <>
+    <div className={theme.section__wrapper}>
       <section className={theme.register__section}>
         <button type="button" onClick={() => setIsOpenExit(true)} className={theme['button-openModal']}>
           <Icon icon="Close" size="large" color="onprimary-secondary" />
@@ -48,7 +57,7 @@ export const RegisterForm = ({ setIsOpenSection }: FormProps) => {
           <div className={theme['wrapper--paddingFlex']}>
             <FormInput type="cardNumber" leadingIcon="Card" register={register} errors={errors} required={true} />
 
-            <FormSelect leadingIcon="User" type="documentType" control={control} errors={errors} required={true} />
+            <FormSelect type="refill" leadingIcon="User" control={control} errors={errors} required={true} />
 
             <FormInput type="documentNumber" leadingIcon="Id" register={register} errors={errors} required={true} />
 
@@ -111,12 +120,13 @@ export const RegisterForm = ({ setIsOpenSection }: FormProps) => {
           </button>
         </FormModal>
       )}
-    </>
+    </div>
   );
 };
 
-// SOBRE SCSS
-// TENEMOS QUE MIRAR FIGMA PERO POTENCIALMENTE METER TODO LO DE AQUI DENTRO DE OTRO CONTENEDOR, PONERLES ABSOLUTE Y A FUNCIONAR, METER EN EL BG LO DE ANTES. CUIDADO QUE EL MODAL SE POSICIONA RESPECTO AL BODY PORQUE NADA AQUI ES RELATIVE, PERO PODRIAMOS NECESITAR POSICIONARLO RESPECTO A NUESTRO BLOQUE PRINCIPAL. SI AL FINAL SALE DE UN LATERAL MIREMOS ANIMACIONES. PODRIA SALIR CENTRADO Y YA.
-
-// ¿Deberíamos necesitar otro useffect aqui para evitar el scroll detras?
 // Falta crear el custom hook tras finalizar el SCSS.
+
+// COMO TAL FALTA SOLO HACER RESPONSIVE TRAS ESTO CON MEDIA QUERIES, LE VAMOS A PREGUNTAR MEJOR PRACTICA PARA HACER RESPONSIVE ESAS COSAS A LA IA.
+// Problema, tienen que tener un max-width.
+// tienen que ser adaptables a resoluciones mas grandes.
+// La cruz podría ser posicion absolute hasta el final donde se pone normal.

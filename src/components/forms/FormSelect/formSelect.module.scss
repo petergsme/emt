@@ -72,7 +72,7 @@
   //Tecnicamente "white-space: nowrap" es mas antiguo pero mas compatible.
   overflow: hidden;
   text-overflow: ellipsis;
-  max-width: -webkit-fill-available;
+  max-width: 100%;
   // La clave para que salieran los malditos puntos suspensivos.
 
   &--placeholder {

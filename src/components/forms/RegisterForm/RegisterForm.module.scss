@@ -17,11 +17,29 @@
 }
 
 // CLASES ESPECÍFICAS DE CONTENEDORES.
+
+.section__wrapper {
+  background-color: var(--bg-primary);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+
+  position: fixed;
+  overflow-y: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  animation: fadeIn 0.5s;
+  animation-timing-function: cubic-bezier(0.82, 0, 0.28, 0.99);
+}
+
 .register__section {
   @include display-flex(var(--gap-40));
   padding-top: var(--padding-40);
   padding-bottom: var(--padding-80);
-  background-color: var(--bg-primary);
+  width: 100%;
   max-width: 390px;
 }
 
@@ -79,5 +97,16 @@
     background-color: transparent;
     color: var(--text-brand);
     border: var(--border-width-3) solid var(--border-onprimary-brand);
+  }
+}
+
+// ANIMACIONES
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
