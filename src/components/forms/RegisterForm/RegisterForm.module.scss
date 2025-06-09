@@ -1,3 +1,4 @@
+@use '../../../styles/mixins' as *;
 // REGISTER FORM STYLES (MAY BE REUSED LATER DOWN THE LINE)
 
 // UTILIDADES
@@ -14,6 +15,21 @@
 .wrapper--paddingFlex {
   @extend .wrapper--padding;
   @include display-flex();
+
+  &--form {
+    @extend .wrapper--padding;
+    @include display-flex();
+
+    & > * {
+      flex: 1;
+      // Flex basis es muy importante, recuerda que flex es shorthand de grow, shrink y basis con la particularidad de que basis empieza en 0 aqui, pero en grow flex basis es auto. Aqui empieza de 0 crece hasta donde el otro pero en el otro caso empieza desde su tamaño y crece hasta donde puede.
+    }
+
+    @include tablet-up {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+  }
 }
 
 // CLASES ESPECÍFICAS DE CONTENEDORES.
@@ -40,7 +56,7 @@
   padding-top: var(--padding-40);
   padding-bottom: var(--padding-80);
   width: 100%;
-  max-width: 390px;
+  align-items: center;
 }
 
 .claim__container {
@@ -59,6 +75,8 @@
 
 .form__container {
   @include display-flex(var(--gap-40));
+  width: 100%;
+  max-width: 800px;
 }
 
 .button-openModal {

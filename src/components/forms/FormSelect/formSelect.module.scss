@@ -37,13 +37,13 @@
 
   &:focus-within {
     border: var(--border-width-2) solid var(--border-onprimary-secondary);
-    background-color: var(--bg-brand-light-primary);
+    // background-color: var(--bg-brand-light-primary);
   }
-}
 
-.select__container--error {
-  @extend .select__container;
-  border-color: var(--border-onprimary-brand);
+  &--error {
+    @extend .select__container;
+    border-color: var(--border-onprimary-brand);
+  }
 }
 
 // ICON GROUP (LEADING ICON + SELECT ITSELF)

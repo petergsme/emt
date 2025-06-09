@@ -149,3 +149,33 @@ export const FormSelect = ({ type, control, errors, required = true, leadingIcon
     </article>
   );
 };
+
+// Cuanto en detalle quieres que hable del componente. "Voy a ir bloque por bloque explicandolo si quereis que vaya mas rapido o mas en detalle decidme sin problema".
+// No entres demasiado en detalle, se practico y sencillo.
+// Saltate todo aquello que no valga la pena explicar.
+// Explica las cosas de manera muchísimo más natural como hace Josmi, conviertiendo un "IF..." en un "Si..." vuelvelo algo natural.
+// Cuanto más expliques más te pueden pillar. Si hay un silencio incomodo, aguanta, no sigas hablando, o sal con una pregunta.
+// Github ponle fotos en el readme de tu pagina para que se vea.
+// Currate aprender sobre la empresa, para una entrevista, diles lo que quieren oir.
+
+// Ve a charlas de TECH, busca las empresas en linkedIN y echa curriculum.
+// En redes conecta con peña así.
+
+// Se mas coherente con el uso de classnames, usalo para todo si lo usas.
+// Crea componentes mas genericos donde pases objetos y arrays y las traducciones esten en ellos. No pases tipos tan especificos ligados a textos traducidos, eso crea componentes muy restringidos. Quieres escalabilidad, no restricción.
+
+// Cuidado si usas BEM, se asume que esas modificaciones son hijas de una clase padre osea que no puedes hacer esto:
+
+// .section {}
+// .section--error {}
+
+// Tendrías que hacer:
+
+// .section {
+//
+//    &--error {}
+// }
+
+// Cambia el formulario para que la validacion sea tras quitar el focus.
+// Anota bien lo de las traducciones.
+// Componentes mas genericos.

@@ -40,7 +40,7 @@
 
   &:focus-within {
     border: var(--border-width-2) solid var(--border-onprimary-secondary);
-    background-color: var(--bg-brand-light-primary);
+    // background-color: var(--bg-brand-light-primary);
 
     & span:last-of-type {
       color: var(--icon-onprimary-secondary);

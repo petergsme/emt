@@ -18,6 +18,21 @@ export const RegisterForm = ({ setIsOpenSection }: FormProps) => {
   const [isOpenExit, setIsOpenExit] = useState(false);
   const [isOpenSuccess, setIsOpenSuccess] = useState(false);
 
+  const { t } = useTranslation('form');
+
+  const {
+    register,
+    control,
+    handleSubmit,
+    formState: { errors },
+    watch,
+  } = useForm<RegisterFormData>({ mode: 'onBlur' });
+
+  const registerCard = (data: RegisterFormData) => {
+    console.log('Los datos del formulario son:', data);
+    setIsOpenSuccess(true);
+  };
+
   useEffect(() => {
     document.body.style.overflow = 'hidden';
 
@@ -26,20 +41,7 @@ export const RegisterForm = ({ setIsOpenSection }: FormProps) => {
     };
   }, []);
   // Muy sencillo, al montarse el body deja de poderse scrollear, al desmontarse vuelve a poderse.
-
-  const { t } = useTranslation('form');
-
-  const {
-    register,
-    control,
-    handleSubmit,
-    formState: { errors, isValid },
-    watch,
-  } = useForm<RegisterFormData>();
-
-  const registerCard = (data: RegisterFormData) => {
-    console.log('Los datos del formulario son:', data);
-  };
+  // Puesto abajo del todo porque arriba van todos los hooks/custom hooks que importamos y eso debe ir seguido.
 
   return (
     <div className={theme.section__wrapper}>
@@ -54,7 +56,7 @@ export const RegisterForm = ({ setIsOpenSection }: FormProps) => {
         </header>
 
         <form className={theme.form__container} onSubmit={handleSubmit(registerCard)} noValidate>
-          <div className={theme['wrapper--paddingFlex']}>
+          <div className={theme['wrapper--paddingFlex--form']}>
             <FormInput type="cardNumber" leadingIcon="Card" register={register} errors={errors} required={true} />
 
             <FormSelect type="refill" leadingIcon="User" control={control} errors={errors} required={true} />
@@ -80,13 +82,7 @@ export const RegisterForm = ({ setIsOpenSection }: FormProps) => {
           </section>
 
           <div className={theme['wrapper--padding']}>
-            <button
-              type="submit"
-              className={`label-button ${theme['submit-button-test']}`}
-              onClick={() => {
-                if (isValid) setIsOpenSuccess(true);
-              }}
-            >
+            <button type="submit" className={`label-button ${theme['submit-button-test']}`}>
               {t('sectionText.register.button')}
             </button>
           </div>
@@ -124,9 +120,4 @@ export const RegisterForm = ({ setIsOpenSection }: FormProps) => {
   );
 };
 
-// Falta crear el custom hook tras finalizar el SCSS.
-
-// COMO TAL FALTA SOLO HACER RESPONSIVE TRAS ESTO CON MEDIA QUERIES, LE VAMOS A PREGUNTAR MEJOR PRACTICA PARA HACER RESPONSIVE ESAS COSAS A LA IA.
-// Problema, tienen que tener un max-width.
-// tienen que ser adaptables a resoluciones mas grandes.
-// La cruz podría ser posicion absolute hasta el final donde se pone normal.
+// Falta crear el custom hook tras finalizar el SCSS. Realmente es necesario?
