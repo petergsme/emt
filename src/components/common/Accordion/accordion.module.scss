@@ -1,0 +1,52 @@
+// ACCORDION CLASSES
+
+.accordion {
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-12);
+    padding: var(--padding-20);
+    border-top: var(--border-width-1) solid;
+    // border-bottom: var(--border-width-1) solid;
+    cursor: pointer;
+
+    &--large {
+      gap: var(--gap-20);
+    }
+
+    &--onprimary {
+      color: var(--text-onprimary);
+      border-color: var(--border-onprimary-secondary);
+    }
+
+    &--onbrand {
+      color: var(--text-onbrand);
+      border-color: var(--border-onbrand);
+    }
+  }
+
+  &__button {
+    color: inherit;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    pointer-events: none;
+  }
+
+  &__chevron {
+    transition: all 0.3s ease;
+
+    &--rotated {
+      transform: rotate(180deg);
+    }
+  }
+  // Claro, para que funcione tiene que tener ambas clases, si no, no puede hacer la transicion.
+}
+
+// Necesitas clases más descriptivas de las cosas. Componentes, de nuevo, más genericos para cosas como el modal.
+// El modal es un componente, una estructura que reutilizamos a través de la web. El contenido es otra cosa. Ten eso en cuenta...

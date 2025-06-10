@@ -165,3 +165,10 @@
 .text__color--brand {
   color: var(--text-brand);
 }
+
+// UTILIDADES DE ACORDEONES
+.accordion__lastChild--border-bottom {
+  & div:last-child {
+    border-bottom: var(--border-width-1) solid;
+  }
+}

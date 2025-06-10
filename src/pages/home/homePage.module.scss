@@ -6,3 +6,10 @@
   background-color: red;
   height: 3000px;
 }
+
+.prueba_bordes {
+  & .accordion__wrapper:last-of-type {
+    border-bottom: var(--border-width-1) solid;
+  }
+}
+// Esto se va a convertir en una clase de utilidad para los bordes de los formularios.

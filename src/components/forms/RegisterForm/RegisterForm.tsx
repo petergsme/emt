@@ -5,6 +5,7 @@ import { FormInput } from '../FormInput/FormInput';
 import { FormCheckbox } from '../FormCheckbox/FormCheckbox';
 import { FormSelect } from '../FormSelect/FormSelect';
 import { FormModal } from '../FormModal/FormModal';
+import { Accordion } from '@/components/common/Accordion/Accordion';
 import { Icon } from '@/assets/icons/Icon';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
@@ -72,7 +73,21 @@ export const RegisterForm = ({ setIsOpenSection }: FormProps) => {
             <FormInput type="mail" leadingIcon="Mail" register={register} errors={errors} required={false} />
           </div>
 
-          {/* Aquí tendráimos el acordeón que no está aquí aún. */}
+          <div className="accordion__lastChild--border-bottom">
+            <Accordion text="Notifica la perdida" textClassName="questions-small" iconSize="small" variant="onprimary">
+              <p className="paragraph-small">
+                En caso de pérdida o robo, puedes notificarlo de tres formas distintas:
+                <br /> a través de esta página, llamando a nuestro teléfono de Atención al cliente o personándote en
+                nuestras oficinas.
+              </p>
+            </Accordion>
+            <Accordion text="Revisa tus datos" textClassName="questions-small" iconSize="small" variant="onprimary">
+              <p className="paragraph-small">
+                Antes de pulsar 'Registrar tarjeta' comprueba que los datos son correctos. Una vez enviado, cualquier
+                modificación deberá realizarse a través del teléfono.
+              </p>
+            </Accordion>
+          </div>
 
           <section className={theme['wrapper--paddingFlex']}>
             <FormCheckbox type="privacy" register={register} errors={errors} watch={watch} required={true} />
