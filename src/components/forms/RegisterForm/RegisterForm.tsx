@@ -11,7 +11,7 @@ import { useTranslation } from 'react-i18next';
 import theme from './RegisterForm.module.scss';
 
 interface FormProps {
-  setIsOpenSection: (state: boolean) => void;
+  setIsOpenSection: (value: boolean) => void;
 }
 
 export const RegisterForm = ({ setIsOpenSection }: FormProps) => {
@@ -59,7 +59,7 @@ export const RegisterForm = ({ setIsOpenSection }: FormProps) => {
           <div className={theme['wrapper--paddingFlex--form']}>
             <FormInput type="cardNumber" leadingIcon="Card" register={register} errors={errors} required={true} />
 
-            <FormSelect type="refill" leadingIcon="User" control={control} errors={errors} required={true} />
+            <FormSelect type="documentType" leadingIcon="User" control={control} errors={errors} required={true} />
 
             <FormInput type="documentNumber" leadingIcon="Id" register={register} errors={errors} required={true} />
 

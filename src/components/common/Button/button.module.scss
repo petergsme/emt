@@ -1,0 +1,78 @@
+// CLASES DEL BOTÓN CLÁSICO.
+
+.btn {
+  width: fit-content;
+  padding: var(--padding-12) var(--padding-24);
+  border-radius: var(--border-radius-1000);
+  cursor: pointer;
+  transition: all 0.2s ease;
+
+  & span {
+    vertical-align: sub;
+  }
+
+  &--filled {
+    border: none;
+
+    &.btn--onbrand {
+      background-color: var(--bg-primary);
+      color: var(--text-onprimary);
+    }
+
+    &.btn--onbrand-secondary {
+      background-color: var(--bg-brand-secondary);
+      color: var(--text-onbrand);
+    }
+
+    &.btn--onprimary {
+      background-color: var(--bg-brand);
+      color: var(--text-onbrand);
+    }
+
+    &.btn--onprimary-secondary {
+      background-color: var(--bg-brand-tertiary);
+      color: var(--text-onbrand);
+    }
+  }
+
+  &--outlined {
+    background-color: transparent;
+    border: var(--border-width-3) solid;
+
+    &.btn--onbrand {
+      border-color: var(--border-onbrand);
+      color: var(--text-onbrand);
+    }
+
+    &.btn--onbrand-secondary {
+      border-color: var(--border-onprimary-brand);
+      color: var(--text-brand);
+    }
+
+    &.btn--onprimary {
+      border-color: var(--border-onprimary-secondary);
+      color: var(--text-onprimary);
+    }
+
+    &.btn--onprimary-secondary {
+      border-color: var(--border-onprimary-brand);
+      color: var(--text-brand);
+    }
+  }
+
+  &--full-width {
+    width: 100%;
+  }
+
+  // SECCIÓN DE ESTADOS
+  &:disabled {
+    background-color: var(--bg-disabled);
+    color: var(--text-disabled);
+    cursor: not-allowed;
+  }
+
+  &:hover:not(:disabled) {
+    opacity: 0.9;
+    transform: translateY(-1px);
+  }
+}
