@@ -1,0 +1,40 @@
+// ACCORDION CLASSES
+
+.accordion {
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-12);
+    padding: var(--padding-20);
+    border-top: var(--border-width-1) solid;
+    border-bottom: var(--border-width-1) solid;
+
+    &--large {
+      gap: var(--gap-20);
+    }
+
+    &--onprimary {
+      color: var(--text-onprimary);
+      border-color: var(--border-onprimary-brand);
+    }
+
+    &--onbrand {
+      color: var(--text-onbrand);
+      border-color: var(--border-onbrand);
+    }
+  }
+
+  &__button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__chevron {
+    transition: all 0.3s ease;
+
+    &--open {
+      transform: rotate(180deg);
+    }
+  }
+}
