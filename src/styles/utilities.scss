@@ -166,6 +166,9 @@
   color: var(--text-brand);
 }
 
-// UTILIDADES DE ANIMACIÓN
-
 // UTILIDADES DE ACORDEONES
+.accordion__lastChild--border-bottom {
+  & div:last-child {
+    border-bottom: var(--border-width-1) solid;
+  }
+}

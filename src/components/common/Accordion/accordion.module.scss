@@ -16,7 +16,7 @@
 
     &--onprimary {
       color: var(--text-onprimary);
-      border-color: var(--border-onprimary-brand);
+      border-color: var(--border-onprimary-secondary);
     }
 
     &--onbrand {
@@ -47,3 +47,6 @@
   }
   // Claro, para que funcione tiene que tener ambas clases, si no, no puede hacer la transicion.
 }
+
+// Necesitas clases más descriptivas de las cosas. Componentes, de nuevo, más genericos para cosas como el modal.
+// El modal es un componente, una estructura que reutilizamos a través de la web. El contenido es otra cosa. Ten eso en cuenta...

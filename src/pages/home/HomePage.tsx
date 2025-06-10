@@ -1,9 +1,9 @@
-import { useState } from "react";
-import { Button } from "@/components/common/Button/Button";
-import { Icon } from "@/assets/icons/Icon";
-import theme from "./homePage.module.scss";
-import { RegisterForm } from "../../components/forms/RegisterForm/RegisterForm";
-import { Accordion } from "@/components/common/Accordion/Accordion";
+import { useState } from 'react';
+import { Button } from '@/components/common/Button/Button';
+import { Icon } from '@/assets/icons/Icon';
+import theme from './homePage.module.scss';
+import { RegisterForm } from '../../components/forms/RegisterForm/RegisterForm';
+import { Accordion } from '@/components/common/Accordion/Accordion';
 
 export const HomePage: React.FC = () => {
   const [isOpenModal, setIsOpenModal] = useState(false);
@@ -25,7 +25,7 @@ export const HomePage: React.FC = () => {
           text="cuantos hacen falta para una bombilla"
           textClassName="questions-small"
           iconSize="small"
-          variant="onbrand"
+          variant="onprimary"
         >
           <div className={theme.div_animado}>
             <h2 className="paragraph-small">hambre fiambre</h2>
