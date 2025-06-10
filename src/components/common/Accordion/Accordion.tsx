@@ -43,3 +43,5 @@ export const Accordion = ({
     </>
   );
 };
+
+// Soluciona lo de los bordes con css, lo de que se solapen. soluciona la animacion de salida que mole. soluciona lo del color de fondo.

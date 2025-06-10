@@ -25,9 +25,14 @@
   }
 
   &__button {
+    color: inherit;
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    background-color: transparent;
+    border: none;
+    padding: 0;
   }
 
   &__chevron {
@@ -35,6 +40,7 @@
 
     &--open {
       transform: rotate(180deg);
+      transition: all 0.3s ease;
     }
   }
 }
