@@ -1,4 +1,4 @@
-import emtIcon from '../../../assets/icons/assets/emt-icon.png'
+import emtIcon from '../../../assets/emt-icon.png'
 import './Navbar.scss'
 import { Button } from '@/components/common/Button/Button'
 
