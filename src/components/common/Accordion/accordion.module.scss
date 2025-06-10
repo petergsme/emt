@@ -7,7 +7,8 @@
     gap: var(--gap-12);
     padding: var(--padding-20);
     border-top: var(--border-width-1) solid;
-    border-bottom: var(--border-width-1) solid;
+    // border-bottom: var(--border-width-1) solid;
+    cursor: pointer;
 
     &--large {
       gap: var(--gap-20);
@@ -29,18 +30,20 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    text-align: left;
 
     background-color: transparent;
     border: none;
     padding: 0;
+    pointer-events: none;
   }
 
   &__chevron {
     transition: all 0.3s ease;
 
-    &--open {
+    &--rotated {
       transform: rotate(180deg);
-      transition: all 0.3s ease;
     }
   }
+  // Claro, para que funcione tiene que tener ambas clases, si no, no puede hacer la transicion.
 }

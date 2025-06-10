@@ -1,4 +1,4 @@
-@use '../../../styles/mixins' as *;
+@use "../../../styles/mixins" as *;
 // REGISTER FORM STYLES (MAY BE REUSED LATER DOWN THE LINE)
 
 // UTILIDADES
@@ -46,6 +46,7 @@
   left: 0;
   right: 0;
   bottom: 0;
+  z-index: 1;
 
   animation: fadeIn 0.5s;
   animation-timing-function: cubic-bezier(0.82, 0, 0.28, 0.99);

@@ -6,3 +6,27 @@
   background-color: red;
   height: 3000px;
 }
+
+.prueba_bordes {
+  & div:last-of-type {
+    border-bottom: var(--border-width-1) solid;
+  }
+}
+// Esto se va a convertir en una clase de utilidad para los bordes de los formularios.
+.div_animado {
+  animation: dropdownSlide 0.2s ease-out;
+}
+
+@keyframes dropdownSlide {
+  from {
+    opacity: 0;
+    transform: translateY(-8px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+// Necesitas clases más descriptivas de las cosas. Componentes, de nuevo, más genericos para cosas como el modal.
+// El modal es un componente, una estructura que reutilizamos a través de la web. El contenido es otra cosa. Ten eso en cuenta...
