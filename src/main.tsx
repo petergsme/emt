@@ -5,7 +5,8 @@ import './i18n';
 import './styles/index.scss';
 
 import { App } from './App.tsx';
-import { HomePage } from './pages/home/HomePage.tsx';
+import { HomePage } from './pages/home/HomePage.tsx'
+import { ComponentPlayground } from './pages/dev/ComponentPlayground/ComponentPlayground.tsx';
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
@@ -13,6 +14,7 @@ createRoot(document.getElementById('root')!).render(
       <Routes>
         <Route path="/" element={<App />}>
           <Route index element={<HomePage />} />
+          <Route path="dev" element={<ComponentPlayground />} />
         </Route>
       </Routes>
     </BrowserRouter>
