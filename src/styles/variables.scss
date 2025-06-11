@@ -45,6 +45,8 @@
   --font-size-20: 20px;
   --font-size-28: 28px;
   --font-size-48: 48px;
+  --font-size-80: 80px;
+  --font-size-96: 96px;
 
   //Font weights
   --font-weight-regular: 400;
@@ -58,6 +60,8 @@
   --line-height-32: 32px;
   --line-height-44: 44px;
   --line-height-72: 72px;
+  --line-height-108: 108px;
+  --line-height-132: 132px;
 
   //Letter spacing
   --tracking-tight: -1%;
@@ -86,6 +90,7 @@
   --space-40: 40px;
   --space-60: 60px;
   --space-80: 80px;
+  --space-120: 120px;
 
   //Base size values
   --size-1: 1px;
@@ -147,6 +152,7 @@
   --padding-40: var(--space-40);
   --padding-60: var(--space-60);
   --padding-80: var(--space-80);
+  --padding-120: var(--space-120);
   --padding-top-28: var(--space-28);
   --padding-bottom-40: var(--space-40);
 

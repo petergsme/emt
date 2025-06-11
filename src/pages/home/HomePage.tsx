@@ -1,97 +1,33 @@
 import { useState } from 'react';
 import { Button } from '@/components/common/Button/Button';
-import { Icon } from '@/assets/icons/Icon';
+import { SingleBlock } from '@/components/layout/SingleBlock/SingleBlock';
 import theme from './homePage.module.scss';
 import { RegisterForm } from '../../components/forms/RegisterForm/RegisterForm';
-import { Accordion } from '@/components/common/Accordion/Accordion';
+// import { useTranslation } from 'react-i18next';
+import { Register } from '@/components/common/Register/Register';
 
 export const HomePage: React.FC = () => {
   const [isOpenModal, setIsOpenModal] = useState(false);
 
+  // const { t } = useTranslation('form');
+
   return (
     <section className={theme.black}>
-      <button onClick={() => setIsOpenModal(true)}>Abre la sección.</button>
-      {isOpenModal && <RegisterForm setIsOpenSection={setIsOpenModal} />}
       <div className={theme.rojo}>
         <Button type="button" style="filled" color="onbrand" onClick={() => setIsOpenModal(true)}>
           abre el modal
         </Button>
-        <Button type="button" style="filled" color="onbrand-secondary" onClick={() => setIsOpenModal(true)}>
-          <Icon icon="AsteriskLine" size="small" color="onprimary" />
-        </Button>
+        {isOpenModal && <RegisterForm setIsOpenSection={setIsOpenModal} />}
       </div>
-      <div className={theme.prueba_bordes}>
-        <Accordion
-          text="cuantos hacen falta para una bombilla"
-          textClassName="questions-small"
-          iconSize="small"
-          variant="onprimary"
-        >
-          <div className={theme.div_animado}>
-            <h2 className="paragraph-small">hambre fiambre</h2>
-            <p className="paragraph-small">
-              pepito grillo que comio el pepito.pepito grillo que comio el pepito.pepito grillo que comio el
-              pepito.pepito grillo que comio el pepito.pepito grillo que comio el pepito.pepito grillo que comio el
-              pepito.pepito grillo que comio el pepito.pepito grillo que comio el pepito.pepito grillo que comio el
-              pepito.pepito grillo que comio el pepito.pepito grillo que comio el pepito.pepito grillo que comio el
-              pepito.pepito grillo que comio el pepito.pepito grillo que comio el pepito.pepito grillo que comio el
-              pepito.pepito grillo que comio el pepito.pepito grillo que comio el pepito.pepito grillo que comio el
-              pepito.pepito grillo que comio el pepito.pepito grillo que comio el pepito.
-            </p>
-          </div>
-        </Accordion>
-        <Accordion
-          text="cuantos hacen falta para una bombilla"
-          textClassName="questions-small"
-          iconSize="small"
-          variant="onbrand"
-        >
-          <h2 className="paragraph-small">hambre fiambre</h2>
-          <p className="paragraph-small">
-            pepito grillo que comio el pepito.pepito grillo que comio el pepito.pepito grillo que comio el pepito.pepito
-            grillo que comio el pepito.pepito grillo que comio el pepito.pepito grillo que comio el pepito.pepito grillo
-            que comio el pepito.pepito grillo que comio el pepito.pepito grillo que comio el pepito.pepito grillo que
-            comio el pepito.pepito grillo que comio el pepito.pepito grillo que comio el pepito.pepito grillo que comio
-            el pepito.pepito grillo que comio el pepito.pepito grillo que comio el pepito.pepito grillo que comio el
-            pepito.pepito grillo que comio el pepito.pepito grillo que comio el pepito.pepito grillo que comio el
-            pepito.pepito grillo que comio el pepito.
-          </p>
-        </Accordion>
-        <Accordion
-          text="cuantos hacen falta para una bombilla"
-          textClassName="questions-small"
-          iconSize="small"
-          variant="onbrand"
-        >
-          <h2 className="paragraph-small">hambre fiambre</h2>
-          <p className="paragraph-small">
-            pepito grillo que comio el pepito.pepito grillo que comio el pepito.pepito grillo que comio el pepito.pepito
-            grillo que comio el pepito.pepito grillo que comio el pepito.pepito grillo que comio el pepito.pepito grillo
-            que comio el pepito.pepito grillo que comio el pepito.pepito grillo que comio el pepito.pepito grillo que
-            comio el pepito.pepito grillo que comio el pepito.pepito grillo que comio el pepito.pepito grillo que comio
-            el pepito.pepito grillo que comio el pepito.pepito grillo que comio el pepito.pepito grillo que comio el
-            pepito.pepito grillo que comio el pepito.pepito grillo que comio el pepito.pepito grillo que comio el
-            pepito.pepito grillo que comio el pepito.
-          </p>
-        </Accordion>
-        <Accordion
-          text="cuantos hacen falta para una bombilla"
-          textClassName="questions-small"
-          iconSize="small"
-          variant="onbrand"
-        >
-          <h2 className="paragraph-small">hambre fiambre</h2>
-          <p className="paragraph-small">
-            pepito grillo que comio el pepito.pepito grillo que comio el pepito.pepito grillo que comio el pepito.pepito
-            grillo que comio el pepito.pepito grillo que comio el pepito.pepito grillo que comio el pepito.pepito grillo
-            que comio el pepito.pepito grillo que comio el pepito.pepito grillo que comio el pepito.pepito grillo que
-            comio el pepito.pepito grillo que comio el pepito.pepito grillo que comio el pepito.pepito grillo que comio
-            el pepito.pepito grillo que comio el pepito.pepito grillo que comio el pepito.pepito grillo que comio el
-            pepito.pepito grillo que comio el pepito.pepito grillo que comio el pepito.pepito grillo que comio el
-            pepito.pepito grillo que comio el pepito.
-          </p>
-        </Accordion>
-      </div>
+      <SingleBlock backgroundColor="dark">
+        <Register hasImage={true} setIsOpenModal={setIsOpenModal} />
+      </SingleBlock>
+      <SingleBlock backgroundColor="dark">
+        <Register setIsOpenModal={setIsOpenModal} />
+      </SingleBlock>
+      <SingleBlock backgroundColor="dark" fullHeight={true} paddingSize="large">
+        <Register hasImage={true} setIsOpenModal={setIsOpenModal} />
+      </SingleBlock>
     </section>
   );
 };

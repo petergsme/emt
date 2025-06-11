@@ -1,6 +1,6 @@
 //UTILITY CLASSES
 // Aquí se podrian utilizar mixins para optimizar mucho, pero si lo hacemos ya no será universal.
-
+@use './mixins' as *;
 //TEXT STYLES UTILITIES
 //Display styles
 .display-large {
@@ -8,6 +8,21 @@
   font-weight: var(--font-weight-regular);
   font-size: var(--font-size-48);
   line-height: var(--line-height-72);
+
+  @include tablet {
+    font-size: var(--font-size-80);
+    line-height: var(--line-height-108);
+  }
+
+  @include tablet-up {
+    font-size: var(--font-size-96);
+    line-height: var(--line-height-132);
+  }
+
+  @include tablet {
+    font-size: var(--font-size-80);
+    line-height: var(--line-height-108);
+  }
 }
 
 .display-medium {
@@ -158,12 +173,22 @@
 
 // TEXT UTILITIES
 
+// POSITION & SIZE
 .center-text {
   text-align: center;
 }
 
+.text__wrap--balanced {
+  text-wrap: balance;
+}
+
+// COLOR
 .text__color--brand {
   color: var(--text-brand);
+}
+
+.text__color--onbrand {
+  color: var(--text-onbrand);
 }
 
 // UTILIDADES DE ACORDEONES
