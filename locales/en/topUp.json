@@ -3,5 +3,14 @@
   "subclaim": "Your balance up to date",
   "infoText": "Enter your Bonobús, Personalized Bonobús or EMT Jove number to check or top up your trips.",
   "faqText": "If you still have questions, visit the top-ups and cards section on our",
-  "buttonText": "TOP UP TRIPS"
+  "buttonText": "TOP UP TRIPS",
+  "faqLink": "Frequently Asked Questions",
+
+  "cardInfo": {
+    "cardType": "Bonobús",
+    "tripsRemaining": "8 trips remaining",
+    "status": "Registered",
+    "lastUsed": "Used on 03/12/25",
+    "buttonText": "Top up your trips"
+  }
 }

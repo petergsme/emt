@@ -6,6 +6,8 @@ import { RegisterForm } from '../../components/forms/RegisterForm/RegisterForm';
 // import { useTranslation } from 'react-i18next';
 import { Register } from '@/components/common/Register/Register';
 import { TopUp } from '@/components/common/TopUp/TopUp';
+import { CardInfo } from '@/components/common/TopUp/CardInfo/CardInfo';
+import { SearchBar } from '@/components/common/TopUp/Searchbar/SearchBar';
 
 export const HomePage: React.FC = () => {
   const [isOpenModal, setIsOpenModal] = useState(false);
@@ -31,6 +33,9 @@ export const HomePage: React.FC = () => {
       </SingleBlock>
       <SingleBlock backgroundColor="light">
         <TopUp setIsOpenModal={setIsOpenModal} />
+      </SingleBlock>
+      <SingleBlock backgroundColor="light">
+        <TopUp version="large" setIsOpenModal={setIsOpenModal} />
       </SingleBlock>
     </section>
   );

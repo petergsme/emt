@@ -1,15 +1,18 @@
-import theme from './TopUp.module.scss';
-import classNames from 'classnames/bind';
+// import theme from './TopUp.module.scss';
+// import classNames from 'classnames/bind';
 import { useTranslation } from 'react-i18next';
 import { Button } from '../Button/Button';
+import { SearchBar } from './Searchbar/SearchBar';
+import { Link } from 'react-router-dom';
 
-const cx = classNames.bind(theme);
+// const cx = classNames.bind(theme);
 
 interface RegisterProps {
   setIsOpenModal: (value: boolean) => void;
+  version?: 'large';
 }
 
-export const TopUp = ({ setIsOpenModal }: RegisterProps) => {
+export const TopUp = ({ setIsOpenModal, version }: RegisterProps) => {
   const { t } = useTranslation('topUp');
 
   return (
@@ -21,9 +24,22 @@ export const TopUp = ({ setIsOpenModal }: RegisterProps) => {
 
       <p className="paragraph-small text__color--onprimary text__wrap--balanced">{t('infoText')}</p>
 
-      <Button type="button" style="filled" onClick={() => setIsOpenModal(true)} color="onprimary">
-        {t('buttonText')}
-      </Button>
+      {version === 'large' && <SearchBar setIsOpenModal={setIsOpenModal} />}
+
+      {version !== 'large' && (
+        <Button type="button" style="filled" onClick={() => setIsOpenModal(true)} color="onprimary">
+          {t('buttonText')}
+        </Button>
+      )}
+
+      {version === 'large' && (
+        <div className="flex flex__column flex__gap-20">
+          <p className="paragraph-small text__color--onprimary text__wrap--balanced">{t('faqText')}</p>
+          <Link className="link-small link__color--brand" to="/politica-de-privacidad">
+            {t('faqLink') + ' ->'}
+          </Link>
+        </div>
+      )}
     </>
   );
 };

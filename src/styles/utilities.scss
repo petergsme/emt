@@ -218,3 +218,15 @@
     gap: var(--gap-12);
   }
 }
+
+.flex {
+  display: flex;
+}
+
+.flex__column {
+  flex-direction: column;
+}
+
+.flex__gap-20 {
+  gap: var(--gap-20);
+}

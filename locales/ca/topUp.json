@@ -3,5 +3,14 @@
   "subclaim": "El teu saldo al dia",
   "infoText": "Introdueix el número del teu Bonobús, Bonobús personalitzat o EMT Jove i consulta o recarrega viatges.",
   "faqText": "Si tens dubtes, passa per la secció de recàrregues i targetes al nostre",
-  "buttonText": "RECARREGA VIATGES"
+  "buttonText": "RECARREGA VIATGES",
+  "faqLink": "Preguntes freqüents",
+
+  "cardInfo": {
+    "cardType": "Bonobús",
+    "tripsRemaining": "8 viatges restants",
+    "status": "Registrada",
+    "lastUsed": "Utilitzada el 12/03/25",
+    "buttonText": "Recarrega els teus viatges"
+  }
 }
