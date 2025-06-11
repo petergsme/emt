@@ -16,8 +16,8 @@ export const Footer = () => {
                     </div>
                     <div className="footer__fees">
                         <div className='footer__fees-content'>
-                            <a className='footer__h3'>Tarifas y Títulos</a>
-                            <a className='footer__p'>Tarjetas</a>
+                            <a href="/tarifas" className='footer__h3'>Tarifas y Títulos</a>
+                            <a href="/tarjetas" className='footer__p'>Tarjetas</a>
                             <a className='footer__p'>Consultas y recargas</a>
                             <a className='footer__p'>Registra tu tarjeta</a>
                         </div>
