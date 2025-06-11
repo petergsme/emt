@@ -23,7 +23,7 @@ export const Register = ({ hasImage = false, setIsOpenModal }: RegisterProps) =>
       <p className="paragraph-small text__color--onbrand text__wrap--balanced">{t('infoText')}</p>
 
       <Button type="button" style="filled" onClick={() => setIsOpenModal(true)} color="onbrand">
-        {t('buttonText')}{' '}
+        {t('buttonText')}
       </Button>
     </>
   );

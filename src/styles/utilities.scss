@@ -30,6 +30,11 @@
   font-weight: var(--font-weight-regular);
   font-size: var(--font-size-28);
   line-height: var(--line-height-44);
+
+  @include tablet-up {
+    font-size: var(--font-size-48);
+    line-height: var(--line-height-68);
+  }
 }
 
 .display-cards {
@@ -191,9 +196,25 @@
   color: var(--text-onbrand);
 }
 
+.text__color--onprimary {
+  color: var(--text-onprimary);
+}
+
 // UTILIDADES DE ACORDEONES
 .accordion__lastChild--border-bottom {
   & div:last-child {
     border-bottom: var(--border-width-1) solid;
+  }
+}
+
+// FLEX UTILITIES
+
+.header__gap {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-8);
+
+  @include tablet-up {
+    gap: var(--gap-12);
   }
 }

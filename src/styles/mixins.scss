@@ -1,41 +1,4 @@
 //MIXINS
-//These are only examples for us to remember how to import mixins and use variables.
-
-//Remember, use mixins when repeating the same code 3+ times.
-
-@mixin max-width($width: 100%) {
-  max-width: $width;
-}
-
-.bloque-fallback {
-  @include max-width();
-  background-color: pink;
-  padding: 20px;
-  margin-bottom: 20px;
-}
-
-.bloque-param {
-  @include max-width(390px);
-  background-color: pink;
-  padding: 20px;
-  margin-bottom: 20px;
-}
-
-$pagemaxwidth: 1920px;
-
-@mixin center-content($totalwidth: $pagemaxwidth) {
-  padding-right: calc((100% - #{$totalwidth}) / 2 + 6px);
-  padding-left: calc((100% - #{$totalwidth}) / 2 + 6px);
-}
-
-.bloque-nuevo {
-  @include center-content(450px);
-  background-color: pink;
-  margin-bottom: 20px;
-  padding-top: 20px;
-  padding-bottom: 20px;
-}
-
 // MEDIA QUERY MIXINS
 @mixin mobile {
   @media (max-width: 767px) {
