@@ -11,6 +11,7 @@ import { FAQ } from '@/components/common/FAQ/FAQ';
 import { Rights } from '../usoNormas/Rights/Rights';
 import { Benefits } from './Benefits/Benefits';
 import { Accident } from '../usoNormas/Use/Accident/Accident';
+import { Use } from '../usoNormas/Use/Use';
 
 export const HomePage: React.FC = () => {
   const [isOpenModal, setIsOpenModal] = useState(false);
@@ -79,6 +80,9 @@ export const HomePage: React.FC = () => {
       </SingleBlock>
       <SingleBlock backgroundColor="light" paddingSize="special">
         <Benefits />
+      </SingleBlock>
+      <SingleBlock backgroundColor="light">
+        <Use />
       </SingleBlock>
       <SingleBlock backgroundColor="neutral" className={theme.specialClass}>
         <Accident />
