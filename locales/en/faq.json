@@ -4,6 +4,13 @@
     "subtitle": "And if there's anything else you need to know",
     "buttonText": "Frequently Asked Questions"
   },
+
+  "generalSection": {
+    "title": "ANSWER YOUR QUESTIONS",
+    "subtitle": "Looking for something else?",
+    "buttonText": "Frequently Asked Questions"
+  },
+
   "rulesQuestions": [
     {
       "id": "validate-card",
@@ -66,6 +73,33 @@
       "id": "luggage-pets",
       "question": "How do I activate my single ticket in the EMTicket app?",
       "answer": "Carts, suitcases, and child seats are allowed if properly secured. Animals are not allowed, except guide dogs."
+    }
+  ],
+
+  "categories": [
+    {
+      "id": "titulos",
+      "icon": "Bus",
+      "title": "FARES",
+      "description": "Bus passes, transfers, validation and expiration dates."
+    },
+    {
+      "id": "mobilis",
+      "icon": "Card",
+      "title": "MÓBILIS",
+      "description": "Registration, balance, top-up and card usage."
+    },
+    {
+      "id": "emticket",
+      "icon": "Ticket",
+      "title": "EMTICKET",
+      "description": "Purchase, activation and mobile ticket usage."
+    },
+    {
+      "id": "otros",
+      "icon": "Questionmark",
+      "title": "OTHERS",
+      "description": "Lost items, special cases and other inquiries."
     }
   ]
 }

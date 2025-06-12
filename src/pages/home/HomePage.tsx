@@ -65,6 +65,9 @@ export const HomePage: React.FC = () => {
       </DoubleBlock>
 
       <SingleBlock backgroundColor="pink" paddingSize="special" gapSize="superlarge">
+        <FAQ questions={faqQuestions} isAccordionVer={false} />
+      </SingleBlock>
+      <SingleBlock backgroundColor="pink" paddingSize="special" gapSize="superlarge">
         <FAQ questions={faqQuestions} />
       </SingleBlock>
     </section>

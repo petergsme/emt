@@ -4,6 +4,13 @@
     "subtitle": "Y si hay algo más que necesites saber",
     "buttonText": "Preguntas frecuentes"
   },
+
+  "generalSection": {
+    "title": "RESUELVE TUS DUDAS",
+    "subtitle": "¿Buscas algo diferente?",
+    "buttonText": "Preguntas frecuentes"
+  },
+
   "rulesQuestions": [
     {
       "id": "validate-card",
@@ -67,6 +74,33 @@
       "id": "luggage-pets",
       "question": "¿Cómo activo mi billete sencillo en la app EMTicket?",
       "answer": "Carritos, maletas y sillas de niños sí, pero deben estar bien sujetos. Animales no, salvo perros-guía."
+    }
+  ],
+
+  "categories": [
+    {
+      "id": "titulos",
+      "icon": "Bus",
+      "title": "TÍTULOS",
+      "description": "Bonobús, AT, validez de abonos y transbordos."
+    },
+    {
+      "id": "mobilis",
+      "icon": "Card",
+      "title": "MÓBILIS",
+      "description": "Registro, saldo, recarga y uso de tu tarjeta."
+    },
+    {
+      "id": "emticket",
+      "icon": "Ticket",
+      "title": "EMTICKET",
+      "description": "Compra, activación y uso de billetes desde tu móvil."
+    },
+    {
+      "id": "otros",
+      "icon": "Questionmark",
+      "title": "OTROS",
+      "description": "Objetos perdidos, casos especiales y otras consultas."
     }
   ]
 }

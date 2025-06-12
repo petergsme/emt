@@ -28,3 +28,42 @@
     }
   }
 }
+
+.category {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-20);
+  justify-content: baseline;
+  align-items: center;
+  padding: var(--padding-20);
+
+  &__container {
+    display: flex;
+    flex-flow: row wrap;
+    border-top: var(--border-width-1) solid var(--border-onprimary-secondary);
+    border-bottom: var(--border-width-1) solid var(--border-onprimary-secondary);
+
+    & article {
+      flex: 1;
+      @include mobile {
+        flex: 1 1 50%;
+        border-right: none;
+
+        &:nth-child(odd) {
+          border-right: var(--border-width-1) solid var(--border-onprimary-secondary);
+        }
+
+        &:nth-child(-n + 2) {
+          border-bottom: var(--border-width-1) solid var(--border-onprimary-secondary);
+        }
+      }
+
+      border-right: var(--border-width-1) solid var(--border-onprimary-secondary);
+      &:last-child {
+        border-right: none;
+      }
+    }
+  }
+}
+
+// A futuro estudiate los grids, no los hemos visto.

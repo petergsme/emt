@@ -4,6 +4,13 @@
     "subtitle": "I si necessites saber alguna cosa més",
     "buttonText": "Preguntes freqüents"
   },
+
+  "generalSection": {
+    "title": "RESOL TES DUBTES",
+    "subtitle": "Busques alguna altra cosa?",
+    "buttonText": "Preguntes freqüents"
+  },
+
   "rulesQuestions": [
     {
       "id": "validate-card",
@@ -66,6 +73,33 @@
       "id": "luggage-pets",
       "question": "Com active el meu bitllet senzill a l’app EMTicket?",
       "answer": "Cotxets, maletes i cadires de xiquets sí, però ben subjectats. Animals no, excepte gossos guia."
+    }
+  ],
+
+  "categories": [
+    {
+      "id": "titulos",
+      "icon": "Bus",
+      "title": "BITLLETS",
+      "description": "Bonobús, AT, validesa d'abonaments i transbordaments."
+    },
+    {
+      "id": "mobilis",
+      "icon": "Card",
+      "title": "MÓBILIS",
+      "description": "Registre, saldo, recàrrega i ús de la teua targeta."
+    },
+    {
+      "id": "emticket",
+      "icon": "Ticket",
+      "title": "EMTICKET",
+      "description": "Compra, activació i ús de bitllets des del teu mòbil."
+    },
+    {
+      "id": "otros",
+      "icon": "Questionmark",
+      "title": "ALTRES",
+      "description": "Objectes perduts, casos especials i altres consultes."
     }
   ]
 }

@@ -8,7 +8,7 @@ export type IconName = keyof typeof icons;
 const cx = classNames.bind(theme);
 export interface IconProps {
   icon: IconName;
-  size?: 'small' | 'medium' | 'large';
+  size?: 'small' | 'medium' | 'large' | 'special';
   color?: 'onprimary' | 'onprimary-secondary' | 'onbrand' | 'onbrand-secondary' | 'disabled';
   extraClass?: string;
 }
