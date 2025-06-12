@@ -9,6 +9,7 @@ interface SingleBlockProps {
   paddingSize?: 'normal' | 'large' | 'special';
   gapSize?: 'normal' | 'large' | 'superlarge';
   fullHeight?: boolean;
+  isHorizontal?: boolean;
   className?: string;
 }
 
@@ -18,6 +19,7 @@ export const SingleBlock = ({
   paddingSize = 'normal',
   gapSize = 'normal',
   fullHeight = false,
+  isHorizontal = false,
   className,
 }: SingleBlockProps) => {
   const moduleClasses = cx(
@@ -32,7 +34,13 @@ export const SingleBlock = ({
 
   return (
     <section className={finalClassName}>
-      <div className={cx('singleBlockLayout__content', `singleBlockLayout__content--gap-${gapSize}`)}>{children}</div>
+      <div
+        className={cx('singleBlockLayout__content', `singleBlockLayout__content--gap-${gapSize}`, {
+          'singleBlockLayout__content--horizontal': isHorizontal,
+        })}
+      >
+        {children}
+      </div>
     </section>
   );
 };

@@ -1,0 +1,24 @@
+{
+  "header": {
+    "title": "Conoce tus",
+    "subtitle": "DERECHOS Y DEBERES",
+    "description": "Aprovecha al máximo nuestro servicio. Descubre los derechos que puedes ejercer y los deberes a cumplir."
+  },
+  "rights": {
+    "title": "Derechos",
+    "item1": "Viajar con un solo billete hasta volver a tu parada inicial.",
+    "item2": "Recibir información sobre tarifas, servicio e incidencias.",
+    "item3": "Recuperar objetos perdidos en la Oficina Central.",
+    "item4": "Presentar quejas o sugerencias y recibir respuesta en 20 días.",
+    "item5": "Confidencialidad de tus datos personales.",
+    "item6": "En líneas certificadas, garantía de calidad según norma UNE-EN13186."
+  },
+  "duties": {
+    "title": "Deberes",
+    "item1": "Llevar y mostrar tu billete o tarjeta si te lo piden.",
+    "item2": "No hablar con el conductor mientras conduce.",
+    "item3": "No llevar objetos molestos o peligrosos.",
+    "item4": "Sujetar bien cochecitos y bicicletas plegadas.",
+    "item5": "Respetar los asientos reservados para los que la necesita."
+  }
+}

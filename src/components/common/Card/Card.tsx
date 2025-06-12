@@ -1,4 +1,4 @@
-import classNames from 'classnames';
+import classNames from 'classnames/bind';
 import theme from './card.module.scss';
 
 const cx = classNames.bind(theme);

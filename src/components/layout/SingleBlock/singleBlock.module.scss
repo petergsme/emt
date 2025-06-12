@@ -1,5 +1,11 @@
 @use '../../../styles/mixins' as *;
 
+@mixin desktop-large {
+  @media (min-width: 1700px) {
+    @content;
+  }
+}
+
 .singleBlockLayout {
   width: 100%;
   display: flex;
@@ -78,6 +84,13 @@
     &--gap-superlarge {
       gap: var(--gap-40);
       @include tablet-up {
+        gap: var(--gap-80);
+      }
+    }
+
+    @include desktop-large {
+      &--horizontal {
+        flex-direction: row;
         gap: var(--gap-80);
       }
     }

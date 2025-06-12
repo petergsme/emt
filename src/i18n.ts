@@ -18,7 +18,7 @@ i18n
       loadPath: '/locales/{{lng}}/{{ns}}.json',
     },
 
-    ns: ['common', 'form', 'register', 'topUp', 'faq'], //If you add more namespaces include them here.
+    ns: ['common', 'form', 'register', 'topUp', 'faq', 'rights'], //If you add more namespaces include them here.
     defaultNS: 'common',
   });
 

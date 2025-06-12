@@ -8,6 +8,7 @@ import { Register } from '@/components/common/Register/Register';
 import { TopUp } from '@/components/common/TopUp/TopUp';
 import { DoubleBlock } from '@/components/layout/DoubleBlock/DoubleBlock';
 import { FAQ } from '@/components/common/FAQ/FAQ';
+import { Rights } from '../usoNormas/Rights/Rights';
 
 export const HomePage: React.FC = () => {
   const [isOpenModal, setIsOpenModal] = useState(false);
@@ -69,6 +70,10 @@ export const HomePage: React.FC = () => {
       </SingleBlock>
       <SingleBlock backgroundColor="pink" paddingSize="special" gapSize="superlarge">
         <FAQ questions={faqQuestions} />
+      </SingleBlock>
+
+      <SingleBlock backgroundColor="light" isHorizontal={true}>
+        <Rights />
       </SingleBlock>
     </section>
   );
