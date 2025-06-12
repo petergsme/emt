@@ -1,5 +1,12 @@
 //MIXINS
 // MEDIA QUERY MIXINS
+
+@mixin mobile-up {
+  @media (min-width: 450px) {
+    @content;
+  }
+}
+
 @mixin mobile {
   @media (max-width: 767px) {
     @content;

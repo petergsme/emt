@@ -1,3 +1,5 @@
+@use '../../../../styles/mixins' as *;
+
 // CARDINFO CLASSES
 
 .cardInfo {
@@ -16,6 +18,10 @@
     & * {
       flex-grow: 1;
       // Aqui flex: 1; haria que ocuparan el mismo ancho, pero eso solo funcionaria en un ancho del componente donde puedan ocuparlo sin romper línea, es decir, haciendo un media query o algo así.
+
+      @include mobile-up {
+        flex: 1 1 calc(50% - var(--gap-8) / 2);
+      }
     }
   }
 
