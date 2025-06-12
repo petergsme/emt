@@ -9,8 +9,9 @@
 
     @include mobile {
         padding: var(--padding-20);
-        flex-direction: column;
-        align-items: flex-start;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
     }
         &__logo {
         display: flex;
@@ -72,5 +73,28 @@
         &:hover {
             box-shadow: 0 0 10px var(--glow);
         }
+    }
+}
+
+.navbar__hamburger {
+  background: none;
+  border: none;
+  padding: 0.5rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:hover {
+    background-color: transparent; // por si hay hover raro
+  }
+}
+
+@include mobile {
+    .navbar__mobile-wrapper {
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     }
 }
