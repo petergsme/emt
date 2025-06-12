@@ -1,3 +1,20 @@
+@use '../../styles/mixins.scss' as *;
+
+@mixin desktop-special {
+  @media (min-width: 1200px) {
+    @content;
+  }
+}
+
 .rojo {
   background-color: red;
+}
+
+.specialClass {
+  @include desktop-special {
+    & div:first-child {
+      flex-direction: row;
+      max-width: 70%;
+    }
+  }
 }

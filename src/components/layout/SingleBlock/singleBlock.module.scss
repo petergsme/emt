@@ -29,6 +29,10 @@
     );
   }
 
+  &__background-color--neutral {
+    background: linear-gradient(170deg, var(--red-700) 10%, var(--red-300-main) 100%);
+  }
+
   &__padding--normal {
     padding: var(--padding-120) var(--padding-20);
 

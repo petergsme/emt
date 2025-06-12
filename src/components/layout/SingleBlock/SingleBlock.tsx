@@ -5,7 +5,7 @@ const cx = classNames.bind(theme);
 
 interface SingleBlockProps {
   children: React.ReactNode;
-  backgroundColor?: 'light' | 'dark' | 'pink';
+  backgroundColor?: 'light' | 'dark' | 'pink' | 'neutral';
   paddingSize?: 'normal' | 'large' | 'special';
   gapSize?: 'normal' | 'large' | 'superlarge';
   fullHeight?: boolean;
