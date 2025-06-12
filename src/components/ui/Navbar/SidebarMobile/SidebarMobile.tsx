@@ -11,33 +11,52 @@ interface SidebarMobileProps {
 }
 
 const SidebarMobile: React.FC<SidebarMobileProps> = ({ isOpen, onClose }) => {
-  if (!isOpen) return null;
+   const [isVisible, setIsVisible] = React.useState(false);
+
+  React.useEffect(() => {
+    if (isOpen) {
+      setIsVisible(true);
+    }
+  }, [isOpen]);
+
+  const handleClose = () => {
+    const container = document.querySelector('.sidebar__container');
+    if (container) {
+      container.classList.add('sidebar__closing');
+      setTimeout(() => {
+        setIsVisible(false);
+        onClose();
+      }, 300); // mismo tiempo que la animación
+    }
+  };
+
+  if (!isOpen && !isVisible) return null;
 
   return (
     <>
-      <div className="sidebar__backdrop" onClick={onClose} />
+      <div className="sidebar__backdrop" onClick={handleClose} />
       <aside className="sidebar__container" role="dialog" aria-modal="true" aria-label="Menú">
         <div className="sidebar__header">
-          <button className="sidebar__close" onClick={onClose} aria-label="Cerrar menú">
+          <button className="sidebar__close" onClick={handleClose} aria-label="Cerrar menú">
             <Icon icon="Close" size="large" color="onbrand" />
           </button>
         </div>
 
         <div className="sidebar__content">
-          <Link to="/mapa" className="sidebar__link" onClick={onClose}>Mapa</Link>
+          <Link to="/mapa" className="sidebar__link" onClick={handleClose}>Mapa</Link>
 
           <Accordion text="Títulos y tarifas" textClassName="sidebar__accordion-title" variant="onbrand" iconSize="medium">
             <div className="sidebar__submenu">
-              <Link to="/tarjetas" className="sidebar__sublink" onClick={onClose}>Tarjetas</Link>
-              <Link to="/consultas" className="sidebar__sublink" onClick={onClose}>Consultas y recargas</Link>
-              <Link to="/consultas" className="sidebar__sublink" onClick={onClose}>Registra tu tarjeta</Link>
+              <Link to="/tarjetas" className="sidebar__sublink" onClick={handleClose}>Tarjetas</Link>
+              <Link to="/consultas" className="sidebar__sublink" onClick={handleClose}>Consultas y recargas</Link>
+              <Link to="/consultas" className="sidebar__sublink" onClick={handleClose}>Registra tu tarjeta</Link>
             </div>
           </Accordion>
 
           <Accordion text="Ayuda" textClassName="sidebar__accordion-title" variant="onbrand" iconSize="medium">
             <div className="sidebar__submenu">
-              <Link to="/normativa" className="sidebar__sublink" onClick={onClose}>Uso de bus y normativa</Link>
-              <Link to="/faq" className="sidebar__sublink" onClick={onClose}>Preguntas frecuentes</Link>
+              <Link to="/normativa" className="sidebar__sublink" onClick={handleClose}>Uso de bus y normativa</Link>
+              <Link to="/faq" className="sidebar__sublink" onClick={handleClose}>Preguntas frecuentes</Link>
             </div>
           </Accordion>
         </div>

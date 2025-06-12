@@ -33,6 +33,19 @@ background: linear-gradient(180deg, var(--red-700) 10%, var(--red-300-main) 100%
   }
 }
 
+@keyframes slideUp {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-100%);
+  }
+}
+
+.sidebar__closing {
+  animation: slideUp 0.3s ease forwards !important;
+}
+
 .sidebar__header {
   display: flex;
   justify-content:end;
