@@ -42,7 +42,7 @@ export const HomePage: React.FC = () => {
           <TopUp version="large" setIsOpenModal={setIsOpenModal} />
         </SingleBlock>
         <SingleBlock backgroundColor="dark">
-          <Register hasImage={true} setIsOpenModal={setIsOpenModal} />
+          <Register hasImage={true} keepImageOnDesktop={true} setIsOpenModal={setIsOpenModal} />
         </SingleBlock>
       </DoubleBlock>
     </section>
