@@ -3,7 +3,7 @@ import { Button } from '@/components/common/Button/Button';
 import { SingleBlock } from '@/components/layout/SingleBlock/SingleBlock';
 import theme from './homePage.module.scss';
 import { RegisterForm } from '../../components/forms/RegisterForm/RegisterForm';
-// import { useTranslation } from 'react-i18next';
+import { useTranslation } from 'react-i18next';
 import { Register } from '@/components/common/Register/Register';
 import { TopUp } from '@/components/common/TopUp/TopUp';
 import { DoubleBlock } from '@/components/layout/DoubleBlock/DoubleBlock';
@@ -12,7 +12,17 @@ import { FAQ } from '@/components/common/FAQ/FAQ';
 export const HomePage: React.FC = () => {
   const [isOpenModal, setIsOpenModal] = useState(false);
 
-  // const { t } = useTranslation('form');
+  const { t, i18n } = useTranslation('faq');
+
+  const handleLanguageChange = (lang: string) => {
+    i18n.changeLanguage(lang);
+  };
+
+  const faqQuestions = t('rulesQuestions', { returnObjects: true }) as Array<{
+    id: string;
+    question: string;
+    answer: string;
+  }>;
 
   return (
     <section className={theme.black}>
@@ -21,6 +31,13 @@ export const HomePage: React.FC = () => {
           abre el modal
         </Button>
         {isOpenModal && <RegisterForm setIsOpenSection={setIsOpenModal} />}
+
+        <Button type="button" style="filled" color="onbrand" onClick={() => handleLanguageChange('ca')}>
+          valenciano
+        </Button>
+        <Button type="button" style="filled" color="onbrand" onClick={() => handleLanguageChange('en')}>
+          ingles
+        </Button>
       </div>
       <SingleBlock backgroundColor="dark">
         <Register hasImage={true} setIsOpenModal={setIsOpenModal} />
@@ -47,8 +64,8 @@ export const HomePage: React.FC = () => {
         </SingleBlock>
       </DoubleBlock>
 
-      <SingleBlock backgroundColor="pink">
-        <FAQ questionArray={['pepino']} />
+      <SingleBlock backgroundColor="pink" paddingSize="special" gapSize="superlarge">
+        <FAQ questions={faqQuestions} />
       </SingleBlock>
     </section>
   );

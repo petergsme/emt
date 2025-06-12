@@ -1,0 +1,30 @@
+@use '../../../styles/mixins' as *;
+// FAQ ACCORDION VERSION CLASSES
+
+.faq {
+  &__accordion-container {
+    width: 100%;
+
+    @include desktop {
+      width: 60%;
+    }
+  }
+
+  &__gradient {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-40);
+    align-items: center;
+    width: 100%;
+    background: linear-gradient(180deg, var(--red-0) 0%, var(--red-100) 50%, var(--red-200) 100%);
+    padding: 0 var(--padding-20) var(--padding-120) var(--padding-20);
+
+    @include mobile {
+      padding: 0 var(--padding-20) var(--padding-80) var(--padding-20);
+    }
+
+    @include tablet {
+      padding: 0 var(--padding-20) var(--padding-80) var(--padding-20);
+    }
+  }
+}

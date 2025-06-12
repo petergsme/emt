@@ -101,5 +101,11 @@
 
       "exit": "CONTINUE"
     }
+  },
+  "accordion": {
+    "lost": "Report loss",
+    "lostAnswer": "In case of loss or theft, you can report it in three ways: through this page, by calling our Customer Service line, or by visiting our offices in person.",
+    "data": "Check your details",
+    "dataAnswer": "Before clicking 'Register card', make sure your information is correct. Once submitted, any changes must be made by phone."
   }
 }

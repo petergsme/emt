@@ -3,27 +3,55 @@ import { Button } from '../Button/Button';
 import theme from './faq.module.scss';
 import classNames from 'classnames/bind';
 import cn from 'classnames';
+import { useNavigate } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
 const cx = classNames.bind(theme);
 
-interface FAQProps {
-  questionArray: string[];
+export interface FAQItem {
+  id: string;
+  question: string;
+  answer: string;
 }
-export const FAQ = ({ questionArray }: FAQProps) => {
+interface FAQProps {
+  questions: FAQItem[];
+}
+
+export const FAQ = ({ questions }: FAQProps) => {
+  const { t } = useTranslation('faq');
+
+  const navigate = useNavigate();
+  const handleNavigateToFAQ = () => {
+    navigate('/faq');
+  };
+
   return (
     <>
-      <h2 className={cn('display-large', 'text__color--onprimary')}>¿DUDAS?</h2>
+      <h2 className={cn('display-large', 'text__color--onprimary')}>{t('accordionSection.title')}</h2>
 
-      {/* {questionArray.map((question, index)=> {
-            return <Accordion
-        })} */}
+      <div className={cn('accordion__lastChild--border-bottom', cx(cx('faq__accordion-container')))}>
+        {questions.map((item) => (
+          <Accordion
+            key={item.id}
+            text={item.question}
+            textClassName="questions-small"
+            iconSize="small"
+            variant="onprimary"
+          >
+            <p className={cn('paragraph-small')}>{item.answer}</p>
+          </Accordion>
+        ))}
+      </div>
 
-      <h3 className={cn('display-medium', 'text__color--onprimary')}>Y si hay algo más que necesites saber</h3>
-      <Button type="button" style="filled" color="onbrand" onClick={() => console.log('prepucio')}>
-        Preguntas frecuentes
-      </Button>
+      <div className={cx('faq__gradient')}>
+        <h3 className={cn('display-medium', 'text__color--onprimary')}>{t('accordionSection.subtitle')}</h3>
+        <Button type="button" style="filled" color="onbrand" onClick={handleNavigateToFAQ}>
+          {t('accordionSection.buttonText')}
+        </Button>
+      </div>
     </>
   );
 };
 
-// Tiene que haber manera de linkear un route en un onclick de button sin usar link o asi.
+// enterate de como usar ese handlenavigation
+// lo del array.
