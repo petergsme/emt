@@ -9,6 +9,10 @@
     background-color: var(--bg-primary);
   }
 
+  &__background-color--pink {
+    background-color: var(--bg-brand-light-primary);
+  }
+
   &__background-color--dark {
     background: linear-gradient(
       170deg,

@@ -7,6 +7,7 @@ import { RegisterForm } from '../../components/forms/RegisterForm/RegisterForm';
 import { Register } from '@/components/common/Register/Register';
 import { TopUp } from '@/components/common/TopUp/TopUp';
 import { DoubleBlock } from '@/components/layout/DoubleBlock/DoubleBlock';
+import { FAQ } from '@/components/common/FAQ/FAQ';
 
 export const HomePage: React.FC = () => {
   const [isOpenModal, setIsOpenModal] = useState(false);
@@ -45,6 +46,10 @@ export const HomePage: React.FC = () => {
           <Register hasImage={true} keepImageOnDesktop={true} setIsOpenModal={setIsOpenModal} />
         </SingleBlock>
       </DoubleBlock>
+
+      <SingleBlock backgroundColor="pink">
+        <FAQ questionArray={['pepino']} />
+      </SingleBlock>
     </section>
   );
 };
