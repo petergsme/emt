@@ -9,6 +9,7 @@ import { TopUp } from '@/components/common/TopUp/TopUp';
 import { DoubleBlock } from '@/components/layout/DoubleBlock/DoubleBlock';
 import { FAQ } from '@/components/common/FAQ/FAQ';
 import { Rights } from '../usoNormas/Rights/Rights';
+import { Benefits } from './Benefits/Benefits';
 
 export const HomePage: React.FC = () => {
   const [isOpenModal, setIsOpenModal] = useState(false);
@@ -74,6 +75,9 @@ export const HomePage: React.FC = () => {
 
       <SingleBlock backgroundColor="light" isHorizontal={true}>
         <Rights />
+      </SingleBlock>
+      <SingleBlock backgroundColor="light" paddingSize="special">
+        <Benefits />
       </SingleBlock>
     </section>
   );

@@ -1,0 +1,20 @@
+{
+  "header": {
+    "title": "Passa't a Móbilis",
+    "subtitle": "I VIATJA A TA MANERA",
+    "description": "Adaptem el transport al teu ritme de vida amb opcions per a cada tipus de viatger i preus que s'ajusten a la teua butxaca."
+  },
+  "benefits": {
+    "unique": "10 títols únics",
+    "uniqueText": "Sigues qui sigues i tingues l'edat que tingues, tenim una forma barata i convenient de viatjar només per a tu.",
+    "prices": "Viatges des de 0€",
+    "pricesText": "Com ho llegeixes, algunes targetes et permeten viatjar gratis, i amb la resta mai pagaràs més de 0,4€ per viatge.",
+    "flexibility": "Flexibilitat total",
+    "flexibilityText": "Tria com i quan recarregar: per viatges, mensual, trimestral o anual. Tu decideixes segons les teues necessitats."
+  },
+  "footer": {
+    "claim": "A QUÈ ESPERES?",
+    "buttonText": "DESCOBREIX LA TEUA"
+  },
+  "imageAlt": "Gràfic d’una targeta roja de transport amb 'mobilis' escrit"
+}

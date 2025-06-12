@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Icon } from '@/assets/icons/Icon';
 import theme from './accordion.module.scss';
 import classNames from 'classnames/bind';
+import cn from 'classnames';
 
 const cx = classNames.bind(theme);
 
@@ -33,9 +34,9 @@ export const Accordion = ({
 
   return (
     <>
-      <div className={wrapperClasses} onClick={() => setIsOpenAccordion(!isOpenAccordion)}>
+      <article className={wrapperClasses} onClick={() => setIsOpenAccordion(!isOpenAccordion)}>
         <button type="button" className={cx('accordion__button')}>
-          <h3 className={cx(textClassName)}>{text}</h3>
+          <h3 className={cn(textClassName)}>{text}</h3>
           <Icon
             icon="ChevronDown"
             color={variant === 'onprimary' ? 'onprimary-secondary' : 'onbrand'}
@@ -44,7 +45,7 @@ export const Accordion = ({
           />
         </button>
         {isOpenAccordion && children}
-      </div>
+      </article>
     </>
   );
 };

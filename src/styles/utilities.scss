@@ -206,7 +206,7 @@
   text-wrap: balance;
   width: 100%;
 
-  & div:last-child {
+  & article:last-child {
     border-bottom: var(--border-width-1) solid;
   }
 }

@@ -44,7 +44,7 @@ export const FAQ = ({ questions, isAccordionVer = true }: FAQProps) => {
       </h2>
 
       {isAccordionVer ? (
-        <div className={cn('accordion__lastChild--border-bottom', cx(cx('faq__accordion-container')))}>
+        <div className={cn('accordion__lastChild--border-bottom', cx('faq__accordion-container'))}>
           {questions.map((item) => (
             <Accordion
               key={item.id}
