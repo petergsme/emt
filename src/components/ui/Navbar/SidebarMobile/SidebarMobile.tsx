@@ -43,22 +43,28 @@ const SidebarMobile: React.FC<SidebarMobileProps> = ({ isOpen, onClose }) => {
         </div>
 
         <div className="sidebar__content">
-          <Link to="/mapa" className="sidebar__link" onClick={handleClose}>Mapa</Link>
-
-          <Accordion text="Títulos y tarifas" textClassName="sidebar__accordion-title" variant="onbrand" iconSize="medium">
-            <div className="sidebar__submenu">
-              <Link to="/tarjetas" className="sidebar__sublink" onClick={handleClose}>Tarjetas</Link>
-              <Link to="/consultas" className="sidebar__sublink" onClick={handleClose}>Consultas y recargas</Link>
-              <Link to="/consultas" className="sidebar__sublink" onClick={handleClose}>Registra tu tarjeta</Link>
+            <div className="sidebar__block sidebar__block--with-border-top">
+                <Link to="/mapa" className="sidebar__link" onClick={handleClose}>Mapa</Link>
             </div>
-          </Accordion>
 
-          <Accordion text="Ayuda" textClassName="sidebar__accordion-title" variant="onbrand" iconSize="medium">
-            <div className="sidebar__submenu">
-              <Link to="/normativa" className="sidebar__sublink" onClick={handleClose}>Uso de bus y normativa</Link>
-              <Link to="/faq" className="sidebar__sublink" onClick={handleClose}>Preguntas frecuentes</Link>
+            <div className="sidebar__block">
+                <Accordion text="Títulos y tarifas" textClassName="sidebar__accordion-title" variant="onbrand" iconSize="medium">
+                    <div className="sidebar__submenu">
+                        <Link to="/tarjetas" className="sidebar__sublink" onClick={handleClose}>Tarjetas</Link>
+                        <Link to="/consultas" className="sidebar__sublink" onClick={handleClose}>Consultas y recargas</Link>
+                        <Link to="/consultas" className="sidebar__sublink" onClick={handleClose}>Registra tu tarjeta</Link>
+                    </div>
+                </Accordion>
             </div>
-          </Accordion>
+
+            <div className="sidebar__block sidebar__block--with-border-bottom">
+                <Accordion text="Ayuda" textClassName="sidebar__accordion-title" variant="onbrand" iconSize="medium">
+                    <div className="sidebar__submenu">
+                        <Link to="/normativa" className="sidebar__sublink" onClick={handleClose}>Uso de bus y normativa</Link>
+                        <Link to="/faq" className="sidebar__sublink" onClick={handleClose}>Preguntas frecuentes</Link>
+                    </div>
+                </Accordion>
+            </div>
         </div>
 
         <div className="sidebar__footer">
