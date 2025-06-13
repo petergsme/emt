@@ -1,14 +1,13 @@
 import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import cn from 'classnames';
 import classNames from 'classnames/bind';
 import theme from './card.module.scss';
 import { Button } from '@/components/common/Button/Button';
 import { Icon } from '@/assets/icons/Icon';
 import { CardModal } from '../CardModal/CardModal';
-
 import card_graphic from '@/assets/card_graphics.webp';
 import { Accordion } from '@/components/common/Accordion/Accordion';
-// import { Link } from 'react-router-dom';
 
 const cx = classNames.bind(theme);
 
@@ -65,8 +64,9 @@ export interface CardProps {
 export const Card = (card: CardProps) => {
   const [isRotated, setIsRotated] = useState(false);
   const [isOpenModal, setIsOpenModal] = useState(false);
-
   const [isClosing, setIsClosing] = useState(false);
+
+  const { t } = useTranslation('mobilisCards');
 
   const handleCloseModal = () => {
     setIsClosing(true);
@@ -103,7 +103,7 @@ export const Card = (card: CardProps) => {
             </div>
 
             <Button type="button" style="filled" color="onbrand" onClick={() => setIsRotated(true)}>
-              {'VER MÁS'}
+              {t('buttonTurn')}
             </Button>
           </div>
 
@@ -139,9 +139,7 @@ export const Card = (card: CardProps) => {
                       );
                     })}
 
-                    {card.hasNorms && (
-                      <a className={cn('link-xsmall', 'text__color--onbrand')}>{'Normativa vigente ->'}</a>
-                    )}
+                    {card.hasNorms && <a className={cn('link-xsmall', 'text__color--onbrand')}>{t('norms')}</a>}
                   </div>
                 </div>
 
@@ -174,7 +172,7 @@ export const Card = (card: CardProps) => {
             </button>
           </header>
           <div className={cn('accordion__lastChild--border-bottom')}>
-            <Accordion variant="onprimary" text="Documentación" textClassName="display-small" iconSize="medium">
+            <Accordion variant="onprimary" text={t('accordionData')} textClassName="display-small" iconSize="medium">
               <div className={cx('card__info-container')}>
                 {card.requiredDocuments?.map((requirement, index) => {
                   return (
@@ -186,11 +184,11 @@ export const Card = (card: CardProps) => {
               </div>
               {card.hasForm && (
                 <Button type="button" style="filled" color="onprimary" fullWidth={true} onClick={() => {}}>
-                  {'Descarga el formulario'}
+                  {t('buttonForm')}
                 </Button>
               )}
             </Accordion>
-            <Accordion variant="onprimary" text="Normas y Detalles" textClassName="display-small" iconSize="medium">
+            <Accordion variant="onprimary" text={t('accordionNorms')} textClassName="display-small" iconSize="medium">
               <div className={cx('card__info-container')}>
                 {card.rules?.map((requirement, index) => {
                   return (
@@ -201,11 +199,11 @@ export const Card = (card: CardProps) => {
                 })}
               </div>
               <a className={cn('link-small', 'link__color--brand', cx('align-self-center'))} href="">
-                {'Normativa vigente ->'}{' '}
+                {t('norms')}
               </a>
               {card.hasAppointmentButton && (
                 <Button type="button" style="filled" color="onprimary" fullWidth={true} onClick={() => {}}>
-                  {'Pedir cita previa'}
+                  {t('buttonDate')}
                 </Button>
               )}
             </Accordion>
