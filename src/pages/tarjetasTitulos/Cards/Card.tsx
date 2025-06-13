@@ -29,6 +29,17 @@ export const bonoOro: CardProps = {
     'Según trimestre de pago:',
     '20€ (ENE - MAR)\u00A0\u00A0\u00A0 15€ (ABR - JUN) 10€ (JUL - SEP)\u00A0\u00A0\u00A0 5€ (OCT - DIC)',
   ],
+  requiredDocuments: [
+    'Formulario de solicitud (deberán presentarse dos copias).',
+    'Original y fotocopia de DNI en vigor.',
+    'Menores de 14, DNI de padre, madre o tutor.',
+  ],
+  hasForm: true,
+  rules: [
+    'En caso de pérdida la expedición de un duplicado tendrá un coste de 5€.',
+    'Precio bonificado hasta el 31/12 (antes 25€).',
+  ],
+  hasAppointmentButton: true,
 };
 
 export interface CardProps {
@@ -38,19 +49,16 @@ export interface CardProps {
   secondaryDescription: string;
   hasButton: boolean;
   buttonText?: string;
-  //   buttonURL?: ((event?: React.MouseEvent) => void) | string; // Función que maneja un evento de clic o string URL
   additionalInfo: string[];
   hasNorms: boolean;
   price: string | string[];
-  //   hasRequiredDocuments: boolean;
-  //   requiredDocuments?: string[];
-  //   hasForm: boolean;
+  requiredDocuments?: string[];
+  hasForm?: boolean;
   //   formURL?: string;
-  //   hasRules: boolean;
-  //   rules?: string[];
+  rules?: string[];
   //   hasRegulations: boolean;
   //   RegulationsURL?: string;
-  //   hasAppointmentButton: boolean;
+  hasAppointmentButton?: boolean;
   //   appointmentURL?: string;
 }
 
@@ -167,10 +175,39 @@ export const Card = (card: CardProps) => {
           </header>
           <div className={cn('accordion__lastChild--border-bottom')}>
             <Accordion variant="onprimary" text="Documentación" textClassName="display-small" iconSize="medium">
-              Documentación
+              <div className={cx('card__info-container')}>
+                {card.requiredDocuments?.map((requirement, index) => {
+                  return (
+                    <p key={index} className={cn('paragraph-xsmall', 'text__color--onprimary')}>
+                      {requirement}
+                    </p>
+                  );
+                })}
+              </div>
+              {card.hasForm && (
+                <Button type="button" style="filled" color="onprimary" fullWidth={true} onClick={() => {}}>
+                  {'Descarga el formulario'}
+                </Button>
+              )}
             </Accordion>
             <Accordion variant="onprimary" text="Normas y Detalles" textClassName="display-small" iconSize="medium">
-              Normas y Detalles
+              <div className={cx('card__info-container')}>
+                {card.rules?.map((requirement, index) => {
+                  return (
+                    <p key={index} className={cn('paragraph-xsmall', 'text__color--onprimary')}>
+                      {requirement}
+                    </p>
+                  );
+                })}
+              </div>
+              <a className={cn('link-small', 'link__color--brand', cx('align-self-center'))} href="">
+                {'Normativa vigente ->'}{' '}
+              </a>
+              {card.hasAppointmentButton && (
+                <Button type="button" style="filled" color="onprimary" fullWidth={true} onClick={() => {}}>
+                  {'Pedir cita previa'}
+                </Button>
+              )}
             </Accordion>
           </div>
         </CardModal>
@@ -179,4 +216,6 @@ export const Card = (card: CardProps) => {
   );
 };
 
-// el texto del button de ver mas viene de un namespace traducido aqui. lo mismo para el alt de la imagen. lo mismo para normativa vigente. lo mismo para el modal los nombres de acordeon
+// el texto del button de ver mas viene de un namespace traducido aqui. lo mismo para el alt de la imagen. lo mismo para normativa vigente. lo mismo para el modal los nombres de acordeon y los nombres de los botones de dentro.
+
+//  haces 5 de ejemplo variaditas y ya. una con la otra foto y asi pasas fotos como parametros recuerda.

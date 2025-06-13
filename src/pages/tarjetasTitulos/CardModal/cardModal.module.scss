@@ -12,9 +12,13 @@
   display: flex;
   justify-content: center;
   align-items: end;
-  // Centrado con flex el contenedor porque así crece pero ademas
+
   animation: fadeIn 0.4s;
   animation-timing-function: cubic-bezier(0.82, 0, 0.28, 0.99);
+
+  @include tablet-up {
+    align-items: center;
+  }
 
   &--closing {
     animation: fadeOut 0.4s;
@@ -33,6 +37,11 @@
 
   animation: slideUp 0.5s;
   animation-timing-function: cubic-bezier(0.82, 0, 0.28, 0.99);
+
+  @include tablet-up {
+    border-radius: var(--border-radius-20);
+    max-width: 50%;
+  }
 
   &--closing {
     animation: slideDown 0.5s;
@@ -75,5 +84,3 @@
     transform: translateY(100%);
   }
 }
-
-// bastante que tocar aqui de media queries.

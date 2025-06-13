@@ -52,6 +52,9 @@
 // El modal es un componente, una estructura que reutilizamos a través de la web. El contenido es otra cosa. Ten eso en cuenta...
 
 .entrance {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-20);
   max-height: 0;
   overflow: hidden;
   transform: translateY(-20%);
