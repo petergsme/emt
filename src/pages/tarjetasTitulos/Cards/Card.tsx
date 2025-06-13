@@ -1,24 +1,47 @@
+import { useState } from 'react';
 import cn from 'classnames';
 import classNames from 'classnames/bind';
 import theme from './card.module.scss';
 import { Button } from '@/components/common/Button/Button';
 import { Icon } from '@/assets/icons/Icon';
-import { useState } from 'react';
+import { CardModal } from '../CardModal/CardModal';
+
 import card_graphic from '@/assets/card_graphics.webp';
-import { Link } from 'react-router-dom';
+import { Accordion } from '@/components/common/Accordion/Accordion';
+// import { Link } from 'react-router-dom';
 
 const cx = classNames.bind(theme);
 
+export const bonoOro: CardProps = {
+  name: 'Bono Oro',
+  primaryDescription: 'Viajes ilimitados a precio reducido para mayores de 65 años, pensionistas y discapacitados.',
+  categories: ['Personal', 'Renovable', 'ilimitada', 'Venta', 'Anual'],
+  secondaryDescription:
+    'Tarjeta personalizada ilimitada de renovación anual. De venta en quioscos, estancos y oficinas EMT.',
+  hasButton: true,
+  additionalInfo: [
+    'Coste inicial: 3€.',
+    'Recargable en quioscos, estancos y oficinas de EMT.',
+    'La tarjeta siempre cubre desde el trimestre de pago hasta fin de año.',
+  ],
+  hasNorms: false,
+  price: [
+    'Según trimestre de pago:',
+    '20€ (ENE - MAR)\u00A0\u00A0\u00A0 15€ (ABR - JUN) 10€ (JUL - SEP)\u00A0\u00A0\u00A0 5€ (OCT - DIC)',
+  ],
+};
+
 export interface CardProps {
   name: string;
-  //   primaryDescription: string;
-  //   tags: string[];
-  //   secondaryDescription: string;
-  //   hasButton: boolean;
-  //   buttonText?: string;
+  primaryDescription: string;
+  categories: string[];
+  secondaryDescription: string;
+  hasButton: boolean;
+  buttonText?: string;
   //   buttonURL?: ((event?: React.MouseEvent) => void) | string; // Función que maneja un evento de clic o string URL
-  //   additionalInfo: string[];
-  //   price: string | string[];
+  additionalInfo: string[];
+  hasNorms: boolean;
+  price: string | string[];
   //   hasRequiredDocuments: boolean;
   //   requiredDocuments?: string[];
   //   hasForm: boolean;
@@ -31,10 +54,19 @@ export interface CardProps {
   //   appointmentURL?: string;
 }
 
-export const Card = ({ name = 'EMT Jove' }: CardProps) => {
+export const Card = (card: CardProps) => {
   const [isRotated, setIsRotated] = useState(false);
+  const [isOpenModal, setIsOpenModal] = useState(false);
 
-  // useffect con dependencia en isrotated para añadir la clase o que?
+  const [isClosing, setIsClosing] = useState(false);
+
+  const handleCloseModal = () => {
+    setIsClosing(true);
+    setTimeout(() => {
+      setIsOpenModal(false);
+      setIsClosing(false);
+    }, 300);
+  };
 
   return (
     <>
@@ -46,75 +78,75 @@ export const Card = ({ name = 'EMT Jove' }: CardProps) => {
         >
           <div className={cx('card__face', 'card__face--front')}>
             <header className={cx('card__header')}>
-              <h3 className={cn('display-cards', 'text__color--onbrand')}>{name}</h3>
-              <p className={cn('paragraph-small', 'text__color--onbrand')}>
-                Un único viaje con transbordos ilimitados durante una hora.
-              </p>
+              <h3 className={cn('display-cards', 'text__color--onbrand')}>{card.name}</h3>
+              <p className={cn('paragraph-small', 'text__color--onbrand')}>{card.primaryDescription}</p>
             </header>
 
-            <img src={card_graphic} alt={'imagen'} />
+            <img className={cx('card__image')} src={card_graphic} alt={'imagen'} />
 
             <div className={cx('card__categories')}>
-              <div className={cn('label-tags')}>Personal</div>
-              <div className={cn('label-tags')}>Recargable</div>
-              <div className={cn('label-tags')}>Venta</div>
-              <div className={cn('label-tags')}>Solicitud</div>
-              <div className={cn('label-tags')}>Limitada</div>
+              {card.categories.map((category, index) => {
+                return (
+                  <div key={index} className={cn('label-tags')}>
+                    {category}
+                  </div>
+                );
+              })}
             </div>
 
             <Button type="button" style="filled" color="onbrand" onClick={() => setIsRotated(true)}>
-              {'Ver más'}
+              {'VER MÁS'}
             </Button>
           </div>
 
           <div className={cx('card__face', 'card__face--back')}>
             <header className={cx('card__header')}>
-              <h3 className={cn('display-cards', 'text__color--onbrand')}>{name}</h3>
+              <h3 className={cn('display-cards', 'text__color--onbrand')}>{card.name}</h3>
               <div className={cx('card__content')}>
                 <div className={cx('card__info')}>
                   <Icon icon="Information" color="onbrand" size="small" />
-                  <p className={cn('paragraph-xsmall', 'text__color--onbrand')}>
-                    Tarjeta monedero virtual de uso personal con saldo recargable. Disponible en la app EMTicket.
-                  </p>
+                  <p className={cn('paragraph-xsmall', 'text__color--onbrand')}>{card.secondaryDescription}</p>
                 </div>
 
-                <Button
-                  type="button"
-                  fullWidth={true}
-                  style="filled"
-                  color="onbrand"
-                  onClick={() => setIsOpenModal(true)}
-                >
-                  Requisitos Y Normas
-                </Button>
+                {card.hasButton && (
+                  <Button
+                    type="button"
+                    fullWidth={true}
+                    style="filled"
+                    color="onbrand"
+                    onClick={() => setIsOpenModal(true)}
+                  >
+                    {card.buttonText}
+                  </Button>
+                )}
 
                 <div className={cx('card__info')}>
                   <Icon icon="AsteriskFilled" color="onbrand" size="small" />
                   <div className={cx('card__info-container')}>
-                    <p className={cn('paragraph-xsmall', 'text__color--onbrand')}>
-                      Viajes gratis tras 41 validaciones en el mismo mes.
-                    </p>
-                    <p className={cn('paragraph-xsmall', 'text__color--onbrand')}>
-                      Recargable con tarjeta bancaria entre 5€ y 40€ (en EMTicket).
-                    </p>
-                    {/* Aqui se hace un map de los asteriscos y un renderizado condicional del link */}
-                    <a className={cn('link-xsmall', 'text__color--onbrand')}>{'amen ->'}</a>
+                    {card.additionalInfo.map((info, index) => {
+                      return (
+                        <p key={index} className={cn('paragraph-xsmall', 'text__color--onbrand')}>
+                          {info}
+                        </p>
+                      );
+                    })}
+
+                    {card.hasNorms && (
+                      <a className={cn('link-xsmall', 'text__color--onbrand')}>{'Normativa vigente ->'}</a>
+                    )}
                   </div>
                 </div>
 
                 <div className={cx('card__info')}>
                   <Icon icon="Euro" color="onbrand" size="small" />
-                  {/* <p className={cn('label-price-small', 'text__color--onbrand')}>4,25€ / 10 VIAJES</p> */}
-                  <div className={cx('card__info-container')}>
-                    {/* <p className={cn('paragraph-xsmall', 'text__color--onbrand')}>Según categoría:</p>
-                    <p className={cn('label-price-xsmall', 'text__color--onbrand')}>
-                      3,40€ / 10 VIAJEs (C. General) 2,15€ / 10 VIAJEs (C. Especial)
-                    </p> */}
-                    <p className={cn('paragraph-xsmall', 'text__color--onbrand')}>Según trimestre de pago:</p>
-                    <p className={cn('label-price-xsmall', 'text__color--onbrand')}>
-                      20€ (ENE - MAR)&nbsp;&nbsp;&nbsp; 15€ (ABR - JUN) 10€ (JUL - SEP)&nbsp;&nbsp;&nbsp; 5€ (OCT - DIC)
-                    </p>
-                  </div>
+                  {card.price === 'string' ? (
+                    <p className={cn('label-price-small', 'text__color--onbrand')}>{card.price}</p>
+                  ) : (
+                    <div className={cx('card__info-container')}>
+                      <p className={cn('paragraph-xsmall', 'text__color--onbrand')}>{card.price[0]}</p>
+                      <p className={cn('label-price-xsmall', 'text__color--onbrand')}>{card.price[1]}</p>
+                    </div>
+                  )}
                 </div>
               </div>
             </header>
@@ -125,6 +157,26 @@ export const Card = ({ name = 'EMT Jove' }: CardProps) => {
           </div>
         </div>
       </article>
+      {isOpenModal && (
+        <CardModal onClose={handleCloseModal} isClosing={isClosing}>
+          <header className={cx('modal__header')}>
+            <h4 className={cn('display-cards', 'text__color--brand')}>{card.name}</h4>
+            <button type="button" onClick={() => handleCloseModal()} className={cx('modal__button')}>
+              <Icon icon="Close" size="large" color="onprimary-secondary" />
+            </button>
+          </header>
+          <div className={cn('accordion__lastChild--border-bottom')}>
+            <Accordion variant="onprimary" text="Documentación" textClassName="display-small" iconSize="medium">
+              Documentación
+            </Accordion>
+            <Accordion variant="onprimary" text="Normas y Detalles" textClassName="display-small" iconSize="medium">
+              Normas y Detalles
+            </Accordion>
+          </div>
+        </CardModal>
+      )}
     </>
   );
 };
+
+// el texto del button de ver mas viene de un namespace traducido aqui. lo mismo para el alt de la imagen. lo mismo para normativa vigente. lo mismo para el modal los nombres de acordeon

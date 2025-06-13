@@ -1,5 +1,4 @@
 .card {
-  //   margin: 100px auto 0;
   height: 550px;
   width: 325px;
   perspective: 1000px;
@@ -50,6 +49,10 @@
     text-align: center;
   }
 
+  &__image {
+    max-width: 265px;
+  }
+
   &__categories {
     display: flex;
     flex-wrap: wrap;
@@ -85,4 +88,22 @@
 
 .icon__line-fix path {
   fill: none;
+}
+
+.modal {
+  &__header {
+    display: flex;
+    padding: 0 var(--padding-20);
+    justify-content: space-between;
+  }
+
+  &__button {
+    background-color: transparent;
+    border: none;
+    margin: 0;
+    padding: 0;
+    max-width: fit-content;
+    align-self: flex-end;
+    cursor: pointer;
+  }
 }

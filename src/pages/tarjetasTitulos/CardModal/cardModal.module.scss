@@ -1,0 +1,79 @@
+@use '../../../styles/mixins.scss' as *;
+
+// FORM MODAL STYLES
+.formModal--wrapper {
+  background-color: rgba(0, 0, 0, 0.7);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  // Centrado con flex el contenedor porque así crece pero ademas
+  animation: fadeIn 0.4s;
+  animation-timing-function: cubic-bezier(0.82, 0, 0.28, 0.99);
+
+  &--closing {
+    animation: fadeOut 0.4s;
+  }
+}
+
+.formModal--modal {
+  width: 100%;
+  padding: var(--padding-40) 0;
+  border-radius: var(--border-radius-20) var(--border-radius-20) 0 0;
+  background-color: var(--bg-primary);
+
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-20);
+
+  animation: slideUp 0.5s;
+  animation-timing-function: cubic-bezier(0.82, 0, 0.28, 0.99);
+
+  &--closing {
+    animation: slideDown 0.5s;
+  }
+}
+
+// ANIMATIONS
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(100%);
+  }
+}
+
+// bastante que tocar aqui de media queries.

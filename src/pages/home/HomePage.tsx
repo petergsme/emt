@@ -13,6 +13,7 @@ import { Benefits } from './Benefits/Benefits';
 import { Accident } from '../usoNormas/Use/Accident/Accident';
 import { Use } from '../usoNormas/Use/Use';
 import { Card } from '../tarjetasTitulos/Cards/Card';
+import { bonoOro } from '../tarjetasTitulos/Cards/Card';
 
 export const HomePage: React.FC = () => {
   const [isOpenModal, setIsOpenModal] = useState(false);
@@ -89,7 +90,7 @@ export const HomePage: React.FC = () => {
         <Accident />
       </SingleBlock>
       {/* super importante, para que este funcione hace falta un media query y clase especial que esta en este scss */}
-      <Card name="EMT Jove" />
+      <Card {...bonoOro} />
     </section>
   );
 };

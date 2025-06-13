@@ -50,3 +50,20 @@
 
 // Necesitas clases más descriptivas de las cosas. Componentes, de nuevo, más genericos para cosas como el modal.
 // El modal es un componente, una estructura que reutilizamos a través de la web. El contenido es otra cosa. Ten eso en cuenta...
+
+.entrance {
+  max-height: 0;
+  overflow: hidden;
+  transform: translateY(-20%);
+  transition: max-height 0.3s ease-in-out, opacity 0.3s ease-out, transform 0.3s ease-in-out;
+
+  &--open {
+    max-height: 500px;
+    transform: translateY(0);
+  }
+
+  &--exit {
+    max-height: 0;
+    transform: translateY(-20%);
+  }
+}

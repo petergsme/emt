@@ -24,17 +24,43 @@ export const Accordion = ({
   gapSize = 'normal',
 }: AccordionProps) => {
   const [isOpenAccordion, setIsOpenAccordion] = useState(false);
+  const [isClosing, setIsClosing] = useState(false);
 
-  const wrapperClasses = cx('accordion__wrapper', `accordion__wrapper--${variant}`, {
-    'accordion__wrapper--large': gapSize === 'large',
-  });
+  const handleCloseAccordion = () => {
+    setIsClosing(true);
+    setTimeout(() => {
+      setIsOpenAccordion(false);
+      setIsClosing(false);
+    }, 300);
+  };
+
+  const handleToggle = () => {
+    if (!isOpenAccordion) {
+      setIsOpenAccordion(true);
+      setIsClosing(true);
+
+      setTimeout(() => {
+        setIsClosing(false);
+      }, 10);
+    } else {
+      handleCloseAccordion();
+    }
+  };
+
   const chevronClasses = cx('accordion__chevron', { ['accordion__chevron--rotated']: isOpenAccordion });
 
   // Recuerda que los corchetes [] solo son necesarios cuando usas template literals dentro de objetos como keys/propiedades.
 
   return (
     <>
-      <article className={wrapperClasses} onClick={() => setIsOpenAccordion(!isOpenAccordion)}>
+      <article
+        className={cx('accordion__wrapper', `accordion__wrapper--${variant}`, {
+          'accordion__wrapper--large': gapSize === 'large',
+        })}
+        onClick={() => {
+          handleToggle();
+        }}
+      >
         <button type="button" className={cx('accordion__button')}>
           <h3 className={cn(textClassName)}>{text}</h3>
           <Icon
@@ -44,7 +70,16 @@ export const Accordion = ({
             extraClass={chevronClasses}
           />
         </button>
-        {isOpenAccordion && children}
+        {isOpenAccordion && (
+          <div
+            className={cx('entrance', {
+              'entrance--open': !isClosing,
+              'entrance--exit': isClosing,
+            })}
+          >
+            {children}
+          </div>
+        )}
       </article>
     </>
   );
