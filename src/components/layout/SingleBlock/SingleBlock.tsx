@@ -7,7 +7,7 @@ interface SingleBlockProps {
   children: React.ReactNode;
   backgroundColor?: 'light' | 'dark' | 'pink' | 'neutral';
   paddingSize?: 'normal' | 'large' | 'special';
-  gapSize?: 'normal' | 'large' | 'superlarge';
+  gapSize?: 'normal' | 'large' | 'superlarge' | 'none';
   fullHeight?: boolean;
   isHorizontal?: boolean;
   className?: string;

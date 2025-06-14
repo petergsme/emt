@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import { createPortal } from 'react-dom';
 import theme from './cardModal.module.scss';
 import classNames from 'classnames/bind';
 // import cn from 'classnames';
@@ -36,7 +37,7 @@ export const CardModal = ({ children, isClosing, onClose }: FormModalProps) => {
     }
   };
 
-  return (
+  const modalContent = (
     <div
       onClick={handleWrapperClick}
       className={cx('formModal--wrapper', { 'formModal--wrapper--closing': isClosing })}
@@ -44,4 +45,6 @@ export const CardModal = ({ children, isClosing, onClose }: FormModalProps) => {
       <section className={cx('formModal--modal', { 'formModal--modal--closing': isClosing })}>{children}</section>
     </div>
   );
+
+  return createPortal(modalContent, document.body);
 };

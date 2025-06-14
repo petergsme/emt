@@ -110,6 +110,7 @@
   font-weight: var(--font-weight-bold);
   font-size: var(--font-size-16);
   letter-spacing: var(--tracking-tight);
+  line-height: normal;
 }
 
 .label-price-small {
@@ -236,4 +237,18 @@
 
 .flex__gap-20 {
   gap: var(--gap-20);
+}
+
+// SingleLayoutBlock UTILITIES
+
+.padding-special--bottom {
+  padding: var(--padding-120) 0 !important;
+
+  @include mobile {
+    padding: var(--padding-80) 0 !important;
+  }
+
+  @include tablet {
+    padding: var(--padding-80) 0 !important;
+  }
 }

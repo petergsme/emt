@@ -7,6 +7,14 @@
   "buttonForm": "Descarga el formulario",
   "buttonDate": "Pedir cita previa",
 
+  "headerClaim": "Tarifas y títulos",
+  "headerSubClaim": "MÓBILIS TE DA MÁS",
+
+  "filterAll": "Todas",
+  "filterSale": "Venta directa",
+  "filterReload": "Recargables",
+  "filterUnlimited": "Ilimitadas",
+
   "categories": {
     "Personal": "Personal",
     "General": "General",

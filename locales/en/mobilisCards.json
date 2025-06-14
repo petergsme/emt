@@ -7,6 +7,14 @@
   "buttonForm": "Download the form",
   "buttonDate": "Book appointment",
 
+  "headerClaim": "Fares and cards",
+  "headerSubClaim": "MÓBILIS GIVES YOU MORE",
+
+  "filterAll": "All",
+  "filterSale": "For sale",
+  "filterReload": "Rechargeable",
+  "filterUnlimited": "Unlimited",
+
   "categories": {
     "Personal": "Personal",
     "General": "General",

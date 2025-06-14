@@ -7,6 +7,14 @@
   "buttonForm": "Descarregar formulari",
   "buttonDate": "Demanar cita prèvia",
 
+  "headerClaim": "Tarifes i títols",
+  "headerSubClaim": "MÓBILIS ET DONA MÉS",
+
+  "filterAll": "Totes",
+  "filterSale": "Venda directa",
+  "filterReload": "Recarregables",
+  "filterUnlimited": "Il·limitades",
+
   "categories": {
     "Personal": "Personal",
     "General": "General",

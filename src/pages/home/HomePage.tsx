@@ -12,8 +12,7 @@ import { Rights } from '../usoNormas/Rights/Rights';
 import { Benefits } from './Benefits/Benefits';
 import { Accident } from '../usoNormas/Use/Accident/Accident';
 import { Use } from '../usoNormas/Use/Use';
-import { Card } from '../tarjetasTitulos/Cards/Card';
-import { useCardsData } from '@/data/CardsData';
+import { CardSection } from '../tarjetasTitulos/CardSection/CardSection';
 
 export const HomePage: React.FC = () => {
   const [isOpenModal, setIsOpenModal] = useState(false);
@@ -29,8 +28,6 @@ export const HomePage: React.FC = () => {
     question: string;
     answer: string;
   }>;
-
-  const cardsData = useCardsData();
 
   return (
     <section className={theme.black}>
@@ -91,12 +88,10 @@ export const HomePage: React.FC = () => {
       <SingleBlock backgroundColor="neutral" className={theme.specialClass}>
         <Accident />
       </SingleBlock>
-      {/* super importante, para que este funcione hace falta un media query y clase especial que esta en este scss */}
-      <section className={theme.prueba}>
-        {cardsData.map((card, index) => {
-          return <Card key={index} {...card} />;
-        })}
-      </section>
+      {/* super importante, para que este funcione hace falta un media query y clase especial que esta en este scss y lo mismo pa el de debajo */}
+      <SingleBlock backgroundColor="light" paddingSize="special" gapSize="none" className="padding-special--bottom">
+        <CardSection />
+      </SingleBlock>
     </section>
   );
 };
