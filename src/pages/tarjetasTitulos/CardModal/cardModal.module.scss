@@ -17,6 +17,8 @@
   animation: fadeIn 0.4s;
   animation-timing-function: cubic-bezier(0.82, 0, 0.28, 0.99);
 
+  touch-action: manipulation;
+
   @include tablet-up {
     align-items: center;
   }

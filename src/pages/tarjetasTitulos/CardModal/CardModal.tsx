@@ -14,9 +14,11 @@ interface FormModalProps {
 export const CardModal = ({ children, isClosing, onClose }: FormModalProps) => {
   useEffect(() => {
     document.body.style.overflow = 'hidden';
+    document.body.style.touchAction = 'manipulation';
 
     return () => {
       document.body.style.overflow = 'unset';
+      document.body.style.touchAction = 'auto';
     };
   }, []);
 

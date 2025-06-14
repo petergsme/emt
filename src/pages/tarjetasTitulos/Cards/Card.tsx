@@ -25,13 +25,14 @@ export const Card = (card: CardProps) => {
     setTimeout(() => {
       setIsOpenModal(false);
       setIsClosing(false);
+      setIsRotated(false);
     }, 300);
   };
 
   if (isRotated) {
     setTimeout(() => {
       setIsRotated(false);
-    }, 30000);
+    }, 60000);
   }
 
   return (

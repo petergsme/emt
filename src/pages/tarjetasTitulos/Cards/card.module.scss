@@ -8,12 +8,14 @@
     width: 100%;
     transition: transform 1s;
     transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
     position: relative;
     background-image: linear-gradient(180deg, var(--red-700) 10%, var(--red-300-main) 100%);
     border-radius: var(--border-radius-20);
 
     &.is-flipped {
       transform: rotateY(180deg);
+      -webkit-transform: rotateY(180deg);
     }
   }
 
@@ -25,20 +27,32 @@
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     overflow: hidden;
+    will-change: transform;
 
     &--front {
       display: flex;
       flex-direction: column;
       justify-content: space-between;
       align-items: center;
+      z-index: 2;
+
+      .is-flipped & {
+        pointer-events: none;
+      }
     }
 
     &--back {
       transform: rotateY(180deg);
+      -webkit-transform: rotateY(180deg);
       display: flex;
       flex-direction: column;
       justify-content: space-between;
       align-items: center;
+      z-index: 1;
+
+      .card__inner:not(.is-flipped) & {
+        pointer-events: none;
+      }
     }
   }
 

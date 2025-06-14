@@ -42,6 +42,7 @@
     flex-flow: row wrap;
     border-top: var(--border-width-1) solid var(--border-onprimary-secondary);
     border-bottom: var(--border-width-1) solid var(--border-onprimary-secondary);
+    border-right: var(--border-width-1) solid var(--border-onprimary-secondary);
 
     & article {
       flex: 1;
@@ -58,7 +59,6 @@
         }
       }
 
-      border-right: var(--border-width-1) solid var(--border-onprimary-secondary);
       &:last-child {
         border-right: none;
       }

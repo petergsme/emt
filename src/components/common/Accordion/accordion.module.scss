@@ -57,16 +57,24 @@
   gap: var(--gap-20);
   max-height: 0;
   overflow: hidden;
-  transform: translateY(-20%);
-  transition: max-height 0.3s ease-in-out, opacity 0.3s ease-out, transform 0.3s ease-in-out;
+  opacity: 0;
+  transform: translateY(-10%);
+
+  transition: max-height 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+    opacity 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.1s, transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.1s;
 
   &--open {
     max-height: 500px;
+    opacity: 1;
     transform: translateY(0);
   }
 
   &--exit {
     max-height: 0;
-    transform: translateY(-20%);
+    opacity: 0;
+    transform: translateY(-10%);
+
+    transition: max-height 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+      opacity 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   }
 }

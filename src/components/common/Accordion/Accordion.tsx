@@ -31,7 +31,7 @@ export const Accordion = ({
     setTimeout(() => {
       setIsOpenAccordion(false);
       setIsClosing(false);
-    }, 300);
+    }, 250);
   };
 
   const handleToggle = () => {
