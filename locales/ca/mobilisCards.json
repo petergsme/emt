@@ -5,5 +5,193 @@
   "accordionData": "Documentació",
   "accordionNorms": "Normes i detalls",
   "buttonForm": "Descarregar formulari",
-  "buttonDate": "Demanar cita prèvia"
+  "buttonDate": "Demanar cita prèvia",
+
+  "categories": {
+    "Personal": "Personal",
+    "General": "General",
+    "Recargable": "Recargable",
+    "Renovable": "Renovable",
+    "Solicitud": "Tràmit",
+    "solicitud": "Tràmit",
+    "Venta": "Venda",
+    "Ilimitada": "il·limitada",
+    "ilimitada": "il·limitada",
+    "Limitada": "Limitada",
+    "Bienal": "Biennal",
+    "Anual": "Anual",
+    "Mensual": "Mensual",
+    "Viajes individuales": "Viatges individuals"
+  },
+  "cards": {
+    "bonobus": {
+      "primaryDescription": "10 viatges amb transbords il·limitats durant 1 hora entre autobusos d'EMT.",
+      "secondaryDescription": "Targeta recargable d'ús general amb un saldo màxim de fins a 30 viatges. De venda en quioscos, estancs i oficines EMT.",
+      "additionalInfo": {
+        "0": "Cost inicial: 2€.",
+        "1": "Renovable en quioscos, estancs, oficines, web i app.",
+        "2": "Preu bonificat fins al 31/12 (abans 8,50€)."
+      },
+      "price": "4,25€ / 10 VIATGES"
+    },
+    "emtJove": {
+      "primaryDescription": "Viatges il·limitats mensuals a preu reduït per a menors de 30 anys.",
+      "secondaryDescription": "Targeta personalitzada il·limitada de renovació mensual. A sol·licitar en les nostres oficines.",
+      "buttonText": "Requeriments i Normes",
+      "additionalInfo": {
+        "0": "Cost inicial: 3€.",
+        "1": "Renovable en quioscos, estancs, oficines EMT, web i app."
+      },
+      "price": "12,5€ / MES",
+      "requiredDocuments": {
+        "0": "Formulari de sol·licitud (caldrà presentar-ne dues còpies).",
+        "1": "Original i fotocòpia de DNI en vigor.",
+        "2": "Menors de 14, DNI de pare, mare o tutor."
+      },
+      "rules": {
+        "0": "En cas de pèrdua l'expedició d'un duplicat tindrà un cost de 5€.",
+        "1": "Preu bonificat fins al 31/12 (abans 25€)."
+      }
+    },
+    "bonoOro": {
+      "primaryDescription": "Viatges il·limitats a preu reduït per a majors de 65 anys, pensionistes i discapacitats.",
+      "secondaryDescription": "Targeta personalitzada il·limitada de renovació anual. De venda en quioscos, estancs i oficines EMT.",
+      "additionalInfo": {
+        "0": "Cost inicial: 3€.",
+        "1": "Recargable en quioscos, estancs i oficines d'EMT.",
+        "2": "La targeta sempre cobreix des del trimestre de pagament fins a final d'any."
+      },
+      "price": {
+        "0": "Segons trimestre de pagament:",
+        "1": "20€ (GEN - MAR)\u00A0\u00A0\u00A0 15€ (ABR - JUN) 10€ (JUL - SET)\u00A0\u00A0\u00A0 5€ (OCT - DES)"
+      }
+    },
+    "personalizado": {
+      "primaryDescription": "10 viatges a preu reduït per a membres de família nombrosa o monoparental.",
+      "secondaryDescription": "Targeta recargable personalitzada amb un saldo màxim de fins a 30 viatges. A sol·licitar en les nostres oficines.",
+      "buttonText": "Requeriments i Normes",
+      "additionalInfo": {
+        "0": "Cost inicial: 3€.",
+        "1": "Renovable en quioscos, estancs, oficines, web i app."
+      },
+      "price": {
+        "0": "Segons categoria:",
+        "1": "3,40€ / 10 VIATGES (C. GENERAL) 2,15€ / 10 VIATGES (C. ESPECIAL)"
+      },
+      "requiredDocuments": {
+        "0": "Formulari de sol·licitud (caldrà presentar-ne dues còpies).",
+        "1": "Original i fotocòpia de DNI en vigor.",
+        "2": "Menors de 14, DNI de pare, mare o tutor.",
+        "3": "Carnet de família nombrosa o monoparental."
+      },
+      "rules": {
+        "0": "En cas de pèrdua l'expedició d'un duplicat tindrà un cost de 5€.",
+        "1": "Subjecta a revisió anual.",
+        "2": "El preu d'aquest abonament té un descompte del 20% o 50% sobre el preu actual del bonobús.",
+        "3": "Preu bonificat fins al 31/12 (perquè depén del bonobús)."
+      }
+    },
+    "emtInfantil": {
+      "primaryDescription": "Viatges gratuïts il·limitats per a menors de 14 anys.",
+      "secondaryDescription": "Targeta personalitzada il·limitada de renovació biennal. A sol·licitar en les nostres oficines.",
+      "buttonText": "Requeriments i Normes",
+      "additionalInfo": {
+        "0": "Cost inicial: 5€.",
+        "1": "Renovable només en oficines EMT."
+      },
+      "price": "GRATUÏTA",
+      "requiredDocuments": {
+        "0": "Formulari de sol·licitud (caldrà presentar-ne dues còpies).",
+        "1": "Original i fotocòpia de DNI en vigor.",
+        "2": "DNI de pare, mare o tutor.",
+        "3": "Foto carnet del beneficiari.",
+        "4": "Llibre de família."
+      },
+      "rules": {
+        "0": "En cas de pèrdua l'expedició d'un duplicat tindrà un cost de 5€."
+      }
+    },
+    "emtMascota": {
+      "primaryDescription": "Viatges gratuïts il·limitats per a animals de companyia que viatgen en un transportí.",
+      "secondaryDescription": "Targeta personalitzada il·limitada de renovació biennal. A sol·licitar en les nostres oficines.",
+      "buttonText": "Requeriments i Normes",
+      "additionalInfo": {
+        "0": "Cost inicial: 5€.",
+        "1": "Renovable només en oficines EMT."
+      },
+      "price": "GRATUÏTA",
+      "requiredDocuments": {
+        "0": "Formulari de sol·licitud (caldrà presentar-ne dues còpies).",
+        "1": "DNI del propietari.",
+        "2": "Foto carnet de la mascota.",
+        "3": "Foto carnet del beneficiari.",
+        "4": "Cartilla de vacunació de la mascota."
+      },
+      "rules": {
+        "0": "En cas de pèrdua l'expedició d'un duplicat tindrà un cost de 5€.",
+        "1": "Només mascotes fins a 15 kg en transportí de màxim 45×35×25 cm col·locat entre peus o en regàs (mai seient).",
+        "2": "Els viatgers sempre tindran preferència front als animals."
+      }
+    },
+    "emtAmbTU": {
+      "primaryDescription": "60 viatges mensuals a preu reduït per a persones amb rendes baixes i les seues famílies.",
+      "secondaryDescription": "Targeta personalitzada limitada de renovació anual. A sol·licitar en les nostres oficines.",
+      "buttonText": "Requeriments i Normes",
+      "additionalInfo": {
+        "0": "Cost inicial: 3€.",
+        "1": "Renovable només en oficines EMT."
+      },
+      "price": "10€ / ANY",
+      "requiredDocuments": {
+        "0": "Formulari de sol·licitud a omplir en l'oficina.",
+        "1": "Original i fotocòpia de DNI en vigor.",
+        "2": "Certificat de Renda emés per l'Agència Tributària."
+      },
+      "rules": {
+        "0": "En cas de pèrdua l'expedició d'un duplicat tindrà un cost de 5€.",
+        "1": "Formulari a sol·licitar en oficines EMT.",
+        "2": "Subjecta a revisió anual.",
+        "3": "Cita prèvia necessària."
+      }
+    },
+    "emtRefugi": {
+      "primaryDescription": "60 viatges mensuals gratuïts per a persones refugiades que residisquen a València.",
+      "secondaryDescription": "Targeta personalitzada limitada de renovació anual. A sol·licitar en les nostres oficines.",
+      "buttonText": "Requeriments i Normes",
+      "additionalInfo": {
+        "0": "Cost inicial: 3€.",
+        "1": "Renovable només en oficines EMT."
+      },
+      "price": "GRATUÏTA",
+      "requiredDocuments": {
+        "0": "Formulari de sol·licitud a omplir en l'oficina."
+      },
+      "rules": {
+        "0": "En cas de pèrdua l'expedició d'un duplicat tindrà un cost de 5€.",
+        "1": "Formulari a sol·licitar en oficines EMT.",
+        "2": "Subjecta a revisió anual.",
+        "3": "Cita prèvia necessària."
+      }
+    },
+    "billeteSencillo": {
+      "primaryDescription": "Un únic viatge amb transbords il·limitats durant una hora.",
+      "secondaryDescription": "Targeta moneder virtual d'ús personal amb saldo recargable. Disponible en l'app EMTicket.",
+      "buttonText": "Descarregar EMTicket",
+      "additionalInfo": {
+        "0": "Viatges gratis després de 41 validacions en el mateix mes.",
+        "1": "Recargable amb targeta bancària entre 5€ i 40€ (en EMTicket)."
+      },
+      "price": "0,4€ / VIATGE"
+    },
+    "movimEMT": {
+      "primaryDescription": "Viatges amb transbords il·limitats durant 1 hora utilitzant saldo de moneder digital EMTicket.",
+      "secondaryDescription": "Targeta moneder virtual d'ús personal amb saldo recargable. Disponible en l'app EMTicket.",
+      "buttonText": "Descarregar EMTicket",
+      "additionalInfo": {
+        "0": "Viatges gratis després de 41 validacions en el mateix mes.",
+        "1": "Recargable amb targeta bancària entre 5€ i 40€ (en EMTicket)."
+      },
+      "price": "0,4€ / VIATGE"
+    }
+  }
 }

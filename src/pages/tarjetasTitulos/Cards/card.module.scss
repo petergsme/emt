@@ -51,6 +51,10 @@
 
   &__image {
     max-width: 265px;
+
+    &--small {
+      max-width: 160px;
+    }
   }
 
   &__categories {

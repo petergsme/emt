@@ -5,5 +5,193 @@
   "accordionData": "Documentation",
   "accordionNorms": "Rules and details",
   "buttonForm": "Download the form",
-  "buttonDate": "Book appointment"
+  "buttonDate": "Book appointment",
+
+  "categories": {
+    "Personal": "Personal",
+    "General": "General",
+    "Recargable": "Pay as you go",
+    "Renovable": "Recurring",
+    "Solicitud": "Request",
+    "solicitud": "Request",
+    "Venta": "For sale",
+    "Ilimitada": "No limit",
+    "ilimitada": "No limit",
+    "Limitada": "Limited",
+    "Bienal": "Biennial",
+    "Anual": "Annual",
+    "Mensual": "Monthly",
+    "Viajes individuales": "Single trips"
+  },
+  "cards": {
+    "bonobus": {
+      "primaryDescription": "10 trips with unlimited transfers for 1 hour between EMT buses.",
+      "secondaryDescription": "General use reloadable card with a maximum balance of up to 30 trips. Available at kiosks, tobacco shops and EMT offices.",
+      "additionalInfo": {
+        "0": "Initial cost: €2.",
+        "1": "Reloadable at kiosks, tobacco shops, offices, web and app.",
+        "2": "Discounted price until 31/12 (previously €8.50)."
+      },
+      "price": "€4.25 / 10 TRIPS"
+    },
+    "emtJove": {
+      "primaryDescription": "Unlimited monthly trips at reduced price for under 30s.",
+      "secondaryDescription": "Personalized unlimited monthly renewal card. Apply at our offices.",
+      "buttonText": "Requirements & Rules",
+      "additionalInfo": {
+        "0": "Initial cost: €3.",
+        "1": "Renewable at kiosks, tobacco shops, EMT offices, web and app."
+      },
+      "price": "€12.5 / MONTH",
+      "requiredDocuments": {
+        "0": "Application form (two copies must be submitted).",
+        "1": "Original and photocopy of valid ID.",
+        "2": "Under 14s, parent or guardian ID."
+      },
+      "rules": {
+        "0": "In case of loss, issuing a duplicate will cost €5.",
+        "1": "Discounted price until 31/12 (previously €25)."
+      }
+    },
+    "bonoOro": {
+      "primaryDescription": "Unlimited trips at reduced price for over 65s, pensioners and disabled.",
+      "secondaryDescription": "Personalized unlimited annual renewal card. Available at kiosks, tobacco shops and EMT offices.",
+      "additionalInfo": {
+        "0": "Initial cost: €3.",
+        "1": "Reloadable at kiosks, tobacco shops and EMT offices.",
+        "2": "Card always covers from payment quarter until end of year."
+      },
+      "price": {
+        "0": "According to payment quarter:",
+        "1": "€20 (JAN-MAR)\u00A0\u00A0\u00A0 €15 (APR-JUN) €10 (JUL-SEP)\u00A0\u00A0\u00A0 €5 (OCT-DEC)"
+      }
+    },
+    "personalizado": {
+      "primaryDescription": "10 trips at reduced price for large or single-parent family members.",
+      "secondaryDescription": "Personalized reloadable card with a maximum balance of up to 30 trips. Apply at our offices.",
+      "buttonText": "Requirements & Rules",
+      "additionalInfo": {
+        "0": "Initial cost: €3.",
+        "1": "Renewable at kiosks, tobacco shops, offices, web and app."
+      },
+      "price": {
+        "0": "According to category:",
+        "1": "€3.40 / 10 TRIPS (GENERAL C.) €2.15 / 10 TRIPS (SPECIAL C.)"
+      },
+      "requiredDocuments": {
+        "0": "Application form (two copies must be submitted).",
+        "1": "Original and photocopy of valid ID.",
+        "2": "Under 14s, parent or guardian ID.",
+        "3": "Large or single-parent family card."
+      },
+      "rules": {
+        "0": "In case of loss, issuing a duplicate will cost €5.",
+        "1": "Subject to annual review.",
+        "2": "This pass price has a 20% or 50% discount on current bonobus price.",
+        "3": "Discounted price until 31/12 (because it depends on bonobus)."
+      }
+    },
+    "emtInfantil": {
+      "primaryDescription": "Free unlimited trips for under 14s.",
+      "secondaryDescription": "Personalized unlimited biennial renewal card. Apply at our offices.",
+      "buttonText": "Requirements & Rules",
+      "additionalInfo": {
+        "0": "Initial cost: €5.",
+        "1": "Renewable only at EMT offices."
+      },
+      "price": "FREE",
+      "requiredDocuments": {
+        "0": "Application form (two copies must be submitted).",
+        "1": "Original and photocopy of valid ID.",
+        "2": "Parent or guardian ID.",
+        "3": "Passport photo of beneficiary.",
+        "4": "Family book."
+      },
+      "rules": {
+        "0": "In case of loss, issuing a duplicate will cost €5."
+      }
+    },
+    "emtMascota": {
+      "primaryDescription": "Free unlimited trips for pets traveling in a carrier.",
+      "secondaryDescription": "Personalized unlimited biennial renewal card. Apply at our offices.",
+      "buttonText": "Requirements & Rules",
+      "additionalInfo": {
+        "0": "Initial cost: €5.",
+        "1": "Renewable only at EMT offices."
+      },
+      "price": "FREE",
+      "requiredDocuments": {
+        "0": "Application form (two copies must be submitted).",
+        "1": "Owner's ID.",
+        "2": "Passport photo of the pet.",
+        "3": "Passport photo of beneficiary.",
+        "4": "Pet vaccination card."
+      },
+      "rules": {
+        "0": "In case of loss, issuing a duplicate will cost €5.",
+        "1": "Only pets up to 15 kg in carrier max 45×35×25 cm placed between feet or on lap (never seat).",
+        "2": "Passengers will always have preference over animals."
+      }
+    },
+    "emtAmbTU": {
+      "primaryDescription": "60 monthly trips at reduced price for low-income people and their families.",
+      "secondaryDescription": "Personalized limited annual renewal card. Apply at our offices.",
+      "buttonText": "Requirements & Rules",
+      "additionalInfo": {
+        "0": "Initial cost: €3.",
+        "1": "Renewable only at EMT offices."
+      },
+      "price": "€10 / YEAR",
+      "requiredDocuments": {
+        "0": "Application form to be filled at the office.",
+        "1": "Original and photocopy of valid ID.",
+        "2": "Income certificate issued by Tax Agency."
+      },
+      "rules": {
+        "0": "In case of loss, issuing a duplicate will cost €5.",
+        "1": "Form to be requested at EMT offices.",
+        "2": "Subject to annual review.",
+        "3": "Prior appointment required."
+      }
+    },
+    "emtRefugi": {
+      "primaryDescription": "60 free monthly trips for refugees residing in Valencia.",
+      "secondaryDescription": "Personalized limited annual renewal card. Apply at our offices.",
+      "buttonText": "Requirements & Rules",
+      "additionalInfo": {
+        "0": "Initial cost: €3.",
+        "1": "Renewable only at EMT offices."
+      },
+      "price": "FREE",
+      "requiredDocuments": {
+        "0": "Application form to be filled at the office."
+      },
+      "rules": {
+        "0": "In case of loss, issuing a duplicate will cost €5.",
+        "1": "Form to be requested at EMT offices.",
+        "2": "Subject to annual review.",
+        "3": "Prior appointment required."
+      }
+    },
+    "billeteSencillo": {
+      "primaryDescription": "A single trip with unlimited transfers for one hour.",
+      "secondaryDescription": "Virtual personal wallet card with reloadable balance. Available on EMTicket app.",
+      "buttonText": "Download EMTicket",
+      "additionalInfo": {
+        "0": "Free trips after 41 validations in the same month.",
+        "1": "Reloadable with bank card between €5 and €40 (in EMTicket)."
+      },
+      "price": "€0.4 / TRIP"
+    },
+    "movimEMT": {
+      "primaryDescription": "Trips with unlimited transfers for 1 hour using EMTicket digital wallet balance.",
+      "secondaryDescription": "Virtual personal wallet card with reloadable balance. Available on EMTicket app.",
+      "buttonText": "Download EMTicket",
+      "additionalInfo": {
+        "0": "Free trips after 41 validations in the same month.",
+        "1": "Reloadable with bank card between €5 and €40 (in EMTicket)."
+      },
+      "price": "€0.4 / TRIP"
+    }
+  }
 }
