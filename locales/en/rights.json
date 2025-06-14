@@ -1,0 +1,24 @@
+{
+  "header": {
+    "title": "Know your",
+    "subtitle": "RIGHTS & DUTIES",
+    "description": "Make the most of our service. Discover the rights you can exercise and the duties to fulfill."
+  },
+  "rights": {
+    "title": "Rights",
+    "item1": "Travel with one ticket until returning to your initial stop.",
+    "item2": "Receive information about fares, service and incidents.",
+    "item3": "Recover lost items at the Central Office.",
+    "item4": "Submit complaints or suggestions and receive response in 20 days.",
+    "item5": "Confidentiality of your personal data.",
+    "item6": "On certified lines, quality guarantee under UNE-EN13186 standard."
+  },
+  "duties": {
+    "title": "Duties",
+    "item1": "Carry and show your ticket or card when requested.",
+    "item2": "Don't talk to the driver while driving.",
+    "item3": "Don't carry annoying or dangerous objects.",
+    "item4": "Secure strollers and folded bicycles properly.",
+    "item5": "Respect reserved seats for those who need them."
+  }
+}

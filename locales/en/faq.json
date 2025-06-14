@@ -1,0 +1,105 @@
+{
+  "accordionSection": {
+    "title": "QUESTIONS?",
+    "subtitle": "And if there's anything else you need to know",
+    "buttonText": "Frequently Asked Questions"
+  },
+
+  "generalSection": {
+    "title": "ANSWER YOUR QUESTIONS",
+    "subtitle": "Looking for something else?",
+    "buttonText": "Frequently Asked Questions"
+  },
+
+  "rulesQuestions": [
+    {
+      "id": "validate-card",
+      "question": "What if I can’t validate my Móbilis card?",
+      "answer": "If that happens, pay for your ticket and then go to the Customer Service Office."
+    },
+    {
+      "id": "other-person-card",
+      "question": "Can I use someone else’s card?",
+      "answer": "No, personalized cards are non-transferable. Fraudulent use may result in penalties and card withdrawal."
+    },
+    {
+      "id": "exact-amount",
+      "question": "What if I don’t have the exact amount for the ticket?",
+      "answer": "If the change is over €10, the driver will give you a voucher to redeem the next day at the Customer Service Office."
+    },
+    {
+      "id": "bus-stopped",
+      "question": "Can I board if the bus is stopped at a traffic light?",
+      "answer": "No, you should never board between stops, even if the bus is stationary."
+    },
+    {
+      "id": "baby-stroller",
+      "question": "Where do I board if I’m with a baby stroller?",
+      "answer": "With a single stroller, use the front door. With a larger stroller, use the door with a ramp."
+    },
+    {
+      "id": "luggage-pets",
+      "question": "Can I bring luggage or animals?",
+      "answer": "Carts, suitcases, and child seats are allowed if properly secured. Animals are not allowed, except guide dogs."
+    }
+  ],
+  "cardsQuestions": [
+    {
+      "id": "validate-card",
+      "question": "What is a Móbilis card?",
+      "answer": "All cards, both personalized and general use, are Móbilis cards. That’s EMT’s name for the card where travel passes like Bonobús, Bono Oro, or Bono Jove are loaded."
+    },
+    {
+      "id": "other-person-card",
+      "question": "What types of cards are there?",
+      "answer": "With a single stroller, use the front door. With a larger stroller, use the door with a ramp."
+    },
+    {
+      "id": "exact-amount",
+      "question": "How do I check my balance or expiry date?",
+      "answer": "With a single stroller, use the front door. With a larger stroller, use the door with a ramp."
+    },
+    {
+      "id": "bus-stopped",
+      "question": "How can I register my card?",
+      "answer": "No, you should never board between stops, even if the bus is stationary."
+    },
+    {
+      "id": "baby-stroller",
+      "question": "What is EMTicket?",
+      "answer": "With a single stroller, use the front door. With a larger stroller, use the door with a ramp."
+    },
+    {
+      "id": "luggage-pets",
+      "question": "How do I activate my single ticket in the EMTicket app?",
+      "answer": "Carts, suitcases, and child seats are allowed if properly secured. Animals are not allowed, except guide dogs."
+    }
+  ],
+
+  "categories": [
+    {
+      "id": "titulos",
+      "icon": "Bus",
+      "title": "FARES",
+      "description": "Bus passes, transfers, validation and expiration dates."
+    },
+    {
+      "id": "mobilis",
+      "icon": "Card",
+      "title": "MÓBILIS",
+      "description": "Registration, balance, top-up and card usage."
+    },
+    {
+      "id": "emticket",
+      "icon": "Ticket",
+      "title": "EMTICKET",
+      "description": "Purchase, activation and mobile ticket usage."
+    },
+    {
+      "id": "otros",
+      "icon": "Questionmark",
+      "title": "OTHERS",
+      "description": "Lost items, special cases and other inquiries."
+    }
+  ]
+}

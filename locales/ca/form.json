@@ -101,5 +101,11 @@
 
       "exit": "CONTINUAR"
     }
+  },
+  "accordion": {
+    "lost": "Notifica la pèrdua",
+    "lostAnswer": "En cas de pèrdua o robatori, pots notificar-ho de tres formes distintes: a través d’aquesta pàgina, telefonant al nostre servei d’Atenció al Client o acudint presencialment a les nostres oficines.",
+    "data": "Revisa les teues dades",
+    "dataAnswer": "Abans de prémer 'Registrar targeta', comprova que les dades són correctes. Una vegada enviada, qualsevol modificació s’haurà de fer per telèfon."
   }
 }

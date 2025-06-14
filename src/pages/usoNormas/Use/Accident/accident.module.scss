@@ -1,0 +1,14 @@
+// CLASES DE ACCIDENT
+@use '../../../../styles/mixins' as *;
+
+.accident__content {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  gap: var(--gap-20);
+  max-width: 512px;
+
+  @include tablet-up {
+    max-width: 70%;
+  }
+}

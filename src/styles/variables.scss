@@ -46,6 +46,8 @@
   --font-size-24: 24px;
   --font-size-28: 28px;
   --font-size-48: 48px;
+  --font-size-80: 80px;
+  --font-size-96: 96px;
 
   //Font weights
   --font-weight-regular: 400;
@@ -58,7 +60,10 @@
   --line-height-24: 24px;
   --line-height-32: 32px;
   --line-height-44: 44px;
+  --line-height-68: 68px;
   --line-height-72: 72px;
+  --line-height-108: 108px;
+  --line-height-132: 132px;
 
   //Letter spacing
   --tracking-tight: -1%;
@@ -88,6 +93,7 @@
   --space-40: 40px;
   --space-60: 60px;
   --space-80: 80px;
+  --space-120: 120px;
 
   //Base size values
   --size-1: 1px;
@@ -98,6 +104,7 @@
   --size-28: 28px;
   --size-32: 32px;
   --size-48: 48px;
+  --size-96: 96px;
   --size-325: 325px;
   --size-550: 550px;
   --size-1000: 1000px;
@@ -108,6 +115,7 @@
   --icon-26: var(--size-26);
   --icon-32: var(--size-32);
   --icon-48: var(--size-48);
+  --icon-96: var(--size-96);
 
   //Icon colors
   --icon-onprimary: var(--red-300-main);
@@ -152,6 +160,7 @@
   --padding-40: var(--space-40);
   --padding-60: var(--space-60);
   --padding-80: var(--space-80);
+  --padding-120: var(--space-120);
   --padding-top-28: var(--space-28);
   --padding-bottom-40: var(--space-40);
 
@@ -170,4 +179,5 @@
   --gap-20: var(--space-20);
   --gap-40: var(--space-40);
   --gap-60: var(--space-60);
+  --gap-80: var(--space-80);
 }

@@ -1,0 +1,50 @@
+// SEARCHBAR CLASSES
+.searchBar {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-12);
+  max-width: 512px;
+  width: 100%;
+
+  &__container {
+    position: relative;
+    width: 100%;
+  }
+
+  &__input {
+    border: 2px solid transparent;
+    color: var(--text-onprimary);
+    background-color: var(--bg-secondary);
+    width: 100%;
+    padding: var(--padding-20);
+    border-radius: var(--border-radius-1000);
+    transition: all 0.3s ease-in-out;
+
+    &::placeholder {
+      color: var(--text-disabled);
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    &:hover {
+      border: 2px solid var(--border-onprimary-secondary);
+    }
+
+    &:focus-within {
+      border: var(--border-width-2) solid var(--border-onprimary-secondary);
+    }
+  }
+}
+
+.icon__container {
+  background-color: var(--bg-brand);
+  border-radius: var(--border-radius-1000);
+  padding: var(--padding-12);
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 12px;
+  line-height: 0;
+}

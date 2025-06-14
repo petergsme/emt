@@ -1,0 +1,20 @@
+{
+  "header": {
+    "title": "Pásate a Móbilis",
+    "subtitle": "Y VIAJA A TU MANERA",
+    "description": "Adaptamos el transporte a tu ritmo de vida con opciones para cada tipo de viajero y precios que se ajustan a tu bolsillo."
+  },
+  "benefits": {
+    "unique": "10 títulos únicos",
+    "uniqueText": "Seas quien seas y tengas la edad que tengas, tenemos una forma barata y conveniente de viajar solo para ti.",
+    "prices": "Viajes desde 0€",
+    "pricesText": "Como lo lees, algunas tarjetas te permiten viajar gratis, y con el resto nunca pagarás más de 0,4€ / viaje.",
+    "flexibility": "Flexibilidad total",
+    "flexibilityText": "Elige cómo y cuándo recargar: por viajes, mensual, trimestral o anual. Tú decides según tus necesidades."
+  },
+  "footer": {
+    "claim": "¿A QUÉ ESPERAS?",
+    "buttonText": "DESCUBRE LA TUYA"
+  },
+  "imageAlt": "Gráfico de una tarjeta de transporte roja con móbilis escrito sobre ella"
+}

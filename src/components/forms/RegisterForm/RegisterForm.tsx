@@ -74,18 +74,11 @@ export const RegisterForm = ({ setIsOpenSection }: FormProps) => {
           </div>
 
           <div className="accordion__lastChild--border-bottom">
-            <Accordion text="Notifica la perdida" textClassName="questions-small" iconSize="small" variant="onprimary">
-              <p className="paragraph-small">
-                En caso de pérdida o robo, puedes notificarlo de tres formas distintas:
-                <br /> a través de esta página, llamando a nuestro teléfono de Atención al cliente o personándote en
-                nuestras oficinas.
-              </p>
+            <Accordion text={t('accordion.lost')} textClassName="questions-small" iconSize="small" variant="onprimary">
+              <p className="paragraph-small">{t('accordion.lostAnswer')}</p>
             </Accordion>
-            <Accordion text="Revisa tus datos" textClassName="questions-small" iconSize="small" variant="onprimary">
-              <p className="paragraph-small">
-                Antes de pulsar 'Registrar tarjeta' comprueba que los datos son correctos. Una vez enviado, cualquier
-                modificación deberá realizarse a través del teléfono.
-              </p>
+            <Accordion text={t('accordion.data')} textClassName="questions-small" iconSize="small" variant="onprimary">
+              <p className="paragraph-small">{t('accordion.lostData')}</p>
             </Accordion>
           </div>
 

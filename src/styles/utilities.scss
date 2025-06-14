@@ -1,6 +1,6 @@
 //UTILITY CLASSES
 // Aquí se podrian utilizar mixins para optimizar mucho, pero si lo hacemos ya no será universal.
-
+@use './mixins' as *;
 //TEXT STYLES UTILITIES
 //Display styles
 .display-large {
@@ -8,6 +8,21 @@
   font-weight: var(--font-weight-regular);
   font-size: var(--font-size-48);
   line-height: var(--line-height-72);
+
+  @include tablet {
+    font-size: var(--font-size-80);
+    line-height: var(--line-height-108);
+  }
+
+  @include tablet-up {
+    font-size: var(--font-size-96);
+    line-height: var(--line-height-132);
+  }
+
+  @include tablet {
+    font-size: var(--font-size-80);
+    line-height: var(--line-height-108);
+  }
 }
 
 .display-medium {
@@ -15,12 +30,18 @@
   font-weight: var(--font-weight-regular);
   font-size: var(--font-size-28);
   line-height: var(--line-height-44);
+
+  @include tablet-up {
+    font-size: var(--font-size-48);
+    line-height: var(--line-height-68);
+  }
 }
 
 .display-cards {
   font-family: var(--font-family-display);
   font-weight: var(--font-weight-regular);
   font-size: var(--font-size-28);
+  line-height: normal;
 }
 
 .display-small {
@@ -81,6 +102,7 @@
   font-weight: var(--font-weight-semibold);
   font-size: var(--font-size-16);
   letter-spacing: var(--tracking-tight);
+  line-height: normal;
 }
 
 .label-filters {
@@ -88,6 +110,7 @@
   font-weight: var(--font-weight-bold);
   font-size: var(--font-size-16);
   letter-spacing: var(--tracking-tight);
+  line-height: normal;
 }
 
 .label-price-small {
@@ -100,6 +123,7 @@
   font-family: var(--font-family-display);
   font-weight: var(--font-weight-regular);
   font-size: var(--font-size-12);
+  line-height: normal;
 }
 
 //Link styles
@@ -158,17 +182,73 @@
 
 // TEXT UTILITIES
 
+// POSITION & SIZE
 .center-text {
   text-align: center;
 }
 
+.text__wrap--balanced {
+  text-wrap: balance;
+}
+
+// COLOR
 .text__color--brand {
   color: var(--text-brand);
 }
 
+.text__color--onbrand {
+  color: var(--text-onbrand);
+}
+
+.text__color--onprimary {
+  color: var(--text-onprimary);
+}
+
 // UTILIDADES DE ACORDEONES
 .accordion__lastChild--border-bottom {
-  & div:last-child {
+  text-align: start;
+  text-wrap: balance;
+  width: 100%;
+
+  & article:last-child {
     border-bottom: var(--border-width-1) solid;
+  }
+}
+
+// FLEX UTILITIES
+
+.header__gap {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-8);
+
+  @include tablet-up {
+    gap: var(--gap-12);
+  }
+}
+
+.flex {
+  display: flex;
+}
+
+.flex__column {
+  flex-direction: column;
+}
+
+.flex__gap-20 {
+  gap: var(--gap-20);
+}
+
+// SingleLayoutBlock UTILITIES
+
+.padding-special--bottom {
+  padding: var(--padding-120) 0 !important;
+
+  @include mobile {
+    padding: var(--padding-80) 0 !important;
+  }
+
+  @include tablet {
+    padding: var(--padding-80) 0 !important;
   }
 }

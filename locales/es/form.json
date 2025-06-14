@@ -97,5 +97,12 @@
 
       "exit": "CONTINUAR"
     }
+  },
+
+  "accordion": {
+    "lost": "Notifica la perdida",
+    "lostAnswer": "En caso de pérdida o robo, puedes notificarlo de tres formas distintas: a través de esta página, llamando a nuestro teléfono de Atención al cliente o personándote en nuestras oficinas.",
+    "data": "Revisa tus datos",
+    "dataAnswer": "Antes de pulsar 'Registrar tarjeta' comprueba que los datos son correctos. Una vez enviado, cualquier modificación deberá realizarse a través del teléfono."
   }
 }

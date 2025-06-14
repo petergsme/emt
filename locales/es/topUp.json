@@ -1,0 +1,16 @@
+{
+  "claim": "CONSULTA Y RECARGA",
+  "subclaim": "Tu saldo al día",
+  "infoText": "Introduce el número de tu Bonobús, Bonobús personalizado o EMT Jove y consulta o recarga  viajes.",
+  "faqText": "Si te quedan dudas, pasate por la sección de recargas y tarjetas en nuestras",
+  "buttonText": "RECARGA VIAJES",
+  "faqLink": "Preguntas frecuentes",
+
+  "cardInfo": {
+    "cardType": "Bonobús",
+    "tripsRemaining": "8 viajes restantes",
+    "status": "Registrada",
+    "lastUsed": "Usada el 12/03/25",
+    "buttonText": "Recarga tus viajes"
+  }
+}

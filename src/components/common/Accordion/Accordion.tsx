@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Icon } from '@/assets/icons/Icon';
 import theme from './accordion.module.scss';
 import classNames from 'classnames/bind';
+import cn from 'classnames';
 
 const cx = classNames.bind(theme);
 
@@ -23,19 +24,45 @@ export const Accordion = ({
   gapSize = 'normal',
 }: AccordionProps) => {
   const [isOpenAccordion, setIsOpenAccordion] = useState(false);
+  const [isClosing, setIsClosing] = useState(false);
 
-  const wrapperClasses = cx('accordion__wrapper', `accordion__wrapper--${variant}`, {
-    'accordion__wrapper--large': gapSize === 'large',
-  });
+  const handleCloseAccordion = () => {
+    setIsClosing(true);
+    setTimeout(() => {
+      setIsOpenAccordion(false);
+      setIsClosing(false);
+    }, 250);
+  };
+
+  const handleToggle = () => {
+    if (!isOpenAccordion) {
+      setIsOpenAccordion(true);
+      setIsClosing(true);
+
+      setTimeout(() => {
+        setIsClosing(false);
+      }, 10);
+    } else {
+      handleCloseAccordion();
+    }
+  };
+
   const chevronClasses = cx('accordion__chevron', { ['accordion__chevron--rotated']: isOpenAccordion });
 
   // Recuerda que los corchetes [] solo son necesarios cuando usas template literals dentro de objetos como keys/propiedades.
 
   return (
     <>
-      <div className={wrapperClasses} onClick={() => setIsOpenAccordion(!isOpenAccordion)}>
+      <article
+        className={cx('accordion__wrapper', `accordion__wrapper--${variant}`, {
+          'accordion__wrapper--large': gapSize === 'large',
+        })}
+        onClick={() => {
+          handleToggle();
+        }}
+      >
         <button type="button" className={cx('accordion__button')}>
-          <h3 className={cx(textClassName)}>{text}</h3>
+          <h3 className={cn(textClassName)}>{text}</h3>
           <Icon
             icon="ChevronDown"
             color={variant === 'onprimary' ? 'onprimary-secondary' : 'onbrand'}
@@ -43,8 +70,17 @@ export const Accordion = ({
             extraClass={chevronClasses}
           />
         </button>
-        {isOpenAccordion && children}
-      </div>
+        {isOpenAccordion && (
+          <div
+            className={cx('entrance', {
+              'entrance--open': !isClosing,
+              'entrance--exit': isClosing,
+            })}
+          >
+            {children}
+          </div>
+        )}
+      </article>
     </>
   );
 };

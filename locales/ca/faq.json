@@ -1,0 +1,105 @@
+{
+  "accordionSection": {
+    "title": "DUBTES?",
+    "subtitle": "I si necessites saber alguna cosa més",
+    "buttonText": "Preguntes freqüents"
+  },
+
+  "generalSection": {
+    "title": "RESOL TES DUBTES",
+    "subtitle": "Busques alguna altra cosa?",
+    "buttonText": "Preguntes freqüents"
+  },
+
+  "rulesQuestions": [
+    {
+      "id": "validate-card",
+      "question": "Què faig si no puc validar la meua targeta Móbilis?",
+      "answer": "Si et passa, paga el bitllet i acudeix a l’Oficina d’Atenció al Client."
+    },
+    {
+      "id": "other-person-card",
+      "question": "Puc utilitzar la targeta d’una altra persona?",
+      "answer": "No, les targetes personalitzades són intransferibles i l’ús fraudulent comporta sancions i retirada."
+    },
+    {
+      "id": "exact-amount",
+      "question": "Què faig si no tinc l’import exacte per al bitllet?",
+      "answer": "Si el canvi supera els 10€, el conductor et donarà un val per a canviar l’endemà a l’Oficina d’Atenció al Client."
+    },
+    {
+      "id": "bus-stopped",
+      "question": "Puc pujar si l’autobús està parat en un semàfor?",
+      "answer": "No, no pugues mai entre parades encara que l’autobús estiga detingut."
+    },
+    {
+      "id": "baby-stroller",
+      "question": "Per on puge si porte un cotxet de bebé?",
+      "answer": "Amb cotxet senzill, per la porta davantera. Amb cotxet doble, per la porta amb rampa."
+    },
+    {
+      "id": "luggage-pets",
+      "question": "Puc portar equipatge o animals?",
+      "answer": "Cotxets, maletes i cadires de xiquets sí, però ben subjectats. Animals no, excepte gossos guia."
+    }
+  ],
+  "cardsQuestions": [
+    {
+      "id": "validate-card",
+      "question": "Què és una targeta Móbilis?",
+      "answer": "Totes les targetes, tant les personalitzades com les generals, són targetes Móbilis. És el nom que fa servir EMT per al suport on es carreguen títols com el bonobús, bo or o bo jove."
+    },
+    {
+      "id": "other-person-card",
+      "question": "Quins tipus de targetes hi ha?",
+      "answer": "Amb cotxet senzill, per la porta davantera. Amb cotxet doble, per la porta amb rampa."
+    },
+    {
+      "id": "exact-amount",
+      "question": "Com consulte el meu saldo o caducitat?",
+      "answer": "Amb cotxet senzill, per la porta davantera. Amb cotxet doble, per la porta amb rampa."
+    },
+    {
+      "id": "bus-stopped",
+      "question": "Com puc registrar la meua targeta?",
+      "answer": "No, no pugues mai entre parades encara que l’autobús estiga detingut."
+    },
+    {
+      "id": "baby-stroller",
+      "question": "Què és EMTicket?",
+      "answer": "Amb cotxet senzill, per la porta davantera. Amb cotxet doble, per la porta amb rampa."
+    },
+    {
+      "id": "luggage-pets",
+      "question": "Com active el meu bitllet senzill a l’app EMTicket?",
+      "answer": "Cotxets, maletes i cadires de xiquets sí, però ben subjectats. Animals no, excepte gossos guia."
+    }
+  ],
+
+  "categories": [
+    {
+      "id": "titulos",
+      "icon": "Bus",
+      "title": "BITLLETS",
+      "description": "Bonobús, AT, validesa d'abonaments i transbordaments."
+    },
+    {
+      "id": "mobilis",
+      "icon": "Card",
+      "title": "MÓBILIS",
+      "description": "Registre, saldo, recàrrega i ús de la teua targeta."
+    },
+    {
+      "id": "emticket",
+      "icon": "Ticket",
+      "title": "EMTICKET",
+      "description": "Compra, activació i ús de bitllets des del teu mòbil."
+    },
+    {
+      "id": "otros",
+      "icon": "Questionmark",
+      "title": "ALTRES",
+      "description": "Objectes perduts, casos especials i altres consultes."
+    }
+  ]
+}

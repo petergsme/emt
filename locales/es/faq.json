@@ -1,0 +1,106 @@
+{
+  "accordionSection": {
+    "title": "¿DUDAS?",
+    "subtitle": "Y si hay algo más que necesites saber",
+    "buttonText": "Preguntas frecuentes"
+  },
+
+  "generalSection": {
+    "title": "RESUELVE TUS DUDAS",
+    "subtitle": "¿Buscas algo diferente?",
+    "buttonText": "Preguntas frecuentes"
+  },
+
+  "rulesQuestions": [
+    {
+      "id": "validate-card",
+      "question": "¿Qué hago si no puedo validar mi tarjeta Móbilis?",
+      "answer": "Si eso sucede, paga el billete y luego acude a la Oficina de Atención al Cliente."
+    },
+    {
+      "id": "other-person-card",
+      "question": "¿Puedo usar la tarjeta de otra persona?",
+      "answer": "No, las tarjetas personalizadas son intransferibles y el uso fraudulento conlleva sanción y retirada."
+    },
+    {
+      "id": "exact-amount",
+      "question": "¿Qué hago si no tengo el importe exacto para el billete?",
+      "answer": "Si el cambio es mayor a 10€, el conductor te dará un vale para canjear al día siguiente en la Oficina de Atención al Cliente."
+    },
+    {
+      "id": "bus-stopped",
+      "question": "¿Puedo subir si el bus está parado en un semáforo?",
+      "answer": "No, nunca subas entre paradas aunque el bus esté detenido."
+    },
+    {
+      "id": "baby-stroller",
+      "question": "¿Por dónde subo si llevo un cochecito de bebé?",
+      "answer": "Con cochecito simple, por la puerta delantera. Con cochecito múltiple, por la puerta con rampa."
+    },
+    {
+      "id": "luggage-pets",
+      "question": "¿Puedo llevar equipaje o animales?",
+      "answer": "Carritos, maletas y sillas de niños sí, pero deben estar bien sujetos. Animales no, salvo perros-guía."
+    }
+  ],
+
+  "cardsQuestions": [
+    {
+      "id": "validate-card",
+      "question": "¿Qué es una tarjeta Móbilis?",
+      "answer": "Todas las tarjetas, tanto las personalizadas como las de uso general, son tarjetas Móbilis. Este es el nombre que la EMT usa para referirse al soporte donde se cargan los diferentes títulos o abonos de transporte, como el bonobús, el bono oro o el bono joven."
+    },
+    {
+      "id": "other-person-card",
+      "question": "¿Qué tipos de tarjetas hay?",
+      "answer": "Con cochecito simple, por la puerta delantera. Con cochecito múltiple, por la puerta con rampa."
+    },
+    {
+      "id": "exact-amount",
+      "question": "¿Cómo consulto mi saldo o caducidad?",
+      "answer": "Con cochecito simple, por la puerta delantera. Con cochecito múltiple, por la puerta con rampa."
+    },
+    {
+      "id": "bus-stopped",
+      "question": "¿Cómo puedo registrar mi tarjeta?",
+      "answer": "No, nunca subas entre paradas aunque el bus esté detenido."
+    },
+    {
+      "id": "baby-stroller",
+      "question": "¿Qué es EMTicket?",
+      "answer": "Con cochecito simple, por la puerta delantera. Con cochecito múltiple, por la puerta con rampa."
+    },
+    {
+      "id": "luggage-pets",
+      "question": "¿Cómo activo mi billete sencillo en la app EMTicket?",
+      "answer": "Carritos, maletas y sillas de niños sí, pero deben estar bien sujetos. Animales no, salvo perros-guía."
+    }
+  ],
+
+  "categories": [
+    {
+      "id": "titulos",
+      "icon": "Bus",
+      "title": "TÍTULOS",
+      "description": "Bonobús, AT, validez de abonos y transbordos."
+    },
+    {
+      "id": "mobilis",
+      "icon": "Card",
+      "title": "MÓBILIS",
+      "description": "Registro, saldo, recarga y uso de tu tarjeta."
+    },
+    {
+      "id": "emticket",
+      "icon": "Ticket",
+      "title": "EMTICKET",
+      "description": "Compra, activación y uso de billetes desde tu móvil."
+    },
+    {
+      "id": "otros",
+      "icon": "Questionmark",
+      "title": "OTROS",
+      "description": "Objetos perdidos, casos especiales y otras consultas."
+    }
+  ]
+}

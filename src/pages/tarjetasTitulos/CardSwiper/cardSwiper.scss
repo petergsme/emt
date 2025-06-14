@@ -1,0 +1,21 @@
+.mySwiper {
+  padding: var(--padding-40) 0 var(--padding-60) var(--padding-20) !important;
+  width: 100vw !important;
+  max-width: 100% !important;
+  margin: 0 !important;
+
+  .slide-auto {
+    width: 325px !important;
+  }
+}
+
+.swiper-pagination-bullet {
+  background: var(--icon-onbrandsecondary) !important;
+  opacity: 1 !important;
+  width: 12px !important;
+  height: 12px !important;
+}
+
+.swiper-pagination-bullet-active {
+  background: var(--icon-onprimary) !important;
+}
