@@ -1,6 +1,12 @@
 @use '../../../styles/mixins' as *;
 // FAQ ACCORDION VERSION CLASSES
 
+@mixin desktop-large {
+  @media (min-width: 1584px) {
+    @content;
+  }
+}
+
 .faq {
   &__accordion-container {
     width: 100%;
@@ -42,25 +48,27 @@
     flex-flow: row wrap;
     border-top: var(--border-width-1) solid var(--border-onprimary-secondary);
     border-bottom: var(--border-width-1) solid var(--border-onprimary-secondary);
-    border-right: var(--border-width-1) solid var(--border-onprimary-secondary);
+    width: 100%;
 
     & article {
       flex: 1;
+      border-right: var(--border-width-1) solid var(--border-onprimary-secondary);
+
+      &:last-child {
+        border-right: none;
+      }
+
       @include mobile {
         flex: 1 1 50%;
         border-right: none;
 
-        &:nth-child(odd) {
+        &:nth-child(2n - 1) {
           border-right: var(--border-width-1) solid var(--border-onprimary-secondary);
         }
 
         &:nth-child(-n + 2) {
           border-bottom: var(--border-width-1) solid var(--border-onprimary-secondary);
         }
-      }
-
-      &:last-child {
-        border-right: none;
       }
     }
   }
