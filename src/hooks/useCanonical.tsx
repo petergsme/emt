@@ -5,8 +5,7 @@ export const useCanonical = () => {
   const location = useLocation();
 
   useEffect(() => {
-    const baseUrl = 'https://emtvalencia.netlify.app';
-    const canonicalUrl = baseUrl + location.pathname;
+    const canonicalUrl = 'https://emtvalencia.netlify.app' + location.pathname;
 
     let canonical = document.querySelector('link[rel="canonical"]');
 
