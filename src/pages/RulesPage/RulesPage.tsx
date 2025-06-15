@@ -4,8 +4,8 @@ import { SingleBlock } from '@/components/layout/SingleBlock/SingleBlock';
 import { Register } from '@/components/common/Register/Register';
 import { TopUp } from '@/components/common/TopUp/TopUp';
 import { FAQ } from '@/components/common/FAQ/FAQ';
-import { Accident } from '../usoNormas/Use/Accident/Accident';
-import { Use } from '../usoNormas/Use/Use';
+import { Accident } from './Use/Accident/Accident';
+import { Use } from './Use/Use';
 import { Rights } from './Rights/Rights';
 import theme from './rulesPage.module.scss';
 

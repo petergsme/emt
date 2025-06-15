@@ -3,7 +3,7 @@ import { SingleBlock } from '@/components/layout/SingleBlock/SingleBlock';
 import { DoubleBlock } from '@/components/layout/DoubleBlock/DoubleBlock';
 import { Register } from '@/components/common/Register/Register';
 import { TopUp } from '@/components/common/TopUp/TopUp';
-import { CardSection } from '../tarjetasTitulos/CardSection/CardSection';
+import { CardSection } from '../CardsPage/CardSection/CardSection';
 import { FAQ } from '@/components/common/FAQ/FAQ';
 // import { Rights } from '../usoNormas/Rights/Rights';
 // import { Accident } from '../usoNormas/Use/Accident/Accident';

@@ -5,10 +5,10 @@ import './i18n';
 import './styles/index.scss';
 
 import { App } from './App.tsx';
-import HomePage from './pages/home/HomePage.tsx';
-import CardsPage from './pages/tarjetasTitulos/CardsPage.tsx';
-import RulesPage from './pages/usoNormas/RulesPage.tsx';
-import ErrorPage from './pages/error/ErrorPage.tsx';
+import HomePage from './pages/HomePage/HomePage.tsx';
+import CardsPage from './pages/CardsPage/CardsPage.tsx';
+import RulesPage from './pages/RulesPage/RulesPage.tsx';
+import ErrorPage from './pages/ErrorPage/ErrorPage.tsx';
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
