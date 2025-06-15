@@ -130,6 +130,82 @@
       content="Consulta horarios, planifica rutas y gestiona tu tarjeta Móbilis en tiempo real."
     />
     <meta name="twitter:image" content="https://emtvalencia.netlify.app/twitter-card-emt.jpg" />
+
+    <!-- ============================================= -->
+    <!-- STRUCTURED DATA (SCHEMA.ORG) -->
+    <!-- ============================================= -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "EMT Valencia",
+        "alternateName": "Empresa Municipal de Transportes de Valencia",
+        "url": "https://emtvalencia.netlify.app",
+        "logo": "https://emtvalencia.netlify.app/android-chrome-512x512.png",
+        "description": "Servicio oficial de transporte público de Valencia",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+34-963-158-515",
+          "contactType": "customer service",
+          "availableLanguage": ["Spanish", "Valencian"],
+          "areaServed": "Valencia, Spain"
+        },
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Carrer de Jesús, 19",
+          "addressLocality": "Valencia",
+          "postalCode": "46007",
+          "addressCountry": "ES"
+        },
+        "serviceType": "Public Transportation",
+        "areaServed": {
+          "@type": "City",
+          "name": "Valencia",
+          "addressCountry": "ES"
+        },
+        "sameAs": [
+          "https://www.facebook.com/EMTValencia",
+          "https://twitter.com/EMTValencia",
+          "https://www.instagram.com/emtvalencia"
+        ]
+      }
+    </script>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "EMT Valencia",
+        "url": "https://emtvalencia.netlify.app",
+        "description": "Consulta horarios, planifica rutas y gestiona tu tarjeta Móbilis del transporte público de Valencia",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://emtvalencia.netlify.app/search?q={search_term_string}",
+          "query-input": "required name=search_term_string"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "EMT Valencia"
+        }
+      }
+    </script>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "EMT Valencia App",
+        "url": "https://emtvalencia.netlify.app",
+        "applicationCategory": "TransportationApplication",
+        "operatingSystem": "Web Browser",
+        "description": "Aplicación web para consultar horarios y gestionar el transporte público de Valencia",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "EUR"
+        }
+      }
+    </script>
   </head>
   <body>
     <div id="root"></div>
