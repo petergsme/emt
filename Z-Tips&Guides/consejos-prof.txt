@@ -17,6 +17,7 @@ ESTO BIEN
    &--error {}
 }
 
+-En vez de crear "display-large" cambia los estilos del h1, y ya.
 
 
 CONSEJOS SOBRE ENTREVISTAS

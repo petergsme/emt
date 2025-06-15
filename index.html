@@ -79,24 +79,20 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-    <!-- Cargar fuentes sin bloquear el renderizado -->
+    <!-- Cargar fuentes sin bloquear el renderizado - SOLO los pesos que usas -->
     <link
       rel="preload"
-      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap"
-      as="style"
-      onload="this.onload=null;this.rel='stylesheet'"
-    />
-    <link
-      rel="preload"
-      href="https://fonts.googleapis.com/css2?family=Boldonse&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&family=Boldonse&display=swap"
       as="style"
       onload="this.onload=null;this.rel='stylesheet'"
     />
 
     <!-- Si JavaScript está deshabilitado, cargar fuentes normalmente -->
     <noscript>
-      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" />
-      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Boldonse&display=swap" />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&family=Boldonse&display=swap"
+      />
     </noscript>
 
     <!-- Preparar conexiones a otros servicios (ahorra tiempo de DNS) -->
