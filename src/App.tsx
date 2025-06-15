@@ -1,13 +1,17 @@
 import { NavLink, Link, Outlet } from 'react-router-dom';
 import { useScrollToSection } from './hooks/useScrollToSection';
+
+import classNames from 'classnames/bind';
 import theme from './App.module.scss';
+
+const cx = classNames.bind(theme);
 
 export const App: React.FC = () => {
   useScrollToSection();
 
   return (
     <>
-      <div className={theme.menu}>
+      <div className={cx('navPrueba')}>
         <NavLink className="a" to="/">
           Home
         </NavLink>
@@ -21,13 +25,10 @@ export const App: React.FC = () => {
         <Link to="/help/rules-guides">Uso del bus y normativa</Link>
         <Link to="/faq">Preguntas frecuentes</Link>
       </div>
-      <main>
-        <Outlet />
-      </main>
+
+      <Outlet />
     </>
   );
 };
 
-//The nav component will be here, in App.tsx. And it will make use of the routers' Link and NavLink. Remember NavLink has className properties relateed to whether it's selected while Link doesn't. The class ".active" is automatically assigned to an active NavLink. Also important, these components prevent page reloads, unlike <a>. For now here's a fake nav to show the usage of those two components.
-
-// Aquí tenemos que meter el footer.
+// Podrias utilizar el navLink en vez de link, que trae unos aria (bueno para accesibilidad) y mas personalizacion.

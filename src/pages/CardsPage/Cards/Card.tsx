@@ -74,9 +74,11 @@ export const Card = (card: CardProps) => {
           <div className={cx('card__face', 'card__face--back')}>
             <header className={cx('card__header')}>
               <h3 className={cn('display-cards', 'text__color--onbrand')}>{card.name}</h3>
+
               <div className={cx('card__content')}>
                 <div className={cx('card__info')}>
                   <Icon icon="Information" color="onbrand" size="small" />
+
                   <p className={cn('paragraph-xsmall', 'text__color--onbrand')}>{card.secondaryDescription}</p>
                 </div>
 
@@ -94,6 +96,7 @@ export const Card = (card: CardProps) => {
 
                 <div className={cx('card__info')}>
                   <Icon icon="AsteriskFilled" color="onbrand" size="small" />
+
                   <div className={cx('card__info-container')}>
                     {card.additionalInfo.map((info, index) => {
                       return (
@@ -113,6 +116,7 @@ export const Card = (card: CardProps) => {
 
                 <div className={cx('card__info')}>
                   <Icon icon="Euro" color="onbrand" size="small" />
+
                   {typeof card.price === 'string' ? (
                     <p className={cn('label-price-small', 'text__color--onbrand')}>{card.price}</p>
                   ) : (
@@ -131,14 +135,17 @@ export const Card = (card: CardProps) => {
           </div>
         </div>
       </article>
+
       {isOpenModal && (
         <CardModal onClose={handleCloseModal} isClosing={isClosing}>
           <header className={cx('modal__header')}>
             <h4 className={cn('display-cards', 'text__color--brand')}>{card.name}</h4>
+
             <button type="button" onClick={() => handleCloseModal()} className={cx('modal__button')}>
               <Icon icon="Close" size="large" color="onprimary-secondary" />
             </button>
           </header>
+
           <div className={cn('accordion__lastChild--border-bottom')}>
             <Accordion variant="onprimary" text={t('accordionData')} textClassName="display-small" iconSize="medium">
               <div className={cx('card__info-container')}>
@@ -150,12 +157,14 @@ export const Card = (card: CardProps) => {
                   );
                 })}
               </div>
+
               {card.hasForm && (
                 <Button type="button" style="filled" color="onprimary" fullWidth={true} onClick={() => {}}>
                   {t('buttonForm')}
                 </Button>
               )}
             </Accordion>
+
             <Accordion variant="onprimary" text={t('accordionNorms')} textClassName="display-small" iconSize="medium">
               <div className={cx('card__info-container')}>
                 {card.rules?.map((requirement, index) => {
@@ -166,9 +175,11 @@ export const Card = (card: CardProps) => {
                   );
                 })}
               </div>
+
               <Link className={cn('link-small', 'link__color--brand', cx('align-self-center'))} to={'/norms'}>
                 {t('norms')}
               </Link>
+
               {card.hasAppointmentButton && (
                 <Button type="button" style="filled" color="onprimary" fullWidth={true} onClick={() => {}}>
                   {t('buttonDate')}
@@ -181,5 +192,3 @@ export const Card = (card: CardProps) => {
     </>
   );
 };
-
-//  haces 5 de ejemplo variaditas y ya. una con la otra foto y asi pasas fotos como parametros recuerda.

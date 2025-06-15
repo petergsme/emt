@@ -128,4 +128,4 @@ export const RegisterForm = ({ setIsOpenSection }: FormProps) => {
   );
 };
 
-// Falta crear el custom hook tras finalizar el SCSS. Realmente es necesario?
+// Falta crear el custom hook tras finalizar el SCSS? Realmente es necesario?
