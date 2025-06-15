@@ -2,7 +2,7 @@ import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
 import { Card } from '@/components/common/Card/Card';
 import { Button } from '@/components/common/Button/Button';
-import card_graphics from '@/assets/card_graphics.webp';
+import card_graphics from '../../../../public/card_graphics.webp';
 import theme from './benefits.module.scss';
 import classNames from 'classnames/bind';
 import cn from 'classnames';

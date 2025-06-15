@@ -2,10 +2,11 @@
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/emt-logo.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- PRINCIPAL Y META -->
+    <!-- ============================================= -->
+    <!-- IDENTIDAD DE LA PÁGINA (SEO BÁSICO) -->
+    <!-- ============================================= -->
     <title>EMT Valencia</title>
     <meta
       name="description"
@@ -19,10 +20,66 @@
     <meta name="robots" content="index, follow" />
     <link rel="canonical" href="https://emtvalencia.netlify.app/" />
 
-    <!-- PRECONEXIONES / PRECARGA DE FUENTES Y DEPENDENCIAS DE GITHUB -->
+    <!-- ============================================= -->
+    <!-- ICONOS DEL NAVEGADOR (FAVICONS) -->
+    <!-- ============================================= -->
+    <!-- Favicon principal (navegadores modernos - usa SVG si tienes) -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <!-- Fallback para navegadores antiguos -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+
+    <!-- ============================================= -->
+    <!-- ICONOS MÓVILES (iOS & ANDROID) -->
+    <!-- ============================================= -->
+    <!-- iOS: Icono cuando añades web a pantalla inicio -->
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+    <!-- Safari: Icono en pestañas ancladas (solo silueta) -->
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#E21C38" />
+
+    <!-- Android: Iconos para PWA instalada -->
+    <link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192x192.png" />
+    <link rel="icon" type="image/png" sizes="512x512" href="/android-chrome-512x512.png" />
+
+    <!-- ============================================= -->
+    <!-- PWA (PROGRESSIVE WEB APP) -->
+    <!-- ============================================= -->
+    <!-- Archivo que define cómo funciona como "app instalada" -->
+    <link rel="manifest" href="/manifest.json" />
+
+    <!-- Colores de la app cuando está instalada -->
+    <meta name="theme-color" content="#E21C38" />
+    <!-- Color barra superior -->
+    <meta name="background-color" content="#FFFFFA" />
+    <!-- Color mientras carga -->
+
+    <!-- ============================================= -->
+    <!-- CONFIGURACIÓN MÓVILES ESPECÍFICA -->
+    <!-- ============================================= -->
+    <!-- iOS: Hace que se comporte como app nativa -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="EMT Valencia" />
+
+    <!-- Android: Configuración como app web -->
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="application-name" content="EMT Valencia" />
+
+    <!-- Windows: Configuración para tiles de Windows -->
+    <meta name="msapplication-TileColor" content="#E21C38" />
+    <meta name="msapplication-config" content="/browserconfig.xml" />
+
+    <!-- ============================================= -->
+    <!-- OPTIMIZACIÓN DE CARGA (PERFORMANCE) -->
+    <!-- ============================================= -->
+    <!-- Preconectar a servidores de Google Fonts (ahorra ~300ms) -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
+    <!-- Cargar fuentes sin bloquear el renderizado -->
     <link
       rel="preload"
       href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap"
@@ -36,19 +93,25 @@
       onload="this.onload=null;this.rel='stylesheet'"
     />
 
+    <!-- Si JavaScript está deshabilitado, cargar fuentes normalmente -->
     <noscript>
       <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" />
       <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Boldonse&display=swap" />
     </noscript>
 
+    <!-- Preparar conexiones a otros servicios (ahorra tiempo de DNS) -->
     <link rel="preconnect" href="https://raw.githubusercontent.com" />
     <link rel="dns-prefetch" href="https://raw.githubusercontent.com" />
 
-    <!-- CARGA PRIORITARIA DEL LCP -->
-    <link rel="preload" href="./src/assets/card_graphics_lock.webp" as="image" type="image/webp" fetchpriority="high" />
-    <link rel="preload" href="./src/assets/card_graphics.webp" as="image" type="image/webp" fetchpriority="high" />
+    <!-- Precargar imágenes críticas que aparecen inmediatamente -->
+    <!-- ⚠️ CORREGIR: Estas rutas no funcionan, deben estar en /public -->
+    <link rel="preload" href="/card_graphics_lock.webp" as="image" type="image/webp" fetchpriority="high" />
+    <link rel="preload" href="/card_graphics.webp" as="image" type="image/webp" fetchpriority="high" />
 
-    <!-- REDES SOCIALES (FB, INSTAGRAM, TWITTER)-->
+    <!-- ============================================= -->
+    <!-- REDES SOCIALES (OPEN GRAPH & TWITTER) -->
+    <!-- ============================================= -->
+    <!-- Cómo se ve cuando compartes en Facebook/LinkedIn -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://emtvalencia.netlify.app/" />
     <meta property="og:title" content="EMT Valencia - Transporte Público de Valencia" />
@@ -59,6 +122,7 @@
     <meta property="og:image" content="https://emtvalencia.netlify.app/og-image-emt.jpg" />
     <meta property="og:locale" content="es_ES" />
 
+    <!-- Cómo se ve cuando compartes en Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="EMT Valencia - Transporte Público de Valencia" />
     <meta

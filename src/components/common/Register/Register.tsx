@@ -2,7 +2,7 @@ import theme from './register.module.scss';
 import classNames from 'classnames/bind';
 import { useTranslation } from 'react-i18next';
 import { Button } from '../Button/Button';
-import card_graphics from '@/assets/card_graphics_lock.webp';
+import card_graphics from '../../../../public/card_graphics_lock.webp';
 
 const cx = classNames.bind(theme);
 

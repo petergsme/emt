@@ -1,0 +1,56 @@
+{
+  "name": "EMT Valencia - Transporte Público",
+  "short_name": "EMT Valencia",
+  "description": "Consulta horarios, planifica rutas y gestiona tu tarjeta Móbilis. Transporte público de Valencia en tiempo real.",
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#fefdf7",
+  "theme_color": "#dc2626",
+  "lang": "es",
+  "scope": "/",
+  "categories": ["travel", "navigation", "utilities", "transportation"],
+  "icons": [
+    {
+      "src": "/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Horarios",
+      "short_name": "Horarios",
+      "description": "Consultar horarios de autobuses",
+      "url": "/horarios",
+      "icons": [{ "src": "/android-chrome-192x192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Rutas",
+      "short_name": "Rutas",
+      "description": "Planificar viaje",
+      "url": "/rutas",
+      "icons": [{ "src": "/android-chrome-192x192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Móbilis",
+      "short_name": "Móbilis",
+      "description": "Gestionar tarjeta Móbilis",
+      "url": "/mobilis",
+      "icons": [{ "src": "/android-chrome-192x192.png", "sizes": "192x192" }]
+    }
+  ]
+}

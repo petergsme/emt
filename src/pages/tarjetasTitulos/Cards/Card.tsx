@@ -8,7 +8,7 @@ import { Icon } from '@/assets/icons/Icon';
 import { CardModal } from '../CardModal/CardModal';
 import { Accordion } from '@/components/common/Accordion/Accordion';
 import { CardProps } from '@/models/Card';
-import card_graphic from '@/assets/card_graphics.webp';
+import card_graphic from '../../../../public/card_graphics.webp';
 import ticket_graphic from '../assets/graphic_ticket.webp';
 
 const cx = classNames.bind(theme);
