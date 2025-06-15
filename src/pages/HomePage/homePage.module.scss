@@ -1,0 +1,15 @@
+@use '../../styles/mixins.scss' as *;
+
+@mixin mobile-CLS {
+  @media (max-width: 500px) {
+    @content;
+  }
+}
+// CLASES HOMEPAGE
+.CLS-optimization {
+  min-height: 1400px;
+
+  @include mobile-CLS {
+    min-height: 1650px;
+  }
+}
