@@ -1,0 +1,6 @@
+@use '../../styles/mixins.scss' as *;
+
+// CLASES HOMEPAGE
+.CLS-optimization {
+  min-height: clamp(700px, 1610px - 2.43vw, 1600px);
+}

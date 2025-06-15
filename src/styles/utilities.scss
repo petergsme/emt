@@ -8,6 +8,11 @@
   font-weight: var(--font-weight-regular);
   font-size: var(--font-size-48);
   line-height: var(--line-height-72);
+  min-height: 1.4em;
+
+  font-display: block;
+  contain: layout style;
+  will-change: auto;
 
   @include mobile-small {
     font-size: 40px;
