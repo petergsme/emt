@@ -46,7 +46,7 @@
   &__image {
     max-width: 460px;
     width: 100%;
-    aspect-ratio: 768/494;
+    // aspect-ratio: 768/494;
 
     @include mobile {
       max-width: 350px;
