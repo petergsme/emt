@@ -1,5 +1,6 @@
 import { NavLink, Link, Outlet } from 'react-router-dom';
 import { useScrollToSection } from './hooks/useScrollToSection';
+import { useCanonical } from './hooks/useCanonical';
 
 import classNames from 'classnames/bind';
 import theme from './App.module.scss';
@@ -8,6 +9,7 @@ const cx = classNames.bind(theme);
 
 export const App: React.FC = () => {
   useScrollToSection();
+  useCanonical();
 
   return (
     <>
