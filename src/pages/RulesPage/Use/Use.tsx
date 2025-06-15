@@ -2,9 +2,9 @@ import cn from 'classnames';
 import classNames from 'classnames/bind';
 import theme from './use.module.scss';
 import { useTranslation } from 'react-i18next';
-import step1 from '../../../../public/emt_valencia_bus_stop_monochrome.webp';
-import step2 from '../../../../public/emt_valencia_bus_interior_monochrome.webp';
-import step3 from '../../../../public/emt_valencia_bus_exterior_monochrome.webp';
+import step1 from '../assets/emt_valencia_bus_stop_monochrome.webp';
+import step2 from '../assets/emt_valencia_bus_interior_monochrome.webp';
+import step3 from '../assets/emt_valencia_bus_exterior_monochrome.webp';
 
 const cx = classNames.bind(theme);
 
