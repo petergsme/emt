@@ -20,3 +20,5 @@ export const App: React.FC = () => {
 //Remember an import with @ like this: import '@/styles/mixins.scss'; means that you're searching from the src folder, @ = src.
 
 //Remember the idea is to have a nav and footer component here.
+
+// Aquí tenemos que meter el footer.

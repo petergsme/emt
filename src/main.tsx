@@ -13,6 +13,9 @@ createRoot(document.getElementById('root')!).render(
       <Routes>
         <Route path="/" element={<App />}>
           <Route index element={<HomePage />} />
+          <Route path="/mobilis-cards" element={<HomePage />} />
+          <Route path="/help-rules-&-guides" element={<HomePage />} />
+          <Route path="/help-rules-&-guides" element={<HomePage />} />
         </Route>
       </Routes>
     </BrowserRouter>
