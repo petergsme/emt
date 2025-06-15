@@ -1,11 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/emt-logo.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>EMT Valencia</title>
 
+    <!-- PRINCIPAL Y META -->
+    <title>EMT Valencia</title>
+    <meta
+      name="description"
+      content="Consulta los horarios de autobuses de EMT Valencia en tiempo real, planifica rutas, gestiona tu tarjeta Móbilis y accede a toda la información del transporte público de Valencia. Servicio oficial de la Empresa Municipal de Transportes."
+    />
+    <meta
+      name="keywords"
+      content="EMT Valencia, autobuses Valencia, transporte público Valencia, horarios EMT, tarjeta Móbilis, rutas autobuses, paradas EMT"
+    />
+    <meta name="author" content="EMT Valencia" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://emtvalencia.netlify.app/" />
+
+    <!-- PRECONEXIONES / PRECARGA DE FUENTES Y DEPENDENCIAS DE GITHUB -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
@@ -29,6 +43,29 @@
 
     <link rel="preconnect" href="https://raw.githubusercontent.com" />
     <link rel="dns-prefetch" href="https://raw.githubusercontent.com" />
+
+    <!-- CARGA PRIORITARIA DEL LCP -->
+    <link rel="preload" href="./src/assets/card_graphics_lock.webp" as="image" type="image/webp" fetchpriority="high" />
+    <link rel="preload" href="./src/assets/card_graphics.webp" as="image" type="image/webp" fetchpriority="high" />
+
+    <!-- REDES SOCIALES (FB, INSTAGRAM, TWITTER)-->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://emtvalencia.netlify.app/" />
+    <meta property="og:title" content="EMT Valencia - Transporte Público de Valencia" />
+    <meta
+      property="og:description"
+      content="Consulta horarios, planifica rutas y gestiona tu tarjeta Móbilis. Información en tiempo real del transporte público de Valencia."
+    />
+    <meta property="og:image" content="https://emtvalencia.netlify.app/og-image-emt.jpg" />
+    <meta property="og:locale" content="es_ES" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="EMT Valencia - Transporte Público de Valencia" />
+    <meta
+      name="twitter:description"
+      content="Consulta horarios, planifica rutas y gestiona tu tarjeta Móbilis en tiempo real."
+    />
+    <meta name="twitter:image" content="https://emtvalencia.netlify.app/twitter-card-emt.jpg" />
   </head>
   <body>
     <div id="root"></div>

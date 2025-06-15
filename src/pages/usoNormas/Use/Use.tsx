@@ -21,7 +21,7 @@ export const Use = () => {
         <div className={cx('use__block')}>
           <img src={step1} alt={t('step1.altImage')} />
           <div className={cx('use__blockText')}>
-            <h4 className={cn('display-medium')}>{t('step1.title')}</h4>
+            <h3 className={cn('display-medium')}>{t('step1.title')}</h3>
             <p className={cn('paragraph-small')}>{t('step1.description')}</p>
           </div>
         </div>
@@ -29,7 +29,7 @@ export const Use = () => {
         <div className={cx('use__block')}>
           <img src={step2} alt={t('step2.altImage')} />
           <div className={cx('use__blockText')}>
-            <h4 className={cn('display-medium')}>{t('step2.title')}</h4>
+            <h3 className={cn('display-medium')}>{t('step2.title')}</h3>
             <p className={cn('paragraph-small')}>{t('step2.description')}</p>
           </div>
         </div>
@@ -37,7 +37,7 @@ export const Use = () => {
         <div className={cx('use__block')}>
           <img src={step3} alt={t('step3.altImage')} />
           <div className={cx('use__blockText')}>
-            <h4 className={cn('display-medium')}>{t('step3.title')}</h4>
+            <h3 className={cn('display-medium')}>{t('step3.title')}</h3>
             <p className={cn('paragraph-small')}>{t('step3.description')}</p>
           </div>
         </div>
