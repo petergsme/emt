@@ -1,19 +1,21 @@
+import { useState } from 'react';
 import theme from './register.module.scss';
 import classNames from 'classnames/bind';
 import { useTranslation } from 'react-i18next';
 import { Button } from '../Button/Button';
 import card_graphics from '../../../../public/card_graphics_lock.webp';
+import { RegisterForm } from '@/components/forms/RegisterForm/RegisterForm';
 
 const cx = classNames.bind(theme);
 
 interface RegisterProps {
   hasImage?: boolean;
   keepImageOnDesktop?: boolean;
-  setIsOpenModal: (value: boolean) => void;
 }
 
-export const Register = ({ hasImage = false, keepImageOnDesktop = false, setIsOpenModal }: RegisterProps) => {
+export const Register = ({ hasImage = false, keepImageOnDesktop = false }: RegisterProps) => {
   const { t } = useTranslation('register');
+  const [isOpenModal, setIsOpenModal] = useState(false);
 
   return (
     <>
@@ -34,6 +36,7 @@ export const Register = ({ hasImage = false, keepImageOnDesktop = false, setIsOp
       <Button type="button" style="filled" onClick={() => setIsOpenModal(true)} color="onbrand">
         {t('buttonText')}
       </Button>
+      {isOpenModal && <RegisterForm setIsOpenSection={setIsOpenModal} />}
     </>
   );
 };

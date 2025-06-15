@@ -15,7 +15,7 @@ export const Benefits = () => {
   const navigate = useNavigate();
 
   const handleNavigateToFAQ = () => {
-    navigate('/cards');
+    navigate('/mobilis-cards');
   };
   // Que no existe, pero da igual...
 

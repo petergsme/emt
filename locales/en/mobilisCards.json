@@ -75,6 +75,7 @@
       }
     },
     "personalizado": {
+      "name": "Personalized",
       "primaryDescription": "10 trips at reduced price for large or single-parent family members.",
       "secondaryDescription": "Personalized reloadable card with a maximum balance of up to 30 trips. Apply at our offices.",
       "buttonText": "Requirements & Rules",
@@ -182,6 +183,7 @@
       }
     },
     "billeteSencillo": {
+      "name": "Single Ticket",
       "primaryDescription": "A single trip with unlimited transfers for one hour.",
       "secondaryDescription": "Virtual personal wallet card with reloadable balance. Available on EMTicket app.",
       "buttonText": "Download EMTicket",

@@ -1,19 +1,19 @@
-// import theme from './TopUp.module.scss';
-// import classNames from 'classnames/bind';
 import { useTranslation } from 'react-i18next';
+import { useNavigate } from 'react-router-dom';
 import { Button } from '../Button/Button';
 import { SearchBar } from './Searchbar/SearchBar';
 import { Link } from 'react-router-dom';
-
-// const cx = classNames.bind(theme);
+import { useState } from 'react';
+import { RegisterForm } from '@/components/forms/RegisterForm/RegisterForm';
 
 interface RegisterProps {
-  setIsOpenModal: (value: boolean) => void;
   version?: 'large';
 }
 
-export const TopUp = ({ setIsOpenModal, version }: RegisterProps) => {
+export const TopUp = ({ version }: RegisterProps) => {
   const { t } = useTranslation('topUp');
+  const [isOpenModal, setIsOpenModal] = useState(false);
+  const navigate = useNavigate();
 
   return (
     <>
@@ -27,7 +27,7 @@ export const TopUp = ({ setIsOpenModal, version }: RegisterProps) => {
       {version === 'large' && <SearchBar setIsOpenModal={setIsOpenModal} />}
 
       {version !== 'large' && (
-        <Button type="button" style="filled" onClick={() => setIsOpenModal(true)} color="onprimary">
+        <Button type="button" style="filled" onClick={() => navigate('/mobilis-cards#recharge')} color="onprimary">
           {t('buttonText')}
         </Button>
       )}
@@ -40,6 +40,7 @@ export const TopUp = ({ setIsOpenModal, version }: RegisterProps) => {
           </Link>
         </div>
       )}
+      {isOpenModal && <RegisterForm setIsOpenSection={setIsOpenModal} />}
     </>
   );
 };

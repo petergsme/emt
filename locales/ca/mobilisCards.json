@@ -75,6 +75,7 @@
       }
     },
     "personalizado": {
+      "name": "Personalitzat",
       "primaryDescription": "10 viatges a preu reduït per a membres de família nombrosa o monoparental.",
       "secondaryDescription": "Targeta recargable personalitzada amb un saldo màxim de fins a 30 viatges. A sol·licitar en les nostres oficines.",
       "buttonText": "Requeriments i Normes",
@@ -182,6 +183,7 @@
       }
     },
     "billeteSencillo": {
+      "name": "Senzill",
       "primaryDescription": "Un únic viatge amb transbords il·limitats durant una hora.",
       "secondaryDescription": "Targeta moneder virtual d'ús personal amb saldo recargable. Disponible en l'app EMTicket.",
       "buttonText": "Descarregar EMTicket",

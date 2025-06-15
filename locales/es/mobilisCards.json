@@ -75,6 +75,7 @@
       }
     },
     "personalizado": {
+      "name": "Personalizado",
       "primaryDescription": "10 viajes a precio reducido para miembros de familia numerosa o monoparental.",
       "secondaryDescription": "Tarjeta recargable personalizada con un saldo máximo de hasta 30 viajes. A solicitar en nuestras oficinas.",
       "buttonText": "Requisitos Y Normas",
@@ -182,6 +183,7 @@
       }
     },
     "billeteSencillo": {
+      "name": "Billete Sencillo",
       "primaryDescription": "Un único viaje con transbordos ilimitados durante una hora.",
       "secondaryDescription": "Tarjeta monedero virtual de uso personal con saldo recargable. Disponible en la app EMTicket.",
       "buttonText": "Descarga EMTicket",

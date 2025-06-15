@@ -78,7 +78,7 @@ export const RegisterForm = ({ setIsOpenSection }: FormProps) => {
               <p className="paragraph-small">{t('accordion.lostAnswer')}</p>
             </Accordion>
             <Accordion text={t('accordion.data')} textClassName="questions-small" iconSize="small" variant="onprimary">
-              <p className="paragraph-small">{t('accordion.lostData')}</p>
+              <p className="paragraph-small">{t('accordion.dataAnswer')}</p>
             </Accordion>
           </div>
 

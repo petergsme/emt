@@ -11,6 +11,7 @@ interface SingleBlockProps {
   fullHeight?: boolean;
   isHorizontal?: boolean;
   className?: string;
+  id?: string;
 }
 
 export const SingleBlock = ({
@@ -21,6 +22,7 @@ export const SingleBlock = ({
   fullHeight = false,
   isHorizontal = false,
   className,
+  id,
 }: SingleBlockProps) => {
   const moduleClasses = cx(
     'singleBlockLayout',
@@ -33,7 +35,7 @@ export const SingleBlock = ({
   // Hecho para poder pasarle clases adicionales si fuera necesario.
 
   return (
-    <section className={finalClassName}>
+    <section id={id} className={finalClassName}>
       <div
         className={cx('singleBlockLayout__content', `singleBlockLayout__content--gap-${gapSize}`, {
           'singleBlockLayout__content--horizontal': isHorizontal,

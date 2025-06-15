@@ -21,19 +21,13 @@ interface CategoryItem {
   description: string;
 }
 interface FAQProps {
-  questions: FAQItem[];
+  questions?: FAQItem[];
   isAccordionVer?: boolean;
 }
 
 export const FAQ = ({ questions, isAccordionVer = true }: FAQProps) => {
   const { t } = useTranslation('faq');
-
   const navigate = useNavigate();
-
-  const handleNavigateToFAQ = () => {
-    navigate('/faq');
-  };
-  // Que no existe, pero da igual...
 
   const categories = t('categories', { returnObjects: true }) as CategoryItem[];
 
@@ -45,7 +39,7 @@ export const FAQ = ({ questions, isAccordionVer = true }: FAQProps) => {
 
       {isAccordionVer ? (
         <div className={cn('accordion__lastChild--border-bottom', cx('faq__accordion-container'))}>
-          {questions.map((item) => (
+          {questions?.map((item) => (
             <Accordion
               key={item.id}
               text={item.question}
@@ -63,7 +57,7 @@ export const FAQ = ({ questions, isAccordionVer = true }: FAQProps) => {
             return (
               <article key={category.id} className={cx('category')}>
                 <Icon icon={category.icon} color="onbrand-secondary" size="special" />
-                <Button type="button" style="filled" color="onprimary-secondary" onClick={handleNavigateToFAQ}>
+                <Button type="button" style="filled" color="onprimary-secondary" onClick={() => navigate('/faq')}>
                   {category.title}
                 </Button>
                 <p className={cn('text__wrap--balanced')}>{category.description}</p>
@@ -77,7 +71,7 @@ export const FAQ = ({ questions, isAccordionVer = true }: FAQProps) => {
         <h3 className={cn('display-medium', 'text__color--onprimary')}>
           {isAccordionVer ? t('accordionSection.subtitle') : t('generalSection.subtitle')}
         </h3>
-        <Button type="button" style="filled" color="onbrand" onClick={handleNavigateToFAQ}>
+        <Button type="button" style="filled" color="onbrand" onClick={() => navigate('/faq')}>
           {isAccordionVer ? t('accordionSection.buttonText') : t('generalSection.buttonText')}
         </Button>
       </div>

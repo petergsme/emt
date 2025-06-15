@@ -3,37 +3,23 @@
   <!-- Página principal -->
   <url>
     <loc>https://emtvalencia.netlify.app/</loc>
-    <lastmod>2024-12-20</lastmod>
-    <changefreq>daily</changefreq>
+    <lastmod>2025-18-06</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   
   <!-- Páginas principales -->
   <url>
-    <loc>https://emtvalencia.netlify.app/horarios</loc>
-    <lastmod>2024-12-20</lastmod>
-    <changefreq>daily</changefreq>
+    <loc>https://emtvalencia.netlify.app/mobilis-cards</loc>
+    <lastmod>2025-18-06</lastmod>
+    <changefreq>yearly</changefreq>
     <priority>0.8</priority>
   </url>
   
   <url>
-    <loc>https://emtvalencia.netlify.app/rutas</loc>
-    <lastmod>2024-12-20</lastmod>
-    <changefreq>weekly</changefreq>
+    <loc>https://emtvalencia.netlify.app/help/rules-guides</loc>
+    <lastmod>2025-18-06</lastmod>
+    <changefreq>yearly</changefreq>
     <priority>0.8</priority>
-  </url>
-  
-  <url>
-    <loc>https://emtvalencia.netlify.app/mobilis</loc>
-    <lastmod>2024-12-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  
-  <url>
-    <loc>https://emtvalencia.netlify.app/paradas</loc>
-    <lastmod>2024-12-20</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
   </url>
 </urlset>

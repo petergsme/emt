@@ -10,6 +10,7 @@ import { Accordion } from '@/components/common/Accordion/Accordion';
 import { CardProps } from '@/models/Card';
 import card_graphic from '../../../../public/card_graphics.webp';
 import ticket_graphic from '../assets/graphic_ticket.webp';
+import { Link } from 'react-router-dom';
 
 const cx = classNames.bind(theme);
 
@@ -102,7 +103,11 @@ export const Card = (card: CardProps) => {
                       );
                     })}
 
-                    {card.hasNorms && <a className={cn('link-xsmall', 'text__color--onbrand')}>{t('norms')}</a>}
+                    {card.hasNorms && (
+                      <Link className={cn('link-xsmall', 'text__color--onbrand')} to={'norms'}>
+                        {t('norms')}
+                      </Link>
+                    )}
                   </div>
                 </div>
 
@@ -161,9 +166,9 @@ export const Card = (card: CardProps) => {
                   );
                 })}
               </div>
-              <a className={cn('link-small', 'link__color--brand', cx('align-self-center'))} href="">
+              <Link className={cn('link-small', 'link__color--brand', cx('align-self-center'))} to={'/norms'}>
                 {t('norms')}
-              </a>
+              </Link>
               {card.hasAppointmentButton && (
                 <Button type="button" style="filled" color="onprimary" fullWidth={true} onClick={() => {}}>
                   {t('buttonDate')}

@@ -72,7 +72,7 @@ export const useCardsData = (): CardProps[] => {
     },
 
     {
-      name: 'Personalizado',
+      name: t('cards.personalizado.name'),
       primaryDescription: t('cards.personalizado.primaryDescription'),
       categories: [
         t('categories.Personal'),
@@ -214,7 +214,7 @@ export const useCardsData = (): CardProps[] => {
     },
 
     {
-      name: 'Billete Sencillo',
+      name: t('cards.billeteSencillo.name'),
       primaryDescription: t('cards.billeteSencillo.primaryDescription'),
       categories: [t('categories.General'), t('categories.Venta'), t('categories.Viajes individuales')],
       secondaryDescription: t('cards.billeteSencillo.secondaryDescription'),

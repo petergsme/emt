@@ -5,7 +5,10 @@ import './i18n';
 import './styles/index.scss';
 
 import { App } from './App.tsx';
-import { HomePage } from './pages/home/HomePage.tsx';
+import HomePage from './pages/home/HomePage.tsx';
+import CardsPage from './pages/tarjetasTitulos/CardsPage.tsx';
+import RulesPage from './pages/usoNormas/RulesPage.tsx';
+import ErrorPage from './pages/error/ErrorPage.tsx';
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
@@ -13,9 +16,9 @@ createRoot(document.getElementById('root')!).render(
       <Routes>
         <Route path="/" element={<App />}>
           <Route index element={<HomePage />} />
-          <Route path="/mobilis-cards" element={<HomePage />} />
-          <Route path="/help-rules-&-guides" element={<HomePage />} />
-          <Route path="/help-rules-&-guides" element={<HomePage />} />
+          <Route path="/mobilis-cards" element={<CardsPage />} />
+          <Route path="/help/rules-guides" element={<RulesPage />} />
+          <Route path="*" element={<ErrorPage />} />
         </Route>
       </Routes>
     </BrowserRouter>
@@ -23,5 +26,4 @@ createRoot(document.getElementById('root')!).render(
 );
 
 //'Index' on HomePage route signals default route, makes sense.
-
 //Remember that right now every route inside the app routing will include whatever's there, like a nav/footer... If you want a page not to have those, take it out of it.
