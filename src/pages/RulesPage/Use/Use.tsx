@@ -19,7 +19,16 @@ export const Use = () => {
 
       <section className={cx('use__content')}>
         <div className={cx('use__block')}>
-          <img src={step1} alt={t('step1.altImage')} />
+          <img
+            className={cx('use__image')}
+            loading="eager"
+            fetchPriority="high"
+            decoding="sync"
+            width={797}
+            height={501}
+            src={step1}
+            alt={t('step1.altImage')}
+          />
           <div className={cx('use__blockText')}>
             <h3 className={cn('display-medium')}>{t('step1.title')}</h3>
             <p className={cn('paragraph-small')}>{t('step1.description')}</p>
@@ -27,7 +36,7 @@ export const Use = () => {
         </div>
 
         <div className={cx('use__block')}>
-          <img src={step2} alt={t('step2.altImage')} />
+          <img src={step2} width={795} height={501} className={cx('use__image')} alt={t('step2.altImage')} />
           <div className={cx('use__blockText')}>
             <h3 className={cn('display-medium')}>{t('step2.title')}</h3>
             <p className={cn('paragraph-small')}>{t('step2.description')}</p>
@@ -35,7 +44,7 @@ export const Use = () => {
         </div>
 
         <div className={cx('use__block')}>
-          <img src={step3} alt={t('step3.altImage')} />
+          <img src={step3} width={795} height={501} className={cx('use__image')} alt={t('step3.altImage')} />
           <div className={cx('use__blockText')}>
             <h3 className={cn('display-medium')}>{t('step3.title')}</h3>
             <p className={cn('paragraph-small')}>{t('step3.description')}</p>

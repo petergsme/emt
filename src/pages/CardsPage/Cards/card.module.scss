@@ -64,10 +64,12 @@
   }
 
   &__image {
-    max-width: 265px;
+    width: 265px;
+    height: 170.45px;
 
     &--small {
-      max-width: 160px;
+      width: 160px;
+      height: 160px;
     }
   }
 

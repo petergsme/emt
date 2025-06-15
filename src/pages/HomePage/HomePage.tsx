@@ -1,14 +1,10 @@
 import { useTranslation } from 'react-i18next';
-import classNames from 'classnames/bind';
-import theme from './homePage.module.scss';
 import { Button } from '@/components/common/Button/Button';
 import { SingleBlock } from '@/components/layout/SingleBlock/SingleBlock';
 import { Benefits } from './Benefits/Benefits';
 import { TopUp } from '@/components/common/TopUp/TopUp';
 import { FAQ } from '@/components/common/FAQ/FAQ';
 import { Register } from '@/components/common/Register/Register';
-
-const cx = classNames.bind(theme);
 
 const HomePage: React.FC = () => {
   const { i18n } = useTranslation('faq');
@@ -28,7 +24,7 @@ const HomePage: React.FC = () => {
         </Button>
       </div>
 
-      <SingleBlock className={cx('CLS-optimization')} backgroundColor="light" paddingSize="special">
+      <SingleBlock backgroundColor="light" paddingSize="special">
         <Benefits />
       </SingleBlock>
 
