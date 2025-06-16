@@ -73,6 +73,8 @@
       "button": "REGISTRAR TARJETA"
     },
 
+    "privacy": "Política de privacidad ->",
+
     "purchase": { "claim": "Que nada te pare", "subclaim": "RECARGA TUS VIAJES", "button": "COMPRAR RECARGA" }
   },
 
@@ -104,5 +106,12 @@
     "lostAnswer": "En caso de pérdida o robo, puedes notificarlo de tres formas distintas: a través de esta página, llamando a nuestro teléfono de Atención al cliente o personándote en nuestras oficinas.",
     "data": "Revisa tus datos",
     "dataAnswer": "Antes de pulsar 'Registrar tarjeta' comprueba que los datos son correctos. Una vez enviado, cualquier modificación deberá realizarse a través del teléfono."
+  },
+
+  "accordionRefill": {
+    "update": "Actualización de los viajes",
+    "updateAnswer": "Puedes cargar un máximo de 30 viajes en tu Bonobús. Si pasas el límite, el sistema esperará a que uses algunos viajes para aplicar nuevas recargas (dentro de los 14 días siguientes).",
+    "limit": "Límite de viajes",
+    "limitAnswer": "Tus viajes se actualizan de 10 en 10 al validar en el bus. Para recargas de 10 viajes necesitarás 1 validación, pero para recargas de 20 viajes necesitarás 2 validaciones."
   }
 }

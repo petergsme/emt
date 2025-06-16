@@ -4,7 +4,7 @@ import { Button } from '../Button/Button';
 import { SearchBar } from './Searchbar/SearchBar';
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
-import { RegisterForm } from '@/components/forms/RegisterForm/RegisterForm';
+import { PurchaseForm } from '@/components/forms/PurchaseForm/PurchaseForm';
 
 interface RegisterProps {
   version?: 'large';
@@ -40,7 +40,7 @@ export const TopUp = ({ version }: RegisterProps) => {
           </Link>
         </div>
       )}
-      {isOpenModal && <RegisterForm setIsOpenSection={setIsOpenModal} />}
+      {isOpenModal && <PurchaseForm setIsOpenSection={setIsOpenModal} />}
     </>
   );
 };

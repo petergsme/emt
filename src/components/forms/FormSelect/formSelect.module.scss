@@ -11,6 +11,7 @@
 .select__label {
   color: var(--icon-onbrandsecondary);
   padding: 0 var(--padding-20);
+  text-align: left;
 
   &--error {
     color: var(--text-brand);

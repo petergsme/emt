@@ -73,6 +73,8 @@
       "button": "REGISTER CARD"
     },
 
+    "privacy": "Privacy Policy ->",
+
     "purchase": {
       "claim": "Fuel your next ride",
       "subclaim": "TOP UP YOUR CARD",
@@ -107,5 +109,12 @@
     "lostAnswer": "In case of loss or theft, you can report it in three ways: through this page, by calling our Customer Service line, or by visiting our offices in person.",
     "data": "Check your details",
     "dataAnswer": "Before clicking 'Register card', make sure your information is correct. Once submitted, any changes must be made by phone."
+  },
+
+  "accordionRefill": {
+    "update": "Topping up trips",
+    "updateAnswer": "You can load a maximum of 30 trips on your Bonobús card. If you exceed the limit, the system will wait for you to use some trips before applying new top-ups (within the following 14 days).",
+    "limit": "Trip limit",
+    "limitAnswer": "Your trips are updated 10 at a time when you validate on the bus. For 10-trip top-ups you'll need 1 validation, but for 20-trip top-ups you'll need 2 validations."
   }
 }

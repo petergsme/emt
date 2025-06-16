@@ -3,17 +3,17 @@ import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { useRegisterForm } from '../../../hooks/useRegisterForm';
 import { RegisterFormData } from '../RegisterFormData';
-import { FormInput, FormCheckbox, FormSelect, FormModal } from '../';
+import { FormInput, FormCheckbox, FormSelect, FormModal } from '..';
 import { Accordion } from '@/components/common/Accordion/Accordion';
 import { Icon } from '@/assets/icons/Icon';
 
-import theme from './RegisterForm.module.scss';
+import theme from './purchaseForm.module.scss';
 
 interface FormProps {
   setIsOpenSection: (value: boolean) => void;
 }
 
-export const RegisterForm = ({ setIsOpenSection }: FormProps) => {
+export const PurchaseForm = ({ setIsOpenSection }: FormProps) => {
   const [isOpenExit, setIsOpenExit] = useState(false);
   const [isOpenSuccess, setIsOpenSuccess] = useState(false);
 
@@ -28,14 +28,14 @@ export const RegisterForm = ({ setIsOpenSection }: FormProps) => {
 
   return (
     <div className={theme.section__wrapper}>
-      <section className={theme.register__section}>
+      <section className={theme.purchase__section}>
         <button type="button" onClick={() => setIsOpenExit(true)} className={theme['button-openModal']}>
           <Icon icon="Close" size="large" color="onprimary-secondary" />
         </button>
 
         <header className={theme.claim__container}>
-          <h2 className="display-medium">{t('sectionText.register.claim')}</h2>
-          <h3 className="display-large">{t('sectionText.register.subclaim')}</h3>
+          <h2 className="display-medium">{t('sectionText.purchase.claim')}</h2>
+          <h3 className="display-large">{t('sectionText.purchase.subclaim')}</h3>
         </header>
 
         <form className={theme.form__container} onSubmit={handleSubmit(registerCard)} noValidate>
@@ -56,15 +56,26 @@ export const RegisterForm = ({ setIsOpenSection }: FormProps) => {
           </div>
 
           <div className="accordion__lastChild--border-bottom">
-            <Accordion text={t('accordion.lost')} textClassName="questions-small" iconSize="small" variant="onprimary">
-              <p className="paragraph-small">{t('accordion.lostAnswer')}</p>
+            <Accordion
+              text={t('accordionRefill.update')}
+              textClassName="questions-small"
+              iconSize="small"
+              variant="onprimary"
+            >
+              <p className="paragraph-small">{t('accordionRefill.updateAnswer')}</p>
             </Accordion>
-            <Accordion text={t('accordion.data')} textClassName="questions-small" iconSize="small" variant="onprimary">
-              <p className="paragraph-small">{t('accordion.dataAnswer')}</p>
+            <Accordion
+              text={t('accordionRefill.limit')}
+              textClassName="questions-small"
+              iconSize="small"
+              variant="onprimary"
+            >
+              <p className="paragraph-small">{t('accordionRefill.limitAnswer')}</p>
             </Accordion>
           </div>
 
           <section className={theme['wrapper--paddingFlex']}>
+            <FormCheckbox type="bill" register={register} errors={errors} watch={watch} required={false} />
             <FormCheckbox type="privacy" register={register} errors={errors} watch={watch} required={true} />
             <Link className={`link-small link__color--brand ${theme.select__link}`} to="/politica-de-privacidad">
               {t('sectionText.privacy')}
@@ -73,7 +84,7 @@ export const RegisterForm = ({ setIsOpenSection }: FormProps) => {
 
           <div className={theme['wrapper--padding']}>
             <button type="submit" className={`label-button ${theme['submit-button-test']}`}>
-              {t('sectionText.register.button')}
+              {t('sectionText.purchase.button')}
             </button>
           </div>
         </form>

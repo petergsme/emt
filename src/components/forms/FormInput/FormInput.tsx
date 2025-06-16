@@ -58,6 +58,4 @@ export const FormInput = ({ type, register, errors, required = true, leadingIcon
   );
 };
 
-//Just using classnames bind on one of the elements' classes that was a bit hard to read.
-
 //Para mejorar la validación del tipo de documento tendríamos que crear validaciones separadas para dni,nie y pasaporte. La manera en que el input escogería la validación sería con un watch en un componente donde solo haya select + input y el select este en watch para que el input cambie en función de lo seleccionado en el select. Esto implicaría cambiar también el mensaje de error y para acceder a el podríamos usar el watch en lugar de crear 3 tipos de input mas para dni/nie/pasaporte. con watch en funcion de lo seleccionado podriamos acceder al mensaje de error en la traducción.

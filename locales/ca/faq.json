@@ -43,36 +43,37 @@
       "answer": "Cotxets, maletes i cadires de xiquets sí, però ben subjectats. Animals no, excepte gossos guia."
     }
   ],
+
   "cardsQuestions": [
     {
-      "id": "validate-card",
-      "question": "Què és una targeta Móbilis?",
-      "answer": "Totes les targetes, tant les personalitzades com les generals, són targetes Móbilis. És el nom que fa servir EMT per al suport on es carreguen títols com el bonobús, bo or o bo jove."
+      "id": "mobilis-cards",
+      "question": "What is a Móbilis card?",
+      "answer": "All cards, both personalized and general-use cards, are Móbilis cards. This is the name EMT uses to refer to the card that holds different transport passes and tickets, such as the bus pass, senior pass, or youth pass."
     },
     {
-      "id": "other-person-card",
-      "question": "Quins tipus de targetes hi ha?",
-      "answer": "Amb cotxet senzill, per la porta davantera. Amb cotxet doble, per la porta amb rampa."
+      "id": "cards-types",
+      "question": "What types of cards are available?",
+      "answer": "Personalized cards: Include photo and personal details. Can only hold one EMT pass. General-use cards: Can load any pass that doesn't require user identification."
     },
     {
-      "id": "exact-amount",
-      "question": "Com consulte el meu saldo o caducitat?",
-      "answer": "Amb cotxet senzill, per la porta davantera. Amb cotxet doble, per la porta amb rampa."
+      "id": "trips-left",
+      "question": "How can I check my balance or expiry date?",
+      "answer": "You can check your balance on bus card readers, at authorized sales points (such as newsstands or tobacco shops), and through this website or the app."
     },
     {
-      "id": "bus-stopped",
-      "question": "Com puc registrar la meua targeta?",
-      "answer": "No, no pugues mai entre parades encara que l’autobús estiga detingut."
+      "id": "register-card",
+      "question": "How can I register my card?",
+      "answer": "If you register your general-use card, you'll be able to recover your trips in case of loss or theft. You can register your card through our phone service (963 158 515) (Monday to Friday 8 AM to 9 PM, Saturdays 9 AM to 2 PM) or through this website."
     },
     {
-      "id": "baby-stroller",
-      "question": "Què és EMTicket?",
-      "answer": "Amb cotxet senzill, per la porta davantera. Amb cotxet doble, per la porta amb rampa."
+      "id": "emticket",
+      "question": "What is EMTicket?",
+      "answer": "EMTicket is a mobile app that lets you buy single tickets from your phone to travel unlimited on EMT for 1 hour from activation in a quick, easy and secure way."
     },
     {
-      "id": "luggage-pets",
-      "question": "Com active el meu bitllet senzill a l’app EMTicket?",
-      "answer": "Cotxets, maletes i cadires de xiquets sí, però ben subjectats. Animals no, excepte gossos guia."
+      "id": "ticket-emticket",
+      "question": "How do I activate my single ticket in the EMTicket app?",
+      "answer": "Once you've bought your ticket, it will be saved in your ticket wallet. To activate it, you need to go there, select it and 'activate' its use."
     }
   ],
 

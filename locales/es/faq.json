@@ -46,34 +46,34 @@
 
   "cardsQuestions": [
     {
-      "id": "validate-card",
+      "id": "mobilis-cards",
       "question": "¿Qué es una tarjeta Móbilis?",
       "answer": "Todas las tarjetas, tanto las personalizadas como las de uso general, son tarjetas Móbilis. Este es el nombre que la EMT usa para referirse al soporte donde se cargan los diferentes títulos o abonos de transporte, como el bonobús, el bono oro o el bono joven."
     },
     {
-      "id": "other-person-card",
+      "id": "cards-types",
       "question": "¿Qué tipos de tarjetas hay?",
-      "answer": "Con cochecito simple, por la puerta delantera. Con cochecito múltiple, por la puerta con rampa."
+      "answer": "Personalizadas: Incluye foto y datos personales. Solo puede contener un título de EMT. De uso general: Puede cargar cualquier título que no requiera de la identificación del usuario."
     },
     {
-      "id": "exact-amount",
+      "id": "trips-left",
       "question": "¿Cómo consulto mi saldo o caducidad?",
-      "answer": "Con cochecito simple, por la puerta delantera. Con cochecito múltiple, por la puerta con rampa."
+      "answer": "Puedes consultar tu saldo en las validadoras del bus, puntos de venta autorizados (como quioscos o estancos) y a través de esta web o la app."
     },
     {
-      "id": "bus-stopped",
+      "id": "register-card",
       "question": "¿Cómo puedo registrar mi tarjeta?",
-      "answer": "No, nunca subas entre paradas aunque el bus esté detenido."
+      "answer": "Si registras tu tarjeta de uso general, podrás recuperar los viajes en caso de pérdida o robo. Puedes registrar tu tarjeta a través de nuestro servicio de atención telefónica (963 158 515) (de lunes a viernes de 8 a 21 horas, y los sábados de 9 a 14 horas) o través de esta web."
     },
     {
-      "id": "baby-stroller",
+      "id": "emticket",
       "question": "¿Qué es EMTicket?",
-      "answer": "Con cochecito simple, por la puerta delantera. Con cochecito múltiple, por la puerta con rampa."
+      "answer": "EMTicket es una aplicación móvil que te permite comprar billetes sencillos desde tu móvil para viajar sin límites en EMT durante 1 hora desde la activación de forma rápida, fácil y segura."
     },
     {
-      "id": "luggage-pets",
+      "id": "ticket-emticket",
       "question": "¿Cómo activo mi billete sencillo en la app EMTicket?",
-      "answer": "Carritos, maletas y sillas de niños sí, pero deben estar bien sujetos. Animales no, salvo perros-guía."
+      "answer": "Una vez hayas comprado tu billete, este pasará a estar guardado en tu cartera de billetes. Para activarlo, deberás entrar ahí, seleccionarlo y “activar” su uso."
     }
   ],
 

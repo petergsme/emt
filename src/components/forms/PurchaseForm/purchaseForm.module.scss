@@ -52,7 +52,7 @@
   animation-timing-function: cubic-bezier(0.82, 0, 0.28, 0.99);
 }
 
-.register__section {
+.purchase__section {
   @include display-flex(var(--gap-40));
   padding-top: var(--padding-40);
   padding-bottom: var(--padding-80);
@@ -108,6 +108,9 @@
 
 .select__link {
   text-align: left;
+}
+
+.small__pelele {
 }
 
 // clases del modal
