@@ -125,6 +125,10 @@ export const FooterMobile = () => {
       <div className="footer__to-top">
         <a href="#">Volver arriba</a>
       </div>
+
+      <div className="footer__to-top">
+        <a className='copy' href="#">© Copyright EMT Valencia 2025.</a>
+      </div>
     </footer>
   );
 };
