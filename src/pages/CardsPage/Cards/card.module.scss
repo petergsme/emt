@@ -2,6 +2,7 @@
   height: 550px;
   width: 325px;
   perspective: 1000px;
+  animation: subtleBounce 0.3s ease-out;
 
   &__inner {
     height: 100%;
@@ -130,4 +131,23 @@
 
 .align-self-center {
   align-self: center;
+}
+
+@keyframes subtleBounce {
+  0% {
+    opacity: 0;
+    transform: translateY(20px) scale(0.95);
+  }
+  50% {
+    opacity: 0.8;
+    transform: translateY(-5px) scale(1.02); // Bounce sutil hacia arriba
+  }
+  75% {
+    opacity: 0.95;
+    transform: translateY(2px) scale(0.99); // Pequeño rebote hacia abajo
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1); // Posición final
+  }
 }
