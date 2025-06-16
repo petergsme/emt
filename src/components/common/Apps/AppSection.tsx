@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import classNames from 'classnames/bind';
 import cn from 'classnames';
 import theme from './appSection.module.scss';
-import { AppCard } from './appCard/appCard';
+import { AppCard } from './appCard/AppCard';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import emticket_app_icon from '@/assets/emticket_app_icon.webp';
 import emtvalencia_app_icon from '@/assets/emtvalencia_app_icon.webp';
