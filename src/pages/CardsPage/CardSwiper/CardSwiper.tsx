@@ -1,5 +1,5 @@
 import { useEffect, useRef } from 'react';
-import { Swiper, SwiperSlide } from 'swiper/react';
+import { Swiper, SwiperRef, SwiperSlide } from 'swiper/react';
 import { Pagination } from 'swiper/modules';
 import './cardSwiper.scss';
 import { Card } from '../Cards/Card';
@@ -15,7 +15,7 @@ interface CardSwiperProps {
 }
 
 export const CardSwiper = ({ cardArray, activeFilter }: CardSwiperProps) => {
-  const swiperRef = useRef<any>(null);
+  const swiperRef = useRef<SwiperRef>(null);
 
   useEffect(() => {
     swiperRef.current?.swiper?.slideTo(0);
