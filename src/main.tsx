@@ -21,7 +21,7 @@ createRoot(document.getElementById('root')!).render(
           <Route path="/help/rules-guides" element={<RulesPage />} />
           <Route path="/error" element={<ErrorPage />} />
           <Route path="*" element={<Navigate to="/error" replace />} />
-          <Route path="dev" element={<ComponentPlayground />} />
+          <Route path="/dev" element={<ComponentPlayground />} />
         </Route>
       </Routes>
     </BrowserRouter>

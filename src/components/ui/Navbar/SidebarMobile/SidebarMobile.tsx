@@ -1,93 +1,143 @@
-import React from 'react';
-import './SidebarMobile.scss';
-import { Link } from 'react-router-dom';
+import { useEffect, useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
+import classNames from 'classnames/bind';
+import cn from 'classnames';
 import { Icon } from '@/assets/icons/Icon';
 import { Accordion } from '@/components/common/Accordion/Accordion';
 import { Button } from '@/components/common/Button/Button';
+import theme from './sidebarMobile.module.scss';
+import { useTranslation } from 'react-i18next';
+
+const cx = classNames.bind(theme);
 
 interface SidebarMobileProps {
   isOpen: boolean;
   onClose: () => void;
 }
 
-const SidebarMobile: React.FC<SidebarMobileProps> = ({ isOpen, onClose }) => {
-   const [isVisible, setIsVisible] = React.useState(false);
+const SidebarMobile = ({ isOpen, onClose }: SidebarMobileProps) => {
+  const [isVisible, setIsVisible] = useState(false);
+  const [isClosing, setIsClosing] = useState(false);
+  const navigate = useNavigate();
+  const { t } = useTranslation('menu');
 
-  React.useEffect(() => {
+  useEffect(() => {
     if (isOpen) {
       setIsVisible(true);
+      setIsClosing(false);
     }
   }, [isOpen]);
 
   const handleClose = () => {
-    const container = document.querySelector('.sidebar__container');
-    if (container) {
-      container.classList.add('sidebar__closing');
-      setTimeout(() => {
-        setIsVisible(false);
-        onClose();
-      }, 300); // mismo tiempo que la animación
-    }
+    setIsClosing(true);
+    setTimeout(() => {
+      setIsVisible(false);
+      setIsClosing(false);
+      onClose();
+    }, 400);
   };
 
-  if (!isOpen && !isVisible) return null;
+  if (!isOpen && !isVisible) return;
 
   return (
     <>
-      <div className="sidebar__backdrop" onClick={handleClose} />
-      <aside className="sidebar__container" role="dialog" aria-modal="true" aria-label="Menú">
-        <div className="sidebar__header">
-          <button className="sidebar__close" onClick={handleClose} aria-label="Cerrar menú">
-            <Icon icon="Close" size="large" color="onbrand" />
-          </button>
-        </div>
+      <div
+        className={cx('sidebar__overlay', {
+          'sidebar__overlay--closing': isClosing,
+        })}
+        onClick={handleClose}
+      />
 
-        <div className="sidebar__content">
-            <div className="sidebar__block sidebar__block--with-border-top">
-                <Link to="/mapa" className="sidebar__link" onClick={handleClose}>Mapa</Link>
-            </div>
+      <aside
+        className={cx('sidebar__panel', {
+          'sidebar__panel--closing': isClosing,
+        })}
+        role="dialog"
+        aria-modal="true"
+        aria-label={t('accessibility.menu')}
+      >
+        <section>
+          <header className={cx('sidebar__topbar')}>
+            <button
+              className={cx('sidebar__close-button')}
+              onClick={handleClose}
+              aria-label={t('accessibility.closeMenu')}
+            >
+              <Icon icon="Close" size="large" color="onbrand" />
+            </button>
+          </header>
 
-            <div className="sidebar__block">
-                <Accordion text="Títulos y tarifas" textClassName="sidebar__accordion-title" variant="onbrand" iconSize="medium">
-                    <div className="sidebar__submenu">
-                        <Link to="/tarjetas" className="sidebar__sublink" onClick={handleClose}>Tarjetas</Link>
-                        <Link to="/consultas" className="sidebar__sublink" onClick={handleClose}>Consultas y recargas</Link>
-                        <Link to="/consultas" className="sidebar__sublink" onClick={handleClose}>Registra tu tarjeta</Link>
-                    </div>
-                </Accordion>
-            </div>
+          <main className={cn('accordion__lastChild--border-bottom', cx('sidebar__main-content'))}>
+            <section className={cx('sidebar__nav-section')}>
+              <Link to="/mapa" className={cn('display-medium', cx('sidebar__nav-link'))} onClick={handleClose}>
+                {t('navigation.map')}
+              </Link>
+            </section>
 
-            <div className="sidebar__block sidebar__block--with-border-bottom">
-                <Accordion text="Ayuda" textClassName="sidebar__accordion-title" variant="onbrand" iconSize="medium">
-                    <div className="sidebar__submenu">
-                        <Link to="/normativa" className="sidebar__sublink" onClick={handleClose}>Uso de bus y normativa</Link>
-                        <Link to="/faq" className="sidebar__sublink" onClick={handleClose}>Preguntas frecuentes</Link>
-                    </div>
-                </Accordion>
-            </div>
-        </div>
+            <Accordion
+              text={t('navigation.titlesAndRates')}
+              textClassName={cn('display-medium')}
+              variant="onbrand"
+              iconSize="medium"
+              gapSize="large"
+            >
+              <nav className={cx('sidebar__sub-nav')}>
+                <Link
+                  to="/mobilis-cards"
+                  className={cn('paragraph-medium', cx('sidebar__nav-link'))}
+                  onClick={handleClose}
+                >
+                  {t('titlesAndRates.cards')}
+                </Link>
+                <Link
+                  to="/mobilis-cards#recharge"
+                  className={cn('paragraph-medium', cx('sidebar__nav-link'))}
+                  onClick={handleClose}
+                >
+                  {t('titlesAndRates.consultationsAndRecharges')}
+                </Link>
+                <Link
+                  to="/mobilis-cards#register"
+                  className={cn('paragraph-medium', cx('sidebar__nav-link'))}
+                  onClick={handleClose}
+                >
+                  {t('titlesAndRates.registerCard')}
+                </Link>
+              </nav>
+            </Accordion>
 
-        <div className="sidebar__footer">
-          <Button
-            type="button"
-            style="outlined"
-            color="onbrand"
-            fullWidth
-            onClick={() => window.location.href = '/contacto'}
-          >
-            Contacta con nosotros
+            <Accordion
+              text={t('navigation.help')}
+              textClassName={cn('display-medium')}
+              variant="onbrand"
+              iconSize="medium"
+              gapSize="large"
+            >
+              <nav className={cx('sidebar__sub-nav')}>
+                <Link
+                  to="/help/rules-guides"
+                  className={cn('paragraph-medium', cx('sidebar__nav-link'))}
+                  onClick={handleClose}
+                >
+                  {t('help.busUsageAndRegulations')}
+                </Link>
+                <Link to="/faq" className={cn('paragraph-medium', cx('sidebar__nav-link'))} onClick={handleClose}>
+                  {t('help.frequentQuestions')}
+                </Link>
+              </nav>
+            </Accordion>
+          </main>
+        </section>
+
+        <footer className={cx('sidebar__action-bar')}>
+          <Button type="button" style="outlined" color="onbrand" fullWidth onClick={() => navigate('/contact')}>
+            {t('actions.contactUs')}
           </Button>
 
-          <Button
-            type="button"
-            style="filled"
-            color="onbrand"
-            fullWidth
-            onClick={() => console.log('Descargar app')}
-          >
-            Descarga las apps
+          <Button type="button" style="filled" color="onbrand" fullWidth onClick={() => navigate('/downloadApps')}>
+            {t('actions.downloadApps')}
           </Button>
-        </div>
+        </footer>
       </aside>
     </>
   );

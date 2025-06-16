@@ -1,0 +1,24 @@
+{
+  "navigation": {
+    "map": "Map",
+    "titlesAndRates": "Tickets",
+    "help": "Help"
+  },
+  "titlesAndRates": {
+    "cards": "Cards",
+    "consultationsAndRecharges": "Inquiries and top-ups",
+    "registerCard": "Register your card"
+  },
+  "help": {
+    "busUsageAndRegulations": "Bus usage and regulations",
+    "frequentQuestions": "Frequently asked questions"
+  },
+  "actions": {
+    "contactUs": "Contact us",
+    "downloadApps": "Download the apps"
+  },
+  "accessibility": {
+    "menu": "Menu",
+    "closeMenu": "Close menu"
+  }
+}

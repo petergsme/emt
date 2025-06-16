@@ -1,0 +1,24 @@
+{
+  "navigation": {
+    "map": "Mapa",
+    "titlesAndRates": "Títulos y tarifas",
+    "help": "Ayuda"
+  },
+  "titlesAndRates": {
+    "cards": "Tarjetas",
+    "consultationsAndRecharges": "Consultas y recargas",
+    "registerCard": "Registra tu tarjeta"
+  },
+  "help": {
+    "busUsageAndRegulations": "Uso del bus y normativa",
+    "frequentQuestions": "Preguntas frecuentes"
+  },
+  "actions": {
+    "contactUs": "Contacta con nosotros",
+    "downloadApps": "Descarga las apps"
+  },
+  "accessibility": {
+    "menu": "Menú",
+    "closeMenu": "Cerrar menú"
+  }
+}
