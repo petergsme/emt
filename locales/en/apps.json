@@ -1,5 +1,6 @@
 {
   "apps": {
+    "altQR": "QR code to download EMT Valencia apps on mobiles",
     "claim": "ALL ON YOUR PHONE",
     "downloadApps": "DOWNLOAD THE APPS",
     "downloadButton": "DOWNLOAD",
@@ -15,7 +16,7 @@
     "emtvalencia": {
       "title": "EMT Valencia",
       "features": {
-        "checkTimes": "Check arrivals and departures.",
+        "checkTimes": "Check bus arrival times.",
         "saveStops": "Save your favorite stops.",
         "rechargeCards": "Top up your cards."
       },

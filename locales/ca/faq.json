@@ -47,33 +47,33 @@
   "cardsQuestions": [
     {
       "id": "mobilis-cards",
-      "question": "What is a Móbilis card?",
-      "answer": "All cards, both personalized and general-use cards, are Móbilis cards. This is the name EMT uses to refer to the card that holds different transport passes and tickets, such as the bus pass, senior pass, or youth pass."
+      "question": "Què és una targeta Móbilis?",
+      "answer": "Totes les targetes, tant les personalitzades com les d'ús general, són targetes Móbilis. Este és el nom que l'EMT utilitza per a referir-se al suport on es carreguen els diferents títols o abonaments de transport, com el bonobús, el bo or o el bo jove."
     },
     {
       "id": "cards-types",
-      "question": "What types of cards are available?",
-      "answer": "Personalized cards: Include photo and personal details. Can only hold one EMT pass. General-use cards: Can load any pass that doesn't require user identification."
+      "question": "Quins tipus de targetes hi ha?",
+      "answer": "Personalitzades: Inclou foto i dades personals. Només pot contindre un títol d'EMT. D'ús general: Pot carregar qualsevol títol que no requerisca la identificació de l'usuari."
     },
     {
       "id": "trips-left",
-      "question": "How can I check my balance or expiry date?",
-      "answer": "You can check your balance on bus card readers, at authorized sales points (such as newsstands or tobacco shops), and through this website or the app."
+      "question": "Com consulte el meu saldo o caducitat?",
+      "answer": "Pots consultar el teu saldo en els validadors de l'autobús, punts de venda autoritzats (com quioscos o estancs) i a través d'esta web o l'app."
     },
     {
       "id": "register-card",
-      "question": "How can I register my card?",
-      "answer": "If you register your general-use card, you'll be able to recover your trips in case of loss or theft. You can register your card through our phone service (963 158 515) (Monday to Friday 8 AM to 9 PM, Saturdays 9 AM to 2 PM) or through this website."
+      "question": "Com puc registrar la meua targeta?",
+      "answer": "Si registres la teua targeta d'ús general, podràs recuperar els viatges en cas de pèrdua o robatori. Pots registrar la teua targeta a través del nostre servei d'atenció telefònica (963 158 515) (de dilluns a divendres de 8 a 21 hores, i els dissabtes de 9 a 14 hores) o a través d'esta web."
     },
     {
       "id": "emticket",
-      "question": "What is EMTicket?",
-      "answer": "EMTicket is a mobile app that lets you buy single tickets from your phone to travel unlimited on EMT for 1 hour from activation in a quick, easy and secure way."
+      "question": "Què és EMTicket?",
+      "answer": "EMTicket és una aplicació mòbil que et permet comprar bitllets senzills des del teu mòbil per a viatjar sense límits en EMT durant 1 hora des de l'activació de forma ràpida, fàcil i segura."
     },
     {
       "id": "ticket-emticket",
-      "question": "How do I activate my single ticket in the EMTicket app?",
-      "answer": "Once you've bought your ticket, it will be saved in your ticket wallet. To activate it, you need to go there, select it and 'activate' its use."
+      "question": "Com active el meu bitllet senzill en l'app EMTicket?",
+      "answer": "Una vegada hages comprat el teu bitllet, este passarà a estar guardat en la teua cartera de bitllets. Per a activar-lo, hauràs d'entrar ahí, seleccionar-lo i 'activar' el seu ús."
     }
   ],
 

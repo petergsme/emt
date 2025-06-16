@@ -1,5 +1,6 @@
 {
   "apps": {
+    "altQR": "Código QR para descargar las apps de EMT Valencia en móviles",
     "claim": "TODO EN TU MÓVIL",
     "downloadApps": "DESCARGA LAS APPS",
     "downloadButton": "DESCARGAR",
@@ -8,7 +9,7 @@
       "features": {
         "easyPurchase": "Compra sencillos facilmente.",
         "virtualWallet": "Monedero virtual MovimEMT.",
-        "advancePurchase": "Compra billetes por adelantado."
+        "advancePurchase": "Compra por adelantado."
       },
       "altText": "Aplicación EMTicket para compra de billetes de transporte público"
     },

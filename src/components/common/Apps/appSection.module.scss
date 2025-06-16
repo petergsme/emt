@@ -4,9 +4,28 @@
 
 .apps {
   &__image {
-    width: 186px;
-    height: 186px;
+    width: 160px;
+    height: 160px;
     align-self: center;
+
+    &--QR {
+      width: 150px;
+      height: 150px;
+    }
+  }
+
+  &__header {
+    padding: 0 var(--padding-20);
+  }
+
+  &__container-desktop {
+    display: none;
+
+    @include desktop {
+      display: flex;
+      gap: var(--gap-40);
+      align-items: center;
+    }
   }
 
   &__content {
@@ -44,4 +63,47 @@
       padding: var(--padding-12) 0;
     }
   }
+
+  &__QR {
+    padding-top: var(--padding-40);
+    display: flex;
+    flex-direction: column-reverse;
+    gap: var(--gap-40);
+    align-items: center;
+    display: none;
+
+    & h2 {
+      // max-width: 400px;
+    }
+
+    @include desktop {
+      display: flex;
+    }
+  }
+}
+
+.mySwiper {
+  padding: 0 var(--padding-20) var(--padding-60) var(--padding-20) !important;
+  width: 100vw !important;
+  max-width: 100% !important;
+  margin: 0 !important;
+
+  @include desktop {
+    display: none !important;
+  }
+}
+
+.slide-auto {
+  width: 325px !important;
+}
+
+.swiper-pagination-bullet {
+  background: var(--icon-onbrandsecondary) !important;
+  opacity: 1 !important;
+  width: 12px !important;
+  height: 12px !important;
+}
+
+.swiper-pagination-bullet-active {
+  background: var(--icon-onprimary) !important;
 }

@@ -1,12 +1,13 @@
 {
   "apps": {
+    "altQR": "Codi QR per a descarregar les aplicacions d'EMT València en mòbils",
     "claim": "TOT AL TEU MÒBIL",
     "downloadApps": "DESCARREGA LES APPS",
     "downloadButton": "DESCARREGAR",
     "emticket": {
       "title": "EMTicket",
       "features": {
-        "easyPurchase": "Compra fàcil de bitllets senzills.",
+        "easyPurchase": "Compra senzills fàcilment.",
         "virtualWallet": "Moneder virtual MovimEMT.",
         "advancePurchase": "Compra bitllets per endavant."
       },

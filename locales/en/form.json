@@ -92,7 +92,7 @@
 
     "completed": {
       "register": {
-        "claim": "Registration completed",
+        "claim": "Register complete",
         "info": "Congratulations, your card has been registered successfully."
       },
 
