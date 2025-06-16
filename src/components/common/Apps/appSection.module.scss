@@ -1,0 +1,47 @@
+@use '../../../styles/mixins.scss' as *;
+
+// APP SECTION CLASSES
+
+.apps {
+  &__image {
+    width: 186px;
+    height: 186px;
+    align-self: center;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-20);
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-8);
+  }
+
+  &__bulletpoint {
+    display: flex;
+    gap: var(--gap-8);
+  }
+
+  &__button--hidden {
+    @include tablet-up {
+      display: none;
+    }
+  }
+
+  &__banner {
+    padding: var(--padding-20) 0;
+    background-color: var(--bg-brand-tertiary);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    @include mobile {
+      padding: var(--padding-12) 0;
+    }
+  }
+}

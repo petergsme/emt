@@ -4,6 +4,8 @@ import { useCanonical } from './hooks/useCanonical';
 
 import classNames from 'classnames/bind';
 import theme from './App.module.scss';
+import { AppSection } from './components/common/Apps/AppSection';
+import { SingleBlock } from './components/layout/SingleBlock/SingleBlock';
 
 const cx = classNames.bind(theme);
 
@@ -29,6 +31,9 @@ export const App: React.FC = () => {
       </div>
 
       <Outlet />
+      <SingleBlock backgroundColor="pink" className={cx('extra-padding-top')}>
+        <AppSection />
+      </SingleBlock>
     </>
   );
 };

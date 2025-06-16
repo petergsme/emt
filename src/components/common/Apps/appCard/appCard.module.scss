@@ -1,0 +1,11 @@
+// APP CARDS CLASSES
+
+.appCard__container {
+  width: var(--size-350);
+  background: var(--gradient-dark-neutral);
+  border-radius: var(--border-radius-20);
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-40);
+  padding: var(--padding-20);
+}

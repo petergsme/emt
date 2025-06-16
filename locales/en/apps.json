@@ -1,0 +1,25 @@
+{
+  "apps": {
+    "claim": "ALL ON YOUR PHONE",
+    "downloadApps": "DOWNLOAD THE APPS",
+    "downloadButton": "DOWNLOAD",
+    "emticket": {
+      "title": "EMTicket",
+      "features": {
+        "easyPurchase": "Easy single ticket purchase.",
+        "virtualWallet": "MovimEMT virtual wallet.",
+        "advancePurchase": "Buy tickets in advance."
+      },
+      "altText": "EMTicket app for purchasing public transport tickets"
+    },
+    "emtvalencia": {
+      "title": "EMT Valencia",
+      "features": {
+        "checkTimes": "Check arrivals and departures.",
+        "saveStops": "Save your favorite stops.",
+        "rechargeCards": "Top up your cards."
+      },
+      "altText": "EMT Valencia app for checking schedules and managing stops"
+    }
+  }
+}

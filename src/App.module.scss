@@ -1,3 +1,5 @@
+@use './styles/mixins.scss' as *;
+
 .App {
   display: flex;
   flex-direction: column;
@@ -14,5 +16,17 @@
     color: white;
     padding: 12px;
     border-radius: 1000px;
+  }
+}
+
+.extra-padding-top {
+  padding: var(--padding-160) var(--padding-20) var(--padding-120) var(--padding-20) !important;
+
+  @include mobile {
+    padding: var(--padding-120) var(--padding-20) var(--padding-80) var(--padding-20) !important;
+  }
+
+  @include tablet {
+    padding: var(--padding-120) var(--padding-20) var(--padding-80) var(--padding-20) !important;
   }
 }

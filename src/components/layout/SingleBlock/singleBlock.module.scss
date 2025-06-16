@@ -10,6 +10,7 @@
   width: 100%;
   display: flex;
   justify-content: center;
+  position: relative;
 
   &__background-color--light {
     background-color: var(--bg-primary);

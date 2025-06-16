@@ -17,12 +17,12 @@ ESTO BIEN
    &--error {}
 }
 
--En vez de crear "display-large" cambia los estilos del h1, y ya.
+-En vez de crear "display-large" cambia los estilos del h1, y ya (haz lo mismo para los demás).
 
 
 CONSEJOS SOBRE ENTREVISTAS
 
-"¿Cuanto en detalle quieres que hable del componente? Voy a ir bloque por bloque explicandolo si quereis que vaya mas rapido o mas en detalle decidme sin problema".
+"¿Cuanto quieres que entre en detalle sobre el componente? Voy a ir bloque por bloque explicandolo si quereis que vaya mas rapido o mas en detalle decidme sin problema".
 
 -No entres demasiado en detalle, se practico y sencillo.
 -Saltate todo aquello que no valga la pena explicar.
