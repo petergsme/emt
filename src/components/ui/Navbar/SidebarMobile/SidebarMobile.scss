@@ -115,9 +115,9 @@ background: linear-gradient(180deg, var(--red-700) 10%, var(--red-300-main) 100%
 }
 
 .sidebar__sublink {
-  color: var(--white-100-main); // o var(--text-secondary) si prefieres un tono más claro
+  color: var(--white-100-main);
   font-size: 20px;
-  font-family: var(--font-family-body); // o display si prefieres
+  font-family: var(--font-family-body); 
   text-decoration: none;
 
   &:hover {
