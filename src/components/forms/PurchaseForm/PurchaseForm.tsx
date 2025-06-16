@@ -1,5 +1,5 @@
-import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import classNames from 'classnames/bind';
 import { useTranslation } from 'react-i18next';
 import { useRegisterForm } from '../../../hooks/useRegisterForm';
 import { RegisterFormData } from '../RegisterFormData';
@@ -9,17 +9,29 @@ import { Icon } from '@/assets/icons/Icon';
 
 import theme from './purchaseForm.module.scss';
 
+const cx = classNames.bind(theme);
+
 interface FormProps {
   setIsOpenSection: (value: boolean) => void;
 }
 
 export const PurchaseForm = ({ setIsOpenSection }: FormProps) => {
-  const [isOpenExit, setIsOpenExit] = useState(false);
-  const [isOpenSuccess, setIsOpenSuccess] = useState(false);
-
   const { t } = useTranslation('form');
 
-  const { register, control, handleSubmit, errors, watch } = useRegisterForm();
+  const {
+    register,
+    control,
+    handleSubmit,
+    errors,
+    watch,
+    handleExitModal,
+    isClosingModal,
+    isClosingSection,
+    setIsOpenExit,
+    isOpenExit,
+    setIsOpenSuccess,
+    isOpenSuccess,
+  } = useRegisterForm({ setIsOpenSection });
 
   const registerCard = (data: RegisterFormData) => {
     console.log('Los datos del formulario son:', data);
@@ -27,7 +39,7 @@ export const PurchaseForm = ({ setIsOpenSection }: FormProps) => {
   };
 
   return (
-    <div className={theme.section__wrapper}>
+    <div className={cx('section__wrapper', { 'section__wrapper--exit': isClosingSection })}>
       <section className={theme.purchase__section}>
         <button type="button" onClick={() => setIsOpenExit(true)} className={theme['button-openModal']}>
           <Icon icon="Close" size="large" color="onprimary-secondary" />
@@ -42,17 +54,15 @@ export const PurchaseForm = ({ setIsOpenSection }: FormProps) => {
           <div className={theme['wrapper--paddingFlex--form']}>
             <FormInput type="cardNumber" leadingIcon="Card" register={register} errors={errors} required={true} />
 
-            <FormSelect type="documentType" leadingIcon="User" control={control} errors={errors} required={true} />
-
-            <FormInput type="documentNumber" leadingIcon="Id" register={register} errors={errors} required={true} />
+            <FormSelect type="refill" leadingIcon="Euro" control={control} errors={errors} required={true} />
 
             <FormInput type="firstName" leadingIcon="User" register={register} errors={errors} required={true} />
 
             <FormInput type="lastName" leadingIcon="User" register={register} errors={errors} required={true} />
 
-            <FormInput type="phone" leadingIcon="Phone" register={register} errors={errors} required={false} />
+            <FormInput type="phone" leadingIcon="Phone" register={register} errors={errors} required={true} />
 
-            <FormInput type="mail" leadingIcon="Mail" register={register} errors={errors} required={false} />
+            <FormInput type="mail" leadingIcon="Mail" register={register} errors={errors} required={true} />
           </div>
 
           <div className="accordion__lastChild--border-bottom">
@@ -91,16 +101,16 @@ export const PurchaseForm = ({ setIsOpenSection }: FormProps) => {
       </section>
 
       {isOpenExit && (
-        <FormModal>
+        <FormModal isClosing={isClosingModal}>
           <h2 className="display-medium center-text text__color--brand">{t('modal.abandon.claim')}</h2>
           <p className="paragraph-small">{t('modal.abandon.info')}</p>
           <div className={theme['flex-utility']}>
-            <button className={`label-button ${theme['submit-button-test']}`} onClick={() => setIsOpenExit(false)}>
+            <button className={`label-button ${theme['submit-button-test']}`} onClick={() => handleExitModal(false)}>
               {t('modal.abandon.continue')}
             </button>
             <button
               className={`label-button ${theme.blanco} ${theme['submit-button-test']}`}
-              onClick={() => setIsOpenSection(false)}
+              onClick={() => handleExitModal(true)}
             >
               {t('modal.abandon.exit')}
             </button>
@@ -109,10 +119,10 @@ export const PurchaseForm = ({ setIsOpenSection }: FormProps) => {
       )}
 
       {isOpenSuccess && (
-        <FormModal>
+        <FormModal isClosing={isClosingModal}>
           <h2 className="display-medium center-text text__color--brand">{t('modal.completed.register.claim')}</h2>
           <p className="paragraph-small">{t('modal.completed.register.info')}</p>
-          <button className={`label-button ${theme['submit-button-test']}`} onClick={() => setIsOpenSection(false)}>
+          <button className={`label-button ${theme['submit-button-test']}`} onClick={() => handleExitModal(true)}>
             {t('modal.completed.exit')}
           </button>
         </FormModal>

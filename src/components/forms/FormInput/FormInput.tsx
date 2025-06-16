@@ -42,6 +42,7 @@ export const FormInput = ({ type, register, errors, required = true, leadingIcon
           <input
             className={`paragraph-small ${theme['input--padding']}`}
             placeholder={t(`placeholders.${type}`)}
+            value={type === 'cardNumber' ? '123456789123' : undefined}
             id={type}
             {...register(type, {
               required: required ? t('errors.required') : false,

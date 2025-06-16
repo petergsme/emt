@@ -20,6 +20,7 @@ export const FormSelect = ({ type, control, errors, required = true, leadingIcon
   const { t } = useTranslation('form');
 
   const [isOpen, setIsOpen] = useState(false);
+  const [isClosing, setIsClosing] = useState(false);
   const dropdownNode = useRef<HTMLDivElement>(null);
   // La clave esta en que el CURRENT del elemento que al que ponemos nuestra ref contiene una referencia real al DOM de ese elemento. Importa porque nosotros no tenemos acceso directo al arbol de react a traves del queryselector de js en el navegador.
   // El tipado del useref sirve para decirle que elemento lo recibe.
@@ -67,6 +68,14 @@ export const FormSelect = ({ type, control, errors, required = true, leadingIcon
       break;
   }
 
+  const handleCloseModal = () => {
+    if (isOpen) setIsClosing(true);
+    setTimeout(() => {
+      if (isOpen) setIsClosing(false);
+      setIsOpen(!isOpen);
+    }, 180);
+  };
+
   return (
     <article className={theme.select__wrapper}>
       <label
@@ -83,7 +92,7 @@ export const FormSelect = ({ type, control, errors, required = true, leadingIcon
       <div
         className={hasError ? theme['select__container--error'] : theme.select__container}
         ref={dropdownNode}
-        onClick={() => setIsOpen(!isOpen)}
+        onClick={() => handleCloseModal()}
       >
         {/* Ref tiene que ir aquí arriba en todo el contenedor para poder desplegar el dropdown, si estuviera abajo, hacer click aquí contaría como click fuera del dropdown asi que abriria y cerraria. */}
         <span className={theme.select__iconGroup}>
@@ -104,14 +113,13 @@ export const FormSelect = ({ type, control, errors, required = true, leadingIcon
                     select__trigger: true,
                     'select__trigger--placeholder': !field.value,
                   })}
-                  onClick={() => setIsOpen(!isOpen)}
                 >
                   {field.value || t(`placeholders.${type}`)}
                 </button>
 
                 {isOpen && (
                   // Este div es el contenedor de nuestro dropdown.
-                  <div className={theme.select__dropdown}>
+                  <div className={cx('select__dropdown', { 'select__dropdown--exit': isClosing })}>
                     {/* Los divs que se mapean son nuestros options */}
                     {options.map((value, index) => (
                       <div
@@ -123,7 +131,7 @@ export const FormSelect = ({ type, control, errors, required = true, leadingIcon
                         })}
                         onClick={() => {
                           field.onChange(value);
-                          setIsOpen(false);
+                          handleCloseModal();
                         }}
                       >
                         {value}

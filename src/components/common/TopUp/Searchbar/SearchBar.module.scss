@@ -41,10 +41,12 @@
 .icon__container {
   background-color: var(--bg-brand);
   border-radius: var(--border-radius-1000);
+  border: none;
   padding: var(--padding-12);
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   right: 12px;
   line-height: 0;
+  cursor: pointer;
 }

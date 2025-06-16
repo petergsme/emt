@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import classNames from 'classnames/bind';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { useRegisterForm } from '../../../hooks/useRegisterForm';
@@ -9,17 +9,29 @@ import { Icon } from '@/assets/icons/Icon';
 
 import theme from './RegisterForm.module.scss';
 
+const cx = classNames.bind(theme);
+
 interface FormProps {
   setIsOpenSection: (value: boolean) => void;
 }
 
 export const RegisterForm = ({ setIsOpenSection }: FormProps) => {
-  const [isOpenExit, setIsOpenExit] = useState(false);
-  const [isOpenSuccess, setIsOpenSuccess] = useState(false);
-
   const { t } = useTranslation('form');
 
-  const { register, control, handleSubmit, errors, watch } = useRegisterForm();
+  const {
+    register,
+    control,
+    handleSubmit,
+    errors,
+    watch,
+    handleExitModal,
+    isClosingModal,
+    isClosingSection,
+    setIsOpenExit,
+    isOpenExit,
+    setIsOpenSuccess,
+    isOpenSuccess,
+  } = useRegisterForm({ setIsOpenSection });
 
   const registerCard = (data: RegisterFormData) => {
     console.log('Los datos del formulario son:', data);
@@ -27,7 +39,7 @@ export const RegisterForm = ({ setIsOpenSection }: FormProps) => {
   };
 
   return (
-    <div className={theme.section__wrapper}>
+    <div className={cx('section__wrapper', { 'section__wrapper--exit': isClosingSection })}>
       <section className={theme.register__section}>
         <button type="button" onClick={() => setIsOpenExit(true)} className={theme['button-openModal']}>
           <Icon icon="Close" size="large" color="onprimary-secondary" />
@@ -80,16 +92,16 @@ export const RegisterForm = ({ setIsOpenSection }: FormProps) => {
       </section>
 
       {isOpenExit && (
-        <FormModal>
+        <FormModal isClosing={isClosingModal}>
           <h2 className="display-medium center-text text__color--brand">{t('modal.abandon.claim')}</h2>
           <p className="paragraph-small">{t('modal.abandon.info')}</p>
           <div className={theme['flex-utility']}>
-            <button className={`label-button ${theme['submit-button-test']}`} onClick={() => setIsOpenExit(false)}>
+            <button className={`label-button ${theme['submit-button-test']}`} onClick={() => handleExitModal(false)}>
               {t('modal.abandon.continue')}
             </button>
             <button
               className={`label-button ${theme.blanco} ${theme['submit-button-test']}`}
-              onClick={() => setIsOpenSection(false)}
+              onClick={() => handleExitModal(true)}
             >
               {t('modal.abandon.exit')}
             </button>
@@ -98,10 +110,10 @@ export const RegisterForm = ({ setIsOpenSection }: FormProps) => {
       )}
 
       {isOpenSuccess && (
-        <FormModal>
+        <FormModal isClosing={isClosingModal}>
           <h2 className="display-medium center-text text__color--brand">{t('modal.completed.register.claim')}</h2>
           <p className="paragraph-small">{t('modal.completed.register.info')}</p>
-          <button className={`label-button ${theme['submit-button-test']}`} onClick={() => setIsOpenSection(false)}>
+          <button className={`label-button ${theme['submit-button-test']}`} onClick={() => handleExitModal(true)}>
             {t('modal.completed.exit')}
           </button>
         </FormModal>
@@ -109,5 +121,3 @@ export const RegisterForm = ({ setIsOpenSection }: FormProps) => {
     </div>
   );
 };
-
-// Falta crear el custom hook tras finalizar el SCSS? Realmente es necesario?

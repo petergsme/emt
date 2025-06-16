@@ -30,9 +30,9 @@ export const SearchBar = ({ setIsOpenModal }: CardSearchProps) => {
           placeholder="5678 1234 5678..."
           className={cn(cx('searchBar__input'), 'paragraph-small')}
         />
-        <span className={cx('icon__container')}>
+        <button type="button" onClick={() => setShowCardModal(true)} className={cx('icon__container')}>
           <Icon icon="Search" size="small" color="onbrand" />
-        </span>
+        </button>
       </div>
 
       {showCardModal && <CardInfo setIsOpenModal={() => setIsOpenModal(true)} />}

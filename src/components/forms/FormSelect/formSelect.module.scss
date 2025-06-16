@@ -102,6 +102,10 @@
   padding: var(--padding-20);
   z-index: 1000;
   animation: dropdownSlide 0.2s ease-out;
+
+  &--exit {
+    animation: dropdownSlideUp 0.2s ease-out;
+  }
 }
 
 // CADA UNO DE NUESTROS OPTION (DIVS XD)
@@ -145,5 +149,16 @@
   to {
     opacity: 1;
     transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes dropdownSlideUp {
+  from {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-8px) scale(0.98);
   }
 }
