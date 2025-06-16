@@ -1,4 +1,6 @@
+import { useState, useEffect } from 'react';
 import './Footer.scss'
+import { FooterMobile } from './FooterMobile/FooterMobile';
 import emtQR from '../../../assets/emt-qr.svg'
 import generalitatLogo from '../../../assets/generalitat-logo.svg'
 import fgvLogo from '../../../assets/fgv-logo.svg'
@@ -6,6 +8,19 @@ import tramLogo from '../../../assets/tram-logo.svg'
 import socialIcons from '../../../assets/icons/assets/social-icons.svg'
 
 export const Footer = () => {
+    const [isMobile, setIsMobile] = useState(window.innerWidth <= 700);
+
+    useEffect(() => {
+        const handleResize = () => {
+            setIsMobile(window.innerWidth <= 700);
+        };
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+    }, []);
+
+    if (isMobile) return <FooterMobile />;
+
     return (
         <footer className="footer">
             <div className='footer__main'>
