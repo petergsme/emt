@@ -1,0 +1,153 @@
+.sidebar__backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+.sidebar__container {
+  position: fixed;
+  color: var(--white-100-main);
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: var(--elements);
+  display: flex;
+  flex-direction: column;
+  z-index: 1000;
+  animation: slideDown 0.3s ease forwards;
+  overflow-y: auto;
+background: linear-gradient(180deg, var(--red-700) 10%, var(--red-300-main) 100%);
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-100%);
+  }
+}
+
+.sidebar__closing {
+  animation: slideUp 0.3s ease forwards !important;
+}
+
+.sidebar__header {
+  display: flex;
+  justify-content:end;
+  align-items: center;
+  margin-block: 40px;
+  margin-inline: 20px;
+}
+
+.sidebar__header h3 {
+    color: var(--white-100-main);
+}
+
+.sidebar__title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--text);
+}
+
+.sidebar__close {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.sidebar__content {
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  margin: 2rem 0;
+  margin-right: 20px;
+}
+
+.sidebar__link {
+  font-size: 28px;
+  letter-spacing: 1px;
+  padding-left: 20px;
+  font-weight: 600;
+  color: var(--text);
+  text-decoration: none;
+  color: var(--white-100-main); // Blanco
+  font-family: var(--font-family-display); // Boldonse
+}
+
+.sidebar__submenu {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-left: 0rem;
+  margin-top: 2rem;
+  font-size: 20px;
+}
+
+.sidebar__sublink {
+  color: var(--text-secondary);
+  font-size: 1rem;
+  text-decoration: none;
+}
+
+.sidebar__footer {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: center;
+  padding-block: 60px;
+  padding-inline: 20px;
+  margin-top: auto;
+}
+
+.sidebar__sublink {
+  color: var(--white-100-main);
+  font-size: 20px;
+  font-family: var(--font-family-body); 
+  text-decoration: none;
+
+  &:hover {
+    opacity: 0.7;
+  }
+}
+
+.sidebar__accordion-title {
+  color: var(--white-100-main);
+  font-family: var(--font-family-display);
+  font-size: 28px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-top: 24px;
+}
+
+/*arreglo provisional para el acordeón*/
+
+.sidebar__block {
+  /* padding: 1rem 0; */
+  padding-top: 1rem ;
+  padding-bottom: 1rem;
+
+  &--with-border-top {
+    border-top: var(--border-width-1) solid var(--white-100-main);
+    padding-top: 2rem;
+  }
+
+  &--with-border-bottom {
+    border-bottom: var(--border-width-1) solid var(--white-100-main);
+    padding-bottom: 2rem;
+  }
+}
