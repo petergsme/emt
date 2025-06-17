@@ -7,7 +7,7 @@ import { AppCard } from './appCard/AppCard';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import emticket_app_icon from '@/assets/emticket_app_icon.webp';
 import emtvalencia_app_icon from '@/assets/emtvalencia_app_icon.webp';
-import app_QR from '@/assets/qr_code_ios.webp';
+import app_QR from '@/assets/emt-qr.svg';
 import { Icon } from '@/assets/icons/Icon';
 import { Button } from '../Button/Button';
 import 'swiper/swiper-bundle.css';

@@ -1,0 +1,86 @@
+// FooterMobile Component Styles
+.footer--mobile {
+  background-color: var(--red-700);
+  color: var(--text-onbrand);
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-40);
+  padding: var(--padding-60) 0;
+
+  & * {
+    color: var(--text-onbrand);
+  }
+
+  & .footer__logos {
+    display: flex;
+    gap: var(--gap-20);
+    align-items: center;
+    padding: 0 var(--padding-20);
+
+    .footer__logo {
+      &-emt {
+        width: 66px;
+        height: 26px;
+      }
+
+      &-ajuntament {
+        width: 150px;
+        height: 45px;
+      }
+    }
+  }
+
+  & .footer__content {
+    display: flex;
+    flex-direction: column;
+    border-bottom: var(--border-width-1) solid var(--border-onbrand);
+  }
+
+  & .footer__block {
+    &--with-border-top {
+      border-top: var(--border-width-1) solid var(--border-onbrand);
+      padding: var(--padding-20);
+    }
+  }
+
+  & .footer__submenu {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-8);
+  }
+
+  & .footer__social {
+    display: flex;
+    justify-content: center;
+    gap: var(--gap-20);
+
+    & a svg {
+      vertical-align: sub;
+    }
+  }
+
+  & .footer__buttons {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-20);
+    padding: 0 var(--padding-20);
+  }
+
+  & .footer__to-top {
+    text-align: center;
+    margin-top: var(--margin-20);
+  }
+
+  & .footer__to-top-link {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    height: 25px;
+  }
+}
+
+// CLASES DE UTILIDAD
+.text-decoration-none {
+  text-decoration: none;
+}

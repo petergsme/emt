@@ -29,6 +29,8 @@ const HomePage: React.FC = () => {
         <Benefits />
       </SingleBlock>
 
+      {/* Tendrás que quitarle esa clase y pasarsela al hero cuando lo metas */}
+
       <SingleBlock backgroundColor="light">
         <TopUp />
       </SingleBlock>

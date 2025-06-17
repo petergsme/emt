@@ -6,7 +6,7 @@ import cn from 'classnames';
 import { Button } from '@/components/common/Button/Button';
 import { Icon } from '@/assets/icons/Icon';
 import SidebarMobile from './SidebarMobile/SidebarMobile';
-import emtIcon from '@/assets/emt-icon.png';
+import emtIcon from '@/assets/emt-icon.webp';
 import theme from './navbar.module.scss';
 import { Link } from 'react-router-dom';
 import { NavLink } from 'react-router-dom';
@@ -68,7 +68,7 @@ export const Navbar = () => {
               {t('navigation.titlesAndRates')}
             </NavLink>
             <NavLink
-              to="/rules-guides"
+              to="/help/rules-guides"
               className={({ isActive }) =>
                 cn('paragraph-small', cx('navbar__nav-link', { 'navbar__nav-link--active': isActive }))
               }
