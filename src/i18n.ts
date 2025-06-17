@@ -31,6 +31,7 @@ i18n
       'apps',
       'menu',
       'footer',
+      'hero',
     ], //If you add more namespaces include them here.
     defaultNS: 'common',
   });

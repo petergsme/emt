@@ -1,0 +1,14 @@
+{
+  "hero": {
+    "title": "TON TEMPS, TES RUTES",
+    "subtitle": "Consulta les arribades d'eixe autobús que esperes en temps real i descobrix tots els recorreguts disponibles."
+  },
+  "search": {
+    "tabs": {
+      "stop": "PARADA",
+      "line": "LÍNIA"
+    },
+    "placeholder": "C2 - grans vies...",
+    "viewMap": "VEURE MAPA"
+  }
+}

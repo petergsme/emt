@@ -4,15 +4,23 @@ import { Benefits } from './Benefits/Benefits';
 import { TopUp } from '@/components/common/TopUp/TopUp';
 import { FAQ } from '@/components/common/FAQ/FAQ';
 import { Register } from '@/components/common/Register/Register';
+import { HeroSection } from './HeroSection/HeroSection';
 
 const HomePage: React.FC = () => {
   return (
     <>
-      <SingleBlock backgroundColor="light" paddingSize="special" className={cn('container__padding--top')}>
-        <Benefits />
+      <SingleBlock
+        fullHeight={true}
+        backgroundColor="dark"
+        paddingSize="large"
+        className={cn('container__padding--top')}
+      >
+        <HeroSection />
       </SingleBlock>
 
-      {/* Tendrás que quitarle esa clase y pasarsela al hero cuando lo metas */}
+      <SingleBlock backgroundColor="light" paddingSize="special">
+        <Benefits />
+      </SingleBlock>
 
       <SingleBlock backgroundColor="light">
         <TopUp />

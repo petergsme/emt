@@ -1,0 +1,14 @@
+{
+  "hero": {
+    "title": "TU TIEMPO, TUS RUTAS",
+    "subtitle": "Consulta las llegadas de ese bus que esperas en tiempo real y descubre todos los recorridos disponibles."
+  },
+  "search": {
+    "tabs": {
+      "stop": "PARADA",
+      "line": "LÍNEA"
+    },
+    "placeholder": "C2 - grandes vías...",
+    "viewMap": "VER MAPA"
+  }
+}

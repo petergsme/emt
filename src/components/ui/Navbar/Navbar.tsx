@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import classNames from 'classnames/bind';
 import cn from 'classnames';
@@ -18,6 +18,9 @@ export const Navbar = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const navigate = useNavigate();
   const { t } = useTranslation('menu');
+  useLocation();
+
+  const isOverBlack = location.pathname === '/' || location.pathname === '/error';
 
   useEffect(() => {
     const handleResize = () => {
@@ -54,7 +57,13 @@ export const Navbar = () => {
             <NavLink
               to="/map"
               className={({ isActive }) =>
-                cn('paragraph-small', cx('navbar__nav-link', { 'navbar__nav-link--active': isActive }))
+                cn(
+                  'paragraph-small',
+                  cx('navbar__nav-link', {
+                    'navbar__nav-link--active': isActive,
+                    'navbar__nav-link--overBlack': isOverBlack,
+                  })
+                )
               }
             >
               {t('navigation.map')}
@@ -62,7 +71,13 @@ export const Navbar = () => {
             <NavLink
               to="/mobilis-cards"
               className={({ isActive }) =>
-                cn('paragraph-small', cx('navbar__nav-link', { 'navbar__nav-link--active': isActive }))
+                cn(
+                  'paragraph-small',
+                  cx('navbar__nav-link', {
+                    'navbar__nav-link--active': isActive,
+                    'navbar__nav-link--overBlack': isOverBlack,
+                  })
+                )
               }
             >
               {t('navigation.titlesAndRates')}
@@ -70,14 +85,25 @@ export const Navbar = () => {
             <NavLink
               to="/help/rules-guides"
               className={({ isActive }) =>
-                cn('paragraph-small', cx('navbar__nav-link', { 'navbar__nav-link--active': isActive }))
+                cn(
+                  'paragraph-small',
+                  cx('navbar__nav-link', {
+                    'navbar__nav-link--active': isActive,
+                    'navbar__nav-link--overBlack': isOverBlack,
+                  })
+                )
               }
             >
               {t('navigation.help')}
             </NavLink>
           </nav>
 
-          <Button type="button" style="filled" color="onprimary" onClick={() => navigate('/contact')}>
+          <Button
+            type="button"
+            style="filled"
+            color={isOverBlack ? 'onbrand' : 'onprimary'}
+            onClick={() => navigate('/contact')}
+          >
             {t('actions.contact')}
           </Button>
         </div>
