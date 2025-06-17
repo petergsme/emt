@@ -31,7 +31,6 @@ export const HeroSection = () => {
         <div className={cx('searchBar')}>
           <div className={cx('searchBar__container')}>
             <input
-              disabled={true}
               type="text"
               placeholder={t('search.placeholder')}
               className={cn(cx('searchBar__input'), 'paragraph-small')}
