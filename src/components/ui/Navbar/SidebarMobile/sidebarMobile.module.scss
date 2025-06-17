@@ -20,7 +20,7 @@
     left: 0;
     height: 100vh;
     width: 100vw;
-    background: linear-gradient(180deg, var(--red-700) 10%, var(--red-300-main) 100%);
+    background: linear-gradient(170deg, var(--red-700) 10%, var(--red-300-main) 100%);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -64,6 +64,10 @@
 
   &__nav-link {
     text-decoration: none;
+
+    &--active {
+      color: var(--text-brand-light-secondary);
+    }
   }
 
   &__sub-nav {

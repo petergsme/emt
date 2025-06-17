@@ -23,6 +23,7 @@ import Turn from './assets/turn-icon.svg?react';
 import Ticket from './assets/ticket-filled-icon.svg?react';
 import User from './assets/user-filled-icon.svg?react';
 import Whatsapp from './assets/whatsapp-filled-icon.svg?react';
+import Menu from './assets/menu-icon.svg?react';
 
 export const icons = {
   AsteriskFilled,
@@ -49,4 +50,5 @@ export const icons = {
   Ticket,
   User,
   Whatsapp,
+  Menu,
 };

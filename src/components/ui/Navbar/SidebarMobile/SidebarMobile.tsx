@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 import classNames from 'classnames/bind';
 import cn from 'classnames';
 import { Icon } from '@/assets/icons/Icon';
@@ -7,6 +7,7 @@ import { Accordion } from '@/components/common/Accordion/Accordion';
 import { Button } from '@/components/common/Button/Button';
 import theme from './sidebarMobile.module.scss';
 import { useTranslation } from 'react-i18next';
+import { useBodyScrollLock } from '@/hooks/useBodyScrollLock';
 
 const cx = classNames.bind(theme);
 
@@ -20,6 +21,8 @@ const SidebarMobile = ({ isOpen, onClose }: SidebarMobileProps) => {
   const [isClosing, setIsClosing] = useState(false);
   const navigate = useNavigate();
   const { t } = useTranslation('menu');
+
+  useBodyScrollLock({ enabled: isOpen });
 
   useEffect(() => {
     if (isOpen) {
@@ -69,9 +72,9 @@ const SidebarMobile = ({ isOpen, onClose }: SidebarMobileProps) => {
 
           <main className={cn('accordion__lastChild--border-bottom', cx('sidebar__main-content'))}>
             <section className={cx('sidebar__nav-section')}>
-              <Link to="/mapa" className={cn('display-medium', cx('sidebar__nav-link'))} onClick={handleClose}>
+              <NavLink to="/mapa" className={cn('display-medium', cx('sidebar__nav-link'))} onClick={handleClose}>
                 {t('navigation.map')}
-              </Link>
+              </NavLink>
             </section>
 
             <Accordion
@@ -82,27 +85,33 @@ const SidebarMobile = ({ isOpen, onClose }: SidebarMobileProps) => {
               gapSize="large"
             >
               <nav className={cx('sidebar__sub-nav')}>
-                <Link
+                <NavLink
                   to="/mobilis-cards"
-                  className={cn('paragraph-medium', cx('sidebar__nav-link'))}
+                  className={({ isActive }) =>
+                    cn('paragraph-medium', cx('sidebar__nav-link', { 'sidebar__nav-link--active': isActive }))
+                  }
                   onClick={handleClose}
                 >
                   {t('titlesAndRates.cards')}
-                </Link>
-                <Link
+                </NavLink>
+                <NavLink
                   to="/mobilis-cards#recharge"
-                  className={cn('paragraph-medium', cx('sidebar__nav-link'))}
+                  className={({ isActive }) =>
+                    cn('paragraph-medium', cx('sidebar__nav-link', { 'sidebar__nav-link--active': isActive }))
+                  }
                   onClick={handleClose}
                 >
                   {t('titlesAndRates.consultationsAndRecharges')}
-                </Link>
-                <Link
+                </NavLink>
+                <NavLink
                   to="/mobilis-cards#register"
-                  className={cn('paragraph-medium', cx('sidebar__nav-link'))}
+                  className={({ isActive }) =>
+                    cn('paragraph-medium', cx('sidebar__nav-link', { 'sidebar__nav-link--active': isActive }))
+                  }
                   onClick={handleClose}
                 >
                   {t('titlesAndRates.registerCard')}
-                </Link>
+                </NavLink>
               </nav>
             </Accordion>
 
@@ -114,27 +123,53 @@ const SidebarMobile = ({ isOpen, onClose }: SidebarMobileProps) => {
               gapSize="large"
             >
               <nav className={cx('sidebar__sub-nav')}>
-                <Link
+                <NavLink
                   to="/help/rules-guides"
-                  className={cn('paragraph-medium', cx('sidebar__nav-link'))}
+                  className={({ isActive }) =>
+                    cn('paragraph-medium', cx('sidebar__nav-link', { 'sidebar__nav-link--active': isActive }))
+                  }
                   onClick={handleClose}
                 >
                   {t('help.busUsageAndRegulations')}
-                </Link>
-                <Link to="/faq" className={cn('paragraph-medium', cx('sidebar__nav-link'))} onClick={handleClose}>
+                </NavLink>
+                <NavLink
+                  to="/faq"
+                  className={({ isActive }) =>
+                    cn('paragraph-medium', cx('sidebar__nav-link', { 'sidebar__nav-link--active': isActive }))
+                  }
+                  onClick={handleClose}
+                >
                   {t('help.frequentQuestions')}
-                </Link>
+                </NavLink>
               </nav>
             </Accordion>
           </main>
         </section>
 
         <footer className={cx('sidebar__action-bar')}>
-          <Button type="button" style="outlined" color="onbrand" fullWidth onClick={() => navigate('/contact')}>
+          <Button
+            type="button"
+            style="outlined"
+            color="onbrand"
+            fullWidth
+            onClick={() => {
+              navigate('/contact');
+              handleClose();
+            }}
+          >
             {t('actions.contactUs')}
           </Button>
 
-          <Button type="button" style="filled" color="onbrand" fullWidth onClick={() => navigate('/downloadApps')}>
+          <Button
+            type="button"
+            style="filled"
+            color="onbrand"
+            fullWidth
+            onClick={() => {
+              navigate('/downloadApps');
+              handleClose();
+            }}
+          >
             {t('actions.downloadApps')}
           </Button>
         </footer>

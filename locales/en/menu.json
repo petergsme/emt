@@ -1,7 +1,7 @@
 {
   "navigation": {
     "map": "Map",
-    "titlesAndRates": "Tickets",
+    "titlesAndRates": "Tickets and fares",
     "help": "Help"
   },
   "titlesAndRates": {
@@ -15,10 +15,13 @@
   },
   "actions": {
     "contactUs": "Contact us",
-    "downloadApps": "Download the apps"
+    "downloadApps": "Download the apps",
+    "contact": "CONTACT"
   },
   "accessibility": {
     "menu": "Menu",
-    "closeMenu": "Close menu"
+    "closeMenu": "Close menu",
+    "logoAlt": "EMT Valencia Logo",
+    "openMenu": "Open menu"
   }
 }

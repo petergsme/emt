@@ -15,10 +15,13 @@
   },
   "actions": {
     "contactUs": "Contacta amb nosaltres",
-    "downloadApps": "Descarrega les apps"
+    "downloadApps": "Descarrega les apps",
+    "contact": "CONTACTE"
   },
   "accessibility": {
     "menu": "Menú",
-    "closeMenu": "Tancar menú"
+    "closeMenu": "Tancar menú",
+    "logoAlt": "Logo EMT València",
+    "openMenu": "Obrir menú"
   }
 }

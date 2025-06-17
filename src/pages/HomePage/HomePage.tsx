@@ -1,4 +1,5 @@
 import { useTranslation } from 'react-i18next';
+import cn from 'classnames';
 import { Button } from '@/components/common/Button/Button';
 import { SingleBlock } from '@/components/layout/SingleBlock/SingleBlock';
 import { Benefits } from './Benefits/Benefits';
@@ -24,7 +25,7 @@ const HomePage: React.FC = () => {
         </Button>
       </div>
 
-      <SingleBlock backgroundColor="light" paddingSize="special">
+      <SingleBlock backgroundColor="light" paddingSize="special" className={cn('container__padding--top')}>
         <Benefits />
       </SingleBlock>
 
