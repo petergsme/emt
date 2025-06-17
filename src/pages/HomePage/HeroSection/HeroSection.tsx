@@ -4,11 +4,19 @@ import theme from './heroSection.module.scss';
 import { Button } from '@/components/common/Button/Button';
 import { useTranslation } from 'react-i18next';
 import { Icon } from '@/assets/icons/Icon';
+import { useNavigate } from 'react-router-dom';
 
 const cx = classNames.bind(theme);
 
 export const HeroSection = () => {
   const { t } = useTranslation('hero');
+  const navigate = useNavigate();
+
+  const handleEnter = (event: React.KeyboardEvent) => {
+    if (event.key === 'Enter') {
+      navigate('/searched');
+    }
+  };
 
   return (
     <>
@@ -19,30 +27,29 @@ export const HeroSection = () => {
 
       <div className={cx('hero__search')}>
         <div className={cx('hero__select')}>
-          <button className={cn('label-button', cx('hero__button', 'hero__button--selected'))} type="button">
+          <article className={cn('label-button', cx('hero__button', 'hero__button--selected'))}>
             {t('search.tabs.stop')}
-          </button>
+          </article>
 
-          <button className={cn('label-button', cx('hero__button'))} type="button">
-            {t('search.tabs.line')}
-          </button>
+          <article className={cn('label-button', cx('hero__button'))}>{t('search.tabs.line')}</article>
         </div>
 
         <div className={cx('searchBar')}>
           <div className={cx('searchBar__container')}>
             <input
+              onKeyDown={handleEnter}
               type="text"
               placeholder={t('search.placeholder')}
               className={cn(cx('searchBar__input'), 'paragraph-small')}
             />
-            <button type="button" className={cx('icon__container')}>
+            <button type="button" className={cx('icon__container')} onClick={() => navigate('/map')}>
               <Icon icon="Search" size="small" color="onbrand" />
             </button>
           </div>
         </div>
       </div>
 
-      <Button type="button" color="onbrand" style="outlined" onClick={() => ''}>
+      <Button type="button" color="onbrand" style="outlined" onClick={() => navigate('/map')}>
         {t('search.viewMap')}
       </Button>
     </>
