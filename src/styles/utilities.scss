@@ -271,3 +271,15 @@
     padding: var(--padding-80) 0 !important;
   }
 }
+
+.container__padding--top {
+  padding-top: var(--padding-160) !important;
+
+  @include mobile {
+    padding-top: var(--padding-160) !important;
+  }
+
+  @include tablet {
+    padding-top: var(--padding-160) !important;
+  }
+}

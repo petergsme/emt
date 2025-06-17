@@ -1,4 +1,5 @@
 import { useTranslation } from 'react-i18next';
+import cn from 'classnames';
 import { SingleBlock } from '@/components/layout/SingleBlock/SingleBlock';
 import { DoubleBlock } from '@/components/layout/DoubleBlock/DoubleBlock';
 import { Register } from '@/components/common/Register/Register';
@@ -17,7 +18,12 @@ const CardsPage: React.FC = () => {
 
   return (
     <>
-      <SingleBlock backgroundColor="light" paddingSize="special" gapSize="none" className="padding-special--bottom">
+      <SingleBlock
+        backgroundColor="light"
+        paddingSize="special"
+        gapSize="none"
+        className={cn('padding-special--bottom', 'container__padding--top')}
+      >
         <CardSection />
       </SingleBlock>
 
@@ -39,5 +45,3 @@ const CardsPage: React.FC = () => {
 };
 
 export default CardsPage;
-
-// Faltan APPS Y FOOTER en el OUTLET y el NAV.

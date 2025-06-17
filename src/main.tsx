@@ -9,6 +9,7 @@ import HomePage from './pages/HomePage/HomePage.tsx';
 import CardsPage from './pages/CardsPage/CardsPage.tsx';
 import RulesPage from './pages/RulesPage/RulesPage.tsx';
 import ErrorPage from './pages/ErrorPage/ErrorPage.tsx';
+import { ComponentPlayground } from './pages/dev/ComponentPlayground/ComponentPlayground.tsx';
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
@@ -20,6 +21,7 @@ createRoot(document.getElementById('root')!).render(
           <Route path="/help/rules-guides" element={<RulesPage />} />
           <Route path="/error" element={<ErrorPage />} />
           <Route path="*" element={<Navigate to="/error" replace />} />
+          <Route path="/dev" element={<ComponentPlayground />} />
         </Route>
       </Routes>
     </BrowserRouter>

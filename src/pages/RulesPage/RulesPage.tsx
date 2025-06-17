@@ -1,5 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import classNames from 'classnames/bind';
+import cn from 'classnames';
 import { SingleBlock } from '@/components/layout/SingleBlock/SingleBlock';
 import { Register } from '@/components/common/Register/Register';
 import { TopUp } from '@/components/common/TopUp/TopUp';
@@ -25,7 +26,10 @@ const RulesPage: React.FC = () => {
       <SingleBlock backgroundColor="light">
         <Use />
       </SingleBlock>
-      <SingleBlock backgroundColor="neutral" className={cx('additional-desktop-media-query')}>
+      <SingleBlock
+        backgroundColor="neutral"
+        className={cn('container__padding--top', cx('additional-desktop-media-query'))}
+      >
         <Accident />
       </SingleBlock>
 

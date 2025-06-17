@@ -36,6 +36,7 @@
   --font-size-16: 16px;
   --font-size-18: 18px;
   --font-size-20: 20px;
+  --font-size-24: 24px;
   --font-size-28: 28px;
   --font-size-48: 48px;
   --font-size-80: 80px;
@@ -78,6 +79,7 @@
   --space-6: 6px;
   --space-8: 8px;
   --space-12: 12px;
+  --space-16: 16px;
   --space-20: 20px;
   --space-24: 24px;
   --space-28: 28px;
@@ -92,6 +94,7 @@
   --size-2: 2px;
   --size-3: 3px;
   --size-24: 24px;
+  --size-26: 26px;
   --size-28: 28px;
   --size-32: 32px;
   --size-48: 48px;
@@ -104,6 +107,7 @@
   //ICONS
   //Icon sizes
   --icon-24: var(--size-24);
+  --icon-26: var(--size-26);
   --icon-32: var(--size-32);
   --icon-48: var(--size-48);
   --icon-96: var(--size-96);
@@ -144,6 +148,7 @@
   //Padding
   --padding-6: var(--space-6);
   --padding-12: var(--space-12);
+  --padding-16: var(--space-16);
   --padding-20: var(--space-20);
   --padding-24: var(--space-24);
   --padding-28: var(--space-28);
@@ -158,6 +163,7 @@
   //Margin
   --margin-20: var(--space-20);
   --margin-40: var(--space-40);
+  --margin-60: var(--space-60);
   --margin-80: var(--space-80);
   --margin-bottom-8: var(--space-8);
   --margin-bottom-40: var(--space-40);
