@@ -7,7 +7,7 @@ import { Accordion } from '@/components/common/Accordion/Accordion';
 import { Button } from '@/components/common/Button/Button';
 import theme from './sidebarMobile.module.scss';
 import { useTranslation } from 'react-i18next';
-import { useBodyScrollLock } from '@/hooks/useBodyScrollLock';
+// import { useBodyScrollLock } from '@/hooks/useBodyScrollLock';
 
 const cx = classNames.bind(theme);
 
@@ -22,7 +22,15 @@ const SidebarMobile = ({ isOpen, onClose }: SidebarMobileProps) => {
   const navigate = useNavigate();
   const { t } = useTranslation('menu');
 
-  useBodyScrollLock({ enabled: isOpen });
+  // useBodyScrollLock({ enabled: isOpen });
+
+  // useEffect(() => {
+  //   if (isOpen) {
+  //     document.body.style.overflow = 'hidden';
+  //   } else {
+  //     document.body.style.overflow = 'unset';
+  //   }
+  // }, [isOpen]);
 
   useEffect(() => {
     if (isOpen) {
