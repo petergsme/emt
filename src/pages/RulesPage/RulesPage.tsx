@@ -23,13 +23,11 @@ const RulesPage: React.FC = () => {
 
   return (
     <>
-      <SingleBlock backgroundColor="light">
+      <SingleBlock backgroundColor="light" className={cn('container__padding--top')}>
         <Use />
       </SingleBlock>
-      <SingleBlock
-        backgroundColor="neutral"
-        className={cn('container__padding--top', cx('additional-desktop-media-query'))}
-      >
+
+      <SingleBlock backgroundColor="neutral" className={cx('additional-desktop-media-query')}>
         <Accident />
       </SingleBlock>
 
