@@ -103,20 +103,30 @@ const SidebarMobile = ({ isOpen, onClose }: SidebarMobileProps) => {
                   {t('titlesAndRates.cards')}
                 </NavLink>
                 <NavLink
-                  to="/mobilis-cards#recharge"
+                  to="/mobilis-cards"
                   className={({ isActive }) =>
                     cn('paragraph-medium', cx('sidebar__nav-link', { 'sidebar__nav-link--active': isActive }))
                   }
-                  onClick={handleClose}
+                  onClick={() => {
+                    handleClose();
+                    setTimeout(() => {
+                      navigate('/mobilis-cards#recharge');
+                    }, 400);
+                  }}
                 >
                   {t('titlesAndRates.consultationsAndRecharges')}
                 </NavLink>
                 <NavLink
-                  to="/mobilis-cards#register"
+                  to="/mobilis-cards"
                   className={({ isActive }) =>
                     cn('paragraph-medium', cx('sidebar__nav-link', { 'sidebar__nav-link--active': isActive }))
                   }
-                  onClick={handleClose}
+                  onClick={() => {
+                    handleClose();
+                    setTimeout(() => {
+                      navigate('/mobilis-cards#register');
+                    }, 400);
+                  }}
                 >
                   {t('titlesAndRates.registerCard')}
                 </NavLink>
