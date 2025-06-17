@@ -2,8 +2,16 @@
   "navigation": {
     "logos": {
       "emt": "EMT Valencia",
-      "ajuntament": "Ajuntament de València"
+      "ajuntament": "Ajuntament de València",
+      "generalitat": "Generalitat Valenciana",
+      "fgv": "FGV - Ferrocarrils de la Generalitat Valenciana",
+      "tram": "TRAM Valencia"
     },
+
+    "qr": {
+      "alt": "Código QR para descargar la aplicación EMT"
+    },
+
     "map": "Mapa",
     "titlesAndRates": {
       "main": "Tarifas y Títulos",
@@ -55,7 +63,8 @@
   "actions": {
     "contact": "Contacta con nosotros",
     "downloadApps": "Descarga las apps",
-    "backToTop": "Volver arriba"
+    "backToTop": "Volver arriba",
+    "downloadApp": "Descarga la App"
   },
   "legal": {
     "copyright": "© Copyright EMT Valencia 2025."

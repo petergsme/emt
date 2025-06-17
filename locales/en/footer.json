@@ -2,7 +2,13 @@
   "navigation": {
     "logos": {
       "emt": "EMT Valencia",
-      "ajuntament": "Valencia City Council"
+      "ajuntament": "Valencia City Council",
+      "generalitat": "Valencian Government",
+      "fgv": "FGV - Valencian Government Railways",
+      "tram": "TRAM Valencia"
+    },
+    "qr": {
+      "alt": "QR code to download the EMT app"
     },
     "map": "Map",
     "titlesAndRates": {
@@ -17,7 +23,7 @@
       "faq": "Frequently asked questions"
     },
     "inPerson": {
-      "main": "In-Person Service",
+      "main": "In-Person",
       "mendoza": {
         "address": "C/ Mendoza 5, Valencia",
         "schedule": "Mon-Fri 9:00-19:30"
@@ -31,7 +37,7 @@
         "schedule": "Mon-Fri 9:00-19:00"
       },
       "appointment": {
-        "required": "Requires prior appointment",
+        "required": "Requires appointment",
         "request": "Book appointment →"
       }
     },
@@ -55,7 +61,8 @@
   "actions": {
     "contact": "Contact us",
     "downloadApps": "Download the apps",
-    "backToTop": "Back to top"
+    "backToTop": "Back to top",
+    "downloadApp": "Download the App"
   },
   "legal": {
     "copyright": "© Copyright EMT Valencia 2025."
