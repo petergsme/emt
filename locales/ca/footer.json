@@ -59,5 +59,11 @@
   },
   "legal": {
     "copyright": "© Copyright EMT València 2025."
+  },
+
+  "language": {
+    "es": "Castellano",
+    "val": "Valencià",
+    "en": "English"
   }
 }

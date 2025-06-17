@@ -1,86 +1,106 @@
-// FooterMobile Component Styles
-.footer--mobile {
-  background-color: var(--red-700);
-  color: var(--text-onbrand);
-  display: flex;
-  flex-direction: column;
-  gap: var(--gap-40);
-  padding: var(--padding-60) 0;
+// CLASES DEL FOOTER MOBILE
 
-  & * {
+.footer {
+  &--mobile {
+    background-color: var(--red-700);
     color: var(--text-onbrand);
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-40);
+    padding: var(--padding-60) 0;
+
+    * {
+      color: var(--text-onbrand);
+    }
   }
 
-  & .footer__logos {
+  &__logos {
     display: flex;
     gap: var(--gap-20);
     align-items: center;
     padding: 0 var(--padding-20);
+  }
 
-    .footer__logo {
-      &-emt {
-        width: 66px;
-        height: 26px;
-      }
+  &__logo {
+    &-emt {
+      width: 66px;
+      height: 26px;
+    }
 
-      &-ajuntament {
-        width: 150px;
-        height: 45px;
-      }
+    &-ajuntament {
+      width: 150px;
+      height: 45px;
     }
   }
 
-  & .footer__content {
+  &__content {
     display: flex;
     flex-direction: column;
     border-bottom: var(--border-width-1) solid var(--border-onbrand);
   }
 
-  & .footer__block {
+  &__block {
     &--with-border-top {
       border-top: var(--border-width-1) solid var(--border-onbrand);
       padding: var(--padding-20);
     }
   }
 
-  & .footer__submenu {
+  &__submenu {
     display: flex;
     flex-direction: column;
     gap: var(--gap-8);
   }
 
-  & .footer__social {
+  &__social {
     display: flex;
     justify-content: center;
     gap: var(--gap-20);
 
-    & a svg {
+    a svg {
       vertical-align: sub;
     }
   }
 
-  & .footer__buttons {
+  &__buttons {
     display: flex;
     flex-direction: column;
     gap: var(--gap-20);
     padding: 0 var(--padding-20);
   }
 
-  & .footer__to-top {
+  &__to-top {
     text-align: center;
     margin-top: var(--margin-20);
   }
 
-  & .footer__to-top-link {
+  &__to-top-link {
     background: none;
     border: none;
     cursor: pointer;
     padding: 0;
     height: 25px;
   }
+
+  &__language-switcher {
+    display: flex;
+    gap: var(--gap-8);
+    padding: 0 var(--padding-20);
+    justify-content: center;
+  }
 }
 
-// CLASES DE UTILIDAD
+// CLASES LANGUAGE BUTTONS
+.language-button {
+  background: none;
+  border: none;
+
+  &--active {
+    color: var(--text-brand-light-secondary);
+  }
+}
+
+// UTILIDADES
 .text-decoration-none {
   text-decoration: none;
 }

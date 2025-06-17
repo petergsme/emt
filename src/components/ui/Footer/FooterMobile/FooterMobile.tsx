@@ -1,4 +1,5 @@
 import { useTranslation } from 'react-i18next';
+import { useLanguageSwitcher } from '@/hooks/useLanguageSwitcher';
 import { useNavigate, Link } from 'react-router-dom';
 import classNames from 'classnames/bind';
 import cn from 'classnames';
@@ -13,6 +14,7 @@ const cx = classNames.bind(styles);
 
 export const FooterMobile = () => {
   const { t } = useTranslation('footer');
+  const { changeLanguage, isActive } = useLanguageSwitcher();
   const navigate = useNavigate();
 
   const handleScrollToTop = () => {
@@ -170,6 +172,27 @@ export const FooterMobile = () => {
       <button type="button" onClick={handleScrollToTop} className={cn('link-small', cx('footer__to-top-link'))}>
         {t('actions.backToTop')}
       </button>
+
+      <div className={cx('footer__language-switcher')}>
+        <button
+          onClick={() => changeLanguage('es')}
+          className={cn('paragraph-small', cx('language-button', { 'language-button--active': isActive('es') }))}
+        >
+          {t('language.es')}
+        </button>
+        <button
+          onClick={() => changeLanguage('ca')}
+          className={cn('paragraph-small', cx('language-button', { 'language-button--active': isActive('ca') }))}
+        >
+          {t('language.val')}
+        </button>
+        <button
+          onClick={() => changeLanguage('en')}
+          className={cn('paragraph-small', cx('language-button', { 'language-button--active': isActive('en') }))}
+        >
+          {t('language.en')}
+        </button>
+      </div>
 
       <p className={cn('paragraph-xxsmall', 'center-text')}>{t('legal.copyright')}</p>
     </footer>
