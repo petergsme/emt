@@ -1,0 +1,69 @@
+{
+  "navigation": {
+    "logos": {
+      "emt": "EMT Valencia",
+      "ajuntament": "Valencia City Council"
+    },
+    "map": "Map",
+    "titlesAndRates": {
+      "main": "Fares and Tickets",
+      "cards": "Cards",
+      "queries": "Queries and top-ups",
+      "register": "Register your card"
+    },
+    "help": {
+      "main": "Help",
+      "regulations": "Bus usage and regulations",
+      "faq": "Frequently asked questions"
+    },
+    "inPerson": {
+      "main": "In-Person Service",
+      "mendoza": {
+        "address": "C/ Mendoza 5, Valencia",
+        "schedule": "Mon-Fri 9:00-19:30"
+      },
+      "upv": {
+        "address": "UPV, Pl. del Ágora",
+        "schedule": "Mon-Fri 8:00-15:30"
+      },
+      "colon": {
+        "address": "Metro Colón",
+        "schedule": "Mon-Fri 9:00-19:00"
+      },
+      "appointment": {
+        "required": "Requires prior appointment",
+        "request": "Book appointment →"
+      }
+    },
+    "phone": {
+      "main": "Phone Support",
+      "number": "96 315 85 15",
+      "schedule": {
+        "weekdays": "Mon-Fri 8:00 to 21:00",
+        "saturday": "Saturdays 9:00 to 14:00"
+      }
+    },
+    "legal": {
+      "main": "Legal",
+      "privacy": "Privacy policy",
+      "cookies": "Cookies"
+    },
+    "social": {
+      "alt": "Social media icons"
+    }
+  },
+  "actions": {
+    "contact": "Contact us",
+    "downloadApps": "Download the apps",
+    "backToTop": "Back to top"
+  },
+  "legal": {
+    "copyright": "© Copyright EMT Valencia 2025."
+  },
+
+  "language": {
+    "es": "Castellano",
+    "val": "Valencià",
+    "en": "English"
+  }
+}

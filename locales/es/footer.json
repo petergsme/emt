@@ -1,0 +1,69 @@
+{
+  "navigation": {
+    "logos": {
+      "emt": "EMT Valencia",
+      "ajuntament": "Ajuntament de València"
+    },
+    "map": "Mapa",
+    "titlesAndRates": {
+      "main": "Tarifas y Títulos",
+      "cards": "Tarjetas",
+      "queries": "Consultas y recargas",
+      "register": "Registra tu tarjeta"
+    },
+    "help": {
+      "main": "Ayuda",
+      "regulations": "Uso de bus y normativa",
+      "faq": "Preguntas frecuentes"
+    },
+    "inPerson": {
+      "main": "Atención Presencial",
+      "mendoza": {
+        "address": "C/ Mendoza 5, Valencia",
+        "schedule": "L-V 9:00-19:30"
+      },
+      "upv": {
+        "address": "UPV, Pl. del Ágora",
+        "schedule": "L-V 8:00-15:30"
+      },
+      "colon": {
+        "address": "Metro Colón",
+        "schedule": "L-V 9:00-19:00"
+      },
+      "appointment": {
+        "required": "Requiere cita previa",
+        "request": "Pedir cita →"
+      }
+    },
+    "phone": {
+      "main": "Atención Telefónica",
+      "number": "96 315 85 15",
+      "schedule": {
+        "weekdays": "L-V 8:00 a 21:00",
+        "saturday": "Sábados 9:00 a 14:00"
+      }
+    },
+    "legal": {
+      "main": "Legal",
+      "privacy": "Política de privacidad",
+      "cookies": "Cookies"
+    },
+    "social": {
+      "alt": "Iconos de redes sociales"
+    }
+  },
+  "actions": {
+    "contact": "Contacta con nosotros",
+    "downloadApps": "Descarga las apps",
+    "backToTop": "Volver arriba"
+  },
+  "legal": {
+    "copyright": "© Copyright EMT Valencia 2025."
+  },
+
+  "language": {
+    "es": "Castellano",
+    "val": "Valencià",
+    "en": "English"
+  }
+}

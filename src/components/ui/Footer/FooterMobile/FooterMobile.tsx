@@ -1,135 +1,200 @@
-import './FooterMobile.scss';
+import { useTranslation } from 'react-i18next';
+import { useLanguageSwitcher } from '@/hooks/useLanguageSwitcher';
+import { useNavigate, Link } from 'react-router-dom';
+import classNames from 'classnames/bind';
+import cn from 'classnames';
+import styles from './footerMobile.module.scss';
 import emtLogo from '../../../../assets/EMT-white.svg';
 import ajuntamentLogo from '../../../../assets/Ayuntamiento-white.svg';
 import { Accordion } from '@/components/common/Accordion/Accordion';
 import { Button } from '@/components/common/Button/Button';
-import socialIcons from '../../../../assets/Socials-white.svg';
+import { Icon } from '@/assets/icons/Icon';
+
+const cx = classNames.bind(styles);
 
 export const FooterMobile = () => {
+  const { t } = useTranslation('footer');
+  const { changeLanguage, isActive } = useLanguageSwitcher();
+  const navigate = useNavigate();
+
+  const handleScrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   return (
-    <footer className="footer--mobile">
-      {/* Logos */}
-      <div className="footer__logos">
-        <img src={emtLogo} alt="EMT Valencia" className="footer__logo" />
-        <img src={ajuntamentLogo} alt="Ajuntament de València" className="footer__logo ajuntament" />
+    <footer className={cx('footer--mobile')}>
+      <div className={cx('footer__logos')}>
+        <img src={emtLogo} alt={t('navigation.logos.emt')} className={cx('footer__logo-emt')} />
+        <img src={ajuntamentLogo} alt={t('navigation.logos.ajuntament')} className={cx('footer__logo-ajuntament')} />
       </div>
 
-      {/* Acordeones y bloques */}
-      <div className="footer__content">
-        <div className="footer__block footer__block--with-border-top">
-          <a href="/mapa" className="footer__link">Mapa</a>
+      <div className={cx('footer__content')}>
+        <div className={cx('footer__block', 'footer__block--with-border-top')}>
+          <Link to="/map" className={cn('display-small', cx('text-decoration-none'))}>
+            {t('navigation.map')}
+          </Link>
         </div>
 
-        <div className="footer__block">
-          <Accordion
-            text="Tarifas y Títulos"
-            textClassName="footer__accordion-title"
-            variant="onbrand"
-            iconSize="medium"
-          >
-            <div className="footer__submenu">
-              <a href="/tarjetas" className="footer__sublink">Tarjetas</a>
-              <a href="/consultas" className="footer__sublink">Consultas y recargas</a>
-              <a href="/registro" className="footer__sublink">Registra tu tarjeta</a>
-            </div>
-          </Accordion>
-        </div>
-
-        <div className="footer__block">
-          <Accordion
-            text="Ayuda"
-            textClassName="footer__accordion-title"
-            variant="onbrand"
-            iconSize="medium"
-          >
-            <div className="footer__submenu">
-              <a href="/normativa" className="footer__sublink">Uso de bus y normativa</a>
-              <a href="/faq" className="footer__sublink">Preguntas frecuentes</a>
-            </div>
-          </Accordion>
-        </div>
-
-        <div className="footer__block">
-          <Accordion
-            text="Atención Presencial"
-            textClassName="footer__accordion-title"
-            variant="onbrand"
-            iconSize="medium"
-          >
-            <div className="footer__submenu">
-              <p className="footer__sublink">C/ Mendoza 5, Valencia<br />L-V 9:00-19:30</p>
-              <p className="footer__sublink">UPV, Pl. del Ágora<br />L-V 8:00-15:30</p>
-              <p className="footer__sublink">Metro Colón<br />L-V 9:00-19:00</p>
-              <p className="footer__sublink">Requiere cita previa<br /><a href="/cita-previa">Pedir cita →</a></p>
-            </div>
-          </Accordion>
-        </div>
-
-        <div className="footer__block">
-          <Accordion
-            text="Atención Telefónica"
-            textClassName="footer__accordion-title"
-            variant="onbrand"
-            iconSize="medium"
-          >
-            <div className="footer__submenu">
-              <p className="footer__sublink">96 315 85 15</p>
-              <p className="footer__sublink">L-V 8:00 a 21:00<br />Sábados 9:00 a 14:00</p>
-            </div>
-          </Accordion>
-        </div>
-
-        <div className="footer__block footer__block--with-border-bottom">
-          <Accordion
-            text="Legal"
-            textClassName="footer__accordion-title"
-            variant="onbrand"
-            iconSize="medium"
-          >
-            <div className="footer__submenu">
-              <a href="/privacidad" className="footer__sublink">Política de privacidad</a>
-              <a href="/cookies" className="footer__sublink">Cookies</a>
-            </div>
-          </Accordion>
-        </div>
-      </div>
-
-      {/* Redes sociales */}
-      <div className="footer__social">
-        <img className="footer__social-icon" src={socialIcons} alt="social icons" />
-      </div>
-
-      {/* Botones */}
-      <div className="footer__buttons">
-        <Button
-          type="button"
-          style="outlined"
-          color="onbrand"
-          fullWidth
-          onClick={() => window.location.href = '/contacto'}
+        <Accordion
+          text={t('navigation.titlesAndRates.main')}
+          textClassName={cn('display-small', cx('text-decoration-none'))}
+          variant="onbrand"
+          iconSize="small"
+          gapSize="large"
         >
-          Contacta con nosotros
-        </Button>
-        <Button
-          type="button"
-          style="filled"
-          color="onbrand"
-          fullWidth
-          onClick={() => console.log('Descargar apps')}
+          <div className={cx('footer__submenu')}>
+            <Link to="/mobilis-cards" className={cn('paragraph-small', cx('text-decoration-none'))}>
+              {t('navigation.titlesAndRates.cards')}
+            </Link>
+            <Link to="/mobilis-cards#recharge" className={cn('paragraph-small', cx('text-decoration-none'))}>
+              {t('navigation.titlesAndRates.queries')}
+            </Link>
+            <Link to="/mobilis-cards#register" className={cn('paragraph-small', cx('text-decoration-none'))}>
+              {t('navigation.titlesAndRates.register')}
+            </Link>
+          </div>
+        </Accordion>
+
+        <Accordion
+          text={t('navigation.help.main')}
+          textClassName={cn('display-small', cx('text-decoration-none'))}
+          variant="onbrand"
+          iconSize="medium"
+          gapSize="large"
         >
-          Descarga las apps
+          <div className={cx('footer__submenu')}>
+            <Link to="/help/rules-guides" className={cn('paragraph-small', cx('text-decoration-none'))}>
+              {t('navigation.help.regulations')}
+            </Link>
+            <Link to="/faq" className={cn('paragraph-small', cx('text-decoration-none'))}>
+              {t('navigation.help.faq')}
+            </Link>
+          </div>
+        </Accordion>
+
+        <Accordion
+          text={t('navigation.inPerson.main')}
+          textClassName={cn('display-small', cx('text-decoration-none'))}
+          variant="onbrand"
+          iconSize="medium"
+          gapSize="large"
+        >
+          <div className={cx('footer__submenu')}>
+            <p className={cn('paragraph-small')}>
+              <span className={cn('questions-small')}>{t('navigation.inPerson.mendoza.address')}</span>
+              <br />
+              {t('navigation.inPerson.mendoza.schedule')}
+            </p>
+            <p className={cn('paragraph-small')}>
+              <span className={cn('questions-small')}>{t('navigation.inPerson.upv.address')}</span>
+              <br />
+              {t('navigation.inPerson.upv.schedule')}
+            </p>
+            <p className={cn('paragraph-small')}>
+              <span className={cn('questions-small')}>{t('navigation.inPerson.colon.address')}</span>
+              <br />
+              {t('navigation.inPerson.colon.schedule')}
+            </p>
+            <p className={cn('paragraph-small')}>
+              {t('navigation.inPerson.appointment.required')}
+              <br />
+              <Link className={cn('link-small')} to="/appointment">
+                {t('navigation.inPerson.appointment.request')}
+              </Link>
+            </p>
+          </div>
+        </Accordion>
+
+        <Accordion
+          text={t('navigation.phone.main')}
+          textClassName={cn('display-small', cx('text-decoration-none'))}
+          variant="onbrand"
+          iconSize="medium"
+          gapSize="large"
+        >
+          <div className={cx('footer__submenu')}>
+            <a href="tel:963158515" className={cx('questions-small')}>
+              {t('navigation.phone.number')}
+            </a>
+            <p className={cn('paragraph-small')}>
+              {t('navigation.phone.schedule.weekdays')}
+              <br />
+              {t('navigation.phone.schedule.saturday')}
+            </p>
+          </div>
+        </Accordion>
+
+        <Accordion
+          text={t('navigation.legal.main')}
+          textClassName={cn('display-small', cx('text-decoration-none'))}
+          variant="onbrand"
+          iconSize="medium"
+          gapSize="large"
+        >
+          <div className={cx('footer__submenu')}>
+            <Link to="/privacy" className={cn('paragraph-small', cx('text-decoration-none'))}>
+              {t('navigation.legal.privacy')}
+            </Link>
+            <Link to="/cookies" className={cn('paragraph-small', cx('text-decoration-none'))}>
+              {t('navigation.legal.cookies')}
+            </Link>
+          </div>
+        </Accordion>
+      </div>
+
+      <div className={cx('footer__social')}>
+        <a target="_blank" href="https://wa.me/34658674920">
+          <Icon icon="Whatsapp" color="onbrand" size="large" />
+        </a>
+        <a target="_blank" href="https://t.me/oacemtvalencia">
+          <Icon icon="Telegram" color="onbrand" size="large" />
+        </a>
+        <a target="_blank" href="https://www.facebook.com/emtvalencia/">
+          <Icon icon="Facebook" color="onbrand" size="large" />
+        </a>
+        <a target="_blank" href="https://twitter.com/emtvalencia">
+          <Icon icon="Twitter" color="onbrand" size="large" />
+        </a>
+        <a target="_blank" href="mailto:atencioalaciutadania@emtvalencia.es">
+          <Icon icon="Mail" color="onbrand" size="large" />
+        </a>
+      </div>
+
+      <div className={cx('footer__buttons')}>
+        <Button type="button" style="outlined" color="onbrand" fullWidth onClick={() => navigate('/contact')}>
+          {t('actions.contact')}
+        </Button>
+        <Button type="button" style="filled" color="onbrand" fullWidth onClick={() => navigate('/downloadApp')}>
+          {t('actions.downloadApps')}
         </Button>
       </div>
 
-      {/* Volver arriba */}
-      <div className="footer__to-top">
-        <a href="#">Volver arriba</a>
+      <button type="button" onClick={handleScrollToTop} className={cn('link-small', cx('footer__to-top-link'))}>
+        {t('actions.backToTop')}
+      </button>
+
+      <div className={cx('footer__language-switcher')}>
+        <button
+          onClick={() => changeLanguage('es')}
+          className={cn('paragraph-small', cx('language-button', { 'language-button--active': isActive('es') }))}
+        >
+          {t('language.es')}
+        </button>
+        <button
+          onClick={() => changeLanguage('ca')}
+          className={cn('paragraph-small', cx('language-button', { 'language-button--active': isActive('ca') }))}
+        >
+          {t('language.val')}
+        </button>
+        <button
+          onClick={() => changeLanguage('en')}
+          className={cn('paragraph-small', cx('language-button', { 'language-button--active': isActive('en') }))}
+        >
+          {t('language.en')}
+        </button>
       </div>
 
-      <div className="footer__to-top">
-        <a className='copy' href="#">© Copyright EMT Valencia 2025.</a>
-      </div>
+      <p className={cn('paragraph-xxsmall', 'center-text')}>{t('legal.copyright')}</p>
     </footer>
   );
 };
-
