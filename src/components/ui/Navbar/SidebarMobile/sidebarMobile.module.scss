@@ -20,8 +20,6 @@
     left: 0;
     right: 0;
     bottom: 0;
-    // height: 100dvh;
-    // width: 100vw;
     background: linear-gradient(170deg, var(--red-700) 10%, var(--red-300-main) 100%);
     display: flex;
     flex-direction: column;
@@ -44,7 +42,6 @@
     justify-content: flex-end;
     align-items: center;
     padding: var(--padding-40) var(--padding-20);
-    // flex-shrink: 0; // ✅ AÑADIDO - No se encoge
   }
 
   &__close-button {
@@ -58,9 +55,6 @@
   &__main-content {
     display: flex;
     flex-direction: column;
-    // flex: 1; // ✅ AÑADIDO - Crece para llenar espacio disponible
-    // overflow-y: auto; // ✅ AÑADIDO - Scroll funcional aquí
-    // min-height: 0;
   }
 
   &__nav-section {
@@ -87,8 +81,6 @@
     flex-direction: column;
     gap: var(--gap-20);
     padding: var(--padding-40) var(--padding-20);
-    // margin-top: auto;
-    // // flex-shrink: 0;
   }
 }
 
