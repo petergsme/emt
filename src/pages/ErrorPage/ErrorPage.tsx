@@ -1,6 +1,6 @@
 import cn from 'classnames';
 import { SingleBlock } from '@/components/layout/SingleBlock/SingleBlock';
-import { HeroSection } from '../HomePage/HeroSection/HeroSection';
+import { Error } from './Error/Error';
 
 const ErrorPage: React.FC = () => {
   return (
@@ -9,9 +9,9 @@ const ErrorPage: React.FC = () => {
         fullHeight={true}
         backgroundColor="dark"
         paddingSize="large"
-        className={cn('container__padding--top')}
+        className={cn('container__padding--top', 'full-height')}
       >
-        <HeroSection />
+        <Error />
       </SingleBlock>
     </>
   );

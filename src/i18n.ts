@@ -32,6 +32,7 @@ i18n
       'menu',
       'footer',
       'hero',
+      'error',
     ], //If you add more namespaces include them here.
     defaultNS: 'common',
   });

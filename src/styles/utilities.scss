@@ -261,6 +261,10 @@
 
 // SingleLayoutBlock UTILITIES
 
+.full-height {
+  height: 100vh;
+}
+
 .padding-special--bottom {
   padding: var(--padding-120) 0 !important;
 

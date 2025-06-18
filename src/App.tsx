@@ -1,4 +1,4 @@
-import { Outlet } from 'react-router-dom';
+import { Outlet, useLocation } from 'react-router-dom';
 import { useScrollToSection } from './hooks/useScrollToSection';
 import { useCanonical } from './hooks/useCanonical';
 
@@ -14,6 +14,7 @@ const cx = classNames.bind(theme);
 export const App: React.FC = () => {
   useScrollToSection();
   useCanonical();
+  useLocation();
 
   return (
     <>
@@ -21,9 +22,11 @@ export const App: React.FC = () => {
 
       <Outlet />
 
-      <SingleBlock backgroundColor="pink" className={cx('extra-padding-top')}>
-        <AppSection />
-      </SingleBlock>
+      {location.pathname !== '/error' && (
+        <SingleBlock backgroundColor="pink" className={cx('extra-padding-top')}>
+          <AppSection />
+        </SingleBlock>
+      )}
 
       <Footer />
     </>
