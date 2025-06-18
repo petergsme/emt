@@ -1,10 +1,12 @@
 import { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
-import cx from 'classnames/bind';
-import styles from './floatingBanner.module.scss';
+import classNames from 'classnames/bind';
+import cn from 'classnames';
+import theme from './floatingBanner.module.scss';
 import { useNavigate } from 'react-router-dom';
+import app_QR from '@/assets/emt-qr.svg';
 
-const cn = cx.bind(styles);
+const cx = classNames.bind(theme);
 
 interface FloatingBannerProps {
   targetSectionId: string;
@@ -13,6 +15,7 @@ interface FloatingBannerProps {
 export const FloatingBanner = ({ targetSectionId }: FloatingBannerProps) => {
   const { t } = useTranslation('apps');
   const [showBanner, setShowBanner] = useState(true);
+  const [isClosing, setIsClosing] = useState(false);
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
   const navigate = useNavigate();
 
@@ -20,15 +23,21 @@ export const FloatingBanner = ({ targetSectionId }: FloatingBannerProps) => {
     const handleScroll = () => {
       const targetSection = document.getElementById(targetSectionId);
 
-      if (targetSection) {
+      if (targetSection && showBanner && !isClosing) {
         const isVisible = targetSection.getBoundingClientRect().top < window.innerHeight;
-        setShowBanner(!isVisible);
+
+        if (isVisible) {
+          setIsClosing(true);
+          setTimeout(() => {
+            setShowBanner(false);
+          }, 300);
+        }
       }
     };
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-  }, [targetSectionId]);
+  }, [targetSectionId, showBanner, isClosing]);
 
   useEffect(() => {
     const handleResize = () => {
@@ -39,14 +48,26 @@ export const FloatingBanner = ({ targetSectionId }: FloatingBannerProps) => {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
-  if (!showBanner) return;
+  if (!showBanner) return null;
 
   return (
     <>
-      {isMobile && (
-        <button type="button" onClick={() => navigate('/#apps')} className={cn('floatingBanner__banner')}>
-          <h2 className={cn('label-button', 'text__color--onbrand', 'center-text')}>{t('apps.downloadApps')}</h2>
+      {isMobile ? (
+        <button
+          type="button"
+          onClick={() => navigate('/#apps')}
+          className={cx('floatingBanner__banner', { 'floatingBanner__banner--exit': isClosing })}
+        >
+          <h2 className="label-button text__color--onbrand center-text">{t('apps.downloadApps')}</h2>
         </button>
+      ) : (
+        <div
+          className={cx('floatingBanner__desktop', { 'floatingBanner__desktop--exit': isClosing })}
+          onClick={() => navigate('/#apps')}
+        >
+          <h2 className={cn('display-small', 'text__color--onprimary', ' center-text')}>{t('apps.downloadApps')}</h2>
+          <img className={cx('floatingBanner__qr')} src={app_QR} alt={t('apps.altQR')} />
+        </div>
       )}
     </>
   );
