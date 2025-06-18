@@ -8,6 +8,7 @@ import { Navbar } from './components/ui/Navbar/Navbar';
 import { AppSection } from './components/common/Apps/AppSection';
 import { SingleBlock } from './components/layout/SingleBlock/SingleBlock';
 import { Footer } from './components/ui/Footer/Footer';
+import { FloatingBanner } from './components/common/Apps/floatingBanner/FloatingBanner';
 
 const cx = classNames.bind(theme);
 
@@ -22,8 +23,10 @@ export const App: React.FC = () => {
 
       <Outlet />
 
+      {location.pathname === '/' && <FloatingBanner targetSectionId="apps" />}
+
       {location.pathname !== '/error' && (
-        <SingleBlock backgroundColor="pink" className={cx('extra-padding-top')}>
+        <SingleBlock id="apps" backgroundColor="pink" className={cx('extra-padding-top')}>
           <AppSection />
         </SingleBlock>
       )}

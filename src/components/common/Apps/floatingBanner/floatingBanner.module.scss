@@ -1,0 +1,19 @@
+@use '../../../../styles/mixins.scss' as *;
+
+// FLOATING BANNER CLASSES
+.floatingBanner {
+  &__banner {
+    padding: var(--padding-20) 0;
+    background-color: var(--bg-brand-tertiary);
+    border: none;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 0;
+
+    @include mobile {
+      padding: var(--padding-12) 0;
+    }
+  }
+}
