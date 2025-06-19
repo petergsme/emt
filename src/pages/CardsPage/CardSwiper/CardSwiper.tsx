@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react';
+import { act, useEffect, useRef } from 'react';
 import { Swiper, SwiperRef, SwiperSlide } from 'swiper/react';
 import { Pagination } from 'swiper/modules';
 import './cardSwiper.scss';
@@ -16,9 +16,17 @@ interface CardSwiperProps {
 
 export const CardSwiper = ({ cardArray, activeFilter }: CardSwiperProps) => {
   const swiperRef = useRef<SwiperRef>(null);
+  const renderCount = useRef(0);
 
   useEffect(() => {
+    renderCount.current++;
+    if (renderCount.current <= 2) {
+      return;
+    }
+    // console.log('firstmount no entra, bien');
+
     swiperRef.current?.swiper?.slideTo(0);
+    // console.log('despues de slide');
   }, [activeFilter]);
 
   return (
@@ -26,6 +34,7 @@ export const CardSwiper = ({ cardArray, activeFilter }: CardSwiperProps) => {
       <Swiper
         pagination={{ dynamicBullets: true }}
         modules={[Pagination]}
+        initialSlide={1}
         className="mySwiper"
         slidesPerView="auto"
         spaceBetween={20}
