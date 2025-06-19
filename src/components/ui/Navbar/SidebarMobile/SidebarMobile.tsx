@@ -193,7 +193,7 @@ const SidebarMobile = ({ isOpen, onClose }: SidebarMobileProps) => {
             style="outlined"
             color="onbrand"
             fullWidth
-            onClick={() => window.open('mailto:atencioalaciutadania@emtvalencia.es', '_blank')}
+            onClick={() => (window.location.href = 'mailto:atencioalaciutadania@emtvalencia.es')}
           >
             {t('actions.contactUs')}
           </Button>
