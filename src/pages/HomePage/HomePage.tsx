@@ -15,7 +15,7 @@ const HomePage: React.FC = () => {
         paddingSize="large"
         className={cn('container__padding--top', 'full-height')}
       >
-        <Register hasImage={true} />
+        <Register isOptimized={true} hasImage={true} />
       </SingleBlock>
 
       <SingleBlock id="benefits" backgroundColor="light" paddingSize="special">

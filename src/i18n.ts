@@ -35,6 +35,7 @@ i18n
       'error',
       'privacy',
       'cookies',
+      'download',
     ], //If you add more namespaces include them here.
     defaultNS: 'common',
   });

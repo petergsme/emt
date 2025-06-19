@@ -1,7 +1,13 @@
 import { useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 import { useAppDownload } from '@/hooks/useAppDownload';
+import classNames from 'classnames/bind';
+import theme from './downloadApp.module.scss';
+
+const cx = classNames.bind(theme);
 
 export const DownloadApp = () => {
+  const { t } = useTranslation('download');
   const { redirectToStore } = useAppDownload();
 
   useEffect(() => {
@@ -9,15 +15,8 @@ export const DownloadApp = () => {
   }, [redirectToStore]);
 
   return (
-    <div
-      style={{
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        height: '100vh',
-      }}
-    >
-      <p>Redirigiendo a la tienda de aplicaciones...</p>
+    <div className={cx('downloadApp')}>
+      <p>{t('redirecting')}</p>
     </div>
   );
 };
