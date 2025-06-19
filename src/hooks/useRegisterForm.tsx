@@ -49,7 +49,7 @@ export const useRegisterForm = ({ setIsOpenSection }: useRegisterFormProps) => {
       }
       setIsClosingModal(false);
       setIsClosingSection(false);
-    }, 300);
+    }, 280);
   };
 
   return {

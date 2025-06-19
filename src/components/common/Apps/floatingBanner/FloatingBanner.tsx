@@ -37,7 +37,7 @@ export const FloatingBanner = ({ targetSectionId }: FloatingBannerProps) => {
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-  }, [targetSectionId, showBanner, isClosing]);
+  }, [showBanner, isClosing]);
 
   useEffect(() => {
     const handleResize = () => {
