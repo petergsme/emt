@@ -78,6 +78,9 @@
     cursor: pointer;
     padding: 0;
     height: 25px;
+    &:hover {
+      opacity: 0.7;
+    }
 
     &:hover {
       text-decoration: underline;
@@ -120,6 +123,10 @@
   border: none;
   color: var(--text-onbrand);
   cursor: pointer;
+
+  &:hover {
+    opacity: 0.7;
+  }
 
   &--active {
     color: var(--text-brand-light-secondary);

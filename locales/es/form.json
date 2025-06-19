@@ -93,8 +93,8 @@
       },
 
       "purchase": {
-        "claim": "Compra completada",
-        "info": "Si lo elegiste, recibirás una copia de la factura en tu correo electrónico."
+        "claim": "Lo sentimos",
+        "info": "En este momento las compras sufren problemas técnicos, por favor vuelve a intentarlo más tarde."
       },
 
       "exit": "CONTINUAR"

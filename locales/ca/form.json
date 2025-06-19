@@ -97,8 +97,8 @@
       },
 
       "purchase": {
-        "claim": "Compra completada",
-        "info": "Si ho vas triar, rebràs una còpia de la factura per correu electrònic."
+        "claim": "Ho sentim",
+        "info": "En aquest moment hi ha problemes tècnics amb les compres. Torna-ho a intentar més tard, per favor."
       },
 
       "exit": "CONTINUAR"

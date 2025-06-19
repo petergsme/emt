@@ -120,8 +120,8 @@ export const PurchaseForm = ({ setIsOpenSection }: FormProps) => {
 
       {isOpenSuccess && (
         <FormModal isClosing={isClosingModal}>
-          <h2 className="display-medium center-text text__color--brand">{t('modal.completed.register.claim')}</h2>
-          <p className="paragraph-small">{t('modal.completed.register.info')}</p>
+          <h2 className="display-medium center-text text__color--brand">{t('modal.completed.purchase.claim')}</h2>
+          <p className="paragraph-small">{t('modal.completed.purchase.info')}</p>
           <button className={`label-button ${theme['submit-button-test']}`} onClick={() => handleExitModal(true)}>
             {t('modal.completed.exit')}
           </button>

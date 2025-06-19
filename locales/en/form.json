@@ -97,8 +97,8 @@
       },
 
       "purchase": {
-        "claim": "Purchase completed",
-        "info": "If selected, you'll receive a copy of the invoice via email."
+        "claim": "Sorry",
+        "info": "We're currently experiencing technical issues with purchases. Please try again later."
       },
 
       "exit": "CONTINUE"
