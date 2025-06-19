@@ -4,7 +4,7 @@ import { Benefits } from './Benefits/Benefits';
 import { TopUp } from '@/components/common/TopUp/TopUp';
 import { FAQ } from '@/components/common/FAQ/FAQ';
 import { Register } from '@/components/common/Register/Register';
-import { HeroSection } from './HeroSection/HeroSection';
+// import { HeroSection } from './HeroSection/HeroSection';
 
 const HomePage: React.FC = () => {
   return (
@@ -13,9 +13,9 @@ const HomePage: React.FC = () => {
         fullHeight={true}
         backgroundColor="dark"
         paddingSize="large"
-        className={cn('container__padding--top')}
+        className={cn('container__padding--top', 'full-height')}
       >
-        <HeroSection />
+        <Register hasImage={true} />
       </SingleBlock>
 
       <SingleBlock id="benefits" backgroundColor="light" paddingSize="special">
@@ -28,10 +28,6 @@ const HomePage: React.FC = () => {
 
       <SingleBlock id="faq" backgroundColor="pink" paddingSize="special" gapSize="superlarge">
         <FAQ isAccordionVer={false} />
-      </SingleBlock>
-
-      <SingleBlock backgroundColor="dark" fullHeight={true} paddingSize="large">
-        <Register hasImage={true} />
       </SingleBlock>
     </>
   );
