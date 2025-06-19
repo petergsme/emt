@@ -12,10 +12,8 @@ export interface CardProps {
   price: string | string[];
   requiredDocuments?: string[];
   hasForm?: boolean;
-  //   formURL?: string;
+  formURL?: string;
   rules?: string[];
-  //   hasRegulations: boolean;
-
   hasAppointmentButton?: boolean;
-  //   appointmentURL?: string;
+  appointmentURL?: string;
 }

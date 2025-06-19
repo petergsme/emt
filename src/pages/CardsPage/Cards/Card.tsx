@@ -10,7 +10,6 @@ import { Accordion } from '@/components/common/Accordion/Accordion';
 import { CardProps } from '@/models/Card';
 import card_graphic from '@/assets/card_graphics.webp';
 import ticket_graphic from '../assets/graphic_ticket.webp';
-import { Link } from 'react-router-dom';
 
 const cx = classNames.bind(theme);
 
@@ -35,6 +34,11 @@ export const Card = (card: CardProps) => {
       setIsRotated(false);
     }, 60000);
   }
+
+  const cardButton =
+    card.buttonText === 'Download EMTicket' ||
+    card.buttonText === 'Descarregar EMTicket' ||
+    card.buttonText === 'Descarga EMTicket';
 
   return (
     <>
@@ -82,7 +86,7 @@ export const Card = (card: CardProps) => {
                   <p className={cn('paragraph-xsmall', 'text__color--onbrand')}>{card.secondaryDescription}</p>
                 </div>
 
-                {card.hasButton && (
+                {card.hasButton && !cardButton && (
                   <Button
                     type="button"
                     fullWidth={true}
@@ -107,7 +111,7 @@ export const Card = (card: CardProps) => {
                     })}
 
                     {card.hasNorms && (
-                      <a href="" target="_blank" className={cn('link-xsmall', 'text__color--onbrand')}>
+                      <a href={card.normsURL} target="_blank" className={cn('link-xsmall', 'text__color--onbrand')}>
                         {t('norms')}
                       </a>
                     )}
@@ -159,7 +163,13 @@ export const Card = (card: CardProps) => {
               </div>
 
               {card.hasForm && (
-                <Button type="button" style="filled" color="onprimary" fullWidth={true} onClick={() => {}}>
+                <Button
+                  type="button"
+                  style="filled"
+                  color="onprimary"
+                  fullWidth={true}
+                  onClick={() => window.open(card.formURL, '_blank')}
+                >
                   {t('buttonForm')}
                 </Button>
               )}
@@ -176,12 +186,22 @@ export const Card = (card: CardProps) => {
                 })}
               </div>
 
-              <Link className={cn('link-small', 'link__color--brand', cx('align-self-center'))} to={'/norms'}>
+              <a
+                href={card.normsURL}
+                target="_blank"
+                className={cn('link-small', 'link__color--brand', cx('align-self-center'))}
+              >
                 {t('norms')}
-              </Link>
+              </a>
 
               {card.hasAppointmentButton && (
-                <Button type="button" style="filled" color="onprimary" fullWidth={true} onClick={() => {}}>
+                <Button
+                  type="button"
+                  style="filled"
+                  color="onprimary"
+                  fullWidth={true}
+                  onClick={() => window.open(card.appointmentURL, '_blank')}
+                >
                   {t('buttonDate')}
                 </Button>
               )}
