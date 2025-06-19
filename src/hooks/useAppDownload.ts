@@ -34,12 +34,12 @@ export const useAppDownload = () => {
   const getStoreUrl = (appType: keyof AppUrls = 'general'): string => {
     if (isIOS) return APP_URLS[appType].ios;
     if (isAndroid) return APP_URLS[appType].android;
-    return APP_URLS[appType].ios; // Fallback para desktop
+    return APP_URLS[appType].ios;
   };
 
   const redirectToStore = (appType: keyof AppUrls = 'general') => {
     const url = getStoreUrl(appType);
-    window.open(url, '_blank');
+    window.location.href = url;
   };
 
   return {
