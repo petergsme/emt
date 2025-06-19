@@ -8,6 +8,7 @@ import { Button } from '@/components/common/Button/Button';
 import theme from './sidebarMobile.module.scss';
 import { useTranslation } from 'react-i18next';
 import { useBodyScrollLock } from '@/hooks/useBodyScrollLock';
+import { useAppDownload } from '@/hooks/useAppDownload';
 
 const cx = classNames.bind(theme);
 
@@ -22,8 +23,16 @@ const SidebarMobile = ({ isOpen, onClose }: SidebarMobileProps) => {
   const navigate = useNavigate();
   const { t } = useTranslation('menu');
 
+  const { redirectToStore, isMobile } = useAppDownload();
   useBodyScrollLock({ enabled: isOpen });
 
+  const handleGeneralDownload = () => {
+    if (isMobile) {
+      redirectToStore('general');
+    } else {
+      navigate('/downloadApps');
+    }
+  };
   // useEffect(() => {
   //   if (isOpen) {
   //     document.body.style.overflow = 'hidden';
@@ -184,24 +193,12 @@ const SidebarMobile = ({ isOpen, onClose }: SidebarMobileProps) => {
             style="outlined"
             color="onbrand"
             fullWidth
-            onClick={() => {
-              navigate('/contact');
-              handleClose();
-            }}
+            onClick={() => window.open('mailto:atencioalaciutadania@emtvalencia.es', '_blank')}
           >
             {t('actions.contactUs')}
           </Button>
 
-          <Button
-            type="button"
-            style="filled"
-            color="onbrand"
-            fullWidth
-            onClick={() => {
-              navigate('/downloadApps');
-              handleClose();
-            }}
-          >
+          <Button type="button" style="filled" color="onbrand" fullWidth onClick={() => handleGeneralDownload()}>
             {t('actions.downloadApps')}
           </Button>
         </footer>

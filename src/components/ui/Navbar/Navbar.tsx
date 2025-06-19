@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { useLocation, useNavigate } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import classNames from 'classnames/bind';
 import cn from 'classnames';
@@ -16,7 +16,6 @@ const cx = classNames.bind(theme);
 export const Navbar = () => {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 1024);
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-  const navigate = useNavigate();
   const { t } = useTranslation('menu');
   useLocation();
 
@@ -102,7 +101,7 @@ export const Navbar = () => {
             type="button"
             style="filled"
             color={isOverBlack ? 'onbrand' : 'onprimary'}
-            onClick={() => navigate('/contact')}
+            onClick={() => window.open('mailto:atencioalaciutadania@emtvalencia.es', '_blank')}
           >
             {t('actions.contact')}
           </Button>
