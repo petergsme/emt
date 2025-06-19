@@ -31,7 +31,7 @@ const RulesPage: React.FC = () => {
         <Accident />
       </SingleBlock>
 
-      <SingleBlock backgroundColor="pink" paddingSize="special" gapSize="superlarge">
+      <SingleBlock id="faq-help" backgroundColor="pink" paddingSize="special" gapSize="superlarge">
         <FAQ questions={faqQuestions} />
       </SingleBlock>
 

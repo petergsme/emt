@@ -27,7 +27,7 @@ const CardsPage: React.FC = () => {
         <CardSection />
       </SingleBlock>
 
-      <SingleBlock backgroundColor="pink" paddingSize="special" gapSize="superlarge">
+      <SingleBlock id="faq-cards" backgroundColor="pink" paddingSize="special" gapSize="superlarge">
         <FAQ questions={faqQuestions} />
       </SingleBlock>
 

@@ -114,6 +114,9 @@
 
     a svg {
       vertical-align: sub;
+      &:hover {
+        opacity: 0.8;
+      }
     }
   }
 }
@@ -130,5 +133,11 @@
 
   &--active {
     color: var(--text-brand-light-secondary);
+  }
+}
+
+.link {
+  &:hover {
+    opacity: 0.7;
   }
 }

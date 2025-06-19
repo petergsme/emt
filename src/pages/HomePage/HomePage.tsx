@@ -18,7 +18,7 @@ const HomePage: React.FC = () => {
         <HeroSection />
       </SingleBlock>
 
-      <SingleBlock backgroundColor="light" paddingSize="special">
+      <SingleBlock id="benefits" backgroundColor="light" paddingSize="special">
         <Benefits />
       </SingleBlock>
 
@@ -26,7 +26,7 @@ const HomePage: React.FC = () => {
         <TopUp />
       </SingleBlock>
 
-      <SingleBlock backgroundColor="pink" paddingSize="special" gapSize="superlarge">
+      <SingleBlock id="faq" backgroundColor="pink" paddingSize="special" gapSize="superlarge">
         <FAQ isAccordionVer={false} />
       </SingleBlock>
 

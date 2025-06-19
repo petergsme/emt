@@ -3,7 +3,7 @@ import { Button } from '../Button/Button';
 import theme from './faq.module.scss';
 import classNames from 'classnames/bind';
 import cn from 'classnames';
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { Icon, IconName } from '@/assets/icons/Icon';
 
@@ -28,6 +28,7 @@ interface FAQProps {
 export const FAQ = ({ questions, isAccordionVer = true }: FAQProps) => {
   const { t } = useTranslation('faq');
   const navigate = useNavigate();
+  const location = useLocation();
 
   const categories = t('categories', { returnObjects: true }) as CategoryItem[];
 
@@ -57,7 +58,18 @@ export const FAQ = ({ questions, isAccordionVer = true }: FAQProps) => {
             return (
               <article key={category.id} className={cx('category')}>
                 <Icon icon={category.icon} color="onbrand-secondary" size="special" />
-                <Button type="button" style="filled" color="onprimary-secondary" onClick={() => navigate('/faq')}>
+                <Button
+                  type="button"
+                  style="filled"
+                  color="onprimary-secondary"
+                  onClick={() => {
+                    if (category.icon === 'Questionmark') {
+                      navigate('/help/rules-guides#faq-help');
+                    } else {
+                      navigate('/mobilis-cards#faq-cards');
+                    }
+                  }}
+                >
                   {category.title}
                 </Button>
                 <p className={cn('text__wrap--balanced')}>{category.description}</p>
@@ -71,7 +83,18 @@ export const FAQ = ({ questions, isAccordionVer = true }: FAQProps) => {
         <h3 className={cn('display-medium', 'text__color--onprimary')}>
           {isAccordionVer ? t('accordionSection.subtitle') : t('generalSection.subtitle')}
         </h3>
-        <Button type="button" style="filled" color="onbrand" onClick={() => navigate('/faq')}>
+        <Button
+          type="button"
+          style="filled"
+          color="onbrand"
+          onClick={() => {
+            if (location.pathname === '/') {
+              navigate('/help/rules-guides#faq-help');
+            } else {
+              navigate('/#faq');
+            }
+          }}
+        >
           {isAccordionVer ? t('accordionSection.buttonText') : t('generalSection.buttonText')}
         </Button>
       </div>

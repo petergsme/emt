@@ -80,8 +80,17 @@ const SidebarMobile = ({ isOpen, onClose }: SidebarMobileProps) => {
 
           <main className={cn('accordion__lastChild--border-bottom', cx('sidebar__main-content'))}>
             <section className={cx('sidebar__nav-section')}>
-              <NavLink to="/mapa" className={cn('display-medium', cx('sidebar__nav-link'))} onClick={handleClose}>
-                {t('navigation.map')}
+              <NavLink
+                to="/"
+                className={cn('display-medium', cx('sidebar__nav-link'))}
+                onClick={() => {
+                  handleClose();
+                  setTimeout(() => {
+                    navigate('/#benefits');
+                  }, 400);
+                }}
+              >
+                {t('navigation.benefits')}
               </NavLink>
             </section>
 
@@ -151,11 +160,16 @@ const SidebarMobile = ({ isOpen, onClose }: SidebarMobileProps) => {
                   {t('help.busUsageAndRegulations')}
                 </NavLink>
                 <NavLink
-                  to="/faq"
+                  to="/"
                   className={({ isActive }) =>
                     cn('paragraph-medium', cx('sidebar__nav-link', { 'sidebar__nav-link--active': isActive }))
                   }
-                  onClick={handleClose}
+                  onClick={() => {
+                    handleClose();
+                    setTimeout(() => {
+                      navigate('/#faq');
+                    }, 400);
+                  }}
                 >
                   {t('help.frequentQuestions')}
                 </NavLink>

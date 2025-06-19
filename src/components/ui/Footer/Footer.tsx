@@ -39,12 +39,6 @@ export const Footer = () => {
     <footer className={cx('footer')}>
       <div className={cx('footer__main')}>
         <div className={cx('footer__content')}>
-          <div>
-            <Link to="/map" className={cn('display-small', cx('footer__link'))}>
-              {t('navigation.map')}
-            </Link>
-          </div>
-
           <div className={cx('footer__section')}>
             <div className={cx('footer__section-content')}>
               <h3 className={cn('display-small')}>{t('navigation.titlesAndRates.main')}</h3>
@@ -78,7 +72,7 @@ export const Footer = () => {
               <Link to="/help/rules-guides" className={cn('paragraph-small', cx('footer__link'))}>
                 {t('navigation.help.regulations')}
               </Link>
-              <Link to="/faq" className={cn('paragraph-small', cx('footer__link'))}>
+              <Link to="/#faq" className={cn('paragraph-small', cx('footer__link'))}>
                 {t('navigation.help.faq')}
               </Link>
             </div>
@@ -115,9 +109,13 @@ export const Footer = () => {
               <p className={cn('paragraph-small', cx('footer__text'))}>
                 <span className={cn('paragraph-small')}>{t('navigation.inPerson.appointment.required')}</span>
                 <br />
-                <Link to="/appointment" className={cn('link-small')}>
+                <a
+                  target="_blank"
+                  href="https://www.emtvalencia.es/ciudadano/index.php?option=com_content&view=article&id=1909:request-for-an-appointment&catid=89&Itemid=185&lang=es"
+                  className={cn('link-small', cx('link'))}
+                >
                   {t('navigation.inPerson.appointment.request')}
-                </Link>
+                </a>
               </p>
             </div>
           </div>

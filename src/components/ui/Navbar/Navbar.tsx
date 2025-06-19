@@ -55,7 +55,7 @@ export const Navbar = () => {
         <div className={cx('navbar__desktop-content')}>
           <nav className={cx('navbar__nav')}>
             <NavLink
-              to="/map"
+              to="/#benefits"
               className={({ isActive }) =>
                 cn(
                   'paragraph-small',
@@ -66,7 +66,7 @@ export const Navbar = () => {
                 )
               }
             >
-              {t('navigation.map')}
+              {t('navigation.benefits')}
             </NavLink>
             <NavLink
               to="/mobilis-cards"

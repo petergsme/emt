@@ -29,12 +29,6 @@ export const FooterMobile = () => {
       </div>
 
       <div className={cx('footer__content')}>
-        <div className={cx('footer__block', 'footer__block--with-border-top')}>
-          <Link to="/map" className={cn('display-small', cx('text-decoration-none'))}>
-            {t('navigation.map')}
-          </Link>
-        </div>
-
         <Accordion
           text={t('navigation.titlesAndRates.main')}
           textClassName={cn('display-small', cx('text-decoration-none'))}
@@ -66,7 +60,7 @@ export const FooterMobile = () => {
             <Link to="/help/rules-guides" className={cn('paragraph-small', cx('text-decoration-none'))}>
               {t('navigation.help.regulations')}
             </Link>
-            <Link to="/faq" className={cn('paragraph-small', cx('text-decoration-none'))}>
+            <Link to="/#faq" className={cn('paragraph-small', cx('text-decoration-none'))}>
               {t('navigation.help.faq')}
             </Link>
           </div>
@@ -98,9 +92,13 @@ export const FooterMobile = () => {
             <p className={cn('paragraph-small')}>
               {t('navigation.inPerson.appointment.required')}
               <br />
-              <Link className={cn('link-small')} to="/appointment">
+              <a
+                href="https://www.emtvalencia.es/ciudadano/index.php?option=com_content&view=article&id=1909:request-for-an-appointment&catid=89&Itemid=185&lang=es"
+                target="_blank"
+                className={cn('link-small')}
+              >
                 {t('navigation.inPerson.appointment.request')}
-              </Link>
+              </a>
             </p>
           </div>
         </Accordion>
