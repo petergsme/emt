@@ -107,9 +107,9 @@ export const Card = (card: CardProps) => {
                     })}
 
                     {card.hasNorms && (
-                      <Link className={cn('link-xsmall', 'text__color--onbrand')} to={'norms'}>
+                      <a href="" target="_blank" className={cn('link-xsmall', 'text__color--onbrand')}>
                         {t('norms')}
-                      </Link>
+                      </a>
                     )}
                   </div>
                 </div>

@@ -1,0 +1,28 @@
+{
+  "title": "COOKIES",
+  "intro": {
+    "acceptance": "Access and use of www.emtvalencia.es implies acceptance of the General Conditions, Privacy Policy and this Cookie Policy. We recommend reading them carefully.",
+    "experience": "We want your experience on the site to be optimal. Therefore, we clearly explain what cookies we use and what they are for."
+  },
+  "sections": {
+    "whatAreCookies": {
+      "title": "What are cookies?",
+      "definition": "Cookies are files that contain small amounts of information that are downloaded to the user's device when visiting a website. Their main purpose is to recognize the user each time they access www.emtvalencia.es, which also allows us to improve the quality and usability of our website.",
+      "importance": "Cookies are essential for the functioning of the Internet, they cannot damage the user's computer or device and, if they are activated in your browser settings, they help us identify and resolve possible website malfunctions."
+    },
+    "whatCookiesWeUse": {
+      "title": "What cookies do we use?",
+      "introduction": "On www.emtvalencia.es only our own cookies are used. We do not use third-party cookies or for advertising purposes.",
+      "types": {
+        "session": "Session cookies: allow basic navigation on the site.",
+        "preferences": "Preference cookies: store the language chosen by the user.",
+        "persistent": "Persistent cookies: in the \"Online Recharge\" service, the user can choose to remember their data (name, phone and email) for future recharges. This information is stored encrypted on the device for one year."
+      },
+      "specificCookies": {
+        "infoParadas": "info_paradas. To manage access to stop information.",
+        "jfcookieLang": "jfcookie[lang]. To access information in the chosen language.",
+        "emtRecarga": "EMTValenciaRecarga and EMTValenciaRecargaRecordar. To, at the user's request, remember on this device the data entered (name, phone and email) when purchasing a recharge for successive recharges. They expire after one year. Data is stored encrypted."
+      }
+    }
+  }
+}

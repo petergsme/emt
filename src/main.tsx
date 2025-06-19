@@ -9,6 +9,8 @@ import HomePage from './pages/HomePage/HomePage.tsx';
 import CardsPage from './pages/CardsPage/CardsPage.tsx';
 import RulesPage from './pages/RulesPage/RulesPage.tsx';
 import ErrorPage from './pages/ErrorPage/ErrorPage.tsx';
+import PrivacyPage from './pages/PrivacyPage/PrivacyPage.tsx';
+import CookiesPage from './pages/CookiesPage/CookiesPage.tsx';
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
@@ -19,6 +21,8 @@ createRoot(document.getElementById('root')!).render(
           <Route path="/mobilis-cards" element={<CardsPage />} />
           <Route path="/help/rules-guides" element={<RulesPage />} />
           <Route path="/error" element={<ErrorPage />} />
+          <Route path="/privacy" element={<PrivacyPage />} />
+          <Route path="/cookies" element={<CookiesPage />} />
           <Route path="*" element={<Navigate to="/error" replace />} />
         </Route>
       </Routes>

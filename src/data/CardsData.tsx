@@ -22,6 +22,7 @@ export const useCardsData = (): CardProps[] => {
         t('cards.bonobus.additionalInfo.2'),
       ],
       hasNorms: true,
+      normsURL: '',
       price: t('cards.bonobus.price'),
     },
 

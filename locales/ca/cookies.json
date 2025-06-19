@@ -1,0 +1,28 @@
+{
+  "title": "COOKIES",
+  "intro": {
+    "acceptance": "L'accés i ús de www.emtvalencia.es implica l'acceptació de les Condicions Generals, la Política de Privacitat i esta Política de Cookies. Et recomanem llegir-les atentament.",
+    "experience": "Volem que la teua experiència al lloc siga òptima. Per això, expliquem de forma clara quines cookies utilitzem i per a què serveixen."
+  },
+  "sections": {
+    "whatAreCookies": {
+      "title": "¿Què són les cookies?",
+      "definition": "Les cookies són arxius que contenen xicotetes quantitats d'informació que es descarreguen al dispositiu de l'usuari quan visita un lloc web. La seua finalitat principal és reconéixer l'usuari cada vegada que accedeix a www.emtvalencia.es, la qual cosa ens permet, a més, millorar la qualitat i la usabilitat del nostre web.",
+      "importance": "Les cookies són essencials per al funcionament d'Internet, no poden danyar l'equip o dispositiu de l'usuari i, si es troben activades en la configuració del teu navegador, ens ajuden a identificar i resoldre possibles errors de funcionament del lloc web."
+    },
+    "whatCookiesWeUse": {
+      "title": "¿Quines cookies utilitzem?",
+      "introduction": "A www.emtvalencia.es sols s'utilitzen cookies pròpies. No usem cookies de tercers ni amb fins publicitaris.",
+      "types": {
+        "session": "Cookies de sessió: permeten la navegació bàsica al lloc.",
+        "preferences": "Cookies de preferències: emmagatzemen l'idioma triat per l'usuari.",
+        "persistent": "Cookies persistents: al servei de \"Recàrrega Online\", l'usuari pot optar per recordar les seues dades (nom, telèfon i correu electrònic) per a futures recàrregues. Esta informació es guarda xifrada al dispositiu durant un any."
+      },
+      "specificCookies": {
+        "infoParadas": "info_paradas. Per a gestionar l'accés a la informació de parades.",
+        "jfcookieLang": "jfcookie[lang]. Per a accedir a la informació en l'idioma triat.",
+        "emtRecarga": "EMTValenciaRecarga i EMTValenciaRecargaRecordar. Per a, a sol·licitud de l'usuari, poder recordar en este dispositiu les dades introduïdes (nom, telèfon i email) en la compra d'una recàrrega en recàrregues successives. Expiren al cap d'un any. Les dades es guarden xifrades."
+      }
+    }
+  }
+}

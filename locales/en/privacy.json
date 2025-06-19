@@ -1,0 +1,70 @@
+{
+  "title": "PRIVACY",
+  "intro": {
+    "commitment": "Commitment: EMT is committed to the protection of personal data and their appropriate use. Applied regulations: Complies with GDPR (EU Regulation 2016/679), LOPDGDD (Organic Law 3/2018) and LSSI (Law 34/2002).",
+    "treatment": "At EMT Valencia we treat your personal data in a safe and responsible manner, respecting your privacy. We only collect the data strictly necessary for each service, applying security measures such as anonymization.",
+    "rights": "You have the right to access, rectify, delete, object to or limit the use of your data, as well as to request its portability. You can easily exercise these rights by contacting EMT.",
+    "conservation": "We keep your data only for the necessary time and guarantee its confidentiality even after ending the relationship with you. When we entrust data processing to third parties, we choose only entities that comply with current regulations."
+  },
+  "userRights": {
+    "title": "User rights",
+    "access": {
+      "label": "Access",
+      "content": "You can know what personal data of yours is being processed."
+    },
+    "rectification": {
+      "label": "Rectification",
+      "content": "You can correct inaccurate or incomplete data."
+    },
+    "deletion": {
+      "label": "Deletion (right to be forgotten)",
+      "content": "You can request that your data be deleted if it is no longer necessary, you withdraw your consent or there was misuse."
+    },
+    "limitation": {
+      "label": "Limitation",
+      "content": "You can request that the use of your data be limited in certain cases (for example, while a claim is being resolved)."
+    },
+    "opposition": {
+      "label": "Opposition",
+      "content": "You can object to processing for personal reasons, unless there are legitimate reasons to continue processing them."
+    },
+    "portability": {
+      "label": "Portability",
+      "content": "You can request that your data be delivered to you in an accessible and transferable format."
+    },
+    "howToExercise": {
+      "label": "How to exercise your rights",
+      "content": "Send your request to atencioalaciutadania@emtvalencia.es or by post to the address of EMT Valencia. Attach a copy of your ID or other official document."
+    },
+    "complaints": {
+      "label": "Complaints",
+      "content": "You can go to the Spanish Data Protection Agency or other competent authority if you consider that your rights have not been respected."
+    }
+  },
+  "sections": {
+    "responsibleForTreatment": {
+      "title": "Responsible for treatment",
+      "content": "The Municipal Transport Company of València S.A.U. (EMT), with CIF A-46380417, and registered office at Plaza Correo Viejo nº 5, 46001, València, is responsible for the processing of personal data collected through this website."
+    },
+    "treatmentPurposes": {
+      "title": "Treatment purposes",
+      "content": "The data will be used for the purpose of providing transport services, citizen attention, user management, subscriptions and other services that EMT offers through the web."
+    },
+    "legitimation": {
+      "title": "Legitimation",
+      "content": "The legal basis for processing is user consent, contract execution or compliance with a legal obligation."
+    },
+    "dataConservation": {
+      "title": "Data conservation",
+      "content": "Data will be kept for as long as the relationship with EMT lasts or until its deletion is requested, and subsequently for the periods required by law."
+    },
+    "recipients": {
+      "title": "Recipients",
+      "content": "Data will not be transferred to third parties except for legal obligation or for the provision of services related to EMT."
+    },
+    "contact": {
+      "title": "Contact",
+      "content": "Data Protection Delegate:dpd@emtvalencia.es"
+    }
+  }
+}

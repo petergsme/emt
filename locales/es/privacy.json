@@ -1,0 +1,70 @@
+{
+  "title": "PRIVACIDAD",
+  "intro": {
+    "commitment": "Compromiso: EMT está comprometida con la protección de los datos personales y el uso adecuado de los mismos. Normativa aplicada: Cumple con el RGPD (Reglamento UE 2016/679), la LOPDGDD (Ley Orgánica 3/2018) y la LSSI (Ley 34/2002).",
+    "treatment": "En EMT Valencia tratamos tus datos personales de manera segura y responsable, respetando tu privacidad. Solo recopilamos los datos estrictamente necesarios para cada servicio, aplicando medidas de seguridad como la anonimización.",
+    "rights": "Tienes derecho a acceder, rectificar, eliminar, oponerte o limitar el uso de tus datos, así como a solicitar su portabilidad. Puedes ejercer estos derechos fácilmente contactando con EMT.",
+    "conservation": "Conservamos tus datos solo el tiempo necesario y garantizamos su confidencialidad incluso tras finalizar la relación contigo. Cuando encargamos el tratamiento de datos a terceros, elegimos solo entidades que cumplen con la normativa vigente."
+  },
+  "userRights": {
+    "title": "Derechos de los usuarios",
+    "access": {
+      "label": "Acceso",
+      "content": "Puedes saber qué datos personales tuyos están siendo tratados."
+    },
+    "rectification": {
+      "label": "Rectificación",
+      "content": "Puedes corregir datos inexactos o incompletos."
+    },
+    "deletion": {
+      "label": "Supresión (olvido)",
+      "content": "Puedes pedir que se eliminen tus datos si ya no son necesarios, retiras tu consentimiento o hubo un uso indebido."
+    },
+    "limitation": {
+      "label": "Limitación",
+      "content": "Puedes solicitar que se limite el uso de tus datos en ciertos casos (por ejemplo, mientras se resuelve una reclamación)."
+    },
+    "opposition": {
+      "label": "Oposición",
+      "content": "Puedes oponerte al tratamiento por motivos personales, salvo que existan razones legítimas para seguir tratándolos."
+    },
+    "portability": {
+      "label": "Portabilidad",
+      "content": "Puedes pedir que tus datos te sean entregados en un formato accesible y transferible."
+    },
+    "howToExercise": {
+      "label": "Cómo ejercer tus derechos",
+      "content": "Envía tu solicitud al correo atencioalaciutadania@emtvalencia.es o por correo postal a la dirección de EMT Valencia. Adjunta una copia de tu DNI u otro documento oficial."
+    },
+    "complaints": {
+      "label": "Reclamaciones",
+      "content": "Puedes acudir a la Agencia Española de Protección de Datos u otra autoridad competente si consideras que tus derechos no han sido respetados."
+    }
+  },
+  "sections": {
+    "responsibleForTreatment": {
+      "title": "Responsable del tratamiento",
+      "content": "La Empresa Municipal de Transportes de València S.A.U. (EMT), con CIF A-46380417, y domicilio social en Plaza Correo Viejo nº 5, 46001, València, es responsable del tratamiento de los datos personales recogidos a través de este sitio web."
+    },
+    "treatmentPurposes": {
+      "title": "Finalidades del tratamiento",
+      "content": "Los datos serán utilizados con la finalidad de prestar los servicios de transporte, atención ciudadana, gestión de usuarios, suscripciones y otros servicios que EMT ofrezca a través de la web."
+    },
+    "legitimation": {
+      "title": "Legitimación",
+      "content": "La base legal para el tratamiento es el consentimiento del usuario, la ejecución de un contrato o el cumplimiento de una obligación legal."
+    },
+    "dataConservation": {
+      "title": "Conservación de los datos",
+      "content": "Los datos se conservarán mientras dure la relación con EMT o hasta que se solicite su supresión, y posteriormente durante los plazos exigidos por ley."
+    },
+    "recipients": {
+      "title": "Destinatarios",
+      "content": "Los datos no se cederán a terceros salvo obligación legal o para la prestación de servicios relacionados con EMT."
+    },
+    "contact": {
+      "title": "Contacto",
+      "content": "Delegado de Protección de Datos:dpd@emtvalencia.es"
+    }
+  }
+}

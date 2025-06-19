@@ -1,0 +1,28 @@
+{
+  "title": "COOKIES",
+  "intro": {
+    "acceptance": "El acceso y uso de www.emtvalencia.es implica la aceptación de las Condiciones Generales, la Política de Privacidad y esta Política de Cookies. Te recomendamos leerlas atentamente.",
+    "experience": "Queremos que tu experiencia en el sitio sea óptima. Por ello, explicamos de forma clara qué cookies utilizamos y para qué sirven."
+  },
+  "sections": {
+    "whatAreCookies": {
+      "title": "¿Qué son las cookies?",
+      "definition": "Las cookies son archivos que contienen pequeñas cantidades de información que se descargan en el dispositivo del usuario que se utiliza cuando visitas un sitio web. Su finalidad principal es reconocer al usuario cada vez que accede a www.emtvalencia.es lo que nos permite, además, mejorar la calidad y la usabilidad de nuestra web.",
+      "importance": "Las cookies son esenciales para el funcionamiento de Internet, no pueden dañar el equipo o dispositivo del usuario y, si se encuentran activadas en la configuración de tu navegador, nos ayudan a identificar y resolver posibles errores de funcionamiento del sitio web."
+    },
+    "whatCookiesWeUse": {
+      "title": "¿Qué cookies utilizamos?",
+      "introduction": "En www.emtvalencia.es solo se utilizan cookies propias. No usamos cookies de terceros ni con fines publicitarios.",
+      "types": {
+        "session": "Cookies de sesión: permiten la navegación básica en el sitio.",
+        "preferences": "Cookies de preferencias: almacenan el idioma elegido por el usuario.",
+        "persistent": "Cookies persistentes: en el servicio de \"Recarga Online\", el usuario puede optar por recordar sus datos (nombre, teléfono y correo electrónico) para futuras recargas. Esta información se guarda cifrada en el dispositivo durante un año."
+      },
+      "specificCookies": {
+        "infoParadas": "info_paradas. Para gestionar el acceso a la información de paradas.",
+        "jfcookieLang": "jfcookie[lang]. Para acceder a la información en el idioma elegido.",
+        "emtRecarga": "EMTValenciaRecarga y EMTValenciaRecargaRecordar. Para, a solicitud del usuario, poder recordar en este dispositivo los datos introducidos (nombre, teléfono y email) en la compra de una recarga en recargas sucesivas. Expiran al cabo de un año. Los datos se guardan encriptados."
+      }
+    }
+  }
+}

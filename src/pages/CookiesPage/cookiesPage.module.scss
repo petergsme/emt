@@ -1,0 +1,18 @@
+@use '../../styles/mixins.scss' as *;
+
+// CLASES COOKIES
+.text-align-left {
+  text-align: left;
+}
+
+.cookies {
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-40);
+
+    @include mobile {
+      gap: var(--gap-20);
+    }
+  }
+}
