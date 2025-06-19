@@ -1,4 +1,5 @@
 import { useTranslation } from 'react-i18next';
+import { useAppDownload } from '@/hooks/useAppDownload';
 import { useLocation, useNavigate } from 'react-router-dom';
 import classNames from 'classnames/bind';
 import cn from 'classnames';
@@ -21,6 +22,24 @@ export const AppSection = () => {
   const navigate = useNavigate();
   const location = useLocation();
   const swiperRef2 = useRef<SwiperRef>(null);
+
+  const { redirectToStore, isMobile } = useAppDownload();
+
+  const handleEmticketDownload = () => {
+    if (isMobile) {
+      redirectToStore('emticket');
+    } else {
+      navigate('/downloadApp');
+    }
+  };
+
+  const handleEmtValenciaDownload = () => {
+    if (isMobile) {
+      redirectToStore('emtvalencia');
+    } else {
+      navigate('/downloadApp');
+    }
+  };
 
   useEffect(() => {
     swiperRef2.current?.swiper?.slideTo(0);
@@ -86,7 +105,7 @@ export const AppSection = () => {
                 color="onbrand"
                 fullWidth={true}
                 style="filled"
-                onClick={() => navigate('/downloadApp')}
+                onClick={() => handleEmticketDownload()}
               >
                 {t('apps.downloadButton')}
               </Button>
@@ -133,7 +152,7 @@ export const AppSection = () => {
                 color="onbrand"
                 fullWidth={true}
                 style="filled"
-                onClick={() => navigate('/downloadApp')}
+                onClick={() => handleEmtValenciaDownload()}
               >
                 {t('apps.downloadButton')}
               </Button>

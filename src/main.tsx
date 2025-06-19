@@ -11,6 +11,7 @@ import RulesPage from './pages/RulesPage/RulesPage.tsx';
 import ErrorPage from './pages/ErrorPage/ErrorPage.tsx';
 import PrivacyPage from './pages/PrivacyPage/PrivacyPage.tsx';
 import CookiesPage from './pages/CookiesPage/CookiesPage.tsx';
+import { DownloadApp } from './pages/DownloadPage/DownloadApp.tsx';
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
@@ -23,6 +24,7 @@ createRoot(document.getElementById('root')!).render(
           <Route path="/error" element={<ErrorPage />} />
           <Route path="/privacy" element={<PrivacyPage />} />
           <Route path="/cookies" element={<CookiesPage />} />
+          <Route path="/downloadApps" element={<DownloadApp />} />
           <Route path="*" element={<Navigate to="/error" replace />} />
         </Route>
       </Routes>
