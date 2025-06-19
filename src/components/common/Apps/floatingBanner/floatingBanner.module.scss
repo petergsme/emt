@@ -42,6 +42,7 @@
     );
     animation: slideInFromRight 0.3s ease-out;
     border-radius: var(--border-radius-20);
+    cursor: pointer;
 
     &--exit {
       animation: slideOutToRight 0.3s ease-in;

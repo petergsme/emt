@@ -1,10 +1,10 @@
 import { useTranslation } from 'react-i18next';
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import classNames from 'classnames/bind';
 import cn from 'classnames';
 import theme from './appSection.module.scss';
 import { AppCard } from './appCard/AppCard';
-import { Swiper, SwiperSlide } from 'swiper/react';
+import { Swiper, SwiperRef, SwiperSlide } from 'swiper/react';
 import emticket_app_icon from '@/assets/emticket_app_icon.webp';
 import emtvalencia_app_icon from '@/assets/emtvalencia_app_icon.webp';
 import app_QR from '@/assets/emt-qr.svg';
@@ -12,12 +12,19 @@ import { Icon } from '@/assets/icons/Icon';
 import { Button } from '../Button/Button';
 import 'swiper/swiper-bundle.css';
 import { Pagination } from 'swiper/modules';
+import { useEffect, useRef } from 'react';
 
 const cx = classNames.bind(theme);
 
 export const AppSection = () => {
   const { t } = useTranslation('apps');
   const navigate = useNavigate();
+  const location = useLocation();
+  const swiperRef2 = useRef<SwiperRef>(null);
+
+  useEffect(() => {
+    swiperRef2.current?.swiper?.slideTo(0);
+  }, [location.pathname]);
 
   return (
     <>
@@ -40,6 +47,7 @@ export const AppSection = () => {
             centeredSlides: true,
           },
         }}
+        ref={swiperRef2}
       >
         <SwiperSlide className={cx('slide-auto')}>
           <AppCard>

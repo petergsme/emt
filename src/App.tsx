@@ -17,6 +17,12 @@ export const App: React.FC = () => {
   useCanonical();
   useLocation();
 
+  const appSection = (
+    <SingleBlock id="apps" backgroundColor="pink" className={cx('extra-padding-top')}>
+      <AppSection />
+    </SingleBlock>
+  );
+
   return (
     <>
       <Navbar />
@@ -25,11 +31,7 @@ export const App: React.FC = () => {
 
       {location.pathname === '/' && <FloatingBanner targetSectionId="apps" />}
 
-      {location.pathname !== '/error' && (
-        <SingleBlock id="apps" backgroundColor="pink" className={cx('extra-padding-top')}>
-          <AppSection />
-        </SingleBlock>
-      )}
+      {location.pathname !== '/error' && appSection}
 
       <Footer />
     </>
