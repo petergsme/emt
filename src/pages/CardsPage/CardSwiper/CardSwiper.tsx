@@ -1,4 +1,4 @@
-import { act, useEffect, useRef } from 'react';
+import { useEffect, useRef } from 'react';
 import { Swiper, SwiperRef, SwiperSlide } from 'swiper/react';
 import { Pagination } from 'swiper/modules';
 import './cardSwiper.scss';
