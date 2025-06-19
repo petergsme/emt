@@ -20,7 +20,7 @@ export const CardSwiper = ({ cardArray, activeFilter }: CardSwiperProps) => {
 
   useEffect(() => {
     renderCount.current++;
-    if (renderCount.current <= 2) {
+    if (renderCount.current <= 1) {
       return;
     }
     // console.log('firstmount no entra, bien');
