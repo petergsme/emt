@@ -30,31 +30,33 @@ const CookiesPage = () => {
           <p>{t('sections.whatCookiesWeUse.introduction')}</p>
 
           <p>
-            <strong>Cookies de sesión:</strong> permiten la navegación básica en el sitio.
+            <strong>{t('sections.whatCookiesWeUse.types.session').split(':')[0]}:</strong>{' '}
+            {t('sections.whatCookiesWeUse.types.session').split(':')[1]}
           </p>
 
           <p>
-            <strong>Cookies de preferencias:</strong> almacenan el idioma elegido por el usuario.
+            <strong>{t('sections.whatCookiesWeUse.types.preferences').split(':')[0]}:</strong>{' '}
+            {t('sections.whatCookiesWeUse.types.preferences').split(':')[1]}
           </p>
 
           <p>
-            <strong>Cookies persistentes:</strong> en el servicio de "Recarga Online", el usuario puede optar por
-            recordar sus datos (nombre, teléfono y correo electrónico) para futuras recargas. Esta información se guarda
-            cifrada en el dispositivo durante un año.
+            <strong>{t('sections.whatCookiesWeUse.types.persistent').split(':')[0]}:</strong>{' '}
+            {t('sections.whatCookiesWeUse.types.persistent').split(':')[1]}
           </p>
 
           <p>
-            <strong>info_paradas.</strong> Para gestionar el acceso a la información de paradas.
+            <strong>{t('sections.whatCookiesWeUse.specificCookies.infoParadas').split('.')[0]}.</strong>{' '}
+            {t('sections.whatCookiesWeUse.specificCookies.infoParadas').split('.')[1]}
           </p>
 
           <p>
-            <strong>jfcookie[lang].</strong> Para acceder a la información en el idioma elegido.
+            <strong>{t('sections.whatCookiesWeUse.specificCookies.jfcookieLang').split('.')[0]}.</strong>{' '}
+            {t('sections.whatCookiesWeUse.specificCookies.jfcookieLang').split('.')[1]}
           </p>
 
           <p>
-            <strong>EMTValenciaRecarga y EMTValenciaRecargaRecordar.</strong> Para, a solicitud del usuario, poder
-            recordar en este dispositivo los datos introducidos (nombre, teléfono y email) en la compra de una recarga
-            en recargas sucesivas. Expiran al cabo de un año. Los datos se guardan encriptados.
+            <strong>{t('sections.whatCookiesWeUse.specificCookies.emtRecarga').split('.')[0]}.</strong>{' '}
+            {t('sections.whatCookiesWeUse.specificCookies.emtRecarga').split('.')[1]}
           </p>
         </div>
       </SingleBlock>
