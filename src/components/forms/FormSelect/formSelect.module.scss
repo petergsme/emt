@@ -1,0 +1,164 @@
+// FORM CUSTOM SELECT STYLES
+
+// WRAPPER (incluye el componente completo)
+.select__wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-12);
+}
+
+// LABEL (la etiqueta)
+.select__label {
+  color: var(--icon-onbrandsecondary);
+  padding: 0 var(--padding-20);
+  text-align: left;
+
+  &--error {
+    color: var(--text-brand);
+  }
+}
+
+// CONTAINER principal
+.select__container {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--gap-20);
+  border-radius: var(--border-radius-1000);
+  background-color: var(--bg-secondary);
+  padding: 0 var(--padding-20);
+  border: var(--border-width-2) solid var(--bg-secondary);
+  transition: all 0.3s ease-in-out;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+
+  &:hover {
+    border: var(--border-width-2) solid var(--border-onprimary-secondary);
+  }
+
+  &:focus-within {
+    border: var(--border-width-2) solid var(--border-onprimary-secondary);
+    // background-color: var(--bg-brand-light-primary);
+  }
+
+  &--error {
+    @extend .select__container;
+    border-color: var(--border-onprimary-brand);
+  }
+}
+
+// ICON GROUP (LEADING ICON + SELECT ITSELF)
+.select__iconGroup {
+  display: flex;
+  gap: var(--gap-20);
+  align-items: center;
+  min-width: 0;
+  // Flexbox lleva "min-width: auto" por defecto, impide que los bloques se contraigan. "Min-width: 0" hace que funcione el text-overflow, pero se lo tienes que poner a todos los contenedores (padre + hijo).
+}
+
+// FIELD (BUTTON + DROPDOWN WITH OPTIONS)
+.select__field {
+  min-width: 0;
+}
+
+// BOTÓN QUE DESPLIEGA EL SELECT
+.select__trigger {
+  background: transparent;
+  border: none;
+  padding: var(--padding-20) 0;
+  cursor: pointer;
+  color: var(--text-onbrandsecondary);
+
+  text-wrap: nowrap;
+  //Tecnicamente "white-space: nowrap" es mas antiguo pero mas compatible.
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+  // La clave para que salieran los malditos puntos suspensivos.
+
+  &--placeholder {
+    color: var(--text-disabled);
+  }
+
+  &:focus {
+    outline: none;
+  }
+  // Esto es una tontería sirve para que con focus (usando tab) no señalé el botón y señale la caja entera.
+}
+
+// CONTENEDOR DROPDOWN
+.select__dropdown {
+  text-align: left;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-20);
+  top: calc(100% + 12px);
+  left: 0;
+  right: 0;
+  background: var(--bg-brand-light-primary);
+  border: var(--border-width-2) solid var(--border-onprimary-secondary);
+  border-radius: var(--border-radius-20);
+  padding: var(--padding-20);
+  z-index: 1000;
+  animation: dropdownSlide 0.2s ease-out;
+
+  &--exit {
+    animation: dropdownSlideUp 0.2s ease-out;
+  }
+}
+
+// CADA UNO DE NUESTROS OPTION (DIVS XD)
+.select__option {
+  border-radius: var(--border-radius-20);
+  cursor: pointer;
+  color: var(--text-onbrandsecondary);
+  transition: all 0.2s ease;
+
+  &--selected {
+    color: var(--text-brand);
+  }
+
+  &:hover {
+    color: var(--text-brand);
+  }
+}
+
+// CHEVRON animation
+.select__chevron {
+  transition: all 0.3s ease;
+
+  &--open {
+    transform: rotate(180deg);
+  }
+}
+
+// ERROR MESSAGE
+.select__errorMessage {
+  color: var(--text-brand);
+  padding: 0 var(--padding-20);
+  text-align: end;
+}
+
+// ANIMACION
+@keyframes dropdownSlide {
+  from {
+    opacity: 0;
+    transform: translateY(-8px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes dropdownSlideUp {
+  from {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-8px) scale(0.98);
+  }
+}

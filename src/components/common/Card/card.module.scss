@@ -1,0 +1,21 @@
+@use '../../../styles/mixins' as *;
+// CLASSES COMMON USE CARD
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-20);
+  padding: var(--padding-20);
+  background-color: var(--bg-secondary);
+  border-radius: var(--border-radius-20);
+  max-width: 384px;
+
+  @include desktop {
+    padding: var(--padding-40);
+  }
+
+  &--fullWidth {
+    max-width: 560px;
+  }
+  //   Esto lo terminaremos tocando porque depende del otro componente.
+}

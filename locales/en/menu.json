@@ -1,0 +1,27 @@
+{
+  "navigation": {
+    "benefits": "Benefits",
+    "titlesAndRates": "Tickets and fares",
+    "help": "Help"
+  },
+  "titlesAndRates": {
+    "cards": "Cards",
+    "consultationsAndRecharges": "Inquiries and top-ups",
+    "registerCard": "Register your card"
+  },
+  "help": {
+    "busUsageAndRegulations": "Bus usage and regulations",
+    "frequentQuestions": "Frequently asked questions"
+  },
+  "actions": {
+    "contactUs": "Contact us",
+    "downloadApps": "Download the apps",
+    "contact": "CONTACT"
+  },
+  "accessibility": {
+    "menu": "Menu",
+    "closeMenu": "Close menu",
+    "logoAlt": "EMT Valencia Logo",
+    "openMenu": "Open menu"
+  }
+}

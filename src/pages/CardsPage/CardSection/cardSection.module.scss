@@ -1,0 +1,61 @@
+@use '../../../styles/mixins' as *;
+
+// CARDS SECTION CLASSES
+
+// @mixin tablet-large {
+//   @media (min-width: 848px) {
+//     @content;
+//   }
+// }
+
+// @mixin desktop-large {
+//   @media (min-width: 1700px) {
+//     @content;
+//   }
+// }
+
+// .rights {
+//   &__list {
+//     margin: 0;
+//     padding-left: 25px;
+//     text-align: left;
+
+//     & li:not(:last-of-type) {
+//       margin-bottom: var(--margin-20);
+//     }
+//   }
+
+//   &__container {
+//     display: flex;
+//     flex-direction: row;
+//     flex-wrap: wrap;
+//     align-items: center;
+//     justify-content: center;
+//     gap: var(--gap-40);
+
+//     @include tablet-large {
+//       & article:last-child {
+//         align-self: stretch;
+//       }
+//     }
+//   }
+// }
+
+.cards {
+  &__gap {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-40);
+  }
+
+  &__filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--gap-8);
+    justify-content: center;
+  }
+
+  &--padding {
+    padding: 0 var(--padding-20);
+  }
+}

@@ -1,0 +1,16 @@
+@use '../../styles/mixins.scss' as *;
+
+@mixin desktop-1200 {
+  @media (min-width: 1200px) {
+    @content;
+  }
+}
+
+.additional-desktop-media-query {
+  @include desktop-1200 {
+    & div:first-child {
+      flex-direction: row;
+      max-width: 70%;
+    }
+  }
+}

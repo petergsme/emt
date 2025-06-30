@@ -1,0 +1,207 @@
+{
+  "altImage": "Gráfico de una tarjeta de transporte roja con móbilis escrito sobre ella",
+  "buttonTurn": "VER MÁS",
+  "norms": "Normativa vigente ->",
+  "accordionData": "Documentación",
+  "accordionNorms": "Normas y detalles",
+  "buttonForm": "Descarga el formulario",
+  "buttonDate": "Pedir cita previa",
+
+  "headerClaim": "Tarifas y títulos",
+  "headerSubClaim": "MÓBILIS TE DA MÁS",
+
+  "filterAll": "Todas",
+  "filterSale": "Venta directa",
+  "filterReload": "Recargables",
+  "filterUnlimited": "Ilimitadas",
+
+  "categories": {
+    "Personal": "Personal",
+    "General": "General",
+    "Recargable": "Recargable",
+    "Renovable": "Renovable",
+    "Solicitud": "Solicitud",
+    "solicitud": "solicitud",
+    "Venta": "Venta",
+    "Ilimitada": "ilimitada",
+    "ilimitada": "ilimitada",
+    "Limitada": "Limitada",
+    "Bienal": "Bienal",
+    "Anual": "Anual",
+    "Mensual": "Mensual",
+    "Viajes individuales": "Viajes individuales"
+  },
+  "cards": {
+    "bonobus": {
+      "primaryDescription": "10 viajes con transbordos ilimitados durante 1 hora entre autobuses de EMT.",
+      "secondaryDescription": "Tarjeta recargable de uso general con un saldo máximo de hasta 30 viajes. De venta en quioscos, estancos y oficinas EMT.",
+      "additionalInfo": {
+        "0": "Coste inicial: 2€.",
+        "1": "Renovable en quioscos, estancos, oficinas, web y app.",
+        "2": "Precio bonificado hasta el 31/12 (antes 8,50€)."
+      },
+      "price": "4,25€ / 10 VIAJES"
+    },
+    "emtJove": {
+      "primaryDescription": "Viajes ilimitados mensuales a precio reducido para menores de 30 años.",
+      "secondaryDescription": "Tarjeta personalizada ilimitada de renovación mensual. A solicitar en nuestras oficinas.",
+      "buttonText": "Requisitos Y Normas",
+      "additionalInfo": {
+        "0": "Coste inicial: 3€.",
+        "1": "Renovable en quioscos, estancos, oficinas EMT, web y app."
+      },
+      "price": "12,5€ / MES",
+      "requiredDocuments": {
+        "0": "Formulario de solicitud (deberán presentarse dos copias).",
+        "1": "Original y fotocopia de DNI en vigor.",
+        "2": "Menores de 14, DNI de padre, madre o tutor."
+      },
+      "rules": {
+        "0": "En caso de pérdida la expedición de un duplicado tendrá un coste de 5€.",
+        "1": "Precio bonificado hasta el 31/12 (antes 25€)."
+      }
+    },
+    "bonoOro": {
+      "primaryDescription": "Viajes ilimitados a precio reducido para mayores de 65 años, pensionistas y discapacitados.",
+      "secondaryDescription": "Tarjeta personalizada ilimitada de renovación anual. De venta en quioscos, estancos y oficinas EMT.",
+      "additionalInfo": {
+        "0": "Coste inicial: 3€.",
+        "1": "Recargable en quioscos, estancos y oficinas de EMT.",
+        "2": "La tarjeta siempre cubre desde el trimestre de pago hasta fin de año."
+      },
+      "price": {
+        "0": "Según trimestre de pago:",
+        "1": "20€ (ENE - MAR)\u00A0\u00A0\u00A0 15€ (ABR - JUN) 10€ (JUL - SEP)\u00A0\u00A0\u00A0 5€ (OCT - DIC)"
+      }
+    },
+    "personalizado": {
+      "name": "Personalizado",
+      "primaryDescription": "10 viajes a precio reducido para miembros de familia numerosa o monoparental.",
+      "secondaryDescription": "Tarjeta recargable personalizada con un saldo máximo de hasta 30 viajes. A solicitar en nuestras oficinas.",
+      "buttonText": "Requisitos Y Normas",
+      "additionalInfo": {
+        "0": "Coste inicial: 3€.",
+        "1": "Renovable en quioscos, estancos, oficinas, web y app."
+      },
+      "price": {
+        "0": "Según categoría:",
+        "1": "3,40€ / 10 VIAJEs (C. General) 2,15€ / 10 VIAJEs (C. Especial)"
+      },
+      "requiredDocuments": {
+        "0": "Formulario de solicitud (deberán presentarse dos copias).",
+        "1": "Original y fotocopia de DNI en vigor.",
+        "2": "Menores de 14, DNI de padre, madre o tutor.",
+        "3": "Carnet de familia numerosa o monoparental."
+      },
+      "rules": {
+        "0": "En caso de pérdida la expedición de un duplicado tendrá un coste de 5€.",
+        "1": "Sujeta a revisión anual.",
+        "2": "El precio de este abono tiene un descuento del 20% o 50% sobre el precio actual del bonobús.",
+        "3": "Precio bonificado hasta el 31/12 (porque depende el bonobús)."
+      }
+    },
+    "emtInfantil": {
+      "primaryDescription": "Viajes gratuitos ilimitados para menores de 14 años.",
+      "secondaryDescription": "Tarjeta personalizada ilimitada de renovación bienal. A solicitar en nuestras oficinas.",
+      "buttonText": "Requisitos Y Normas",
+      "additionalInfo": {
+        "0": "Coste inicial: 5€.",
+        "1": "Renovable solo en oficinas EMT."
+      },
+      "price": "GRATUITA",
+      "requiredDocuments": {
+        "0": "Formulario de solicitud (deberán presentarse dos copias).",
+        "1": "Original y fotocopia de DNI en vigor.",
+        "2": "DNI de padre, madre o tutor.",
+        "3": "Foto carnet del beneficiario.",
+        "4": "Libro de familia."
+      },
+      "rules": {
+        "0": "En caso de pérdida la expedición de un duplicado tendrá un coste de 5€."
+      }
+    },
+    "emtMascota": {
+      "primaryDescription": "Viajes gratuitos ilimitados para animales de compañía que viajen en un transportín.",
+      "secondaryDescription": "Tarjeta personalizada ilimitada de renovación bienal. A solicitar en nuestras oficinas.",
+      "buttonText": "Requisitos Y Normas",
+      "additionalInfo": {
+        "0": "Coste inicial: 5€.",
+        "1": "Renovable solo en oficinas EMT."
+      },
+      "price": "GRATUITA",
+      "requiredDocuments": {
+        "0": "Formulario de solicitud (deberán presentarse dos copias).",
+        "1": "DNI del propietario.",
+        "2": "Foto carnet de la mascota.",
+        "3": "Foto carnet del beneficiario.",
+        "4": "Cartilla de vacunación de la mascota."
+      },
+      "rules": {
+        "0": "En caso de pérdida la expedición de un duplicado tendrá un coste de 5€.",
+        "1": "Solo mascotas hasta 15 kg en transportín de máximo 45×35×25 cm colocado entre pies o en regazo (nunca asiento).",
+        "2": "Los viajeros siempre tendrán preferencia frente a los animales."
+      }
+    },
+    "emtAmbTU": {
+      "primaryDescription": "60 viajes mensuales a precio reducido para personas con rentas bajas y sus familias.",
+      "secondaryDescription": "Tarjeta personalizada limitada de renovación anual. A solicitar en nuestras oficinas.",
+      "buttonText": "Requisitos Y Normas",
+      "additionalInfo": {
+        "0": "Coste inicial: 3€.",
+        "1": "Renovable solo en oficinas EMT."
+      },
+      "price": "10€ / AÑO",
+      "requiredDocuments": {
+        "0": "Formulario de solicitud a rellenar en la oficina.",
+        "1": "Original y fotocopia de DNI en vigor.",
+        "2": "Certificado de Renta emitido por la Agencia Tributaria."
+      },
+      "rules": {
+        "0": "En caso de pérdida la expedición de un duplicado tendrá un coste de 5€.",
+        "1": "Formulario a solicitar en oficinas EMT.",
+        "2": "Sujeta a revisión anual.",
+        "3": "Cita previa necesaria."
+      }
+    },
+    "emtRefugi": {
+      "primaryDescription": "60 viajes mensuales gratuitos para personas refugiadas que residan en Valencia.",
+      "secondaryDescription": "Tarjeta personalizada limitada de renovación anual. A solicitar en nuestras oficinas.",
+      "buttonText": "Requisitos Y Normas",
+      "additionalInfo": {
+        "0": "Coste inicial: 3€.",
+        "1": "Renovable solo en oficinas EMT."
+      },
+      "price": "GRATUITA",
+      "requiredDocuments": {
+        "0": "Formulario de solicitud a rellenar en la oficina."
+      },
+      "rules": {
+        "0": "En caso de pérdida la expedición de un duplicado tendrá un coste de 5€.",
+        "1": "Formulario a solicitar en oficinas EMT.",
+        "2": "Sujeta a revisión anual.",
+        "3": "Cita previa necesaria."
+      }
+    },
+    "billeteSencillo": {
+      "name": "Billete Sencillo",
+      "primaryDescription": "Un único viaje con transbordos ilimitados durante una hora.",
+      "secondaryDescription": "Tarjeta monedero virtual de uso personal con saldo recargable. Disponible en la app EMTicket.",
+      "buttonText": "Descarga EMTicket",
+      "additionalInfo": {
+        "0": "Viajes gratis tras 41 validaciones en el mismo mes.",
+        "1": "Recargable con tarjeta bancaria entre 5€ y 40€ (en EMTicket)."
+      },
+      "price": "0,4€ / VIAJE"
+    },
+    "movimEMT": {
+      "primaryDescription": "Viajes con transbordos ilimitados durante 1 hora utilizando saldo de monedero digital EMTicket.",
+      "secondaryDescription": "Tarjeta monedero virtual de uso personal con saldo recargable. Disponible en la app EMTicket.",
+      "buttonText": "Descarga EMTicket",
+      "additionalInfo": {
+        "0": "Viajes gratis tras 41 validaciones en el mismo mes.",
+        "1": "Recargable con tarjeta bancaria entre 5€ y 40€ (en EMTicket)."
+      },
+      "price": "0,4€ / VIAJE"
+    }
+  }
+}

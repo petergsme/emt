@@ -1,0 +1,20 @@
+{
+  "header": {
+    "title": "Switch to Móbilis",
+    "subtitle": "AND TRAVEL YOUR WAY",
+    "description": "We adapt transport to your lifestyle with options for every type of traveler and prices that fit your budget."
+  },
+  "benefits": {
+    "unique": "10 unique cards",
+    "uniqueText": "Whatever your age or lifestyle, we have an affordable and convenient way to travel designed just for you.",
+    "prices": "Trips from €0",
+    "pricesText": "You read it right - some cards let you travel for free, and with others you'll never pay more than €0.4 per trip.",
+    "flexibility": "Total flexibility",
+    "flexibilityText": "Choose how and when to top up: by trips, monthly, quarterly or yearly. You decide based on your needs."
+  },
+  "footer": {
+    "claim": "WHAT ARE YOU WAITING FOR?",
+    "buttonText": "DISCOVER YOURS"
+  },
+  "imageAlt": "A graphic of a red transportation card with 'mobilis' written on it"
+}

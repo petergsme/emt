@@ -1,0 +1,106 @@
+{
+  "accordionSection": {
+    "title": "QUESTIONS?",
+    "subtitle": "And if there's anything else you need to know",
+    "buttonText": "Frequently Asked Questions"
+  },
+
+  "generalSection": {
+    "title": "ANSWER YOUR QUESTIONS",
+    "subtitle": "Looking for something else?",
+    "buttonText": "Frequently Asked Questions"
+  },
+
+  "rulesQuestions": [
+    {
+      "id": "validate-card",
+      "question": "What if I can’t validate my Móbilis card?",
+      "answer": "If that happens, pay for your ticket and then go to the Customer Service Office."
+    },
+    {
+      "id": "other-person-card",
+      "question": "Can I use someone else’s card?",
+      "answer": "No, personalized cards are non-transferable. Fraudulent use may result in penalties and card withdrawal."
+    },
+    {
+      "id": "exact-amount",
+      "question": "What if I don’t have the exact amount for the ticket?",
+      "answer": "If the change is over €10, the driver will give you a voucher to redeem the next day at the Customer Service Office."
+    },
+    {
+      "id": "bus-stopped",
+      "question": "Can I board if the bus is stopped at a traffic light?",
+      "answer": "No, you should never board between stops, even if the bus is stationary."
+    },
+    {
+      "id": "baby-stroller",
+      "question": "Where do I board if I’m with a baby stroller?",
+      "answer": "With a single stroller, use the front door. With a larger stroller, use the door with a ramp."
+    },
+    {
+      "id": "luggage-pets",
+      "question": "Can I bring luggage or animals?",
+      "answer": "Carts, suitcases, and child seats are allowed if properly secured. Animals are not allowed, except guide dogs."
+    }
+  ],
+
+  "cardsQuestions": [
+    {
+      "id": "mobilis-cards",
+      "question": "What is a Móbilis card?",
+      "answer": "All cards, both personalized and general-use cards, are Móbilis cards. This is the name EMT uses to refer to the card that holds different transport passes and tickets, such as the bus pass, senior pass, or youth pass."
+    },
+    {
+      "id": "cards-types",
+      "question": "What types of cards are available?",
+      "answer": "Personalized cards: Include photo and personal details. Can only hold one EMT pass. General-use cards: Can load any pass that doesn't require user identification."
+    },
+    {
+      "id": "trips-left",
+      "question": "How can I check my balance or expiry date?",
+      "answer": "You can check your balance on bus card readers, at authorized sales points (such as newsstands or tobacco shops), and through this website or the app."
+    },
+    {
+      "id": "register-card",
+      "question": "How can I register my card?",
+      "answer": "If you register your general-use card, you'll be able to recover your trips in case of loss or theft. You can register your card through our phone service (963 158 515) (Monday to Friday 8 AM to 9 PM, Saturdays 9 AM to 2 PM) or through this website."
+    },
+    {
+      "id": "emticket",
+      "question": "What is EMTicket?",
+      "answer": "EMTicket is a mobile app that lets you buy single tickets from your phone to travel unlimited on EMT for 1 hour from activation in a quick, easy and secure way."
+    },
+    {
+      "id": "ticket-emticket",
+      "question": "How do I activate my single ticket in the EMTicket app?",
+      "answer": "Once you've bought your ticket, it will be saved in your ticket wallet. To activate it, you need to go there, select it and 'activate' its use."
+    }
+  ],
+
+  "categories": [
+    {
+      "id": "titulos",
+      "icon": "Bus",
+      "title": "FARES",
+      "description": "Bus passes, transfers, validation and expiration dates."
+    },
+    {
+      "id": "mobilis",
+      "icon": "Card",
+      "title": "MÓBILIS",
+      "description": "Registration, balance, top-up and card usage."
+    },
+    {
+      "id": "emticket",
+      "icon": "Ticket",
+      "title": "EMTICKET",
+      "description": "Purchase, activation and mobile ticket usage."
+    },
+    {
+      "id": "otros",
+      "icon": "Questionmark",
+      "title": "OTHERS",
+      "description": "Lost items, special cases and other inquiries."
+    }
+  ]
+}

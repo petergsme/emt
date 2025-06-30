@@ -1,0 +1,22 @@
+@use '../../../styles/mixins' as *;
+
+// CLASES DEL CONTENIDO DE REGISTER
+.register__image {
+  width: 100%;
+  height: auto;
+  max-width: 460px;
+
+  @include mobile {
+    max-width: 350px;
+  }
+
+  @include desktop {
+    display: none;
+  }
+
+  &--stay {
+    @include desktop {
+      display: inline;
+    }
+  }
+}

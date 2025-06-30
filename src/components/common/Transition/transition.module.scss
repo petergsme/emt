@@ -1,0 +1,32 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(
+    160deg,
+    var(--red-900) 25%,
+    var(--red-700) 50%,
+    var(--red-500) 75%,
+    var(--red-300-main) 100%
+  );
+  z-index: 9999;
+  animation: fadeRedTransition 500ms ease-out;
+}
+
+@keyframes fadeRedTransition {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 1;
+  }
+
+  75% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}

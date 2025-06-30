@@ -1,0 +1,26 @@
+{
+  "header": {
+    "title": "3 passos simples",
+    "subtitle": "PER A USAR BÉ L'AUTOBÚS"
+  },
+  "step1": {
+    "title": "1. Abans",
+    "description": "Dirigeix-te cap a la teua parada. Quan vegis aproximar-se l'autobús, alça la mà per a avisar el conductor. Puja només quan s'ature per complet i per la porta davantera. Recorda tindre llesta la teua targeta Móbilis o els diners per al bitllet.",
+    "altImage": "Persona esperant l'autobús a la parada amb la mà alçada per a indicar al conductor"
+  },
+  "step2": {
+    "title": "2. Dins",
+    "description": "Valida la teua targeta o compra el bitllet. Després avança cap al fons deixant pas i seu-te o agafa't a les barres. Cedeix el teu seient si veus algú que ho necessita més i mantín les teues pertinences a prop. Recorda tindre el teu bitllet a mà per si hi haguera revisió.",
+    "altImage": "Interior de l'autobús amb passatgers validant targetes i ocupant seients"
+  },
+  "step3": {
+    "title": "3. En baixar",
+    "description": "Quan estigues prop de la teua parada, prem el timbre. Avança cap a la porta i subjecta't. Baixa només quan l'autobús s'ature per complet i les portes estiguen obertes.",
+    "altImage": "Passatger baixant de l'autobús per la porta del darrere quan està completament aturat"
+  },
+  "accident": {
+    "title": "En cas d'accident",
+    "p1": "Mantín la calma i segueix les instruccions del conductor. Si cal evacuar, deixa el teu equipatge i fes-ho usant l'eixida més propera i sense empényer. Si l'autobús està bolcat, ix per portes o finestres d'emergència. Si no s'obrin, usa el martell d'emergència.",
+    "p2": "Si el conductor estiguera inconscient, l'evacuació serà igual, però els passatgers hauran d'assegurar-se d'obrir les portes d'emergència, apagar el motor i posar el fre de mà si fora necessari."
+  }
+}

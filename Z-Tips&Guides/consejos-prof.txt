@@ -1,0 +1,39 @@
+CONSEJOS SOBRE TU CÓDIGO
+
+-Se coherente con el uso de classnames, usalo para todo no aquí y allá.
+-Crea componentes mas genericos donde pases objetos y arrays y las traducciones esten en ellos. No pases tipos tan especificos ligados a textos traducidos, eso crea componentes muy restringidos. Quieres escalabilidad, no restricción.
+
+-Tienes muchisimo que aprender y meter de accesibilidad. Sobre inputs que ocupen todo el campo, labels... Pidele a Wakkos cursos.
+-El nombrado de clases es mas jodido de lo que parece, vuelve a ver la clase de Wakkos, quieres tener mucho material reutilizable para tus clases y nombrados descriptivos pero correctos en BEM que ayuden a saber que coño es el elemento.
+-Si usas BEM y anidaciones de scss, todo tienes que montarlo dentro del padre:
+
+ESTO MAL:
+.section {}
+.section--error {}
+
+ESTO BIEN
+.section {
+
+   &--error {}
+}
+
+-En vez de crear "display-large" cambia los estilos del h1, y ya (haz lo mismo para los demás).
+
+
+CONSEJOS SOBRE ENTREVISTAS
+
+"¿Cuanto quieres que entre en detalle sobre el componente? Voy a ir bloque por bloque explicandolo si quereis que vaya mas rapido o mas en detalle decidme sin problema".
+
+-No entres demasiado en detalle, se practico y sencillo.
+-Saltate todo aquello que no valga la pena explicar.
+-Explica las cosas de manera muchísimo más natural como hace Josmi, conviertiendo un "IF..." en un "Si..." vuelvelo algo natural.
+-Cuanto más expliques más te pueden pillar. Si hay un silencio incomodo, aguanta, no sigas hablando, o sal con una pregunta.
+-Currate aprender sobre la empresa, para una entrevista, diles lo que quieren oir.
+
+
+
+CONSEJOS SOBRE ENCONTRAR TRABAJO
+
+-Github ponle fotos en el readme de tu pagina para que se vea.
+-Ve a charlas de TECH, busca las empresas en linkedIN y echa curriculum.
+-En redes conecta con peña así.

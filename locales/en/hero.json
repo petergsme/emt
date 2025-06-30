@@ -1,0 +1,14 @@
+{
+  "hero": {
+    "title": "YOUR TIME, YOUR ROUTES",
+    "subtitle": "Check the arrivals of that bus you're waiting for in real time and discover all available routes."
+  },
+  "search": {
+    "tabs": {
+      "stop": "STOP",
+      "line": "LINE"
+    },
+    "placeholder": "C2 - main streets...",
+    "viewMap": "VIEW MAP"
+  }
+}

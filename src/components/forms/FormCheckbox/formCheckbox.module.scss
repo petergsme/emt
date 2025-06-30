@@ -1,0 +1,41 @@
+//FORM CHECKBOX STYLES
+
+.checkbox__icon {
+  appearance: none;
+  width: 28px;
+  height: 28px;
+  flex-shrink: 0;
+  margin: 0;
+  cursor: pointer;
+  //Appearance none hides the classic checkbox look while giving it width and height keeps it clickable.
+}
+
+.checkbox__container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-12);
+}
+
+.checkbox__wrapper {
+  display: flex;
+  align-items: center;
+  text-align: left;
+  gap: var(--gap-12);
+  position: relative;
+
+  & span {
+    position: absolute;
+    pointer-events: none;
+  }
+  //This span is targetting the Icon component and positioning it on top of the real checkbox while making it invisible to our click so we can still click the checkbox.
+}
+
+.checkbox__label {
+  color: var(--icon-onbrandsecondary);
+  cursor: pointer;
+}
+
+.checkbox__errorMessage {
+  color: var(--text-brand);
+  text-align: end;
+}

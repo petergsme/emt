@@ -1,0 +1,149 @@
+@use "../../../styles/mixins" as *;
+// REGISTER FORM STYLES (MAY BE REUSED LATER DOWN THE LINE)
+
+// UTILIDADES
+@mixin display-flex($gap: var(--gap-20)) {
+  display: flex;
+  flex-direction: column;
+  gap: $gap;
+}
+
+.wrapper--padding {
+  padding: 0 var(--padding-20);
+}
+
+.wrapper--paddingFlex {
+  @extend .wrapper--padding;
+  @include display-flex();
+
+  &--form {
+    @extend .wrapper--padding;
+    @include display-flex();
+
+    & > * {
+      flex: 1;
+      // Flex basis es muy importante, recuerda que flex es shorthand de grow, shrink y basis con la particularidad de que basis empieza en 0 aqui, pero en grow flex basis es auto. Aqui empieza de 0 crece hasta donde el otro pero en el otro caso empieza desde su tamaño y crece hasta donde puede.
+    }
+
+    @include tablet-up {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+  }
+}
+
+// CLASES ESPECÍFICAS DE CONTENEDORES.
+
+.section__wrapper {
+  background-color: var(--bg-primary);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+
+  position: fixed;
+  overflow-y: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 100;
+
+  animation: fadeIn 0.5s;
+  animation-timing-function: cubic-bezier(0.82, 0, 0.28, 0.99);
+
+  &--exit {
+    animation: fadeOut 0.3s;
+    animation-timing-function: cubic-bezier(0.82, 0, 0.28, 0.99);
+  }
+}
+
+.purchase__section {
+  @include display-flex(var(--gap-40));
+  padding-top: var(--padding-40);
+  padding-bottom: var(--padding-80);
+  width: 100%;
+  align-items: center;
+}
+
+.claim__container {
+  @include display-flex(var(--gap-8));
+  @extend .wrapper--padding;
+  text-align: center;
+
+  & h2 {
+    color: var(--text-onbrandsecondary);
+  }
+
+  & h3 {
+    color: var(--text-brand);
+  }
+}
+
+.form__container {
+  @include display-flex(var(--gap-40));
+  width: 100%;
+  max-width: 800px;
+}
+
+.button-openModal {
+  @extend .wrapper--padding;
+  background-color: transparent;
+  border: none;
+  margin: 0;
+  max-width: fit-content;
+  align-self: flex-end;
+  cursor: pointer;
+}
+
+// MIENTRAS NO EXISTA EL BOTÓN REAL USO ESTOS ESTILOS PARA VERLO COMO SERÍA.
+.submit-button-test {
+  width: 100%;
+  padding: 12px 24px;
+  border-radius: 1000px;
+  background-color: var(--bg-brand);
+  border: none;
+  color: var(--text-primary);
+  cursor: pointer;
+
+  &.enabled {
+    background: #e63946;
+    color: white;
+  }
+}
+
+.select__link {
+  text-align: left;
+}
+
+// clases del modal
+
+.flex-utility {
+  @include display-flex();
+  flex-direction: row;
+
+  & .blanco {
+    background-color: transparent;
+    color: var(--text-brand);
+    border: var(--border-width-3) solid var(--border-onprimary-brand);
+  }
+}
+
+// ANIMACIONES
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}

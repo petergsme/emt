@@ -1,0 +1,17 @@
+@use '../../../styles/mixins' as *;
+
+@mixin desktop-large {
+  @media (min-width: 1500px) {
+    @content;
+  }
+}
+
+// CLASES DEL DOUBLEBLOCK
+.doubleBlockLayout {
+  display: flex;
+  flex-wrap: wrap;
+
+  @include desktop-large {
+    flex-wrap: nowrap;
+  }
+}

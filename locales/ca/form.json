@@ -1,0 +1,120 @@
+{
+  "labels": {
+    "cardNumber": "Número de targeta Mobilis",
+    "documentNumber": "Número del document d'identificació",
+    "firstName": "Nom",
+    "lastName": "Cognoms",
+    "phone": "Número de telèfon",
+    "mail": "Correu electrònic",
+    "privacy": "Accepte la política de privacitat i les condicions de compra.",
+    "bill": "Desitge rebre una còpia de la factura al meu correu electrònic.",
+    "contact": "Tria un assumpte",
+    "refill": "Recarrega i preu",
+    "documentType": "Tipus de document d'identificació"
+  },
+  "placeholders": {
+    "cardNumber": "567812345678...",
+    "documentNumber": "23824449T...",
+    "firstName": "Joan...",
+    "lastName": "Perales Olmos...",
+    "phone": "628 098 545...",
+    "mail": "joan@gmail.com...",
+    "contact": "He perdut les meues ulleres...",
+    "refill": "Selecciona la teua recàrrega...",
+    "documentType": "Passaport..."
+  },
+  "errors": {
+    "required": "Este camp és obligatori",
+    "privacy": "Has d'acceptar les condicions de compra",
+    "cardNumber": "Ha de tindre exactament 12 dígits",
+    "documentNumber": "Només pot contindre lletres i números",
+    "firstName": "Només pot contindre lletres",
+    "lastName": "Només poden contindre lletres",
+    "phone": "Només pot contindre dígits",
+    "mail": "Introdueix un correu electrònic vàlid"
+  },
+
+  "documentType": {
+    "dni": "DNI",
+    "nie": "NIE",
+    "passport": "passaport"
+  },
+
+  "contact": {
+    "fault": "Queixes",
+    "lost": "Objectes perduts",
+    "issues": "Incidències en la línia",
+    "other": "Altres consultes"
+  },
+
+  "refill": {
+    "emtJove": "Renovació EMT Jove / 12,5€ (descompte + IVA)",
+    "bonobus": {
+      "option1": "10 viatges / 4,25€ (descompte + IVA)",
+      "option2": "20 viatges / 8,50€ (descompte + IVA)",
+      "option3": "30 viatges / 12,75€ (descompte + IVA)"
+    },
+    "persesp": {
+      "option1": "10 viatges / 2,15€ (amb IVA)",
+      "option2": "20 viatges / 4,30€ (amb IVA)",
+      "option3": "30 viatges / 6,45€ (amb IVA)"
+    },
+    "persgen": {
+      "option1": "10 viatges / 3,40€ (amb IVA)",
+      "option2": "20 viatges / 6,80€ (amb IVA)",
+      "option3": "30 viatges / 10,20€ (amb IVA)"
+    }
+  },
+
+  "sectionText": {
+    "register": {
+      "claim": "Registra ta targeta",
+      "subclaim": "ASSEGURA TES VIATGES",
+      "button": "REGISTRAR TARGETA"
+    },
+
+    "privacy": "Política de privacitat ->",
+
+    "purchase": {
+      "claim": "Que res t'ature",
+      "subclaim": "RECARREGA TES VIATGES",
+      "button": "COMPRAR RECÀRREGA"
+    }
+  },
+
+  "modal": {
+    "abandon": {
+      "claim": "Segur?",
+      "info": "Si abandones el procés, perdràs les dades que has introduït i hauràs de tornar a començar.",
+      "exit": "SÍ",
+      "continue": "NO"
+    },
+
+    "completed": {
+      "register": {
+        "claim": "Registre completat",
+        "info": "Enhorabona, ara els teus viatges estan ben guardats."
+      },
+
+      "purchase": {
+        "claim": "Ho sentim",
+        "info": "En aquest moment hi ha problemes tècnics amb les compres. Torna-ho a intentar més tard, per favor."
+      },
+
+      "exit": "CONTINUAR"
+    }
+  },
+  "accordion": {
+    "lost": "Notifica la pèrdua",
+    "lostAnswer": "En cas de pèrdua o robatori, pots notificar-ho de tres formes distintes: a través d’aquesta pàgina, telefonant al nostre servei d’Atenció al Client o acudint presencialment a les nostres oficines.",
+    "data": "Revisa les teues dades",
+    "dataAnswer": "Abans de prémer 'Registrar targeta', comprova que les dades són correctes. Una vegada enviada, qualsevol modificació s’haurà de fer per telèfon."
+  },
+
+  "accordionRefill": {
+    "update": "Actualització dels viatges",
+    "updateAnswer": "Pots carregar un màxim de 30 viatges en el teu Bonobús. Si passes el límit, el sistema esperarà que uses alguns viatges per a aplicar noves recàrregues (dins dels 14 dies següents).",
+    "limit": "Límit de viatges",
+    "limitAnswer": "Els teus viatges s'actualitzen de 10 en 10 en validar en l'autobús. Per a recàrregues de 10 viatges necessitaràs 1 validació, però per a recàrregues de 20 viatges necessitaràs 2 validacions."
+  }
+}

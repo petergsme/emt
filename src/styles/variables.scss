@@ -1,0 +1,182 @@
+//CUSTOM PROPERTIES
+
+:root {
+  //COLORS
+  //Neutral colors - white
+  --white-100-main: hsla(60, 100%, 99%, 1);
+  --white-300: hsla(60, 21%, 91%, 1);
+  --white-500: hsla(60, 6%, 68%, 1);
+  --white-700: hsla(60, 3%, 54%, 1);
+  --white-900: hsla(60, 3%, 39%, 1);
+
+  //Neutral colors - black
+  --black-100-main: hsla(351, 47%, 3%, 1);
+  --black-300: hsla(345, 27%, 6%, 1);
+  --black-500: hsla(351, 14%, 10%, 1);
+  --black-700: hsla(353, 10%, 16%, 1);
+  --black-900: hsla(60, 3%, 39%, 1);
+
+  //Brand colors - red
+  --red-0: hsla(11, 76%, 90%, 1);
+  --red-100: hsla(5, 78%, 77%, 1);
+  --red-200: hsla(358, 78%, 63%, 1);
+  --red-300-main: hsla(352, 78%, 50%, 1);
+  --red-500: hsla(349, 83%, 32%, 1);
+  --red-700: hsla(346, 88%, 19%, 1);
+  --red-900: hsla(0, 100%, 5%, 1);
+
+  //TYPOGRAPHY SYSTEM
+  //Font families
+  --font-family-body: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-family-display: 'Boldonse', Georgia, 'Times New Roman', serif;
+
+  //Font sizes
+  --font-size-10: 10px;
+  --font-size-12: 12px;
+  --font-size-16: 16px;
+  --font-size-18: 18px;
+  --font-size-20: 20px;
+  --font-size-24: 24px;
+  --font-size-28: 28px;
+  --font-size-48: 48px;
+  --font-size-80: 80px;
+  --font-size-96: 96px;
+
+  //Font weights
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  //Line heights
+  --line-height-20: 20px;
+  --line-height-24: 24px;
+  --line-height-32: 32px;
+  --line-height-44: 44px;
+  --line-height-68: 68px;
+  --line-height-72: 72px;
+  --line-height-108: 108px;
+  --line-height-132: 132px;
+
+  //Letter spacing
+  --tracking-tight: -1%;
+
+  //Text colors
+  --text-primary: var(--white-100-main);
+  --text-secondary: var(--black-500);
+  --text-brand: var(--red-300-main);
+  --text-brand-light-primary: var(--red-0);
+  --text-brand-light-secondary: var(--red-100);
+  --text-disabled: var(--white-700);
+  --text-onbrand: var(--white-100-main);
+  --text-onbrandsecondary: var(--red-700);
+  --text-onprimary: var(--red-700);
+  --text-onprimary-brand: var(--red-300-main);
+
+  //SPACING FOUNDATION
+  //Base space values
+  --space-4: 4px;
+  --space-6: 6px;
+  --space-8: 8px;
+  --space-12: 12px;
+  --space-16: 16px;
+  --space-20: 20px;
+  --space-24: 24px;
+  --space-28: 28px;
+  --space-40: 40px;
+  --space-60: 60px;
+  --space-80: 80px;
+  --space-120: 120px;
+  --space-160: 160px;
+
+  //Base size values
+  --size-1: 1px;
+  --size-2: 2px;
+  --size-3: 3px;
+  --size-24: 24px;
+  --size-26: 26px;
+  --size-28: 28px;
+  --size-32: 32px;
+  --size-48: 48px;
+  --size-96: 96px;
+  --size-325: 325px;
+  --size-350: 350px;
+  --size-550: 550px;
+  --size-1000: 1000px;
+
+  //ICONS
+  //Icon sizes
+  --icon-24: var(--size-24);
+  --icon-26: var(--size-26);
+  --icon-32: var(--size-32);
+  --icon-48: var(--size-48);
+  --icon-96: var(--size-96);
+
+  //Icon colors
+  --icon-onprimary: var(--red-300-main);
+  --icon-onprimary-secondary: var(--red-700);
+  --icon-onbrand: var(--white-100-main);
+  --icon-onbrandsecondary: var(--red-700);
+  --icon-disabled: var(--white-500);
+
+  //BORDERS & LAYOUT
+  //Border widths
+  --border-width-1: var(--size-1);
+  --border-width-2: var(--size-2);
+  --border-width-3: var(--size-3);
+
+  //Border radius
+  --border-radius-20: var(--space-20);
+  --border-radius-1000: var(--size-1000);
+
+  //Border colors
+  --border-onbrand: var(--white-100-main);
+  --border-onprimary-brand: var(--red-300-main);
+  --border-onprimary-secondary: var(--red-700);
+
+  //BACKGROUNDS
+  --bg-primary: var(--white-100-main);
+  --bg-secondary: var(--white-300);
+  --bg-brand: var(--red-300-main);
+  --bg-brand-secondary: var(--red-500);
+  --bg-brand-tertiary: var(--red-700);
+  --bg-brand-light-primary: var(--red-0);
+  --bg-brand-light-secondary: var(--red-100);
+  --bg-disabled: var(--white-300);
+
+  //COMPONENT SPACING
+  //Padding
+  --padding-6: var(--space-6);
+  --padding-12: var(--space-12);
+  --padding-16: var(--space-16);
+  --padding-20: var(--space-20);
+  --padding-24: var(--space-24);
+  --padding-28: var(--space-28);
+  --padding-40: var(--space-40);
+  --padding-60: var(--space-60);
+  --padding-80: var(--space-80);
+  --padding-120: var(--space-120);
+  --padding-160: var(--space-160);
+  --padding-top-28: var(--space-28);
+  --padding-bottom-40: var(--space-40);
+
+  //Margin
+  --margin-20: var(--space-20);
+  --margin-40: var(--space-40);
+  --margin-60: var(--space-60);
+  --margin-80: var(--space-80);
+  --margin-bottom-8: var(--space-8);
+  --margin-bottom-40: var(--space-40);
+
+  //Gap
+  --gap-4: var(--space-4);
+  --gap-8: var(--space-8);
+  --gap-12: var(--space-12);
+  --gap-20: var(--space-20);
+  --gap-40: var(--space-40);
+  --gap-60: var(--space-60);
+  --gap-80: var(--space-80);
+
+  //GRADIENTS
+  --gradient-dark-neutral: linear-gradient(180deg, var(--red-700) 10%, var(--red-300-main) 100%);
+}

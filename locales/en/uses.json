@@ -1,0 +1,26 @@
+{
+  "header": {
+    "title": "3 simple steps",
+    "subtitle": "TO USE THE BUS PROPERLY"
+  },
+  "step1": {
+    "title": "1. Waiting",
+    "description": "Head to your stop. When you see the bus approaching, raise your hand to signal the driver. Board only when it comes to a complete stop and through the front door. Remember to have your Móbilis card or money for the ticket ready.",
+    "altImage": "Person waiting at bus stop with raised hand signaling the approaching bus driver"
+  },
+  "step2": {
+    "title": "2. Boarding",
+    "description": "Validate your card or buy your ticket. Then move toward the back making way for others and sit down or hold onto the bars. Give up your seat if you see someone who needs it more and keep your belongings close. Remember to have your ticket ready in case of inspection.",
+    "altImage": "Bus interior with passengers validating cards and taking seats"
+  },
+  "step3": {
+    "title": "3. Exiting",
+    "description": "When you're near your stop, press the buzzer. Move toward the door and hold on. Get off only when the bus comes to a complete stop and the doors are open.",
+    "altImage": "Passenger exiting bus through rear door when completely stopped"
+  },
+  "accident": {
+    "title": "In case of accident",
+    "p1": "Stay calm and follow the driver's instructions. If evacuation is necessary, leave your luggage and do so using the nearest exit without pushing. If the bus has overturned, exit through emergency doors or windows. If they don't open, use the emergency hammer.",
+    "p2": "If the driver were unconscious, evacuation would be the same, but passengers should ensure emergency doors are opened, the engine is turned off, and the handbrake is applied if necessary."
+  }
+}

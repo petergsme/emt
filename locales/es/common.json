@@ -1,0 +1,10 @@
+{
+  "tasks": "Tareas",
+  "welcome": "Bienvenido a React",
+  "menu": {
+    "login": "Iniciar sesión",
+    "signup": "Crear cuenta",
+    "tasks": "Tareas"
+  },
+  "completedProgress": "{{completed}} de {{total}} tareas completadas"
+}

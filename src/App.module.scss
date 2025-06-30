@@ -1,0 +1,32 @@
+@use './styles/mixins.scss' as *;
+
+.App {
+  display: flex;
+  flex-direction: column;
+}
+
+.navPrueba {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 8px;
+
+  & a {
+    background-color: green;
+    color: white;
+    padding: 12px;
+    border-radius: 1000px;
+  }
+}
+
+.extra-padding-top {
+  padding: var(--padding-160) 0 var(--padding-120) 0 !important;
+
+  @include mobile {
+    padding: var(--padding-120) 0 var(--padding-80) 0 !important;
+  }
+
+  @include tablet {
+    padding: var(--padding-120) 0 var(--padding-80) 0 !important;
+  }
+}

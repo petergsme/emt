@@ -1,0 +1,59 @@
+@use '../../../styles/mixins.scss' as *;
+
+// CLASES DE USE SECTION
+
+.use {
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-60);
+    padding: 0;
+
+    @include tablet-up {
+      padding: 0 var(--padding-40);
+    }
+
+    @include desktop {
+      flex-direction: row;
+      gap: var(--gap-20);
+    }
+  }
+
+  &__image {
+    width: 100%;
+    height: auto;
+  }
+
+  &__block {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-20);
+
+    @include desktop {
+      flex-direction: column;
+      gap: var(--gap-40);
+    }
+  }
+
+  &__blockText {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-20);
+
+    & p {
+      @include desktop {
+        max-width: 550px;
+      }
+    }
+
+    & h4 {
+      @include tablet-up {
+        font-size: var(--font-size-28);
+        line-height: var(--line-height-44);
+      }
+    }
+  }
+}
+
+//  max-width  de parrafo interno.

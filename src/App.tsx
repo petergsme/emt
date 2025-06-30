@@ -1,26 +1,39 @@
-import "./App.css";
-import { Routes, Route, Link } from "react-router-dom";
+import { Outlet, useLocation } from 'react-router-dom';
+import { useScrollToSection } from './hooks/useScrollToSection';
+import { useCanonical } from './hooks/useCanonical';
 
-function Home() {
-  return <h2>Inicio</h2>;
-}
+import classNames from 'classnames/bind';
+import theme from './App.module.scss';
+import { Navbar } from './components/ui/Navbar/Navbar';
+import { AppSection } from './components/common/Apps/AppSection';
+import { SingleBlock } from './components/layout/SingleBlock/SingleBlock';
+import { Footer } from './components/ui/Footer/Footer';
+import { FloatingBanner } from './components/common/Apps/floatingBanner/FloatingBanner';
 
-function About() {
-  return <h2>Acerca de</h2>;
-}
+const cx = classNames.bind(theme);
 
-function App() {
-  return (
-    <div>
-      <nav>
-        <Link to="/">Inicio</Link> | <Link to="/about">Acerca</Link>
-      </nav>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-      </Routes>
-    </div>
+export const App: React.FC = () => {
+  useScrollToSection();
+  useCanonical();
+  useLocation();
+
+  const appSection = (
+    <SingleBlock id="apps" backgroundColor="pink" className={cx('extra-padding-top')}>
+      <AppSection />
+    </SingleBlock>
   );
-}
 
-export default App;
+  return (
+    <>
+      <Navbar />
+
+      <Outlet />
+
+      {location.pathname === '/' && <FloatingBanner targetSectionId="apps" />}
+
+      {location.pathname !== '/error' && appSection}
+
+      <Footer />
+    </>
+  );
+};

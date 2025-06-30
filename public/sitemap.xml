@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Página principal -->
+  <url>
+    <loc>https://emtvalencia.netlify.app/</loc>
+    <lastmod>2025-18-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  
+  <!-- Páginas principales -->
+  <url>
+    <loc>https://emtvalencia.netlify.app/mobilis-cards</loc>
+    <lastmod>2025-18-06</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://emtvalencia.netlify.app/help/rules-guides</loc>
+    <lastmod>2025-18-06</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+</urlset>

@@ -1,0 +1,27 @@
+{
+  "navigation": {
+    "benefits": "Beneficis",
+    "titlesAndRates": "Títols i tarifes",
+    "help": "Ajuda"
+  },
+  "titlesAndRates": {
+    "cards": "Targetes",
+    "consultationsAndRecharges": "Consultes i recarregues",
+    "registerCard": "Registra la teua targeta"
+  },
+  "help": {
+    "busUsageAndRegulations": "Ús del bus i normativa",
+    "frequentQuestions": "Preguntes freqüents"
+  },
+  "actions": {
+    "contactUs": "Contacta amb nosaltres",
+    "downloadApps": "Descarrega les apps",
+    "contact": "CONTACTE"
+  },
+  "accessibility": {
+    "menu": "Menú",
+    "closeMenu": "Tancar menú",
+    "logoAlt": "Logo EMT València",
+    "openMenu": "Obrir menú"
+  }
+}

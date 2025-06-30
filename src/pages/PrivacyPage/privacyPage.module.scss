@@ -1,0 +1,18 @@
+@use '../../styles/mixins.scss' as *;
+
+// CLASES PRIVACIDAD
+.text-align-left {
+  text-align: left;
+}
+
+.privacy {
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-40);
+
+    @include mobile {
+      gap: var(--gap-20);
+    }
+  }
+}

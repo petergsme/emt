@@ -1,0 +1,102 @@
+@use '../../../../styles/mixins.scss' as *;
+
+// FLOATING BANNER CLASSES
+.floatingBanner {
+  &__banner {
+    padding: var(--padding-20) 0;
+    background-color: var(--bg-brand-tertiary);
+    border: none;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 0;
+
+    animation: slideUp 0.3s ease-out;
+
+    &--exit {
+      animation: slideDown 0.3s ease-out;
+    }
+
+    @include mobile {
+      padding: var(--padding-12) 0;
+    }
+  }
+
+  &__desktop {
+    padding: var(--padding-20);
+    display: flex;
+    flex-direction: column-reverse;
+    gap: var(--gap-12);
+    align-items: center;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 0;
+    background: linear-gradient(
+      360deg,
+      var(--red-0) 25%,
+      var(--red-100) 50%,
+      var(--red-200) 75%,
+      var(--red-300-main) 100%
+    );
+    animation: slideInFromRight 0.3s ease-out;
+    border-radius: var(--border-radius-20);
+    cursor: pointer;
+
+    &--exit {
+      animation: slideOutToRight 0.3s ease-in;
+    }
+  }
+
+  &__qr {
+    width: 120px;
+    height: 120px;
+  }
+}
+
+// ANIMACIONES
+
+@keyframes slideInFromRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideOutToRight {
+  0% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+}
+
+@keyframes slideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(-0);
+  }
+}
+
+@keyframes slideDown {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+}

@@ -1,0 +1,120 @@
+{
+  "labels": {
+    "cardNumber": "Mobilis card number",
+    "documentNumber": "Identification document number",
+    "firstName": "First name",
+    "lastName": "Last name",
+    "phone": "Phone number",
+    "mail": "Email",
+    "privacy": "I accept the privacy policy and the terms of purchase.",
+    "bill": "I wish to receive a copy of the invoice by email.",
+    "contact": "Choose a subject",
+    "refill": "Top-up and price",
+    "documentType": "Type of identification document"
+  },
+  "placeholders": {
+    "cardNumber": "567812345678...",
+    "documentNumber": "23824449T...",
+    "firstName": "John...",
+    "lastName": "Smith...",
+    "phone": "628 098 545...",
+    "mail": "john@gmail.com...",
+    "contact": "I lost my glasses...",
+    "refill": "Select your top-up...",
+    "documentType": "Passport..."
+  },
+  "errors": {
+    "required": "This input is required",
+    "privacy": "You must accept the terms of purchase",
+    "cardNumber": "Must have exactly 12 digits",
+    "documentNumber": "Can only contain letters and numbers",
+    "firstName": "Cn only contain letters",
+    "lastName": "Can only contain letters",
+    "phone": "Can only contain digits",
+    "mail": "Enter a valid email address"
+  },
+
+  "documenType": {
+    "dni": "DNI",
+    "nie": "NIE",
+    "passport": "Passport"
+  },
+
+  "contact": {
+    "fault": "Complaints",
+    "lost": "Lost and found",
+    "issues": "Service disruptions",
+    "other": "Other inquiries"
+  },
+
+  "refill": {
+    "emtJove": "EMT Jove Renewal / €12.5 (discount + VAT)",
+    "bonobus": {
+      "option1": "10 trips / €4.25 (discount + VAT)",
+      "option2": "20 trips / €8.50 (discount + VAT)",
+      "option3": "30 trips / €12.75 (discount + VAT)"
+    },
+    "persesp": {
+      "option1": "10 trips / €2.15 (VAT included)",
+      "option2": "20 trips / €4.30 (VAT included)",
+      "option3": "30 trips / €6.45 (VAT included)"
+    },
+    "persgen": {
+      "option1": "10 trips / €3.40 (VAT included)",
+      "option2": "20 trips / €6.80 (VAT included)",
+      "option3": "30 trips / €10.20 (VAT included)"
+    }
+  },
+
+  "sectionText": {
+    "register": {
+      "claim": "Register your card",
+      "subclaim": "SECURE YOUR TRIPS",
+      "button": "REGISTER CARD"
+    },
+
+    "privacy": "Privacy Policy ->",
+
+    "purchase": {
+      "claim": "Fuel your next ride",
+      "subclaim": "TOP UP YOUR CARD",
+      "button": "ADD TRAVEL CREDIT"
+    }
+  },
+
+  "modal": {
+    "abandon": {
+      "claim": "Are you sure?",
+      "info": "If you abandon the process, the data you entered will be lost and you'll have to start over.",
+      "exit": "YES",
+      "continue": "NO"
+    },
+
+    "completed": {
+      "register": {
+        "claim": "Register complete",
+        "info": "Congratulations, your card has been registered successfully."
+      },
+
+      "purchase": {
+        "claim": "Sorry",
+        "info": "We're currently experiencing technical issues with purchases. Please try again later."
+      },
+
+      "exit": "CONTINUE"
+    }
+  },
+  "accordion": {
+    "lost": "Report loss",
+    "lostAnswer": "In case of loss or theft, you can report it in three ways: through this page, by calling our Customer Service line, or by visiting our offices in person.",
+    "data": "Check your details",
+    "dataAnswer": "Before clicking 'Register card', make sure your information is correct. Once submitted, any changes must be made by phone."
+  },
+
+  "accordionRefill": {
+    "update": "Topping up trips",
+    "updateAnswer": "You can load a maximum of 30 trips on your Bonobús card. If you exceed the limit, the system will wait for you to use some trips before applying new top-ups (within the following 14 days).",
+    "limit": "Trip limit",
+    "limitAnswer": "Your trips are updated 10 at a time when you validate on the bus. For 10-trip top-ups you'll need 1 validation, but for 20-trip top-ups you'll need 2 validations."
+  }
+}

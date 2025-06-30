@@ -1,0 +1,117 @@
+{
+  "labels": {
+    "cardNumber": "Número de tarjeta Mobilis",
+    "documentNumber": "Número de documento de identificación",
+    "firstName": "Nombre",
+    "lastName": "Apellidos",
+    "phone": "Número de teléfono",
+    "mail": "Correo electrónico",
+    "privacy": "Acepto la politica de privacidad y las condiciones de compra.",
+    "bill": "Deseo recibir copia de la factura en mi correo electrónico.",
+    "contact": "Escoge un asunto",
+    "refill": "Recarga y precio",
+    "documentType": "Tipo de documento de identificación"
+  },
+  "placeholders": {
+    "cardNumber": "567812345678...",
+    "documentNumber": "23824449T...",
+    "firstName": "Juan...",
+    "lastName": "Perales Olmos...",
+    "phone": "628 098 545...",
+    "mail": "Juan@gmail.com...",
+    "contact": "He perdido mis gafas...",
+    "refill": "Selecciona tu recarga...",
+    "documentType": "Pasaporte..."
+  },
+  "errors": {
+    "required": "Este campo es obligatorio",
+    "privacy": "Debes aceptar las condiciones de compra",
+    "cardNumber": "Debe tener exactamente 12 dígitos",
+    "documentNumber": "Solo puede contener letras y números",
+    "firstName": "Solo puede contener letras",
+    "lastName": "Solo pueden contener letras",
+    "phone": "Solo puede contener números",
+    "mail": "Introduce un email válido"
+  },
+
+  "documentType": {
+    "dni": "DNI",
+    "nie": "NIE",
+    "passport": "Pasaporte"
+  },
+
+  "contact": {
+    "fault": "Quejas",
+    "lost": "Objetos perdidos",
+    "issues": "Incidencias en la línea",
+    "other": "Otras consultas"
+  },
+
+  "refill": {
+    "emtJove": "Renovación EMT Jove / 12,5€ (descuento + IVA)",
+    "bonobus": {
+      "option1": "10 viajes / 4,25€ (descuento + IVA)",
+      "option2": "20 viajes / 8,50€ (descuento + IVA)",
+      "option3": "30 viajes / 12, 75€ (descuento + IVA)"
+    },
+    "persesp": {
+      "option1": "10 viajes / 2,15€  (con IVA)",
+      "option2": "20 viajes / 4,30€ (con IVA)",
+      "option3": "30 viajes / 6,45€ (con IVA)"
+    },
+    "persgen": {
+      "option1": "10 viajes / 3,40€ (con IVA)",
+      "option2": "20 viajes / 6,80€ (con IVA)",
+      "option3": "30 viajes / 10,20€ (con IVA)"
+    }
+  },
+
+  "sectionText": {
+    "register": {
+      "claim": "Registra tu tarjeta",
+      "subclaim": "ASEGURA TUS VIAJES",
+      "button": "REGISTRAR TARJETA"
+    },
+
+    "privacy": "Política de privacidad ->",
+
+    "purchase": { "claim": "Que nada te pare", "subclaim": "RECARGA TUS VIAJES", "button": "COMPRAR RECARGA" }
+  },
+
+  "modal": {
+    "abandon": {
+      "claim": "¿Seguro?",
+      "info": "Si abandonas el proceso perderás los datos que has introducido y tendrás que volver a empezar.",
+      "exit": "SÍ",
+      "continue": "NO"
+    },
+
+    "completed": {
+      "register": {
+        "claim": "Tarjeta registrada",
+        "info": "Enhorabuena, ahora tus viajes están a buen recaudo."
+      },
+
+      "purchase": {
+        "claim": "Lo sentimos",
+        "info": "En este momento las compras sufren problemas técnicos, por favor vuelve a intentarlo más tarde."
+      },
+
+      "exit": "CONTINUAR"
+    }
+  },
+
+  "accordion": {
+    "lost": "Notifica la perdida",
+    "lostAnswer": "En caso de pérdida o robo, puedes notificarlo de tres formas distintas: a través de esta página, llamando a nuestro teléfono de Atención al cliente o personándote en nuestras oficinas.",
+    "data": "Revisa tus datos",
+    "dataAnswer": "Antes de pulsar 'Registrar tarjeta' comprueba que los datos son correctos. Una vez enviado, cualquier modificación deberá realizarse a través del teléfono."
+  },
+
+  "accordionRefill": {
+    "update": "Actualización de los viajes",
+    "updateAnswer": "Puedes cargar un máximo de 30 viajes en tu Bonobús. Si pasas el límite, el sistema esperará a que uses algunos viajes para aplicar nuevas recargas (dentro de los 14 días siguientes).",
+    "limit": "Límite de viajes",
+    "limitAnswer": "Tus viajes se actualizan de 10 en 10 al validar en el bus. Para recargas de 10 viajes necesitarás 1 validación, pero para recargas de 20 viajes necesitarás 2 validaciones."
+  }
+}

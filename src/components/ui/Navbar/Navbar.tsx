@@ -1,0 +1,112 @@
+import { useEffect, useState } from 'react';
+import { useLocation } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
+import classNames from 'classnames/bind';
+import cn from 'classnames';
+import { Button } from '@/components/common/Button/Button';
+import { Icon } from '@/assets/icons/Icon';
+import SidebarMobile from './SidebarMobile/SidebarMobile';
+import emtIcon from '@/assets/emt-icon.webp';
+import theme from './navbar.module.scss';
+import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
+
+const cx = classNames.bind(theme);
+
+export const Navbar = () => {
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 1024);
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  const { t } = useTranslation('menu');
+  useLocation();
+
+  const isOverBlack = location.pathname === '/' || location.pathname === '/error';
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 1024);
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  return (
+    <header className={cx('navbar')}>
+      <div className={cx('navbar__mobile-container')}>
+        <Link to="/" className={cx('navbar__brand')}>
+          <img className={cx('navbar__brand-logo')} src={emtIcon} alt={t('accessibility.logoAlt')} />
+        </Link>
+
+        {isMobile && (
+          <button
+            className={cx('navbar__menu-button')}
+            onClick={() => setIsSidebarOpen(true)}
+            aria-label={t('accessibility.openMenu')}
+          >
+            <Icon icon="Menu" size="large" color="onprimary" extraClass={cx('navbar__menu-icon')} />
+          </button>
+        )}
+      </div>
+
+      {isMobile ? (
+        <SidebarMobile isOpen={isSidebarOpen} onClose={() => setIsSidebarOpen(false)} />
+      ) : (
+        <div className={cx('navbar__desktop-content')}>
+          <nav className={cx('navbar__nav')}>
+            <NavLink
+              to="/#benefits"
+              className={({ isActive }) =>
+                cn(
+                  'paragraph-small',
+                  cx('navbar__nav-link', {
+                    'navbar__nav-link--active': isActive,
+                    'navbar__nav-link--overBlack': isOverBlack,
+                  })
+                )
+              }
+            >
+              {t('navigation.benefits')}
+            </NavLink>
+            <NavLink
+              to="/mobilis-cards"
+              className={({ isActive }) =>
+                cn(
+                  'paragraph-small',
+                  cx('navbar__nav-link', {
+                    'navbar__nav-link--active': isActive,
+                    'navbar__nav-link--overBlack': isOverBlack,
+                  })
+                )
+              }
+            >
+              {t('navigation.titlesAndRates')}
+            </NavLink>
+            <NavLink
+              to="/help/rules-guides"
+              className={({ isActive }) =>
+                cn(
+                  'paragraph-small',
+                  cx('navbar__nav-link', {
+                    'navbar__nav-link--active': isActive,
+                    'navbar__nav-link--overBlack': isOverBlack,
+                  })
+                )
+              }
+            >
+              {t('navigation.help')}
+            </NavLink>
+          </nav>
+
+          <Button
+            type="button"
+            style="filled"
+            color={isOverBlack ? 'onbrand' : 'onprimary'}
+            onClick={() => window.open('mailto:atencioalaciutadania@emtvalencia.es', '_blank')}
+          >
+            {t('actions.contact')}
+          </Button>
+        </div>
+      )}
+    </header>
+  );
+};

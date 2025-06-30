@@ -1,0 +1,123 @@
+.sidebar {
+  &__overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 999;
+    animation: fadeIn 0.5s cubic-bezier(0.82, 0, 0.28, 0.99);
+
+    &--closing {
+      animation: fadeOut 0.5s cubic-bezier(0.82, 0, 0.28, 0.99);
+    }
+  }
+
+  &__panel {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(170deg, var(--red-700) 10%, var(--red-300-main) 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    z-index: 1000;
+    animation: slideDown 0.5s ease;
+    overflow-y: auto;
+
+    &--closing {
+      animation: slideUp 0.5s ease;
+    }
+
+    * {
+      color: var(--white-100-main);
+    }
+  }
+
+  &__topbar {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: var(--padding-40) var(--padding-20);
+  }
+
+  &__close-button {
+    background: none;
+    border: none;
+    margin: 0;
+    padding: 0;
+    transform: translateX(15%);
+  }
+
+  &__main-content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__nav-section {
+    padding: var(--padding-20);
+    border-top: var(--border-width-1) solid var(--white-100-main);
+  }
+
+  &__nav-link {
+    text-decoration: none;
+
+    &--active {
+      color: var(--text-brand-light-secondary);
+    }
+  }
+
+  &__sub-nav {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-8);
+  }
+
+  &__action-bar {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-20);
+    padding: var(--padding-40) var(--padding-20);
+  }
+}
+
+// ANIMACIONES
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-100%);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}

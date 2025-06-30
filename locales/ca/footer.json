@@ -1,0 +1,76 @@
+{
+  "navigation": {
+    "logos": {
+      "emt": "EMT València",
+      "ajuntament": "Ajuntament de València",
+      "generalitat": "Generalitat Valenciana",
+      "fgv": "FGV - Ferrocarrils de la Generalitat Valenciana",
+      "tram": "TRAM València"
+    },
+    "qr": {
+      "alt": "Codi QR per a descarregar l'aplicació EMT"
+    },
+    "map": "Mapa",
+    "titlesAndRates": {
+      "main": "Tarifes i Títols",
+      "cards": "Targetes",
+      "queries": "Consultes i recàrregues",
+      "register": "Registra la teua targeta"
+    },
+    "help": {
+      "main": "Ajuda",
+      "regulations": "Ús d'autobús i normativa",
+      "faq": "Preguntes freqüents"
+    },
+    "inPerson": {
+      "main": "Atenció Presencial",
+      "mendoza": {
+        "address": "C/ Mendoza 5, València",
+        "schedule": "Dl-Dv 9:00-19:30"
+      },
+      "upv": {
+        "address": "UPV, Pl. de l'Àgora",
+        "schedule": "Dl-Dv 8:00-15:30"
+      },
+      "colon": {
+        "address": "Metro Colón",
+        "schedule": "Dl-Dv 9:00-19:00"
+      },
+      "appointment": {
+        "required": "Requerix cita prèvia",
+        "request": "Demanar cita →"
+      }
+    },
+    "phone": {
+      "main": "Atenció Telefònica",
+      "number": "96 315 85 15",
+      "schedule": {
+        "weekdays": "Dl-Dv 8:00 a 21:00",
+        "saturday": "Dissabtes 9:00 a 14:00"
+      }
+    },
+    "legal": {
+      "main": "Legal",
+      "privacy": "Política de privacitat",
+      "cookies": "Cookies"
+    },
+    "social": {
+      "alt": "Icones de xarxes socials"
+    }
+  },
+  "actions": {
+    "contact": "Contacta amb nosaltres",
+    "downloadApps": "Descarrega les apps",
+    "backToTop": "Tornar amunt",
+    "downloadApp": "Descarrega l'App"
+  },
+  "legal": {
+    "copyright": "© Copyright EMT València 2025."
+  },
+
+  "language": {
+    "es": "Castellano",
+    "val": "Valencià",
+    "en": "English"
+  }
+}

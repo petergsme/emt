@@ -1,0 +1,24 @@
+{
+  "header": {
+    "title": "Coneix els teus",
+    "subtitle": "DRETS I DEURES",
+    "description": "Aprofita al màxim el nostre servei. Descobreix els drets que pots exercir i els deures a complir."
+  },
+  "rights": {
+    "title": "Drets",
+    "item1": "Viatjar amb un sol bitllet fins tornar a la teua parada inicial.",
+    "item2": "Rebre informació sobre tarifes, servei i incidències.",
+    "item3": "Recuperar objectes perduts a l'Oficina Central.",
+    "item4": "Presentar queixes o suggeriments i rebre resposta en 20 dies.",
+    "item5": "Confidencialitat de les teues dades personals.",
+    "item6": "En línies certificades, garantia de qualitat segons norma UNE-EN13186."
+  },
+  "duties": {
+    "title": "Deures",
+    "item1": "Portar i mostrar el teu bitllet o targeta si te'l demanen.",
+    "item2": "No parlar amb el conductor mentre condueix.",
+    "item3": "No portar objectes molests o perillosos.",
+    "item4": "Subjectar bé cotxets i bicicletes plegades.",
+    "item5": "Respectar els seients reservats per als que ho necessiten."
+  }
+}
