@@ -79,3 +79,23 @@ NOTAS ADICIONALES
 Los tests automaticos son complementarios, no reemplazo de testing manual.
 La clave es encontrar balance entre cobertura y tiempo invertido.
 Arquitectura del codigo debe considerar testing desde el diseño inicial.
+
+
+ORGANIZACION DE TESTS
+
+-Carpeta en source, o a su mismo nivel.
+-Test al lado de su componente es lo que prefiere josmi.
+
+Para que vitest lo pille por defecto tiene que llamarse el fichero .spec o .test
+
+Importante importar import { expect, test } from 'vitest';
+Describe sirve para agrupar tests si quieres usarlo, por ejemplo para casos de exito o de error, funcion especifica gorda...
+
+Para tests segun joSMI los pasos son
+PREPARAR LOS datos
+HACER LA logica
+COMPPROBAR LOS RESULTADOS
+
+Es importante que para testear importes la funcion o lo que sea, no uses una copia. Esto fuerza un poco a que dividas mejor tu codigo, lo compartimentes. Si no es muy dificil testear.
+
+En el ejemplo del todolist y su reducer, seria bueno querer usar un generador de tareas aleatorias para las comprobaciones, seria la unica manera de testear bien muchos casos de uso random.
