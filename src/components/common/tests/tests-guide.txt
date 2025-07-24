@@ -1,0 +1,81 @@
+CONCEPTOS FUNDAMENTALES
+
+Grado de confianza
+Los tests se miden por el nivel de confianza que proporcionan al codigo.
+
+Coverage (Cobertura)
+Porcentaje de codigo testeado.
+Ejemplo: 3 ifs y testeas 1 = 33% coverage.
+Lo ideal es probar casos importantes y casos raros.
+
+
+*Empezar tests desde el inicio del proyecto es mejor que implementarlos despues,
+pero requiere arquitectura especifica y conocimiento previo.
+
+
+TIPOS DE TESTING POR EJECUTOR
+
+Tests manuales
+Tu pruebas tu propio codigo manualmente.
+
+Tests de terceros
+Otros desarrolladores prueban tu codigo. Es buena practica porque normalmente no testeas 100% bien lo que implementas.
+
+QA (Quality Assurance)
+Perfil especializado en pruebas. Tiene bateria propia de tests que ejecuta antes de releases y con codigo nuevo. Quita responsabilidad al programador.
+
+Tests automaticos vs manuales
+Los tests automaticos NO deben sustituir tests manuales, especialmente en frontend. Los automaticos aseguran que la logica funciona pero podrian no detectar ciertos errores de la interfaz.
+
+
+TIPOS DE TEST AUTOMATICOS (ORDEN DE IMPORTANCIA/TIEMPO)
+
+(End to End - E2E)
+Programa que simula usuario real. Utiliza bases de datos con datos de prueba.
+Ventajas: Dan mas seguridad, prueban front + back + interfaz.
+Desventajas: Trabajosos de crear, requieren actualizacion frecuente.
+Herramienta: Cypress framework
+
+(Integracion)
+Para flujos que incluyen varios componentes + datos que cambian.
+Ejemplo: boton eliminar tarea en todo list
+Diferencia con E2E: No trabaja con base de datos, comprueba front + interfaz
+Herramientas: Vitest/Jest + React Testing Library
+
+(Unitarios)
+Para casos muy concretos, funcion o componente unico.
+Ejemplo: comprobar si componente se renderiza
+
+*Snapshot tests investigar aparte, dan poca confianza.
+
+
+ENFOQUE PRACTICO
+
+Tests que nos interesan:
+Unit tests y Integration tests.
+*En realidad probar mas de un caso de uso ya son tecnicamente integration tests.
+
+Herramientas recomendadas
+Vitest vs Jest: casi identicas pero Vitest es mas nueva.
+Para proyectos nuevos usar Vitest.
+
+
+PASOS PARA IMPLEMENTAR TESTS
+
+Configuracion
+Configurar libreria Vitest en el proyecto
+
+Estructura de archivos
+Crear funcion a testear: sum.ts
+Crear test en misma carpeta: sum.spec.ts
+
+Validacion importante
+Asegurate de que los tests fallan inicialmente
+A veces creas test roto que siempre da bien, verificar que funciona correctamente
+
+
+NOTAS ADICIONALES
+
+Los tests automaticos son complementarios, no reemplazo de testing manual.
+La clave es encontrar balance entre cobertura y tiempo invertido.
+Arquitectura del codigo debe considerar testing desde el diseño inicial.
