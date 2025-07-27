@@ -1,54 +1,108 @@
-# React + TypeScript + Vite
+# Rediseño Web EMT ValenciaAdd commentMore actions
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Descripción del Proyecto
+El proyecto se centra en el rediseño y reestructuración de la página web de la EMT valenciana, con el objetivo de crear una interfaz moderna, intuitiva y funcional. Se busca simplificar las funcionalidades clave y eliminar elementos poco relevantes, mejorando la accesibilidad general del sitio.
 
-Currently, two official plugins are available:
+## Alcance del Servicio
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Usuarios (Viajeros y Ciudadanos)
+- Plataforma optimizada para consulta rápida de horarios
+- Exploración de opciones de viaje
+- Gestión de tarjetas y saldo
 
-## Expanding the ESLint configuration
+## Características Distintivas
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### Experiencia de Usuario
+- Optimización para dispositivos móviles y ordenadores
+- Simplificación de la presentación de información
+- Priorización de la facilidad de uso
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+### Integración Técnica
+- Conexión en tiempo real con API oficial EMT
+- Información actualizada de llegadas
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Objetivos del Proyecto
+1. Mejorar la usabilidad general
+2. Proporcionar información en tiempo real
+3. Reducir la frustración del usuario
+4. Optimizar navegación móvil
+5. Modernizar presencia digital
+6. Fomentar uso del transporte público
+7. Implementar mejoras de accesibilidad
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## Necesidades de los Usuarios
+- Plataforma intuitiva y ágil
+- Información precisa de horarios y rutas
+- Gestión de títulos de transporte
+- Consulta de saldo
+- Monitoreo de incidencias
+- Gestión de objetos perdidos
+- Contacto con EMT
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+## Estrategia de Implementación
+
+### Metodología
+1. Investigación UX
+   - Estudio de usuarios actuales
+   - Encuestas
+   - Tests de usabilidad
+
+2. Diseño
+   - Wireframes en Figma
+   - Creación de prototipos
+
+3. Desarrollo
+   - Frontend con HTML, CSS, JavaScript y React
+   - Integración con API de la Generalitat
+
+4. Testing
+   - Pruebas de usabilidad
+   - Mejoras iterativas
+
+## Análisis de Competencia
+
+### Referencias Principales
+- Moovit: Consulta de tiempos de llegada
+- Buses de Vigo: Diseño funcional y claro
+- Valenbisi: Mapas simplificados
+- Metrovalencia: Modernización de servicio público
+
+## User Stories
+- Consulta de recorridos y paradas
+- Verificación de tiempos de llegada
+- Consulta de frecuencias
+- Gestión de saldo y títulos
+- Monitoreo de incidencias
+- Acceso a noticias del servicio
+- Gestión de favoritos
+- Contacto y objetos perdidos
+- Gestión de citas
+- Navegación del mapa
+- Soporte multilingüe
+- Consulta de normativa
+
+## Assumptions & Hypotheses
+
+### Assumptions
+- La información en tiempo real aumentará el uso
+- El diseño accesible mejorará la experiencia
+- La simplificación aumentará la eficiencia
+- La modernización mejorará la movilidad urbana
+- Las funciones personalizadas incrementarán el uso recurrente
+
+## Notas de Desarrollo
+
+### Próximos Pasos
+1. Redefinición de funciones clave
+2. Consulta de APIs
+3. Creación de sitemap
+4. Definición de inspiraciones de diseño
+
+### Consideraciones Importantes
+- Priorizar arquitectura de información
+- Desarrollar diagrama de flujo
+- Analizar journey del usuario
+- Recordar conversiones a aplicación móvil
+- Implementar multilingüismo
+- Evitar callejones sin salida en navegación
+- Gestionar limitaciones en información de incidencias
