@@ -1,25 +1,17 @@
-# Rediseño Web EMT ValenciaAdd commentMore actions
+# Rediseño Web EMT Valencia
 
 ## Descripción del Proyecto
 El proyecto se centra en el rediseño y reestructuración de la página web de la EMT valenciana, con el objetivo de crear una interfaz moderna, intuitiva y funcional. Se busca simplificar las funcionalidades clave y eliminar elementos poco relevantes, mejorando la accesibilidad general del sitio.
-
-## Alcance del Servicio
 
 ### Usuarios (Viajeros y Ciudadanos)
 - Plataforma optimizada para consulta rápida de horarios
 - Exploración de opciones de viaje
 - Gestión de tarjetas y saldo
 
-## Características Distintivas
-
 ### Experiencia de Usuario
 - Optimización para dispositivos móviles y ordenadores
 - Simplificación de la presentación de información
 - Priorización de la facilidad de uso
-
-### Integración Técnica
-- Conexión en tiempo real con API oficial EMT
-- Información actualizada de llegadas
 
 ## Objetivos del Proyecto
 1. Mejorar la usabilidad general
@@ -89,20 +81,3 @@ El proyecto se centra en el rediseño y reestructuración de la página web de l
 - La simplificación aumentará la eficiencia
 - La modernización mejorará la movilidad urbana
 - Las funciones personalizadas incrementarán el uso recurrente
-
-## Notas de Desarrollo
-
-### Próximos Pasos
-1. Redefinición de funciones clave
-2. Consulta de APIs
-3. Creación de sitemap
-4. Definición de inspiraciones de diseño
-
-### Consideraciones Importantes
-- Priorizar arquitectura de información
-- Desarrollar diagrama de flujo
-- Analizar journey del usuario
-- Recordar conversiones a aplicación móvil
-- Implementar multilingüismo
-- Evitar callejones sin salida en navegación
-- Gestionar limitaciones en información de incidencias
