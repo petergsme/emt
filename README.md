@@ -1,6 +1,6 @@
 # Rediseño Web EMT ValenciaAdd commentMore actions
 
-https://drive.google.com/file/d/1g6Gma6f8V_v8uLCBIanq3WP0fYMffsBD/view?usp=drive_link
+![Alt text](https://drive.google.com/file/d/1g6Gma6f8V_v8uLCBIanq3WP0fYMffsBD/view?usp=drive_link)
 
 ## Descripción del Proyecto
 El proyecto se centra en el rediseño y reestructuración de la página web de la EMT valenciana, con el objetivo de crear una interfaz moderna, intuitiva y funcional. Se busca simplificar las funcionalidades clave y eliminar elementos poco relevantes, mejorando la accesibilidad general del sitio.
